@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Ed Umbao | SEO Consultant & SaaS Copywriter</title>
+  <meta name="description" content="Ed Umbao is an SEO consultant and SaaS copywriter helping B2B and SaaS companies build content systems that rank, convert, and support growth." />
+
+  <style>
+    :root {
+      --bg: #070b16;
+      --bg-soft: #0b1020;
+      --panel: #111827;
+      --panel-2: #151f33;
+      --panel-3: #0f172a;
+      --border: #24324a;
+      --text: #eef4ff;
+      --muted: #9fb0c7;
+      --muted-2: #c4d1e4;
+      --blue: #3b82f6;
+      --green: #22c55e;
+      --cyan: #06b6d4;
+      --purple: #8b5cf6;
+      --shadow: rgba(0, 0, 0, 0.42);
+      --radius-lg: 28px;
+      --radius-md: 18px;
+      --radius-sm: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(59, 130, 246, 0.18), transparent 30%),
+        radial-gradient(circle at top right, rgba(34, 197, 94, 0.14), transparent 28%),
+        radial-gradient(circle at 50% 20%, rgba(139, 92, 246, 0.10), transparent 35%),
+        var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(14px);
+      background: rgba(7, 11, 22, 0.76);
+      border-bottom: 1px solid rgba(36, 50, 74, 0.72);
+    }
+
+    .nav-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--blue), var(--green));
+      box-shadow: 0 10px 24px rgba(59, 130, 246, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: white;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .nav-cta {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(59, 130, 246, 0.12);
+      border: 1px solid rgba(59, 130, 246, 0.35);
+      color: #cfe1ff;
+      font-weight: 700;
+    }
+
+    .hero {
+      padding: 82px 0 48px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(34, 197, 94, 0.10);
+      border: 1px solid rgba(34, 197, 94, 0.25);
+      color: #9ff0be;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 0.98;
+      letter-spacing: -0.06em;
+      margin: 0 0 20px;
+    }
+
+    .hero-text {
+      color: var(--muted-2);
+      font-size: 19px;
+      max-width: 720px;
+      margin-bottom: 26px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 26px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 18px;
+      border-radius: 14px;
+      border: 0;
+      font-size: 16px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform 0.15s ease, opacity 0.15s ease, border 0.15s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      opacity: 0.96;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--blue), var(--green));
+      color: white;
+      box-shadow: 0 14px 30px rgba(59, 130, 246, 0.25);
+    }
+
+    .btn-secondary {
+      background: rgba(17, 24, 39, 0.85);
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    .trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .trust-pill {
+      padding: 8px 11px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .preview-card,
+    .panel-card,
+    .tool-card,
+    .service-card,
+    .stat-card {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.025)),
+        var(--panel);
+      border: 1px solid rgba(255, 255, 255, 0.10);
+      box-shadow: 0 20px 52px var(--shadow);
+    }
+
+    .preview-card {
+      position: relative;
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      overflow: hidden;
+    }
+
+    .preview-card::before {
+      content: "";
+      position: absolute;
+      inset: -2px;
+      background: radial-gradient(circle at top right, rgba(34, 197, 94, 0.25), transparent 34%);
+      pointer-events: none;
+    }
+
+    .preview-top {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 22px;
+    }
+
+    .window-dots {
+      display: flex;
+      gap: 7px;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #475569;
+    }
+
+    .dot:nth-child(1) { background: #ef4444; }
+    .dot:nth-child(2) { background: #f59e0b; }
+    .dot:nth-child(3) { background: #22c55e; }
+
+    .score-badge {
+      color: #bff7d1;
+      font-size: 13px;
+      font-weight: 800;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(34, 197, 94, 0.11);
+      border: 1px solid rgba(34, 197, 94, 0.25);
+    }
+
+    .mock-line {
+      position: relative;
+      height: 12px;
+      border-radius: 99px;
+      background: #263550;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+
+    .mock-line span {
+      display: block;
+      height: 100%;
+      border-radius: 99px;
+      background: linear-gradient(90deg, var(--blue), var(--green));
+    }
+
+    .mock-list {
+      position: relative;
+      margin-top: 22px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .mock-item {
+      padding: 14px;
+      border-radius: 16px;
+      background: rgba(15, 23, 42, 0.78);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .mock-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 10px;
+      background: rgba(59, 130, 246, 0.18);
+      color: #bfdbfe;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+      font-weight: 900;
+    }
+
+    .mock-item strong {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 2px;
+    }
+
+    .mock-item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .section {
+      padding: 40px 0;
+    }
+
+    .section-title {
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      margin: 0 0 12px;
+    }
+
+    .section-subtitle {
+      color: var(--muted-2);
+      font-size: 17px;
+      max-width: 760px;
+      margin: 0 0 26px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .stat-card {
+      border-radius: var(--radius-md);
+      padding: 22px;
+    }
+
+    .stat-number {
+      font-size: 34px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      margin-bottom: 8px;
+      background: linear-gradient(135deg, #ffffff, #9ff0be);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .stat-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .tool-grid,
+    .services-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .tool-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .tool-card,
+    .service-card,
+    .panel-card {
+      border-radius: var(--radius-lg);
+      padding: 26px;
+    }
+
+    .card-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 15px;
+      background: rgba(59, 130, 246, 0.15);
+      color: #bfdbfe;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+      font-size: 22px;
+      font-weight: 900;
+    }
+
+    .tool-card h3,
+    .service-card h3,
+    .panel-card h3 {
+      margin: 0 0 8px;
+      font-size: 22px;
+    }
+
+    .tool-card p,
+    .service-card p,
+    .panel-card p {
+      color: var(--muted);
+      margin: 0 0 18px;
+    }
+
+    .process-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .process-item {
+      padding: 14px;
+      border-radius: 16px;
+      background: rgba(15, 23, 42, 0.78);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--muted-2);
+    }
+
+    .process-item strong {
+      color: var(--text);
+    }
+
+    .footer {
+      padding: 34px 0 46px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .tool-grid,
+      .services-grid,
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .hero {
+        padding: 52px 0 28px;
+      }
+
+      .preview-card,
+      .tool-card,
+      .service-card,
+      .panel-card,
+      .stat-card {
+        padding: 20px;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="#home" class="brand">
+        <span class="brand-mark">↗</span>
+        <span>Ed Umbao</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#tools">Tools</a>
+        <a href="#services">Services</a>
+        <a href="#proof">Proof</a>
+        <a href="#process">Process</a>
+        <a href="#contact" class="nav-cta">Work with me</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">SEO Consultant & SaaS Copywriter</div>
+
+          <h1>I build content systems that rank, convert, and support SaaS growth.</h1>
+
+          <p class="hero-text">
+            I help lean SaaS and B2B teams turn search demand, product knowledge, and customer pain points
+            into clear SEO content, landing page copy, and repeatable editorial workflows.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#tools" class="btn btn-primary">Use free tools</a>
+            <a href="#contact" class="btn btn-secondary">Work with me</a>
+          </div>
+
+          <div class="trust-row">
+            <span class="trust-pill">15 years in SEO</span>
+            <span class="trust-pill">SaaS & B2B content</span>
+            <span class="trust-pill">Content team leadership</span>
+          </div>
+        </div>
+
+        <div class="preview-card">
+          <div class="preview-top">
+            <div class="window-dots">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+            <span class="score-badge">Growth system</span>
+          </div>
+
+          <div class="mock-line"><span style="width: 92%;"></span></div>
+          <div class="mock-line"><span style="width: 78%;"></span></div>
+          <div class="mock-line"><span style="width: 64%;"></span></div>
+
+          <div class="mock-list">
+            <div class="mock-item">
+              <div class="mock-icon">1</div>
+              <div>
+                <strong>Find search opportunities</strong>
+                <p>Use real queries, buyer pain points, and product use cases to shape the content plan.</p>
+              </div>
+            </div>
+
+            <div class="mock-item">
+              <div class="mock-icon">2</div>
+              <div>
+                <strong>Build answer-based content</strong>
+                <p>Turn questions into clear articles, briefs, landing pages, and internal link paths.</p>
+              </div>
+            </div>
+
+            <div class="mock-item">
+              <div class="mock-icon">3</div>
+              <div>
+                <strong>Improve with workflows</strong>
+                <p>Create repeatable systems the content team can use without slowing down execution.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="proof" class="section">
+      <div class="container">
+        <h2 class="section-title">Built for lean SaaS teams that need content to do more than publish.</h2>
+        <p class="section-subtitle">
+          My work sits at the intersection of SEO strategy, copywriting, technical content, and practical execution.
+        </p>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">15+</div>
+            <p>Years of SEO experience across news websites, personal brands, SaaS, and B2B companies.</p>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-number">550K+</div>
+            <p>Users generated in two years with a lean SaaS team of 15 people.</p>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-number">2</div>
+            <p>Free tools already published to support SEO planning and conversion-focused copywriting.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tools" class="section">
+      <div class="container">
+        <h2 class="section-title">Free SEO & Copywriting Tools</h2>
+        <p class="section-subtitle">
+          I build simple tools to improve my work as a copywriter and SEO specialist for SaaS companies.
+          These tools help turn messy ideas into clearer content workflows.
+        </p>
+
+        <div class="tool-grid">
+          <div class="tool-card">
+            <div class="card-icon">⌕</div>
+            <h3>Answer-Based SEO Article Planner</h3>
+            <p>
+              Turn a search question into a structured article planning prompt with audience,
+              angle, example, and CTA.
+            </p>
+            <a class="btn btn-primary" href="https://edumbao.github.io/answer-based-seo-planner/" target="_blank" rel="noopener">
+              Open SEO Planner
+            </a>
+          </div>
+
+          <div class="tool-card">
+            <div class="card-icon">✦</div>
+            <h3>Benefit Headline Creator</h3>
+            <p>
+              Rewrite vague website headlines into clear action-benefit headlines that explain
+              what visitors do and what they get.
+            </p>
+            <a class="btn btn-primary" href="https://edumbao.github.io/benefit-headline-creator/" target="_blank" rel="noopener">
+              Open Headline Creator
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <h2 class="section-title">How I can help</h2>
+        <p class="section-subtitle">
+          I help SaaS and B2B companies build content systems that connect SEO, copywriting, product use cases,
+          and business goals.
+        </p>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="card-icon">01</div>
+            <h3>SEO Content Strategy</h3>
+            <p>
+              Content plans built around search intent, topic clusters, internal links, and pages that support growth.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="card-icon">02</div>
+            <h3>SaaS Copywriting</h3>
+            <p>
+              Landing page copy, benefit-led messaging, and product explanations that make complex offers easier to understand.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="card-icon">03</div>
+            <h3>Editorial Workflows</h3>
+            <p>
+              Repeatable briefs, checklists, and review systems that help small content teams publish with more consistency.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="section">
+      <div class="container">
+        <div class="panel-card">
+          <h2 class="section-title">My working process</h2>
+          <p class="section-subtitle">
+            I do not treat SEO content as random blog publishing. I build it as a system.
+          </p>
+
+          <div class="process-list">
+            <div class="process-item">
+              <strong>1. Start with real demand.</strong> Use Google Search Console, customer questions, ICP pain points, and product use cases to choose content topics.
+            </div>
+
+            <div class="process-item">
+              <strong>2. Turn questions into structure.</strong> Build articles around direct answers, useful H2s, practical examples, and internal link paths.
+            </div>
+
+            <div class="process-item">
+              <strong>3. Write for clarity and conversion.</strong> Make the page easy to understand, beginner-friendly, and connected to the next useful action.
+            </div>
+
+            <div class="process-item">
+              <strong>4. Improve with repeatable workflows.</strong> Use templates, checklists, and review systems so the team can move faster without lowering quality.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="panel-card">
+          <h2 class="section-title">Need help building SEO content systems for a SaaS or B2B website?</h2>
+          <p class="section-subtitle">
+            I am building this website as a home for my SEO work, copywriting projects, free tools, and content systems.
+            Connect with me while the full site is being prepared.
+          </p>
+
+          <div class="hero-actions">
+            <a href="https://www.linkedin.com/in/ed-umbao/" class="btn btn-primary" target="_blank" rel="noopener">
+              Connect on LinkedIn
+            </a>
+            <a href="https://edumbao.github.io/answer-based-seo-planner/" class="btn btn-secondary" target="_blank" rel="noopener">
+              Try the SEO Planner
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        Copyright © 2026 Ed Umbao. All rights reserved.
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
