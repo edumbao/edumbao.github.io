@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Free SEO Content Strategy Planner by Ed Umbao</title>
+  <meta name="description" content="Download the free SEO Content Strategy Planner by Ed Umbao to plan content pillars, long-tail keywords, search intent, CTAs, and publishing progress." />
+
+  <style>
+    :root {
+      --bg: #070b16;
+      --soft-bg: #0b1020;
+      --panel: #111827;
+      --panel-2: #151f33;
+      --border: #24324a;
+      --text: #e0efff;
+      --muted: #c4d1e4;
+      --muted-2: #9fb0c7;
+      --blue: #3b82f6;
+      --green: #22c55e;
+      --cyan: #06d6a0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 64px 24px;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 72px;
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .nav-link {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--panel-2);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 14px;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 5vw, 64px);
+      line-height: 1.05;
+      margin: 0 0 22px;
+      letter-spacing: -1.4px;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      color: var(--muted);
+      max-width: 720px;
+      margin-bottom: 32px;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--blue);
+      color: #ffffff;
+      padding: 15px 22px;
+      border-radius: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 12px 28px rgba(59, 130, 246, 0.28);
+    }
+
+    .button-secondary {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .mini-note {
+      color: var(--muted-2);
+      font-size: 14px;
+      margin-top: 14px;
+    }
+
+    .preview-card {
+      background: linear-gradient(180deg, var(--panel), var(--soft-bg));
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: 0 18px 60px rgba(0, 0, 0, 0.28);
+    }
+
+    .sheet-preview {
+      background: #ffffff;
+      color: #111827;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid #d9e2ef;
+    }
+
+    .sheet-title {
+      background: var(--bg);
+      color: var(--text);
+      padding: 13px;
+      font-weight: 700;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .sheet-header,
+    .sheet-row {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 0.9fr;
+    }
+
+    .sheet-header div {
+      background: var(--blue);
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 10px;
+      border-right: 1px solid #d9e2ef;
+    }
+
+    .sheet-row div {
+      font-size: 12px;
+      padding: 11px 10px;
+      border-top: 1px solid #e5e7eb;
+      border-right: 1px solid #e5e7eb;
+    }
+
+    section {
+      margin-top: 72px;
+    }
+
+    .section-title {
+      font-size: 34px;
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 760px;
+      font-size: 18px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .final-cta {
+      background: linear-gradient(135deg, var(--panel), var(--panel-2));
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 36px;
+      text-align: center;
+    }
+
+    .final-cta p {
+      color: var(--muted);
+      max-width: 660px;
+      margin: 0 auto 24px;
+      font-size: 18px;
+    }
+
+    footer {
+      margin-top: 64px;
+      color: var(--muted-2);
+      font-size: 14px;
+      text-align: center;
+    }
+
+    footer a {
+      color: var(--blue);
+    }
+
+    @media (max-width: 820px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        margin-bottom: 40px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <nav class="nav">
+      <a class="brand" href="https://edumbao.com/">Ed Umbao</a>
+      <a class="nav-link" href="https://edumbao.com/">Back to edumbao.com</a>
+    </nav>
+
+    <section class="hero">
+      <div>
+        <span class="badge">Free Google Sheets Template</span>
+
+        <h1>Free SEO Content Strategy Planner</h1>
+
+        <p class="subtitle">
+          Plan your content pillars, long-tail keywords, search intent, expertise angles, CTAs, and publishing progress in one simple Google Sheets planner.
+        </p>
+
+        <div class="cta-row">
+          <a class="button" href="https://philnews.gumroad.com/l/free-seo-content-strategy-planner">
+            Get the Free Planner
+          </a>
+          <a class="button-secondary" href="#whats-inside">
+            See what’s included
+          </a>
+        </div>
+
+        <p class="mini-note">
+          Free download via Gumroad. You’ll enter your email to get access.
+        </p>
+      </div>
+
+      <div class="preview-card">
+        <div class="sheet-preview">
+          <div class="sheet-title">SEO Content Planner Template</div>
+          <div class="sheet-header">
+            <div>Content Idea</div>
+            <div>Keyword</div>
+            <div>Intent</div>
+          </div>
+          <div class="sheet-row">
+            <div>How to Build a Content Strategy</div>
+            <div>content strategy planner</div>
+            <div>Informational</div>
+          </div>
+          <div class="sheet-row">
+            <div>SEO for Consultants</div>
+            <div>SEO for consultants</div>
+            <div>Commercial</div>
+          </div>
+          <div class="sheet-row">
+            <div>AI Content Workflow</div>
+            <div>AI content workflow</div>
+            <div>Commercial</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="whats-inside">
+      <h2 class="section-title">What’s inside the planner</h2>
+      <p class="section-intro">
+        This planner helps you move from scattered content ideas to a clear SEO-driven content strategy.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Content Planner Template</h3>
+          <p>Organize your content ideas, keywords, search intent, expertise angle, CTA, notes, and status.</p>
+        </div>
+
+        <div class="card">
+          <h3>Search Intent Guide</h3>
+          <p>Understand whether your content should educate, compare, build trust, or convert readers.</p>
+        </div>
+
+        <div class="card">
+          <h3>Progress Tracker</h3>
+          <p>Track what has started, what is currently in progress, and what is done.</p>
+        </div>
+
+        <div class="card">
+          <h3>Example Tab</h3>
+          <p>See what a completed planning row looks like before filling out your own template.</p>
+        </div>
+
+        <div class="card">
+          <h3>AI Planning Prompts</h3>
+          <p>Use guided prompts to brainstorm content pillars, long-tail keywords, CTAs, and story angles.</p>
+        </div>
+
+        <div class="card">
+          <h3>How-to Checklist</h3>
+          <p>Follow a simple workflow for planning and organizing SEO content without overcomplicating it.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="final-cta">
+        <h2 class="section-title">Build a clearer content strategy</h2>
+        <p>
+          Download the free planner and start mapping content that can rank, build trust, and support your business goals.
+        </p>
+
+        <a class="button" href="PASTE_YOUR_GUMROAD_PRODUCT_LINK_HERE">
+          Get the Free Planner
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      Created by <a href="https://edumbao.com/">Ed Umbao</a> · Free SEO Content Strategy Planner
+    </footer>
+  </main>
+</body>
+</html>
