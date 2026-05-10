@@ -513,6 +513,50 @@
   color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.45);
 }
+  .hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 28px;
+}
+
+.hero-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 22px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.hero-actions .btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Green gradient for Use free tools */
+.hero-actions .btn-green {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #ffffff;
+  border: 1px solid transparent;
+}
+
+/* White button for Get Free SEO Planner */
+.hero-actions .btn-white {
+  background: #ffffff;
+  color: #0f172a;
+  border: 1px solid #ffffff;
+}
+
+/* Outline button for Work with me */
+.hero-actions .btn-outline {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
   </style>
 </head>
 
@@ -548,13 +592,15 @@
           </p>
 
           <div class="hero-actions">
-            <a href="#tools" class="hero-button">Use free tools</a>
-
-            <a href="/free-seo-content-strategy-planner/" class="hero-button">
-              Get the Free SEO Planner
+            <a href="#tools" class="btn btn-green">
+              Use Free tools
             </a>
 
-            <a href="#contact" class="hero-button hero-button-secondary">
+            <a href="/free-seo-content-strategy-planner/" class="btn btn-white">
+              Get a Free SEO planner
+            </a>
+
+            <a href="#contact" class="btn btn-outline">
               Work with me
             </a>
           </div>
