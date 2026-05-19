@@ -563,7 +563,88 @@
   color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.5);
 }
+/* Hero share buttons */
+.share-widget {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 0 0 22px;
+}
 
+.share-label {
+  color: var(--muted-2);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.share-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 40px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(17, 24, 39, 0.82);
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.15s ease, opacity 0.15s ease, border 0.15s ease;
+}
+
+.share-btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.94;
+}
+
+.share-btn svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.share-btn.copy {
+  color: #dcfce7;
+  border-color: rgba(34, 197, 94, 0.35);
+}
+
+.share-btn.embed {
+  color: #e9d5ff;
+  border-color: rgba(139, 92, 246, 0.35);
+}
+
+.share-btn.facebook {
+  color: #dbeafe;
+  border-color: rgba(59, 130, 246, 0.35);
+}
+
+.share-btn.more {
+  color: #cffafe;
+  border-color: rgba(6, 182, 212, 0.35);
+}
+
+.share-message {
+  color: #9ff0be;
+  font-size: 13px;
+  min-height: 18px;
+}
+
+@media (max-width: 620px) {
+  .share-widget {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
   </style>
 </head>
 
@@ -611,7 +692,48 @@
               Work with me
             </a>
           </div>
+          <div class="share-widget" aria-label="Share this page">
+  <span class="share-label">Share this</span>
 
+  <div class="share-buttons">
+    <button type="button" class="share-btn copy" id="copyPageLink">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M3.9 12c0-1.71.69-3.31 1.9-4.52l2.12-2.12a6.39 6.39 0 0 1 9.03 0 1 1 0 0 1-1.41 1.41 4.39 4.39 0 0 0-6.2 0L7.22 8.9a4.39 4.39 0 0 0 0 6.2 1 1 0 0 1-1.41 1.41A6.35 6.35 0 0 1 3.9 12Zm6.34 2.83a1 1 0 0 1 0-1.41l3.18-3.18a1 1 0 1 1 1.41 1.41l-3.18 3.18a1 1 0 0 1-1.41 0Zm-1.78 2.4a4.39 4.39 0 0 0 6.2 0l2.12-2.13a4.39 4.39 0 0 0 0-6.2 1 1 0 0 1 1.41-1.41 6.39 6.39 0 0 1 0 9.03l-2.12 2.12a6.39 6.39 0 0 1-9.03 0 1 1 0 0 1 1.41-1.41Z"/>
+      </svg>
+      Copy Link
+    </button>
+
+    <button type="button" class="share-btn embed" id="copyEmbedCode">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M8.7 16.3a1 1 0 0 1-1.4 1.4l-5-5a1 1 0 0 1 0-1.4l5-5a1 1 0 1 1 1.4 1.4L4.42 12l4.28 4.3Zm6.6 0L19.58 12 15.3 7.7a1 1 0 1 1 1.4-1.4l5 5a1 1 0 0 1 0 1.4l-5 5a1 1 0 0 1-1.4-1.4Z"/>
+      </svg>
+      Embed
+    </button>
+
+    <a class="share-btn x" id="shareOnX" href="#" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3l-4.9-6.5L6.3 22H3.2l7.3-8.4L2.8 2h6.4l4.5 6 5.2-6Zm-1.1 17.8h1.7L8.3 4.1H6.5l11.3 15.7Z"/>
+      </svg>
+      X
+    </a>
+
+    <a class="share-btn facebook" id="shareOnFacebook" href="#" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M22 12.06C22 6.48 17.52 2 11.94 2S2 6.48 2 12.06c0 5.04 3.69 9.22 8.52 9.98v-7.06H8v-2.92h2.52V9.84c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.23.19 2.23.19v2.45h-1.26c-1.24 0-1.63.77-1.63 1.56v1.9h2.78l-.44 2.92h-2.34v7.06C18.31 21.28 22 17.1 22 12.06Z"/>
+      </svg>
+      Facebook
+    </a>
+
+    <button type="button" class="share-btn more" id="shareMore">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M18 8a3 3 0 1 0-2.83-4H15a3 3 0 0 0 .17 1L8.91 8.58A3 3 0 1 0 9 15.42L15.17 19A3 3 0 1 0 16 17.27l-6.17-3.58a3.14 3.14 0 0 0 0-3.38L16 6.73A2.99 2.99 0 0 0 18 8Z"/>
+      </svg>
+      More
+    </button>
+  </div>
+
+  <span class="share-message" id="shareMessage" role="status" aria-live="polite"></span>
+</div>
           <div class="trust-row">
             <span class="trust-pill">15 years in SEO</span>
             <span class="trust-pill">SaaS & B2B content</span>
@@ -841,5 +963,111 @@
       </div>
     </footer>
   </main>
+<script>
+  (function () {
+    function getShareUrl() {
+      const canonical = document.querySelector('link[rel="canonical"]');
+      return canonical ? canonical.href : window.location.href.split('#')[0];
+    }
+
+    function showMessage(message) {
+      const messageBox = document.getElementById('shareMessage');
+      if (!messageBox) return;
+
+      messageBox.textContent = message;
+
+      window.clearTimeout(window.shareMessageTimer);
+      window.shareMessageTimer = window.setTimeout(function () {
+        messageBox.textContent = '';
+      }, 2500);
+    }
+
+    async function copyText(text, successMessage) {
+      try {
+        await navigator.clipboard.writeText(text);
+        showMessage(successMessage);
+      } catch (error) {
+        const textArea = document.createElement('textarea');
+        textArea.value = text;
+        textArea.setAttribute('readonly', '');
+        textArea.style.position = 'absolute';
+        textArea.style.left = '-9999px';
+        document.body.appendChild(textArea);
+        textArea.select();
+
+        try {
+          document.execCommand('copy');
+          showMessage(successMessage);
+        } catch (copyError) {
+          showMessage('Copy failed. Please copy manually.');
+        }
+
+        document.body.removeChild(textArea);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const pageUrl = getShareUrl();
+      const pageTitle = document.title || 'Ed Umbao';
+
+      const xLink = document.getElementById('shareOnX');
+      const facebookLink = document.getElementById('shareOnFacebook');
+      const copyLinkButton = document.getElementById('copyPageLink');
+      const embedButton = document.getElementById('copyEmbedCode');
+      const moreButton = document.getElementById('shareMore');
+
+      if (xLink) {
+        xLink.href =
+          'https://twitter.com/intent/tweet?url=' +
+          encodeURIComponent(pageUrl) +
+          '&text=' +
+          encodeURIComponent(pageTitle);
+      }
+
+      if (facebookLink) {
+        facebookLink.href =
+          'https://www.facebook.com/sharer/sharer.php?u=' +
+          encodeURIComponent(pageUrl);
+      }
+
+      if (copyLinkButton) {
+        copyLinkButton.addEventListener('click', function () {
+          copyText(pageUrl, 'Link copied.');
+        });
+      }
+
+      if (embedButton) {
+        embedButton.addEventListener('click', function () {
+          const embedCode =
+            '<iframe src="' +
+            pageUrl +
+            '" title="' +
+            pageTitle.replace(/"/g, '&quot;') +
+            '" width="100%" height="600" style="border:0;" loading="lazy"></iframe>';
+
+          copyText(embedCode, 'Embed code copied.');
+        });
+      }
+
+      if (moreButton) {
+        moreButton.addEventListener('click', async function () {
+          if (navigator.share) {
+            try {
+              await navigator.share({
+                title: pageTitle,
+                text: 'Check this out:',
+                url: pageUrl
+              });
+            } catch (error) {
+              // User cancelled share dialog.
+            }
+          } else {
+            copyText(pageUrl, 'Sharing is not supported here. Link copied instead.');
+          }
+        });
+      }
+    });
+  })();
+</script>
 </body>
 </html>
