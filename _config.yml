@@ -4,4 +4,3 @@ url: "https://edumbao.com"
 baseurl: ""
 permalink: /:title/
 markdown: kramdown
-theme: minima
