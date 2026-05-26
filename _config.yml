@@ -1,0 +1,7 @@
+title: Ed Umbao's Blog
+description: Insights on SEO and B2B SaaS.
+url: "https://edumbao.com"
+baseurl: ""
+permalink: /:title/
+markdown: kramdown
+theme: minima
