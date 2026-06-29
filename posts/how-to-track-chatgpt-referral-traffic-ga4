@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Track ChatGPT Referral Traffic in GA4 | Ed Umbao</title>
+    <meta name="description" content="Learn how to isolate and analyze traffic coming from ChatGPT to your website using GA4 acquisition reports.">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <header class="nav">
+        <div class="nav-inner">
+          <a href="../index.html" class="brand">
+            <span class="brand-mark">↗</span>
+            <span>Ed Umbao</span>
+          </a>
+    
+          <nav class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="../blog.html">Blog</a>
+            <a href="../index.html#tools">Tools</a>
+            <a href="../index.html#services">Services</a>
+            <a href="../index.html#proof">Proof</a>
+            <a href="../index.html#process">Process</a>
+            <a href="../index.html#contact" class="nav-cta">Work with me</a>
+          </nav>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 60px 20px;">
+        <article>
+            <h1 class="section-title">How to Track ChatGPT Referral Traffic in GA4</h1>
+            <p style="color: var(--muted); margin-bottom: 30px;">Published on June 29, 2026</p>
+            
+            <div style="color: var(--text); font-size: 1.1rem; line-height: 1.8;">
+                <p>Many business owners are focused on traditional search engine rankings, yet they are missing a growing volume of visitors arriving through conversational tools like ChatGPT. This traffic is often overlooked because it does not appear in standard reports, but it represents a crucial shift in how people find information.</p>
+
+                <p>If you want to understand which of your web pages are truly providing value, you must track these referrals specifically. Below is a simple process to identify exactly which pages AI platforms are citing as reliable sources.</p>
+
+                <h2>The GA4 Discovery Workflow</h2>
+                <p>You can isolate ChatGPT traffic within Google Analytics 4 by applying specific filters to your existing reports.</p>
+                <ul>
+                    <li><strong>Navigate to Reports:</strong> Log into your GA4 account and go to Reports > Acquisition > Traffic acquisition.</li>
+                    <li><strong>Adjust the Dimension:</strong> Click the dropdown arrow next to the primary table header and change the view to Session source / medium.</li>
+                    <li><strong>Search for AI Sources:</strong> Use the search bar directly above the table to type chatgpt.com. This will filter the results to show sessions originating from that domain.</li>
+                </ul>
+
+                <h3>Analyze Page-Level Engagement</h3>
+                <p>Once you have isolated the source, switch to the Engagement tab in the sidebar and select Pages and screens:</p>
+                <ol>
+                    <li>Click the + Add filter button at the top of the report.</li>
+                    <li>Set the dimension to Session source and the value to chatgpt.com.</li>
+                    <li>Click Apply.</li>
+                </ol>
+                <p>This report now displays the exact pages on your website that are receiving traffic from ChatGPT. These pages are the assets that the model has determined are relevant enough to recommend to its users.</p>
+
+                <h2>Strategy: Improving Your Cited Pages</h2>
+                <p>Once you have identified these high-performing pages, use them to guide your future content planning:</p>
+                <ul>
+                    <li><strong>Audit for Clarity:</strong> If ChatGPT is consistently citing a specific page, look at its structure. Determine if the clarity of your information or the specific data provided is what makes it stand out.</li>
+                    <li><strong>Prioritize Important Data:</strong> AI models often rely on information placed early in a document. Ensure your most relevant answers appear near the top of your pages to increase the likelihood of being referenced.</li>
+                    <li><strong>Build Content Clusters:</strong> Use the topics from these cited pages to develop supporting articles. If a model trusts your content on one subject, it is more likely to trust your expertise on related topics.</li>
+                    <li><strong>Monitor Performance:</strong> Check this report regularly. If the traffic to your cited pages decreases, it may mean a competitor has provided a more concise or up-to-date answer that the model is now choosing to prioritize.</li>
+                </ul>
+
+                <h2>Tracking Unlabeled Traffic</h2>
+                <p>Keep in mind that this method only captures traffic that passes a referrer header. Some platforms remove this data, meaning some of your visitors will appear as Direct traffic. To get a broader view, you can create a custom channel group in your GA4 Admin settings that includes multiple AI domains. This allows you to group all AI-sourced traffic into one segment, giving you a clearer picture of your total visibility.</p>
+            </div>
+        </article>
+    </main>
+
+</body>
+</html>
