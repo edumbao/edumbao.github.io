@@ -460,31 +460,80 @@
       font-size: 14px;
     }
 
-    @media (max-width: 900px) {
-      .hero-grid,
-      .tool-grid,
-      .services-grid,
-      .stats-grid {
-      grid-template-columns: 1fr;
-    }
+   .menu-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  background: rgba(17, 24, 39, 0.82);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
 
-    .nav-inner {
-      flex-direction: column;
-      align-items: flex-start;
-    }
+.menu-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--text);
+}
 
-    .nav-links {
-      display: flex;
-      width: 100%;
-      overflow-x: auto;
-      gap: 12px;
-      padding-bottom: 6px;
-    }
-
-    .nav-links a {
-      white-space: nowrap;
-    }
+@media (max-width: 900px) {
+  .hero-grid,
+  .tool-grid,
+  .services-grid,
+  .stats-grid {
+    grid-template-columns: 1fr;
   }
+
+  .nav-inner {
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+    margin-left: auto;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 20px;
+    right: 20px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding: 14px;
+    border-radius: 18px;
+    background: rgba(7, 11, 22, 0.96);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    box-shadow: 0 20px 52px var(--shadow);
+  }
+
+  .nav-links.nav-open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 10px 12px;
+    border-radius: 12px;
+  }
+
+  .nav-links a:hover {
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  .nav-cta {
+    text-align: center;
+  }
+}
 
     @media (max-width: 620px) {
       .hero {
@@ -663,22 +712,28 @@
 
 <body>
   <header class="nav">
-    <div class="nav-inner">
-      <a href="/index.html" class="brand">
-        <span class="brand-mark">↗</span>
-        <span>Ed Umbao</span>
-      </a>
+  <div class="nav-inner">
+    <a href="/index.html" class="brand">
+      <span class="brand-mark">↗</span>
+      <span>Ed Umbao</span>
+    </a>
 
-      <nav class="nav-links">
-        <a href="/index.html">Home</a>
-        <a href="/blog.html">Blog</a>
-        <a href="/index.html#tools">Tools</a>
-        <a href="/index.html#services">Services</a>
-        <a href="/index.html#proof">Proof</a>
-        <a href="/index.html#process">Process</a>
-        <a href="/index.html#contact" class="nav-cta">Work with me</a>
-      </nav>
-    </div>
+    <button class="menu-toggle" aria-label="Open menu" aria-controls="site-menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav-links" id="site-menu">
+      <a href="/index.html">Home</a>
+      <a href="/blog.html">Blog</a>
+      <a href="/index.html#tools">Tools</a>
+      <a href="/index.html#services">Services</a>
+      <a href="/index.html#proof">Proof</a>
+      <a href="/index.html#process">Process</a>
+      <a href="/index.html#contact" class="nav-cta">Work with me</a>
+    </nav>
+  </div>
 </header>
 
   <main>
