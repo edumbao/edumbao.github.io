@@ -10,22 +10,28 @@
 
     <!-- ADD THE NEW HEADER HERE -->
     <header class="nav">
-        <div class="nav-inner">
-          <a href="/index.html" class="brand">
-            <span class="brand-mark">↗</span>
-            <span>Ed Umbao</span>
-          </a>
-    
-          <nav class="nav-links">
-            <a href="/index.html">Home</a>
-            <a href="/blog.html">Blog</a>
-            <a href="/index.html#tools">Tools</a>
-            <a href="/index.html#services">Services</a>
-            <a href="/index.html#proof">Proof</a>
-            <a href="/index.html#process">Process</a>
-            <a href="/index.html#contact" class="nav-cta">Work with me</a>
-          </nav>
-        </div>
+      <div class="nav-inner">
+        <a href="/index.html" class="brand">
+          <span class="brand-mark">↗</span>
+          <span>Ed Umbao</span>
+        </a>
+
+        <button class="menu-toggle" aria-label="Open menu" aria-controls="site-menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="nav-links" id="site-menu">
+          <a href="/index.html">Home</a>
+          <a href="/blog.html">Blog</a>
+          <a href="/index.html#tools">Tools</a>
+          <a href="/index.html#services">Services</a>
+          <a href="/index.html#proof">Proof</a>
+          <a href="/index.html#process">Process</a>
+          <a href="/index.html#contact" class="nav-cta">Work with me</a>
+        </nav>
+      </div>
     </header>
     
     <main class="container">
@@ -101,6 +107,27 @@
     </div>
   </section>
 </main>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const menuButton = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (!menuButton || !navLinks) return;
+
+    menuButton.addEventListener('click', function () {
+      const isOpen = navLinks.classList.toggle('nav-open');
+      menuButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    navLinks.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        navLinks.classList.remove('nav-open');
+        menuButton.setAttribute('aria-expanded', 'false');
+      });
+    });
+  });
+</script>
 
 </body>
 </html>
