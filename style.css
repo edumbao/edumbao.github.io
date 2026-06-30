@@ -578,18 +578,6 @@
       }
     }
 
-@media (max-width: 900px) {
-  .nav-links {
-    display: flex !important;
-    width: 100%;
-    overflow-x: auto;
-    gap: 12px;
-    padding-bottom: 6px;
-  }
-
-  .nav-links a {
-    white-space: nowrap;
-  }
 
   .nav-inner {
     flex-direction: column;
