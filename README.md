@@ -9,6 +9,8 @@ I am **Ed Umbao**, a professional copywriter, technical writer, and SEO strategi
 * **Automation & Development:** Proficient in building web directories and lead generation workflows using Python, n8n, and Apify.
 
 ## Current Projects
+* **[Targetron.com](https://targetron.com):** A B2B local leads directory and B2B Lead Generation Database.
+* **[Outscraper.com](https://outscraper.com):** A Business Data and Enrichment Platform.
 * **[BantayanVibes.com](https://bantayanvibes.com):** A travel and tourism blog project for my hometown.
 * **Technical Portfolio:** Developing a portfolio using Lovable AI and syncing to GitHub to showcase technical content and automation projects.
 * **E-book Author:** Creator of *"5 Ready-to-Launch AI Side Hustles"* (available on Gumroad).
