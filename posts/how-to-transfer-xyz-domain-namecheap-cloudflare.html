@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Transfer a .xyz Domain from Namecheap to Cloudflare (Hosted on Blogger) | Ed Umbao</title>
+    <meta name="description" content="Learn how to transfer your .xyz domain from Namecheap to Cloudflare without downtime or SSL issues for your Google Blogger site, plus get a free 1-year registration extension.">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <header class="nav">
+        <div class="nav-inner">
+          <a href="/index.html" class="brand">
+            <span class="brand-mark">↗</span>
+            <span>Ed Umbao</span>
+          </a>
+
+          <nav class="nav-links">
+            <a href="/index.html">Home</a>
+            <a href="/blog.html">Blog</a>
+            <a href="/index.html#tools">Tools</a>
+            <a href="/index.html#services">Services</a>
+            <a href="/index.html#proof">Proof</a>
+            <a href="/index.html#process">Process</a>
+            <a href="/index.html#contact" class="nav-cta">Work with me</a>
+          </nav>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 60px 20px;">
+        <article>
+            <h1 class="section-title">How to Transfer a .xyz Domain from Namecheap to Cloudflare (Hosted on Blogger)</h1>
+            <p style="color: var(--muted); margin-bottom: 30px;">Published on August 9, 2026</p>
+            
+            <div style="color: var(--text); font-size: 1.1rem; line-height: 1.8;">
+                
+                <p>Transferring your domain to Cloudflare Registrar allows you to manage your DNS and domain registration at cost without markups. If your site is hosted on Google Blogger, following the correct setup ensures zero downtime and prevents SSL configuration issues.</p>
+
+                <div style="background: var(--bg-secondary); padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid var(--accent, #2563eb);">
+                    <p style="margin: 0; font-size: 1rem;"><strong>Note:</strong> When you transfer a domain to Cloudflare, you do not lose any remaining time on your existing registration. Cloudflare automatically extends your domain registration by <strong>one full year</strong> as part of the transfer process.</p>
+                </div>
+
+                <h2>Step 1: Add the Domain to Cloudflare & Update Nameservers</h2>
+                <ol>
+                    <li>Log in to your <strong>Cloudflare</strong> account and click <strong>Add a site</strong>.</li>
+                    <li>Select the <strong>Free Plan</strong> and allow Cloudflare to scan your existing DNS records.</li>
+                    <li>Note the <strong>two Cloudflare nameservers</strong> assigned to your account.</li>
+                    <li>Log in to <strong>Namecheap</strong>:
+                        <ul>
+                            <li>Navigate to <strong>Domain List</strong> &rarr; <strong>Manage</strong> next to your domain.</li>
+                            <li>Under <strong>Nameservers</strong>, change the selection to <strong>Custom DNS</strong>.</li>
+                            <li>Enter the two Cloudflare nameservers and click the <strong>green checkmark</strong> to save.</li>
+                        </ul>
+                    </li>
+                </ol>
+                <p style="font-size: 0.95rem; color: var(--muted);"><em>*Note: DNS changes typically propagate globally within 5 to 15 minutes.</em></p>
+
+                <h2>Step 2: Configure Blogger DNS Records (Avoid SSL Conflicts)</h2>
+                <p>Because Google Blogger manages its own free SSL certificates, routing web traffic through Cloudflare’s proxy during setup can cause connection errors.</p>
+                <ol>
+                    <li>Inside Cloudflare, navigate to <strong>DNS</strong> &rarr; <strong>Records</strong>.</li>
+                    <li>Locate the <strong>4 A Records</strong> (pointing to Google's IPs) and the 1 CNAME Record (<code>www</code> pointing to <code>ghs.google.com</code>).</li>
+                    <li>Edit each of these 5 records and toggle the <strong>Proxy Status</strong> from <strong>Proxied (Orange Cloud)</strong> to <strong>DNS Only (Grey Cloud)</strong>.</li>
+                    <li>Leave all email-related records (MX, TXT, DKIM, DMARC) untouched.</li>
+                </ol>
+
+                <h2>Step 3: Unlock the Domain & Get the Auth Code from Namecheap</h2>
+                <ol>
+                    <li>In Namecheap, go to <strong>Domain List</strong> &rarr; <strong>Manage</strong> &rarr; <strong>Sharing & Transfer</strong>.</li>
+                    <li>Ensure <strong>Domain Lock</strong> is toggled to <strong>OFF</strong>.</li>
+                    <li>Verify that your <strong>Registrant Contact Email</strong> is up to date and accessible. 
+                        <br><em style="font-size: 0.95rem; color: var(--muted);">(Caution: If updating your email address, make sure to <strong>opt out</strong> of the optional 60-day transfer lock prompt).</em>
+                    </li>
+                    <li>Click <strong>Auth Code</strong>, select a transfer reason, and submit to request your transfer authorization code via email.</li>
+                </ol>
+
+                <h2>Step 4: Initiate Transfer in Cloudflare & Add 1-Year Registration</h2>
+                <ol>
+                    <li>Once Cloudflare displays your domain status as <strong>Active</strong>, go to <strong>Domains</strong> &rarr; <strong>Transfers</strong> in the Cloudflare sidebar.</li>
+                    <li>Select your domain under <strong>Ready for Transfer</strong> and click <strong>Continue</strong>.</li>
+                    <li>Paste your <strong>Auth Code</strong> into the field.</li>
+                    <li>Confirm your contact details and complete the checkout payment. This transaction pays for the transfer and <strong>adds one full year to your domain's expiration date</strong> at wholesale pricing.</li>
+                </ol>
+
+                <h2>Step 5: Fast-Track the Transfer Approval</h2>
+                <p>By default, domain registrars hold outbound transfers for up to 5 days. You can bypass this wait time immediately:</p>
+                <ol>
+                    <li>Wait 10 to 15 minutes after submitting payment in Cloudflare.</li>
+                    <li>Check the email inbox associated with your <strong>Namecheap</strong> account for an email titled <strong>"Standardized Form of Authorization for Transferring Out"</strong>.</li>
+                    <li>Open the link inside the email and click <strong>Approve Transfer</strong>.</li>
+                </ol>
+                <p>Once approved, Namecheap immediately releases the domain, and Cloudflare finalizes the migration within minutes while keeping your Blogger site online throughout the entire process.</p>
+
+                <p style="margin-top: 40px; font-weight: bold; border-top: 1px solid var(--border); padding-top: 20px;">
+                    Have you transferred your domains to Cloudflare yet? 
+                    <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+                        Drop a comment on my LinkedIn post</a> and let's discuss your setup.
+                </p>
+            </div>
+        </article>
+    </main>
+
+</body>
+</html>
