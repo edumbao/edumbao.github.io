@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>What Does an SEO Score Really Tell You? Why I Built SEO Battle | Ed Umbao</title>
+
+    <meta name="description" content="What does an SEO score really tell you? I built SEO Battle to track homepage SEO health, score history, improvement, and head-to-head website comparisons.">
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <header class="nav">
+        <div class="nav-inner">
+
+            <a href="/index.html" class="brand">
+                <span class="brand-mark">↗</span>
+                <span>Ed Umbao</span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="/index.html">Home</a>
+                <a href="/blog.html">Blog</a>
+                <a href="/index.html#tools">Tools</a>
+                <a href="/index.html#services">Services</a>
+                <a href="/index.html#proof">Proof</a>
+                <a href="/index.html#process">Process</a>
+                <a href="/index.html#contact" class="nav-cta">Work with me</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main class="container" style="padding: 60px 20px;">
+
+        <article>
+
+            <h1 class="section-title">
+                What Does an SEO Score Really Tell You? Why I Built SEO Battle
+            </h1>
+
+            <p style="color: var(--muted); margin-bottom: 30px;">
+                Published on August 31, 2026
+            </p>
+          
+            <!-- Featured Image -->
+            <div style="background: var(--bg-secondary); padding: 20px; border-radius: 8px; margin: 30px 0;">
+            <img
+              src="../images/seo-score-history-comparison.webp"
+              alt="SEO score history and website comparison showing improvement from 92 to 97"
+              style="width: 100%; border-radius: 8px;"
+            >
+            <p style="font-size: 0.9rem; color: var(--muted); margin: 12px 0 0;">
+                SEO Battle adds history and comparison to a homepage SEO score so changes can be tracked over time.
+            </p>
+        </div>
+
+            <div style="color: var(--text); font-size: 1.1rem; line-height: 1.8;">
+
+                <p>
+                    An <strong>SEO score</strong> became more useful to me when I started using it to check whether the changes I made on my own sites were improving anything.
+                </p>
+
+                <p>
+                    I was not looking for another number to collect. I wanted to know if a site was better than it was a week ago, whether a technical fix moved the score, and how one site compared with another after I made changes.
+                </p>
+
+                <p>
+                    That was where the problem started.
+                </p>
+
+                <p>
+                    Most SEO checkers gave me a score for that moment. I could see the result, but I still had to remember the previous number, compare it manually, and work out whether the site was moving in the right direction.
+                </p>
+
+                <p>
+                    So I started building something for myself.
+                </p>
+
+                <p>
+                    At first, SEO Battle was just a simple homepage checker. Then I kept adding the things I needed while testing my own sites: scan history, score movement, public profiles, head-to-head comparisons, saved battles, a leaderboard, and momentum rankings.
+                </p>
+
+                <p>
+                    The project also gave me a practical reason to question the usual claim that “SEO is dead.” I could still see technical and on-page changes producing measurable differences. The harder part was keeping track of those changes in a way that made sense over time.
+                </p>
+
+                <p>
+                    SEO Battle does not try to reduce SEO to one perfect number. A 100/100 only means the homepage passed the checks included in the current scoring model.
+                </p>
+
+                <p>
+                    For me, the useful part is the context around the number:
+                    <strong>where the site started, what changed, and whether it is improving.</strong>
+                </p>
+
+
+                <!-- Quick Answer -->
+                <div style="background: var(--bg-secondary); padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid var(--accent, #2563eb);">
+
+                    <h2 style="margin-top: 0;">
+                        Quick Answer: What Does an SEO Score Mean?
+                    </h2>
+
+                    <p>
+                        An <strong>SEO score</strong> is a summary of how well a page passes the checks included in a specific scoring model.
+                    </p>
+
+                    <p>
+                        It can help you see whether technical and on-page conditions are improving, but the number only makes sense in context. Different tools may check different things, use different weights, or score a different part of the site.
+                    </p>
+
+                    <p style="margin-bottom: 0;">
+                        An SEO score is <strong>not a Google ranking score</strong>, and a 100/100 does not mean a site has perfect SEO. It only means the page passed all the checks measured by that particular model.
+                    </p>
+
+                </div>
+
+
+                <h2>Why I Built SEO Battle to Track SEO Improvement</h2>
+
+                <p>
+                    I did not start SEO Battle because I thought the internet needed another SEO checker.
+                </p>
+
+                <p>
+                    I built it because I wanted a better way to monitor the changes I was making on my own sites.
+                </p>
+
+                <p>
+                    A single score could tell me how a homepage looked at that moment, but it could not answer the question I cared about most:
+                    <strong>is the site improving over time?</strong>
+                </p>
+
+
+                <h3>A Single Score Did Not Show Me Enough</h3>
+
+                <p>
+                    If a site scores 92/100 today, that number can look useful on its own.
+                </p>
+
+                <p>
+                    But I still want to know what happened before it.
+                </p>
+
+                <p>
+                    Was the previous score 78? Was it already 92 last week? Did a technical change improve the page, or did nothing move at all?
+                </p>
+
+                <p>
+                    That was the gap I kept running into. I could scan a site, make changes, and scan it again, but I still had to compare the results manually.
+                </p>
+
+                <p>
+                    The number was useful. The history was more useful.
+                </p>
+
+
+                <h3>I Wanted to See Whether My Changes Were Working</h3>
+
+                <p>
+                    When I update a site, I want to know whether the change had an effect on the checks I am tracking.
+                </p>
+
+                <p>
+                    That could mean fixing a missing meta description, adding the right canonical tag, improving image ALT coverage, correcting the H1 structure, or making sure the homepage is indexable.
+                </p>
+
+                <p>
+                    Instead of keeping separate notes or trying to remember an old score, I wanted the tool to show the previous result beside the current one.
+                </p>
+
+                <p>
+                    A move from <strong>92 to 97</strong> tells me something that 97 alone cannot.
+                </p>
+
+                <p>
+                    It shows direction.
+                </p>
+
+
+                <h3>The Tool Grew Beyond a One-Time Checker</h3>
+
+                <p>
+                    SEO Battle started as a simple homepage scan.
+                </p>
+
+                <p>
+                    Once I started saving results, the next features became easier to justify.
+                </p>
+
+                <p>
+                    I added public site profiles so I could see scan history. I added score movement so I could check whether a site was improving. Then I added head-to-head battles, saved battle records, a leaderboard, and momentum rankings.
+                </p>
+
+                <p>
+                    The project changed from a one-time checker into something I could use to follow SEO health over time and compare one site with another.
+                </p>
+
+                <p>
+                    That is the part that became most useful to me.
+                </p>
+
+
+                <h2>How the SEO Battle SEO Score Works</h2>
+
+                <p>
+                    SEO Battle uses a <strong>100-point homepage SEO score</strong>. The score is divided into four groups so I can see where a page is strong and where it is missing basic SEO checks.
+                </p>
+
+                <p>
+                    The score is not meant to copy another SEO tool. It reflects the checks I chose to track in SEO Battle and the weight assigned to each one.
+                </p>
+
+
+                <h3>Technical Setup: 25 Points</h3>
+
+                <p>
+                    This group checks whether the homepage has the basic technical setup I expect to see:
+                </p>
+
+                <ul>
+                    <li>Homepage is reachable</li>
+                    <li>HTTPS is available</li>
+                    <li>Canonical tag exists</li>
+                    <li>Canonical tag is valid</li>
+                    <li>Mobile viewport is present</li>
+                </ul>
+
+                <p>
+                    These checks make up <strong>25 points</strong> of the total score.
+                </p>
+
+
+                <h3>On-Page Signals: 35 Points</h3>
+
+                <p>
+                    On-page checks carry the largest share of the score.
+                </p>
+
+                <p>SEO Battle looks for:</p>
+
+                <ul>
+                    <li>Title tag</li>
+                    <li>Title length between 30 and 60 characters</li>
+                    <li>Meta description</li>
+                    <li>Meta description length between 120 and 160 characters</li>
+                    <li>H1</li>
+                    <li>Exactly one H1</li>
+                </ul>
+
+                <p>
+                    Together, these checks account for <strong>35 points</strong>.
+                </p>
+
+
+                <h3>Crawl and Indexability: 25 Points</h3>
+
+                <p>
+                    A page can have a good title and description but still create problems for search engines if its crawl or indexing setup is wrong.
+                </p>
+
+                <p>SEO Battle checks:</p>
+
+                <ul>
+                    <li>Whether the page is indexable</li>
+                    <li>robots.txt</li>
+                    <li>Sitemap</li>
+                    <li>HTML language attribute</li>
+                    <li>Internal links</li>
+                </ul>
+
+                <p>
+                    This group contributes another <strong>25 points</strong>.
+                </p>
+
+
+                <h3>Search and Share Markup: 15 Points</h3>
+
+                <p>
+                    The final <strong>15 points</strong> cover markup that helps search engines and social platforms understand or present the page.
+                </p>
+
+                <p>The checks include:</p>
+
+                <ul>
+                    <li>JSON-LD structured data</li>
+                    <li>Open Graph title</li>
+                    <li>Open Graph description</li>
+                    <li>Image ALT coverage</li>
+                </ul>
+
+                <p>
+                    SEO Battle considers image ALT coverage good when at least 80% of detected images have an ALT attribute. If the page has no images, that check passes.
+                </p>
+
+                <p>
+                    Add the four groups together and the maximum score is <strong>100 points</strong>.
+                </p>
+
+                <div style="background: var(--bg-secondary); padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid var(--accent, #2563eb);">
+
+                    <p style="margin: 0;">
+                        <strong>Important:</strong> A 100/100 SEO score does not mean perfect SEO. It means the scanned homepage passed every check included in the current SEO Battle scoring model.
+                    </p>
+
+                </div>
+
+                <p>
+                    If you want to see the complete point breakdown, you can review the
+                    <a href="https://seo-battle-board.vercel.app/methodology" target="_blank" rel="noopener noreferrer">
+                        SEO Battle scoring methodology
+                    </a>.
+                </p>
+
+
+                <h2>Why SEO Score History and Comparison Matter</h2>
+
+                <p>
+                    A single SEO score gives me a snapshot. The history around that score tells me whether the site is moving in the right direction.
+                </p>
+
+                <p>
+                    That difference matters when I am making changes across my own sites and want a quick way to see whether the technical and on-page work is paying off.
+                </p>
+
+
+                <h3>92 to 97 Tells Me More Than 97 Alone</h3>
+
+                <p>
+                    If I scan a site today and see <strong>97/100</strong>, that is useful.
+                </p>
+
+                <p>
+                    But if the previous scan was <strong>92/100</strong>, I learn more.
+                </p>
+
+                <p>
+                    I can see that something changed between the two scans. Then I can check which signals improved and connect that movement with the updates I made.
+                </p>
+
+                <p>
+                    The same works in the other direction. If a score drops, I know I should look at what changed instead of assuming the site is still in the same condition.
+                </p>
+
+
+                <h3>Comparing Two Websites Adds Context</h3>
+
+                <p>
+                    History shows how one site changes over time. Comparison answers a different question.
+                </p>
+
+                <p>
+                    If two sites both look strong, I can run a head-to-head battle and compare their homepage SEO scores side by side.
+                </p>
+
+                <p>
+                    SEO Battle also breaks the result into the same four scoring groups:
+                </p>
+
+                <ul>
+                    <li>Technical setup</li>
+                    <li>On-page signals</li>
+                    <li>Crawl and indexability</li>
+                    <li>Search and share markup</li>
+                </ul>
+
+                <p>
+                    That helps me see whether the difference comes from one area or from several smaller gaps.
+                </p>
+
+
+                <h3>Saved Battles Preserve What Happened</h3>
+
+                <p>
+                    I did not want old battle results to change every time one of the sites was scanned again.
+                </p>
+
+                <p>
+                    So saved battles keep the score, category result, and winner from that moment.
+                </p>
+
+                <p>
+                    That matters because a historical comparison should stay historical. If one site improves later, the old battle still shows what the result was when the comparison happened.
+                </p>
+
+
+                <h3>Leaderboard and Momentum Answer Different Questions</h3>
+
+                <p>
+                    I also separated <strong>Leaderboard</strong> and <strong>Momentum</strong> because they measure different things.
+                </p>
+
+                <p>
+                    The Leaderboard answers:
+                    <strong>Which sites have the strongest current SEO score?</strong>
+                </p>
+
+                <p>
+                    Momentum answers:
+                    <strong>Which sites are improving between scans?</strong>
+                </p>
+
+                <p>
+                    A site can rank high on the Leaderboard and show no recent movement. Another site can have a lower current score but be improving faster.
+                </p>
+
+                <p>
+                    For me, that distinction makes the score more useful because it separates current strength from progress over time.
+                </p>
+
+
+                <h2>What an SEO Score Cannot Tell You</h2>
+
+                <p>
+                    The more I used SEO Battle, the clearer it became that the score needed limits.
+                </p>
+
+                <p>
+                    A number can help me check whether a homepage passes the signals I chose to measure. It cannot explain the full SEO condition of a site.
+                </p>
+
+
+                <h3>A High Score Does Not Guarantee Rankings</h3>
+
+                <p>
+                    A site can score well in SEO Battle and still struggle in search.
+                </p>
+
+                <p>
+                    The score does not tell me whether the page targets the right query, satisfies search intent, earns links, builds topical authority, or converts visitors.
+                </p>
+
+                <p>
+                    It also does not predict where Google will rank the page.
+                </p>
+
+                <p>
+                    That is why I do not treat 100/100 as a ranking claim.
+                </p>
+
+
+                <h3>SEO Battle Currently Measures the Homepage</h3>
+
+                <p>
+                    The current scoring model is focused on the homepage.
+                </p>
+
+                <p>
+                    That keeps the scan simple and consistent, but it also means the score does not represent every page on the site.
+                </p>
+
+                <p>
+                    A homepage can pass all the checks while important landing pages, blog posts, or product pages still have their own SEO problems.
+                </p>
+
+                <p>
+                    For deeper analysis, I still need to look beyond the homepage.
+                </p>
+
+
+                <h3>Technical Health Is Only Part of SEO</h3>
+
+                <p>
+                    SEO Battle checks signals such as HTTPS, canonical tags, titles, meta descriptions, headings, indexability, internal links, structured data, and image ALT coverage.
+                </p>
+
+                <p>
+                    It does not measure everything that can influence SEO performance.
+                </p>
+
+                <p>For example, the score does not cover:</p>
+
+                <ul>
+                    <li>Backlink quality</li>
+                    <li>Topical authority</li>
+                    <li>Keyword demand</li>
+                    <li>Search intent</li>
+                    <li>Content usefulness</li>
+                    <li>Conversion performance</li>
+                    <li>Full-site content quality</li>
+                </ul>
+
+                <p>
+                    This is also why I do not use the score as a replacement for content strategy.
+                </p>
+
+                <p>
+                    When I work on content, I still need to understand what people are asking and whether the page gives them a useful answer. I explored that side of the process in my article on
+                    <a href="https://edumbao.com/posts/how-to-build-answer-based-seo-strategy.html">
+                        building an answer-based SEO strategy
+                    </a>.
+                </p>
+
+                <p>
+                    The score helps me check the condition of the homepage. It does not decide the whole SEO strategy for me.
+                </p>
+
+                <p>
+                    What I care about most is whether the score gives me a clearer way to track change, spot gaps, and see whether the site is moving in the right direction.
+                </p>
+
+
+                <!-- CTA Before FAQ -->
+                <div style="background: var(--bg-secondary); padding: 24px; border-radius: 8px; margin: 40px 0; border-left: 4px solid var(--accent, #2563eb);">
+
+                    <h2 style="margin-top: 0;">
+                        Try SEO Battle During the Public Beta
+                    </h2>
+
+                    <p>
+                        I built SEO Battle to make SEO scores more useful over time, not just to generate another one-time number.
+                    </p>
+
+                    <p>
+                        You can use it to check a homepage SEO score, view scan history, compare two sites, and see how scores change between scans.
+                    </p>
+
+                    <p>
+                        <strong>No login. No sign-up. No paywall.</strong>
+                    </p>
+
+                    <p>
+                        Just enter a domain and start scanning.
+                    </p>
+
+                    <p style="margin-bottom: 0;">
+                        <a
+                            href="https://seo-battle-board.vercel.app/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style="font-weight: bold;"
+                        >
+                            Try SEO Battle during the public beta
+                        </a>
+                    </p>
+
+                </div>
+
+
+                <h2>Frequently Asked Questions</h2>
+
+
+                <h3>What is a good SEO score?</h3>
+
+                <p>
+                    There is no universal SEO score that applies across every tool.
+                </p>
+
+                <p>
+                    A score only makes sense within the scoring model that produced it. In SEO Battle, the number reflects the homepage checks included in the current 100-point model.
+                </p>
+
+                <p>
+                    For me, the more useful question is whether the score is improving and which checks are causing the change.
+                </p>
+
+
+                <h3>Does a 100 SEO score mean perfect SEO?</h3>
+
+                <p>
+                    No.
+                </p>
+
+                <p>
+                    A 100/100 in SEO Battle means the scanned homepage passed every check included in the current scoring model.
+                </p>
+
+                <p>
+                    It does not mean the site has perfect SEO, stronger backlinks, better content, higher authority, or guaranteed rankings.
+                </p>
+
+
+                <h3>Can two SEO tools give different SEO scores?</h3>
+
+                <p>
+                    Yes.
+                </p>
+
+                <p>
+                    Different tools may check different signals, apply different weights, or scan different parts of a site.
+                </p>
+
+                <p>
+                    That is why I do not compare a score from one tool directly with a score from another and assume they mean the same thing.
+                </p>
+
+
+                <h3>Can I compare two websites with SEO Battle?</h3>
+
+                <p>
+                    Yes.
+                </p>
+
+                <p>
+                    SEO Battle lets me compare two domains side by side using the same scoring model. The battle shows the total scores as well as the results across the four scoring groups.
+                </p>
+
+                <p>
+                    Saved battles also keep the result from that moment instead of changing after a later scan.
+                </p>
+
+
+                <h3>Does SEO Battle scan an entire website?</h3>
+
+                <p>
+                    No.
+                </p>
+
+                <p>
+                    The current version focuses on the homepage.
+                </p>
+
+                <p>
+                    The score should be read as a homepage SEO health score, not as an audit of every page on the site.
+                </p>
+
+
+                <h3>Is SEO Battle free to use?</h3>
+
+                <p>
+                    During the current public beta, there is <strong>no login, no sign-up, and no paywall</strong>.
+                </p>
+
+                <p>
+                    You can enter a domain, run a scan, view its public profile, or compare it with another site.
+                </p>
+
+
+                <p style="margin-top: 40px; font-weight: bold; border-top: 1px solid var(--border); padding-top: 20px;">
+                    Have you tried SEO Battle yet?
+                    <a
+                        href="https://seo-battle-board.vercel.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Run your site through the public beta
+                    </a>
+                    and see how it scores.
+                </p>
+
+            </div>
+
+        </article>
+
+    </main>
+
+</body>
+</html>
