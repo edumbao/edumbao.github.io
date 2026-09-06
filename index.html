@@ -101,6 +101,10 @@
 
   <style>
 
+    /* ======================================================
+       Design System
+    ======================================================= */
+
     :root {
       --bg: #0b0f14;
       --bg-soft: #10151c;
@@ -119,8 +123,6 @@
       --warm: #e0c28f;
 
       --container: 1180px;
-
-      --radius: 14px;
 
       --serif:
         Georgia,
@@ -148,34 +150,26 @@
       box-sizing: border-box;
     }
 
-
     html {
       scroll-behavior: smooth;
     }
 
-
     body {
       margin: 0;
-
       background: var(--bg);
-
       color: var(--text);
 
       font-family: var(--sans);
-
       font-size: 16px;
-
       line-height: 1.7;
 
       -webkit-font-smoothing: antialiased;
     }
 
-
     img,
     svg {
       max-width: 100%;
     }
-
 
     button,
     input,
@@ -184,19 +178,16 @@
       font: inherit;
     }
 
-
     a {
       color: inherit;
       text-decoration: none;
     }
-
 
     a:focus-visible,
     button:focus-visible {
       outline: 3px solid var(--blue);
       outline-offset: 4px;
     }
-
 
     .container {
       width: min(calc(100% - 40px), var(--container));
@@ -214,13 +205,11 @@
       z-index: 100;
 
       background: rgba(11, 15, 20, 0.94);
-
       border-bottom: 1px solid var(--line-soft);
 
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
     }
-
 
     .site-nav {
       min-height: 72px;
@@ -232,17 +221,14 @@
       gap: 24px;
     }
 
-
     .site-brand {
       display: inline-flex;
       align-items: center;
-
       gap: 11px;
 
       font-weight: 750;
       letter-spacing: -0.02em;
     }
-
 
     .brand-mark {
       width: 38px;
@@ -261,14 +247,11 @@
       font-weight: 700;
     }
 
-
     .site-menu {
       display: flex;
       align-items: center;
-
       gap: 3px;
     }
-
 
     .site-menu a {
       padding: 9px 11px;
@@ -281,13 +264,10 @@
       border-bottom: 1px solid transparent;
     }
 
-
     .site-menu a:hover {
       color: var(--text);
-
       border-bottom-color: var(--green);
     }
-
 
     .site-menu .nav-cta {
       margin-left: 8px;
@@ -295,17 +275,17 @@
       padding: 9px 13px;
 
       border: 1px solid var(--line);
-
       border-radius: 8px;
 
       color: var(--text);
     }
 
-
     .site-menu .nav-cta:hover {
       border-color: var(--green);
     }
 
+
+    /* Mobile Menu */
 
     .menu-toggle {
       display: none;
@@ -327,7 +307,6 @@
       cursor: pointer;
     }
 
-
     .menu-toggle span {
       display: block;
 
@@ -344,10 +323,8 @@
 
     .section {
       padding: 84px 0;
-
       border-top: 1px solid var(--line-soft);
     }
-
 
     .section-kicker {
       margin: 0 0 12px;
@@ -361,7 +338,6 @@
       letter-spacing: 0.12em;
     }
 
-
     .section-title {
       max-width: 820px;
 
@@ -370,14 +346,11 @@
       font-family: var(--serif);
 
       font-size: clamp(34px, 5vw, 58px);
-
       font-weight: 500;
 
       line-height: 1.08;
-
       letter-spacing: -0.035em;
     }
-
 
     .section-intro {
       max-width: 760px;
@@ -403,7 +376,6 @@
       margin-top: 32px;
     }
 
-
     .button {
       display: inline-flex;
       align-items: center;
@@ -416,7 +388,6 @@
       padding: 11px 17px;
 
       border: 1px solid var(--line);
-
       border-radius: 8px;
 
       font-size: 14px;
@@ -428,35 +399,41 @@
         transform 0.15s ease;
     }
 
-
     .button:hover {
       transform: translateY(-1px);
     }
 
-
     .button-primary {
       background: var(--green);
-
       border-color: var(--green);
 
       color: #08120d;
     }
 
-
     .button-primary:hover {
       background: #96dfba;
     }
 
-
     .button-secondary {
       color: var(--text);
-
       background: transparent;
     }
 
-
     .button-secondary:hover {
       border-color: var(--blue);
+    }
+
+    .button-text {
+      border-color: transparent;
+      color: var(--blue);
+
+      padding-left: 4px;
+      padding-right: 4px;
+    }
+
+    .button-text:hover {
+      color: #b9d3ff;
+      border-color: transparent;
     }
 
 
@@ -465,22 +442,20 @@
     ======================================================= */
 
     .hero {
-      padding: 108px 0 92px;
+      padding: 96px 0 86px;
     }
-
 
     .hero-grid {
       display: grid;
 
       grid-template-columns:
-        minmax(0, 1.25fr)
-        minmax(310px, 0.75fr);
+        minmax(0, 1.2fr)
+        minmax(320px, 0.8fr);
 
       gap: 72px;
 
-      align-items: start;
+      align-items: center;
     }
-
 
     .hero-eyebrow {
       margin: 0 0 22px;
@@ -494,7 +469,6 @@
       letter-spacing: 0.11em;
     }
 
-
     .hero h1 {
       max-width: 820px;
 
@@ -502,27 +476,21 @@
 
       font-family: var(--serif);
 
-      font-size: clamp(52px, 7vw, 88px);
-
+      font-size: clamp(52px, 7vw, 86px);
       font-weight: 500;
 
       line-height: 0.98;
-
       letter-spacing: -0.055em;
     }
 
-
     .hero h1 em {
       color: var(--green);
-
       font-style: normal;
     }
-
 
     .hero-copy {
       max-width: 720px;
     }
-
 
     .hero-copy p {
       margin: 0;
@@ -533,89 +501,93 @@
       line-height: 1.7;
     }
 
-
     .hero-copy strong {
       color: var(--text);
     }
 
 
     /* ======================================================
-       Hero Workbench
+       Hero Portrait
     ======================================================= */
 
-    .workbench {
-      border-top: 1px solid var(--line);
-
-      padding-top: 16px;
+    .hero-portrait {
+      max-width: 420px;
+      justify-self: end;
     }
 
+    .portrait-frame {
+      position: relative;
 
-    .workbench-label {
+      padding-top: 18px;
+
+      border-top: 1px solid var(--line);
+    }
+
+    .portrait-label {
       display: flex;
       justify-content: space-between;
+      gap: 16px;
 
-      gap: 20px;
-
-      padding-bottom: 14px;
-
-      border-bottom: 1px solid var(--line-soft);
+      margin-bottom: 12px;
 
       color: var(--muted);
 
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
 
       text-transform: uppercase;
       letter-spacing: 0.09em;
     }
 
+    .portrait-image {
+      width: 100%;
 
-    .workbench-list {
-      list-style: none;
+      display: block;
 
-      margin: 0;
-      padding: 0;
+      aspect-ratio: 4 / 5;
+
+      object-fit: cover;
+
+      object-position: center 24%;
+
+      border: 1px solid var(--line);
+      border-radius: 10px;
     }
 
-
-    .workbench-item {
+    .portrait-caption {
       display: grid;
 
-      grid-template-columns: 34px 1fr;
+      grid-template-columns: 1fr auto;
 
-      gap: 13px;
+      gap: 18px;
 
-      padding: 18px 0;
+      padding-top: 15px;
 
-      border-bottom: 1px solid var(--line-soft);
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 15px;
     }
 
+    .portrait-caption strong {
+      display: block;
 
-    .workbench-index {
-      color: var(--green);
+      margin-bottom: 2px;
 
       font-family: var(--serif);
 
-      font-size: 16px;
+      font-size: 18px;
+      font-weight: 500;
     }
 
-
-    .workbench-item strong {
-      display: block;
-
-      margin-bottom: 3px;
-
-      font-size: 14px;
-    }
-
-
-    .workbench-item span {
+    .portrait-caption span {
       display: block;
 
       color: var(--muted);
 
-      font-size: 13px;
-      line-height: 1.5;
+      font-size: 12px;
+    }
+
+    .portrait-location {
+      text-align: right;
     }
 
 
@@ -630,37 +602,28 @@
       background: var(--bg-soft);
     }
 
-
     .proof-grid {
       display: grid;
-
-      grid-template-columns:
-        repeat(3, 1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
-
 
     .proof-stat {
       padding: 28px 30px;
-
       border-right: 1px solid var(--line-soft);
     }
-
 
     .proof-stat:last-child {
       border-right: 0;
     }
 
-
     .proof-number {
       margin-bottom: 7px;
 
       font-family: var(--serif);
-
       font-size: 38px;
 
       color: var(--text);
     }
-
 
     .proof-stat p {
       margin: 0;
@@ -680,13 +643,10 @@
       padding-top: 96px;
     }
 
-
     .project-list {
       margin-top: 54px;
-
       border-top: 1px solid var(--line);
     }
-
 
     .project {
       display: grid;
@@ -701,14 +661,11 @@
       border-bottom: 1px solid var(--line);
     }
 
-
     .project-meta {
       position: sticky;
       top: 100px;
-
       align-self: start;
     }
-
 
     .project-number {
       margin-bottom: 18px;
@@ -716,14 +673,11 @@
       color: var(--green);
 
       font-family: var(--serif);
-
       font-size: 16px;
     }
 
 
-    /* ======================================================
-       Company Logo Treatment
-    ======================================================= */
+    /* Company logos */
 
     .company-logo-wrap {
       display: flex;
@@ -733,7 +687,6 @@
 
       margin-bottom: 16px;
     }
-
 
     .company-logo {
       width: 58px;
@@ -750,7 +703,6 @@
       border: 1px solid var(--line-soft);
     }
 
-
     .company-logo-placeholder {
       width: 58px;
       height: 58px;
@@ -759,17 +711,14 @@
       place-items: center;
 
       border: 1px solid var(--line);
-
       border-radius: 12px;
 
       color: var(--purple);
 
       font-family: var(--serif);
-
       font-size: 13px;
       font-weight: 700;
     }
-
 
     .project-type {
       margin: 0;
@@ -783,21 +732,17 @@
       letter-spacing: 0.08em;
     }
 
-
     .project-content h3 {
       margin: 0 0 12px;
 
       font-family: var(--serif);
 
       font-size: clamp(30px, 4vw, 48px);
-
       font-weight: 500;
 
       line-height: 1.1;
-
       letter-spacing: -0.035em;
     }
-
 
     .project-summary {
       max-width: 780px;
@@ -808,7 +753,6 @@
 
       font-size: 17px;
     }
-
 
     .project-columns {
       display: grid;
@@ -821,13 +765,10 @@
       margin-top: 32px;
     }
 
-
     .project-column {
       border-top: 1px solid var(--line-soft);
-
       padding-top: 16px;
     }
-
 
     .project-column h4 {
       margin: 0 0 10px;
@@ -841,14 +782,12 @@
       letter-spacing: 0.07em;
     }
 
-
     .project-column ul {
       list-style: none;
 
       margin: 0;
       padding: 0;
     }
-
 
     .project-column li {
       position: relative;
@@ -862,7 +801,6 @@
       font-size: 14px;
     }
 
-
     .project-column li::before {
       content: "—";
 
@@ -871,7 +809,6 @@
 
       color: var(--green);
     }
-
 
     .project-link {
       display: inline-flex;
@@ -886,7 +823,6 @@
       font-size: 14px;
       font-weight: 750;
     }
-
 
     .project-link:hover {
       color: #b9d3ff;
@@ -909,7 +845,6 @@
       align-items: start;
     }
 
-
     .about-note {
       border-top: 1px solid var(--line);
 
@@ -923,11 +858,9 @@
       line-height: 1.5;
     }
 
-
     .about-copy {
       max-width: 760px;
     }
-
 
     .about-copy p {
       margin: 0 0 20px;
@@ -936,7 +869,6 @@
 
       font-size: 17px;
     }
-
 
     .about-copy strong {
       color: var(--text);
@@ -949,10 +881,8 @@
 
     .tools-list {
       margin-top: 48px;
-
       border-top: 1px solid var(--line);
     }
-
 
     .tool-row {
       display: grid;
@@ -969,7 +899,6 @@
       border-bottom: 1px solid var(--line);
     }
 
-
     .tool-mark {
       color: var(--green);
 
@@ -978,13 +907,10 @@
       font-size: 20px;
     }
 
-
     .tool-row h3 {
       margin: 0 0 4px;
-
       font-size: 18px;
     }
-
 
     .tool-row p {
       margin: 0;
@@ -993,7 +919,6 @@
 
       font-size: 14px;
     }
-
 
     .tool-link {
       color: var(--blue);
@@ -1018,13 +943,10 @@
       margin-top: 48px;
     }
 
-
     .service {
       border-top: 1px solid var(--line);
-
       padding-top: 20px;
     }
-
 
     .service-number {
       margin-bottom: 28px;
@@ -1034,7 +956,6 @@
       font-family: var(--serif);
     }
 
-
     .service h3 {
       margin: 0 0 10px;
 
@@ -1043,7 +964,6 @@
       font-size: 26px;
       font-weight: 500;
     }
-
 
     .service p {
       margin: 0;
@@ -1060,10 +980,8 @@
 
     .process {
       margin-top: 48px;
-
       border-top: 1px solid var(--line);
     }
-
 
     .process-row {
       display: grid;
@@ -1078,20 +996,15 @@
       border-bottom: 1px solid var(--line);
     }
 
-
     .process-number {
       color: var(--green);
-
       font-family: var(--serif);
     }
 
-
     .process-row h3 {
       margin: 0;
-
       font-size: 15px;
     }
-
 
     .process-row p {
       margin: 0;
@@ -1122,7 +1035,6 @@
       border-top: 1px solid var(--line);
     }
 
-
     .writing-block p {
       margin: 0;
 
@@ -1131,13 +1043,10 @@
       font-size: 17px;
     }
 
-
     .writing-links {
       display: grid;
-
       gap: 10px;
     }
-
 
     .writing-links a {
       display: flex;
@@ -1164,7 +1073,6 @@
       background: var(--bg-soft);
     }
 
-
     .contact-grid {
       display: grid;
 
@@ -1177,11 +1085,9 @@
       align-items: end;
     }
 
-
     .contact-copy {
       max-width: 800px;
     }
-
 
     .contact-aside {
       border-top: 1px solid var(--line);
@@ -1208,7 +1114,6 @@
       font-size: 13px;
     }
 
-
     .footer-inner {
       display: flex;
       justify-content: space-between;
@@ -1230,23 +1135,25 @@
         grid-template-columns: 1fr;
       }
 
-
       .hero-grid {
-        gap: 58px;
+        gap: 54px;
       }
 
+      .hero-portrait {
+        justify-self: start;
+        max-width: 430px;
+      }
 
       .project {
-        grid-template-columns: 130px minmax(0, 1fr);
+        grid-template-columns:
+          130px minmax(0, 1fr);
 
         gap: 34px;
       }
 
-
       .services-grid {
         grid-template-columns: 1fr;
       }
-
 
       .process-row {
         grid-template-columns:
@@ -1262,11 +1169,9 @@
         position: relative;
       }
 
-
       .menu-toggle {
         display: inline-flex;
       }
-
 
       .site-menu {
         display: none;
@@ -1287,78 +1192,66 @@
         border-bottom: 1px solid var(--line);
       }
 
-
       .site-menu.nav-open {
         display: flex;
       }
 
-
       .site-menu a {
         padding: 12px 0;
 
-        border-bottom: 1px solid var(--line-soft);
+        border-bottom:
+          1px solid var(--line-soft);
       }
-
 
       .site-menu .nav-cta {
         margin-left: 0;
 
         border: 0;
-        border-bottom: 1px solid var(--line-soft);
+        border-bottom:
+          1px solid var(--line-soft);
 
         border-radius: 0;
       }
-
 
       .proof-grid {
         grid-template-columns: 1fr;
       }
 
-
       .proof-stat {
         border-right: 0;
-        border-bottom: 1px solid var(--line-soft);
+        border-bottom:
+          1px solid var(--line-soft);
       }
-
 
       .proof-stat:last-child {
         border-bottom: 0;
       }
 
-
       .project {
         grid-template-columns: 1fr;
-
         gap: 18px;
       }
-
 
       .project-meta {
         position: static;
       }
 
-
       .project-columns {
         grid-template-columns: 1fr;
       }
 
-
       .process-row {
         grid-template-columns: 46px 1fr;
-
         gap: 16px;
       }
-
 
       .process-row p {
         grid-column: 2;
       }
 
-
       .tool-row {
         grid-template-columns: 45px 1fr;
       }
-
 
       .tool-link {
         grid-column: 2;
@@ -1370,39 +1263,53 @@
     @media (max-width: 620px) {
 
       .container {
-        width: min(calc(100% - 28px), var(--container));
+        width:
+          min(
+            calc(100% - 28px),
+            var(--container)
+          );
       }
-
 
       .hero {
-        padding: 74px 0 66px;
+        padding: 68px 0 62px;
       }
-
 
       .hero h1 {
-        font-size: clamp(46px, 14vw, 66px);
+        font-size:
+          clamp(46px, 14vw, 66px);
       }
-
 
       .hero-copy p {
         font-size: 17px;
       }
 
-
       .section {
         padding: 68px 0;
       }
-
 
       .actions {
         flex-direction: column;
       }
 
-
       .button {
         width: 100%;
       }
 
+      .hero-portrait {
+        max-width: 100%;
+      }
+
+      .portrait-image {
+        aspect-ratio: 4 / 4.8;
+      }
+
+      .portrait-caption {
+        grid-template-columns: 1fr;
+      }
+
+      .portrait-location {
+        text-align: left;
+      }
 
       .footer-inner {
         flex-direction: column;
@@ -1536,6 +1443,8 @@
       <div class="container hero-grid">
 
 
+        <!-- Hero Copy -->
+
         <div>
 
           <p class="hero-eyebrow">
@@ -1586,10 +1495,21 @@
 
 
             <a
-              href="#about"
+              href="/files/ed-umbao-resume.pdf"
               class="button button-secondary"
+              download
             >
-              About my work
+              Download résumé ↓
+            </a>
+
+
+            <a
+              href="https://www.linkedin.com/in/ed-umbao/"
+              target="_blank"
+              rel="noopener"
+              class="button button-text"
+            >
+              LinkedIn ↗
             </a>
 
           </div>
@@ -1597,115 +1517,69 @@
         </div>
 
 
+        <!-- Hero Portrait -->
+
         <aside
-          class="workbench"
-          aria-label="Areas of work"
+          class="hero-portrait"
+          aria-label="Ed Umbao profile"
         >
 
-          <div class="workbench-label">
+          <div class="portrait-frame">
 
-            <span>
-              Current focus
-            </span>
 
-            <span>
-              2026
-            </span>
+            <div class="portrait-label">
+
+              <span>
+                Copywriter · SEO specialist
+              </span>
+
+              <span>
+                Davao City
+              </span>
+
+            </div>
+
+
+            <img
+              src="/images/ed-umbao-profile.jpg"
+              alt="Ed Umbao, SEO specialist and B2B SaaS Copywriter"
+              class="portrait-image"
+              width="800"
+              height="1000"
+            >
+
+
+            <div class="portrait-caption">
+
+
+              <div>
+
+                <strong>
+                  Ed Umbao
+                </strong>
+
+                <span>
+                  SEO · B2B SaaS · Technical content
+                </span>
+
+              </div>
+
+
+              <div class="portrait-location">
+
+                <span>
+                  Philippines
+                </span>
+
+                <span>
+                  Working remotely
+                </span>
+
+              </div>
+
+            </div>
 
           </div>
-
-
-          <ol class="workbench-list">
-
-
-            <li class="workbench-item">
-
-              <span class="workbench-index">
-                01
-              </span>
-
-              <div>
-
-                <strong>
-                  SaaS SEO content
-                </strong>
-
-                <span>
-                  Search intent, product use cases,
-                  topical coverage and article updates.
-                </span>
-
-              </div>
-
-            </li>
-
-
-            <li class="workbench-item">
-
-              <span class="workbench-index">
-                02
-              </span>
-
-              <div>
-
-                <strong>
-                  Technical product writing
-                </strong>
-
-                <span>
-                  APIs, data workflows, tutorials
-                  and product explanations.
-                </span>
-
-              </div>
-
-            </li>
-
-
-            <li class="workbench-item">
-
-              <span class="workbench-index">
-                03
-              </span>
-
-              <div>
-
-                <strong>
-                  Content operations
-                </strong>
-
-                <span>
-                  Trackers, briefs, internal-link maps,
-                  QA and publishing systems.
-                </span>
-
-              </div>
-
-            </li>
-
-
-            <li class="workbench-item">
-
-              <span class="workbench-index">
-                04
-              </span>
-
-              <div>
-
-                <strong>
-                  Learning by building
-                </strong>
-
-                <span>
-                  Small SEO tools, GitHub projects
-                  and technical experiments.
-                </span>
-
-              </div>
-
-            </li>
-
-          </ol>
 
         </aside>
 
@@ -1806,9 +1680,7 @@
         <div class="project-list">
 
 
-          <!-- ==================================================
-               Outscraper
-          =================================================== -->
+          <!-- Outscraper -->
 
           <article class="project">
 
@@ -1869,7 +1741,6 @@
                     What I work on
                   </h4>
 
-
                   <ul>
 
                     <li>
@@ -1902,7 +1773,6 @@
                   <h4>
                     Work around the writing
                   </h4>
-
 
                   <ul>
 
@@ -1945,9 +1815,7 @@
           </article>
 
 
-          <!-- ==================================================
-               Targetron
-          =================================================== -->
+          <!-- Targetron -->
 
           <article class="project">
 
@@ -2008,7 +1876,6 @@
                     Content areas
                   </h4>
 
-
                   <ul>
 
                     <li>
@@ -2041,7 +1908,6 @@
                   <h4>
                     Editorial work
                   </h4>
-
 
                   <ul>
 
@@ -2084,9 +1950,7 @@
           </article>
 
 
-          <!-- ==================================================
-               Systems
-          =================================================== -->
+          <!-- Systems -->
 
           <article class="project">
 
@@ -2146,7 +2010,6 @@
                     Systems
                   </h4>
 
-
                   <ul>
 
                     <li>
@@ -2179,7 +2042,6 @@
                   <h4>
                     Technical learning
                   </h4>
-
 
                   <ul>
 
@@ -2305,6 +2167,15 @@
               class="button button-secondary"
             >
               Read what I'm learning
+            </a>
+
+
+            <a
+              href="/files/ed-umbao-resume.pdf"
+              class="button button-secondary"
+              download
+            >
+              Download résumé ↓
             </a>
 
           </div>
@@ -2682,6 +2553,7 @@
           <div class="writing-links">
 
             <a href="/blog.html">
+
               <span>
                 Personal blog
               </span>
@@ -2689,10 +2561,12 @@
               <span>
                 →
               </span>
+
             </a>
 
 
             <a href="/writing-portfolio/">
+
               <span>
                 Published SaaS work
               </span>
@@ -2700,6 +2574,23 @@
               <span>
                 →
               </span>
+
+            </a>
+
+
+            <a
+              href="/files/ed-umbao-resume.pdf"
+              download
+            >
+
+              <span>
+                Public résumé
+              </span>
+
+              <span>
+                ↓
+              </span>
+
             </a>
 
           </div>
@@ -2762,6 +2653,15 @@
               class="button button-secondary"
             >
               View published work
+            </a>
+
+
+            <a
+              href="/files/ed-umbao-resume.pdf"
+              class="button button-secondary"
+              download
+            >
+              Download résumé
             </a>
 
           </div>
