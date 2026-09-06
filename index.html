@@ -17,6 +17,7 @@
     gtag('config', 'G-LBQL9HBJNL');
   </script>
 
+
   <!-- Basic Metadata -->
   <meta charset="UTF-8">
 
@@ -29,13 +30,14 @@
 
   <meta
     name="description"
-    content="Ed Umbao works with lean B2B SaaS teams on SEO content, technical writing, topical planning, internal linking, editorial systems, and small SEO tools."
+    content="Ed Umbao works with lean B2B SaaS teams on SEO content, technical writing, topical planning, analytics, editorial systems, and practical web tools."
   >
 
   <link
     rel="canonical"
     href="https://edumbao.com/"
   >
+
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
@@ -47,7 +49,7 @@
 
   <meta
     property="og:description"
-    content="SEO content, technical writing, editorial systems, tools, and selected work from lean B2B SaaS teams."
+    content="SEO content, technical writing, editorial systems, analytics, tools, and selected work from lean B2B SaaS teams."
   >
 
   <meta
@@ -59,6 +61,7 @@
     property="og:site_name"
     content="Ed Umbao"
   >
+
 
   <!-- Twitter / X -->
   <meta
@@ -73,8 +76,9 @@
 
   <meta
     name="twitter:description"
-    content="SEO content, technical writing, editorial systems, tools, and selected work from lean B2B SaaS teams."
+    content="SEO content, technical writing, editorial systems, analytics, tools, and selected work from lean B2B SaaS teams."
   >
+
 
   <style>
 
@@ -110,6 +114,11 @@
         "Segoe UI",
         sans-serif;
     }
+
+
+    /* ======================================================
+       Reset
+    ======================================================= */
 
     *,
     *::before,
@@ -162,7 +171,10 @@
       margin-inline: auto;
     }
 
-    /* Header */
+
+    /* ======================================================
+       Header
+    ======================================================= */
 
     .site-header {
       position: sticky;
@@ -220,7 +232,7 @@
     }
 
     .site-menu a {
-      padding: 9px 11px;
+      padding: 9px 10px;
 
       color: var(--muted);
 
@@ -236,7 +248,7 @@
     }
 
     .site-menu .nav-cta {
-      margin-left: 8px;
+      margin-left: 6px;
 
       padding: 9px 13px;
 
@@ -249,6 +261,9 @@
     .site-menu .nav-cta:hover {
       border-color: var(--green);
     }
+
+
+    /* Mobile menu */
 
     .menu-toggle {
       display: none;
@@ -279,10 +294,14 @@
       background: var(--text);
     }
 
-    /* General Sections */
+
+    /* ======================================================
+       General Sections
+    ======================================================= */
 
     .section {
       padding: 84px 0;
+
       border-top: 1px solid var(--line-soft);
     }
 
@@ -322,7 +341,10 @@
       font-size: 18px;
     }
 
-    /* Buttons */
+
+    /* ======================================================
+       Buttons
+    ======================================================= */
 
     .actions {
       display: flex;
@@ -394,7 +416,10 @@
       border-color: transparent;
     }
 
-    /* Compact Hero */
+
+    /* ======================================================
+       Compact Hero
+    ======================================================= */
 
     .hero {
       padding: 56px 0 44px;
@@ -460,7 +485,10 @@
       color: var(--text);
     }
 
-    /* Cropped Hero Portrait */
+
+    /* ======================================================
+       Cropped Hero Portrait
+    ======================================================= */
 
     .hero-portrait {
       width: 100%;
@@ -541,7 +569,10 @@
       text-align: right;
     }
 
-    /* Proof Strip */
+
+    /* ======================================================
+       Proof Strip
+    ======================================================= */
 
     .proof-strip {
       border-top: 1px solid var(--line-soft);
@@ -552,11 +583,13 @@
 
     .proof-grid {
       display: grid;
+
       grid-template-columns: repeat(3, 1fr);
     }
 
     .proof-stat {
       padding: 28px 30px;
+
       border-right: 1px solid var(--line-soft);
     }
 
@@ -582,7 +615,10 @@
       line-height: 1.55;
     }
 
-    /* Featured Work */
+
+    /* ======================================================
+       Featured Work
+    ======================================================= */
 
     .featured-work {
       padding-top: 96px;
@@ -590,6 +626,7 @@
 
     .project-list {
       margin-top: 54px;
+
       border-top: 1px solid var(--line);
     }
 
@@ -619,6 +656,7 @@
       color: var(--green);
 
       font-family: var(--serif);
+
       font-size: 16px;
     }
 
@@ -659,6 +697,7 @@
       color: var(--purple);
 
       font-family: var(--serif);
+
       font-size: 13px;
       font-weight: 700;
     }
@@ -710,6 +749,7 @@
 
     .project-column {
       border-top: 1px solid var(--line-soft);
+
       padding-top: 16px;
     }
 
@@ -771,7 +811,10 @@
       color: #b9d3ff;
     }
 
-    /* About */
+
+    /* ======================================================
+       About
+    ======================================================= */
 
     .about-grid {
       display: grid;
@@ -814,7 +857,10 @@
       color: var(--text);
     }
 
-    /* Tools */
+
+    /* ======================================================
+       Public Tools
+    ======================================================= */
 
     .tools-list {
       margin-top: 48px;
@@ -866,7 +912,10 @@
       font-weight: 750;
     }
 
-    /* Services */
+
+    /* ======================================================
+       Services
+    ======================================================= */
 
     .services-grid {
       display: grid;
@@ -910,7 +959,106 @@
       font-size: 14px;
     }
 
-    /* Process */
+
+    /* ======================================================
+       Working Stack
+    ======================================================= */
+
+    .stack-intro {
+      max-width: 800px;
+    }
+
+    .stack {
+      margin-top: 52px;
+
+      border-top: 1px solid var(--line);
+    }
+
+    .stack-row {
+      display: grid;
+
+      grid-template-columns:
+        220px minmax(0, 1fr);
+
+      gap: 48px;
+
+      padding: 28px 0;
+
+      border-bottom: 1px solid var(--line);
+    }
+
+    .stack-heading {
+      display: flex;
+      gap: 13px;
+
+      align-items: flex-start;
+    }
+
+    .stack-number {
+      min-width: 28px;
+
+      color: var(--green);
+
+      font-family: var(--serif);
+
+      font-size: 14px;
+    }
+
+    .stack-heading h3 {
+      margin: 0;
+
+      font-size: 14px;
+      font-weight: 750;
+
+      line-height: 1.4;
+    }
+
+    .stack-content {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 8px;
+    }
+
+    .stack-item {
+      display: inline-flex;
+      align-items: center;
+
+      min-height: 34px;
+
+      padding: 6px 10px;
+
+      border: 1px solid var(--line);
+
+      border-radius: 6px;
+
+      color: var(--text-soft);
+
+      font-size: 13px;
+
+      background: transparent;
+    }
+
+    .stack-item:hover {
+      border-color: #3a4654;
+      color: var(--text);
+    }
+
+    .stack-note {
+      max-width: 760px;
+
+      margin: 24px 0 0;
+
+      color: var(--muted);
+
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+
+    /* ======================================================
+       Process
+    ======================================================= */
 
     .process {
       margin-top: 48px;
@@ -951,7 +1099,10 @@
       font-size: 14px;
     }
 
-    /* Writing */
+
+    /* ======================================================
+       Writing
+    ======================================================= */
 
     .writing-block {
       display: grid;
@@ -999,7 +1150,10 @@
       font-weight: 700;
     }
 
-    /* Contact */
+
+    /* ======================================================
+       Contact
+    ======================================================= */
 
     .contact {
       background: var(--bg-soft);
@@ -1031,7 +1185,10 @@
       font-size: 14px;
     }
 
-    /* Footer */
+
+    /* ======================================================
+       Footer
+    ======================================================= */
 
     .footer {
       padding: 32px 0 42px;
@@ -1050,7 +1207,10 @@
       gap: 30px;
     }
 
-    /* Responsive */
+
+    /* ======================================================
+       Responsive
+    ======================================================= */
 
     @media (max-width: 980px) {
 
@@ -1067,6 +1227,7 @@
 
       .hero-portrait {
         max-width: 280px;
+
         justify-self: start;
       }
 
@@ -1085,12 +1246,20 @@
         grid-template-columns: 1fr;
       }
 
+      .stack-row {
+        grid-template-columns:
+          180px minmax(0, 1fr);
+
+        gap: 30px;
+      }
+
       .process-row {
         grid-template-columns:
           55px 220px minmax(0, 1fr);
       }
 
     }
+
 
     @media (max-width: 820px) {
 
@@ -1146,7 +1315,9 @@
 
       .proof-stat {
         border-right: 0;
-        border-bottom: 1px solid var(--line-soft);
+
+        border-bottom:
+          1px solid var(--line-soft);
       }
 
       .proof-stat:last-child {
@@ -1165,6 +1336,12 @@
 
       .project-columns {
         grid-template-columns: 1fr;
+      }
+
+      .stack-row {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
       }
 
       .process-row {
@@ -1188,6 +1365,7 @@
       }
 
     }
+
 
     @media (max-width: 620px) {
 
@@ -1219,6 +1397,7 @@
 
       .actions {
         flex-direction: column;
+
         margin-top: 20px;
       }
 
@@ -1270,6 +1449,26 @@
         padding: 62px 0;
       }
 
+      .stack {
+        margin-top: 38px;
+      }
+
+      .stack-row {
+        padding: 24px 0;
+      }
+
+      .stack-content {
+        gap: 7px;
+      }
+
+      .stack-item {
+        min-height: 32px;
+
+        padding: 5px 8px;
+
+        font-size: 12px;
+      }
+
       .footer-inner {
         flex-direction: column;
       }
@@ -1278,8 +1477,8 @@
 
   </style>
 
-  <!-- Person Schema -->
 
+  <!-- Person Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -1291,15 +1490,32 @@
       "https://www.linkedin.com/in/ed-umbao/",
       "https://github.com/edumbao"
     ],
-    "description": "Ed Umbao works with lean B2B SaaS teams on SEO content, technical writing, topical planning, internal linking, editorial systems, and small SEO tools."
+    "knowsAbout": [
+      "SEO",
+      "B2B SaaS Content",
+      "Technical Writing",
+      "Content Strategy",
+      "Google Analytics",
+      "Google Search Console",
+      "WordPress",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Next.js"
+    ],
+    "description": "Ed Umbao works with lean B2B SaaS teams on SEO content, technical writing, topical planning, analytics, internal linking, editorial systems, and practical web tools."
   }
   </script>
 
 </head>
 
+
 <body>
 
-  <!-- Header -->
+
+  <!-- ======================================================
+       Header
+  ======================================================= -->
 
   <header class="site-header">
 
@@ -1324,6 +1540,7 @@
 
       </a>
 
+
       <button
         class="menu-toggle"
         type="button"
@@ -1337,6 +1554,7 @@
         <span></span>
 
       </button>
+
 
       <nav
         class="site-menu"
@@ -1354,6 +1572,10 @@
 
         <a href="#tools">
           Tools
+        </a>
+
+        <a href="#stack">
+          Stack
         </a>
 
         <a href="#process">
@@ -1381,7 +1603,9 @@
   <main>
 
 
-    <!-- Hero -->
+    <!-- ====================================================
+         Hero
+    ===================================================== -->
 
     <section
       class="hero"
@@ -1534,7 +1758,9 @@
     </section>
 
 
-    <!-- Proof Strip -->
+    <!-- ====================================================
+         Proof Strip
+    ===================================================== -->
 
     <section
       class="proof-strip"
@@ -1590,7 +1816,9 @@
     </section>
 
 
-    <!-- Featured Work -->
+    <!-- ====================================================
+         Featured Work
+    ===================================================== -->
 
     <section
       class="section featured-work"
@@ -2032,7 +2260,9 @@
     </section>
 
 
-    <!-- About -->
+    <!-- ====================================================
+         About
+    ===================================================== -->
 
     <section
       class="section"
@@ -2127,7 +2357,9 @@
     </section>
 
 
-    <!-- Tools -->
+    <!-- ====================================================
+         Public Tools
+    ===================================================== -->
 
     <section
       class="section"
@@ -2149,7 +2381,7 @@
 
         <p class="section-intro">
 
-          These are working experiments rather than polished SaaS products.
+          These are working experiments rather than finished SaaS products.
           I use them to make repeated SEO and copywriting tasks easier
           and to learn how web tools are built.
 
@@ -2231,7 +2463,9 @@
     </section>
 
 
-    <!-- Services -->
+    <!-- ====================================================
+         Services
+    ===================================================== -->
 
     <section
       class="section"
@@ -2325,7 +2559,288 @@
     </section>
 
 
-    <!-- Process -->
+    <!-- ====================================================
+         Working Stack
+    ===================================================== -->
+
+    <section
+      class="section"
+      id="stack"
+    >
+
+      <div class="container">
+
+
+        <p class="section-kicker">
+          Working stack
+        </p>
+
+
+        <h2 class="section-title">
+          Tools & platforms I use across SEO, content and technical work.
+        </h2>
+
+
+        <p class="section-intro stack-intro">
+
+          I work across publishing, analytics, remote-team communication,
+          AI-assisted research, website management and small web projects.
+          The tools change by project, but these are the platforms I use
+          most often.
+
+        </p>
+
+
+        <div class="stack">
+
+
+          <!-- SEO -->
+
+          <div class="stack-row">
+
+            <div class="stack-heading">
+
+              <span class="stack-number">
+                01
+              </span>
+
+              <h3>
+                SEO & analytics
+              </h3>
+
+            </div>
+
+
+            <div class="stack-content">
+
+              <span class="stack-item">
+                Google Analytics
+              </span>
+
+              <span class="stack-item">
+                Google Search Console
+              </span>
+
+              <span class="stack-item">
+                Bing Webmaster Tools
+              </span>
+
+              <span class="stack-item">
+                DataForSEO
+              </span>
+
+              <span class="stack-item">
+                AIOSEO
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- Publishing -->
+
+          <div class="stack-row">
+
+            <div class="stack-heading">
+
+              <span class="stack-number">
+                02
+              </span>
+
+              <h3>
+                Publishing & web
+              </h3>
+
+            </div>
+
+
+            <div class="stack-content">
+
+              <span class="stack-item">
+                WordPress
+              </span>
+
+              <span class="stack-item">
+                Elementor
+              </span>
+
+              <span class="stack-item">
+                Hostinger
+              </span>
+
+              <span class="stack-item">
+                Cloudflare
+              </span>
+
+              <span class="stack-item">
+                Google Drive
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- Team -->
+
+          <div class="stack-row">
+
+            <div class="stack-heading">
+
+              <span class="stack-number">
+                03
+              </span>
+
+              <h3>
+                Team workflows
+              </h3>
+
+            </div>
+
+
+            <div class="stack-content">
+
+              <span class="stack-item">
+                Slack
+              </span>
+
+              <span class="stack-item">
+                Telegram
+              </span>
+
+              <span class="stack-item">
+                GitHub
+              </span>
+
+              <span class="stack-item">
+                Zoom
+              </span>
+
+              <span class="stack-item">
+                Google Meet
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- AI -->
+
+          <div class="stack-row">
+
+            <div class="stack-heading">
+
+              <span class="stack-number">
+                04
+              </span>
+
+              <h3>
+                AI-assisted work
+              </h3>
+
+            </div>
+
+
+            <div class="stack-content">
+
+              <span class="stack-item">
+                ChatGPT
+              </span>
+
+              <span class="stack-item">
+                Claude
+              </span>
+
+              <span class="stack-item">
+                Claude Code
+              </span>
+
+              <span class="stack-item">
+                Gemini
+              </span>
+
+              <span class="stack-item">
+                Perplexity
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- Technical -->
+
+          <div class="stack-row">
+
+            <div class="stack-heading">
+
+              <span class="stack-number">
+                05
+              </span>
+
+              <h3>
+                Technical stack
+              </h3>
+
+            </div>
+
+
+            <div class="stack-content">
+
+              <span class="stack-item">
+                HTML
+              </span>
+
+              <span class="stack-item">
+                CSS
+              </span>
+
+              <span class="stack-item">
+                JavaScript
+              </span>
+
+              <span class="stack-item">
+                TypeScript
+              </span>
+
+              <span class="stack-item">
+                Next.js
+              </span>
+
+              <span class="stack-item">
+                Supabase
+              </span>
+
+              <span class="stack-item">
+                Vercel
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <p class="stack-note">
+
+          My technical stack reflects tools I actively work with
+          while building SEO utilities and managing web projects.
+          I use them as part of my SEO and content work rather than
+          presenting myself as a full-time software engineer.
+
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================================
+         Process
+    ===================================================== -->
 
     <section
       class="section"
@@ -2447,7 +2962,9 @@
     </section>
 
 
-    <!-- Writing -->
+    <!-- ====================================================
+         Writing
+    ===================================================== -->
 
     <section
       class="section"
@@ -2534,7 +3051,9 @@
     </section>
 
 
-    <!-- Contact -->
+    <!-- ====================================================
+         Contact
+    ===================================================== -->
 
     <section
       class="section contact"
@@ -2560,8 +3079,8 @@
           <p class="section-intro">
 
             If you need someone who can move between search research,
-            SaaS writing, product understanding and the editorial
-            work around publishing, you can reach me through LinkedIn.
+            SaaS writing, product understanding, analytics and the
+            editorial work around publishing, you can reach me through LinkedIn.
 
           </p>
 
@@ -2608,8 +3127,8 @@
           <br><br>
 
           Lean B2B SaaS teams that need help connecting
-          SEO research, product knowledge, writing and
-          content operations.
+          SEO research, product knowledge, writing,
+          analytics and content operations.
 
         </aside>
 
@@ -2618,7 +3137,9 @@
     </section>
 
 
-    <!-- Footer -->
+    <!-- ====================================================
+         Footer
+    ===================================================== -->
 
     <footer class="footer">
 
@@ -2630,7 +3151,7 @@
 
 
         <span>
-          SEO · SaaS content · Technical learning
+          SEO · SaaS content · Analytics · Technical learning
         </span>
 
       </div>
@@ -2640,7 +3161,9 @@
   </main>
 
 
-  <!-- Mobile Navigation -->
+  <!-- ======================================================
+       Mobile Navigation
+  ======================================================= -->
 
   <script>
 
