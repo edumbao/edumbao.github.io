@@ -1,1185 +1,3110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LBQL9HBJNL"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-LBQL9HBJNL');
-</script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Ed Umbao | SEO Consultant & SaaS Copywriter</title>
-  <meta name="description" content="Ed Umbao is an SEO consultant and SaaS copywriter helping B2B and SaaS companies build content systems that rank, convert, and support growth." />
+<head>
+
+  <!-- ======================================================
+       Google Analytics
+  ======================================================= -->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LBQL9HBJNL"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-LBQL9HBJNL');
+  </script>
+
+
+  <!-- ======================================================
+       Basic Metadata
+  ======================================================= -->
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>
+    Ed Umbao | SEO & Content Systems for Lean B2B SaaS Teams
+  </title>
+
+  <meta
+    name="description"
+    content="Ed Umbao helps lean B2B SaaS teams turn product knowledge, search demand, and customer problems into useful SEO content, copy, and repeatable editorial systems."
+  />
+
+  <link
+    rel="canonical"
+    href="https://edumbao.com/"
+  />
+
+
+  <!-- ======================================================
+       Open Graph
+  ======================================================= -->
+
+  <meta
+    property="og:type"
+    content="website"
+  />
+
+  <meta
+    property="og:title"
+    content="Ed Umbao | SEO & Content Systems for Lean B2B SaaS Teams"
+  />
+
+  <meta
+    property="og:description"
+    content="SEO content, SaaS copywriting, editorial systems, case studies, and tools built from hands-on work with lean B2B SaaS teams."
+  />
+
+  <meta
+    property="og:url"
+    content="https://edumbao.com/"
+  />
+
+  <meta
+    property="og:site_name"
+    content="Ed Umbao"
+  />
+
+
+  <!-- ======================================================
+       Twitter / X
+  ======================================================= -->
+
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  />
+
+  <meta
+    name="twitter:title"
+    content="Ed Umbao | SEO & Content Systems for Lean B2B SaaS Teams"
+  />
+
+  <meta
+    name="twitter:description"
+    content="SEO content, SaaS copywriting, editorial systems, case studies, and tools built from hands-on work with lean B2B SaaS teams."
+  />
+
+
+  <!-- ======================================================
+       Styles
+  ======================================================= -->
 
   <style>
+
+    /* ======================================================
+       Design System
+    ======================================================= */
+
     :root {
+
+      /* Backgrounds */
+
       --bg: #070b16;
       --bg-soft: #0b1020;
-      --panel: #111827;
-      --panel-2: #151f33;
-      --panel-3: #0f172a;
+
+      --surface: #111827;
+      --surface-soft: #151f33;
+      --surface-dark: #0f172a;
+
+
+      /* Borders */
+
       --border: #24324a;
-      --text: #eef4ff;
-      --muted: #9fb0c7;
-      --muted-2: #c4d1e4;
+      --border-soft: rgba(255, 255, 255, 0.10);
+
+
+      /* Text */
+
+      --text: #f4f7fb;
+      --text-soft: #c4d1e4;
+      --muted: #94a3b8;
+
+
+      /* Brand */
+
       --blue: #3b82f6;
       --green: #22c55e;
       --cyan: #06b6d4;
       --purple: #8b5cf6;
-      --shadow: rgba(0, 0, 0, 0.42);
-      --radius-lg: 28px;
-      --radius-md: 18px;
-      --radius-sm: 12px;
+
+
+      /* Layout */
+
+      --container: 1160px;
+
+
+      /* Radius */
+
+      --radius-sm: 10px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+
+
+      /* Shadows */
+
+      --shadow-sm:
+        0 8px 24px rgba(0, 0, 0, 0.18);
+
+      --shadow-md:
+        0 20px 50px rgba(0, 0, 0, 0.30);
     }
 
-    * {
+
+
+    /* ======================================================
+       Global
+    ======================================================= */
+
+    *,
+    *::before,
+    *::after {
       box-sizing: border-box;
     }
+
 
     html {
       scroll-behavior: smooth;
     }
 
+
     body {
-      font-family: Arial, sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(59, 130, 246, 0.18), transparent 30%),
-        radial-gradient(circle at top right, rgba(34, 197, 94, 0.14), transparent 28%),
-        radial-gradient(circle at 50% 20%, rgba(139, 92, 246, 0.10), transparent 35%),
-        var(--bg);
-      color: var(--text);
+
       margin: 0;
-      padding: 0;
+
+      min-height: 100vh;
+
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      font-size: 16px;
+
       line-height: 1.6;
+
+      color: var(--text);
+
+      background:
+
+        radial-gradient(
+          circle at 10% 0%,
+          rgba(59, 130, 246, 0.15),
+          transparent 30%
+        ),
+
+        radial-gradient(
+          circle at 90% 0%,
+          rgba(34, 197, 94, 0.10),
+          transparent 28%
+        ),
+
+        radial-gradient(
+          circle at 50% 18%,
+          rgba(139, 92, 246, 0.06),
+          transparent 32%
+        ),
+
+        var(--bg);
+
+      -webkit-font-smoothing: antialiased;
     }
 
+
+    img,
+    svg {
+      max-width: 100%;
+    }
+
+
+    button,
+    input,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+
     a {
+
       color: inherit;
+
       text-decoration: none;
     }
 
+
+    a:focus-visible,
+    button:focus-visible {
+
+      outline:
+        3px solid rgba(59, 130, 246, 0.55);
+
+      outline-offset: 3px;
+    }
+
+
     .container {
-      max-width: 1160px;
-      margin: 0 auto;
-      padding: 0 20px;
+
+      width:
+        min(
+          calc(100% - 40px),
+          var(--container)
+        );
+
+      margin-inline: auto;
     }
 
-    .nav {
+
+
+    /* ======================================================
+       Header
+    ======================================================= */
+
+    .site-header {
+
       position: sticky;
+
       top: 0;
-      z-index: 10;
-      backdrop-filter: blur(14px);
-      background: rgba(7, 11, 22, 0.76);
-      border-bottom: 1px solid rgba(36, 50, 74, 0.72);
+
+      z-index: 100;
+
+      border-bottom:
+        1px solid rgba(255, 255, 255, 0.08);
+
+      background:
+        rgba(7, 11, 22, 0.82);
+
+      backdrop-filter:
+        blur(16px);
+
+      -webkit-backdrop-filter:
+        blur(16px);
     }
 
-    .nav-inner {
-      max-width: 1160px;
-      margin: 0 auto;
-      padding: 16px 20px;
+
+    .site-nav {
+
+      min-height: 72px;
+
       display: flex;
+
+      align-items: center;
+
       justify-content: space-between;
-      align-items: center;
-      gap: 16px;
+
+      gap: 24px;
     }
 
-    .brand {
-      display: flex;
+
+
+    /* Brand */
+
+    .site-brand {
+
+      display: inline-flex;
+
       align-items: center;
-      gap: 10px;
+
+      gap: 11px;
+
+      font-size: 16px;
+
       font-weight: 800;
+
       letter-spacing: -0.02em;
+
+      color: var(--text);
     }
+
+
+    .site-brand:hover {
+      opacity: 0.92;
+    }
+
 
     .brand-mark {
-      width: 34px;
-      height: 34px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, var(--blue), var(--green));
-      box-shadow: 0 10px 24px rgba(59, 130, 246, 0.3);
+
+      width: 36px;
+
+      height: 36px;
+
+      display: grid;
+
+      place-items: center;
+
+      border-radius: 11px;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--blue),
+          var(--green)
+        );
+
+      color: #ffffff;
+
+      font-size: 16px;
+
+      font-weight: 900;
+
+      box-shadow:
+        0 8px 22px
+        rgba(59, 130, 246, 0.25);
+    }
+
+
+
+    /* Navigation */
+
+    .site-menu {
+
       display: flex;
+
       align-items: center;
+
+      gap: 6px;
+    }
+
+
+    .site-menu a {
+
+      padding:
+        9px 11px;
+
+      border-radius:
+        9px;
+
+      color:
+        var(--muted);
+
+      font-size:
+        14px;
+
+      font-weight:
+        600;
+
+      transition:
+        color 0.15s ease,
+        background 0.15s ease;
+    }
+
+
+    .site-menu a:hover {
+
+      color:
+        var(--text);
+
+      background:
+        rgba(255, 255, 255, 0.05);
+    }
+
+
+    .site-menu .nav-cta {
+
+      margin-left:
+        5px;
+
+      padding:
+        10px 15px;
+
+      border:
+        1px solid
+        rgba(59, 130, 246, 0.34);
+
+      background:
+        rgba(59, 130, 246, 0.12);
+
+      color:
+        #dbeafe;
+
+      font-weight:
+        700;
+    }
+
+
+    .site-menu .nav-cta:hover {
+
+      background:
+        rgba(59, 130, 246, 0.20);
+    }
+
+
+
+    /* Mobile menu button */
+
+    .menu-toggle {
+
+      display: none;
+
+      width: 42px;
+
+      height: 42px;
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+      border-radius:
+        10px;
+
+      background:
+        rgba(255, 255, 255, 0.04);
+
+      cursor: pointer;
+
+      align-items: center;
+
       justify-content: center;
-      font-size: 18px;
-      color: white;
+
+      flex-direction: column;
+
+      gap: 5px;
     }
 
-    .nav-links {
-      display: flex;
-      gap: 18px;
-      align-items: center;
-      color: var(--muted);
-      font-size: 14px;
+
+    .menu-toggle span {
+
+      display: block;
+
+      width: 20px;
+
+      height: 2px;
+
+      border-radius: 100px;
+
+      background:
+        var(--text);
     }
 
-    .nav-links a:hover {
-      color: var(--text);
-    }
 
-    .nav-cta {
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: rgba(59, 130, 246, 0.12);
-      border: 1px solid rgba(59, 130, 246, 0.35);
-      color: #cfe1ff;
-      font-weight: 700;
-    }
+
+    /* ======================================================
+       Hero
+    ======================================================= */
 
     .hero {
-      padding: 82px 0 48px;
+
+      padding:
+        82px 0 48px;
     }
+
 
     .hero-grid {
+
       display: grid;
-      grid-template-columns: 1.08fr 0.92fr;
+
+      grid-template-columns:
+        1.08fr 0.92fr;
+
       gap: 28px;
+
       align-items: center;
     }
+
 
     .eyebrow {
+
       display: inline-flex;
+
       align-items: center;
+
       gap: 8px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(34, 197, 94, 0.10);
-      border: 1px solid rgba(34, 197, 94, 0.25);
-      color: #9ff0be;
-      font-size: 14px;
-      font-weight: 700;
-      margin-bottom: 18px;
+
+      padding:
+        8px 12px;
+
+      border-radius:
+        999px;
+
+      background:
+        rgba(34, 197, 94, 0.10);
+
+      border:
+        1px solid
+        rgba(34, 197, 94, 0.25);
+
+      color:
+        #9ff0be;
+
+      font-size:
+        14px;
+
+      font-weight:
+        700;
+
+      margin-bottom:
+        18px;
     }
+
 
     h1 {
-      font-size: clamp(42px, 6vw, 72px);
-      line-height: 0.98;
-      letter-spacing: -0.06em;
-      margin: 0 0 20px;
+
+      margin:
+        0 0 20px;
+
+      font-size:
+        clamp(42px, 6vw, 72px);
+
+      line-height:
+        0.98;
+
+      letter-spacing:
+        -0.06em;
     }
+
 
     .hero-text {
-      color: var(--muted-2);
-      font-size: 19px;
-      max-width: 720px;
-      margin-bottom: 26px;
+
+      max-width:
+        720px;
+
+      margin-bottom:
+        26px;
+
+      color:
+        var(--text-soft);
+
+      font-size:
+        19px;
     }
+
+
+
+    /* ======================================================
+       Buttons
+    ======================================================= */
 
     .hero-actions {
+
       display: flex;
+
       gap: 12px;
+
       flex-wrap: wrap;
-      margin-bottom: 26px;
+
+      align-items: center;
+
+      margin:
+        28px 0 26px;
     }
+
 
     .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 14px 18px;
-      border-radius: 14px;
-      border: 0;
-      font-size: 16px;
-      font-weight: 800;
-      cursor: pointer;
-      transition: transform 0.15s ease, opacity 0.15s ease, border 0.15s ease;
+
+      display:
+        inline-flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      gap:
+        8px;
+
+      padding:
+        14px 20px;
+
+      border:
+        1px solid transparent;
+
+      border-radius:
+        999px;
+
+      font-size:
+        15px;
+
+      font-weight:
+        750;
+
+      cursor:
+        pointer;
+
+      transition:
+        transform 0.15s ease,
+        opacity 0.15s ease,
+        background 0.15s ease,
+        border 0.15s ease;
     }
+
 
     .btn:hover {
-      transform: translateY(-1px);
-      opacity: 0.96;
+
+      transform:
+        translateY(-1px);
+
+      opacity:
+        0.96;
     }
+
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--blue), var(--green));
-      color: white;
-      box-shadow: 0 14px 30px rgba(59, 130, 246, 0.25);
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--blue),
+          var(--green)
+        );
+
+      color:
+        #ffffff;
+
+      box-shadow:
+        0 14px 30px
+        rgba(59, 130, 246, 0.20);
     }
+
 
     .btn-secondary {
-      background: rgba(17, 24, 39, 0.85);
-      border: 1px solid var(--border);
-      color: var(--text);
+
+      background:
+        rgba(17, 24, 39, 0.85);
+
+      border-color:
+        var(--border);
+
+      color:
+        var(--text);
     }
+
+
+    .btn-green {
+
+      background:
+        linear-gradient(
+          135deg,
+          #22c55e,
+          #16a34a
+        );
+
+      color:
+        #ffffff;
+    }
+
+
+    .btn-white {
+
+      background:
+        #ffffff;
+
+      color:
+        #0f172a;
+
+      border-color:
+        #ffffff;
+    }
+
+
+    .btn-outline {
+
+      background:
+        transparent;
+
+      color:
+        #ffffff;
+
+      border-color:
+        rgba(255, 255, 255, 0.42);
+    }
+
+
+    .btn-outline:hover {
+
+      border-color:
+        rgba(255, 255, 255, 0.68);
+    }
+
+
+
+    /* ======================================================
+       Trust Row
+    ======================================================= */
 
     .trust-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
+
+      display:
+        flex;
+
+      flex-wrap:
+        wrap;
+
+      gap:
+        10px;
     }
 
+
     .trust-pill {
-      padding: 8px 11px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      color: var(--muted);
-      font-size: 13px;
+
+      padding:
+        8px 11px;
+
+      border-radius:
+        999px;
+
+      background:
+        rgba(255, 255, 255, 0.04);
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+      color:
+        var(--muted);
+
+      font-size:
+        13px;
     }
+
+
+
+    /* ======================================================
+       Shared Cards
+    ======================================================= */
 
     .preview-card,
     .panel-card,
     .tool-card,
     .service-card,
     .stat-card {
+
       background:
-        linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.025)),
-        var(--panel);
-      border: 1px solid rgba(255, 255, 255, 0.10);
-      box-shadow: 0 20px 52px var(--shadow);
+
+        linear-gradient(
+          180deg,
+          rgba(255,255,255,0.07),
+          rgba(255,255,255,0.025)
+        ),
+
+        var(--surface);
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.10);
+
+      box-shadow:
+        var(--shadow-md);
     }
+
+
+
+    /* ======================================================
+       Hero Preview Card
+    ======================================================= */
 
     .preview-card {
-      position: relative;
-      border-radius: var(--radius-lg);
-      padding: 24px;
-      overflow: hidden;
+
+      position:
+        relative;
+
+      overflow:
+        hidden;
+
+      padding:
+        24px;
+
+      border-radius:
+        var(--radius-lg);
     }
+
 
     .preview-card::before {
+
       content: "";
-      position: absolute;
-      inset: -2px;
-      background: radial-gradient(circle at top right, rgba(34, 197, 94, 0.25), transparent 34%);
-      pointer-events: none;
+
+      position:
+        absolute;
+
+      inset:
+        -2px;
+
+      background:
+        radial-gradient(
+          circle at top right,
+          rgba(34, 197, 94, 0.25),
+          transparent 34%
+        );
+
+      pointer-events:
+        none;
     }
+
 
     .preview-top {
-      position: relative;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 22px;
+
+      position:
+        relative;
+
+      display:
+        flex;
+
+      justify-content:
+        space-between;
+
+      align-items:
+        center;
+
+      margin-bottom:
+        22px;
     }
+
 
     .window-dots {
-      display: flex;
-      gap: 7px;
+
+      display:
+        flex;
+
+      gap:
+        7px;
     }
+
 
     .dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: #475569;
+
+      width:
+        10px;
+
+      height:
+        10px;
+
+      border-radius:
+        50%;
+
+      background:
+        #475569;
     }
 
-    .dot:nth-child(1) { background: #ef4444; }
-    .dot:nth-child(2) { background: #f59e0b; }
-    .dot:nth-child(3) { background: #22c55e; }
+
+    .dot:nth-child(1) {
+      background: #ef4444;
+    }
+
+    .dot:nth-child(2) {
+      background: #f59e0b;
+    }
+
+    .dot:nth-child(3) {
+      background: #22c55e;
+    }
+
 
     .score-badge {
-      color: #bff7d1;
-      font-size: 13px;
-      font-weight: 800;
-      padding: 7px 10px;
-      border-radius: 999px;
-      background: rgba(34, 197, 94, 0.11);
-      border: 1px solid rgba(34, 197, 94, 0.25);
+
+      padding:
+        7px 10px;
+
+      border-radius:
+        999px;
+
+      background:
+        rgba(34, 197, 94, 0.11);
+
+      border:
+        1px solid
+        rgba(34, 197, 94, 0.25);
+
+      color:
+        #bff7d1;
+
+      font-size:
+        13px;
+
+      font-weight:
+        800;
     }
+
 
     .mock-line {
-      position: relative;
-      height: 12px;
-      border-radius: 99px;
-      background: #263550;
-      margin-bottom: 12px;
-      overflow: hidden;
+
+      position:
+        relative;
+
+      overflow:
+        hidden;
+
+      height:
+        12px;
+
+      margin-bottom:
+        12px;
+
+      border-radius:
+        99px;
+
+      background:
+        #263550;
     }
+
 
     .mock-line span {
-      display: block;
-      height: 100%;
-      border-radius: 99px;
-      background: linear-gradient(90deg, var(--blue), var(--green));
+
+      display:
+        block;
+
+      height:
+        100%;
+
+      border-radius:
+        99px;
+
+      background:
+        linear-gradient(
+          90deg,
+          var(--blue),
+          var(--green)
+        );
     }
+
 
     .mock-list {
-      position: relative;
-      margin-top: 22px;
-      display: grid;
-      gap: 12px;
+
+      position:
+        relative;
+
+      display:
+        grid;
+
+      gap:
+        12px;
+
+      margin-top:
+        22px;
     }
+
 
     .mock-item {
-      padding: 14px;
-      border-radius: 16px;
-      background: rgba(15, 23, 42, 0.78);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
+
+      display:
+        flex;
+
+      align-items:
+        flex-start;
+
+      gap:
+        12px;
+
+      padding:
+        14px;
+
+      border-radius:
+        16px;
+
+      background:
+        rgba(15, 23, 42, 0.78);
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
     }
+
 
     .mock-icon {
-      width: 30px;
-      height: 30px;
-      border-radius: 10px;
-      background: rgba(59, 130, 246, 0.18);
-      color: #bfdbfe;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex: 0 0 auto;
-      font-weight: 900;
+
+      width:
+        30px;
+
+      height:
+        30px;
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      flex:
+        0 0 auto;
+
+      border-radius:
+        10px;
+
+      background:
+        rgba(59, 130, 246, 0.18);
+
+      color:
+        #bfdbfe;
+
+      font-weight:
+        900;
     }
+
 
     .mock-item strong {
-      display: block;
-      font-size: 14px;
-      margin-bottom: 2px;
+
+      display:
+        block;
+
+      margin-bottom:
+        2px;
+
+      font-size:
+        14px;
     }
+
 
     .mock-item p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.45;
+
+      margin:
+        0;
+
+      color:
+        var(--muted);
+
+      font-size:
+        13px;
+
+      line-height:
+        1.45;
     }
+
+
+
+    /* ======================================================
+       Sections
+    ======================================================= */
 
     .section {
-      padding: 40px 0;
+
+      padding:
+        44px 0;
     }
+
 
     .section-title {
-      font-size: clamp(30px, 4vw, 46px);
-      line-height: 1.1;
-      letter-spacing: -0.04em;
-      margin: 0 0 12px;
+
+      margin:
+        0 0 12px;
+
+      font-size:
+        clamp(30px, 4vw, 46px);
+
+      line-height:
+        1.1;
+
+      letter-spacing:
+        -0.04em;
     }
+
 
     .section-subtitle {
-      color: var(--muted-2);
-      font-size: 17px;
-      max-width: 760px;
-      margin: 0 0 26px;
+
+      max-width:
+        760px;
+
+      margin:
+        0 0 26px;
+
+      color:
+        var(--text-soft);
+
+      font-size:
+        17px;
     }
+
+
+
+    /* ======================================================
+       Proof
+    ======================================================= */
 
     .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
+
+      display:
+        grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap:
+        16px;
     }
+
 
     .stat-card {
-      border-radius: var(--radius-md);
-      padding: 22px;
+
+      padding:
+        22px;
+
+      border-radius:
+        var(--radius-md);
     }
+
 
     .stat-number {
-      font-size: 34px;
-      line-height: 1;
-      font-weight: 900;
-      letter-spacing: -0.04em;
-      margin-bottom: 8px;
-      background: linear-gradient(135deg, #ffffff, #9ff0be);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+
+      margin-bottom:
+        8px;
+
+      font-size:
+        34px;
+
+      line-height:
+        1;
+
+      font-weight:
+        900;
+
+      letter-spacing:
+        -0.04em;
+
+      background:
+        linear-gradient(
+          135deg,
+          #ffffff,
+          #9ff0be
+        );
+
+      -webkit-background-clip:
+        text;
+
+      -webkit-text-fill-color:
+        transparent;
     }
 
+
     .stat-card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 15px;
+
+      margin:
+        0;
+
+      color:
+        var(--muted);
+
+      font-size:
+        15px;
     }
+
+
+
+    /* ======================================================
+       Tools + Services
+    ======================================================= */
 
     .tool-grid,
     .services-grid {
-      display: grid;
-      gap: 18px;
+
+      display:
+        grid;
+
+      gap:
+        18px;
     }
+
 
     .tool-grid {
-      grid-template-columns: repeat(2, 1fr);
+
+      grid-template-columns:
+        repeat(2, 1fr);
     }
 
+
     .services-grid {
-      grid-template-columns: repeat(3, 1fr);
+
+      grid-template-columns:
+        repeat(3, 1fr);
     }
+
 
     .tool-card,
     .service-card,
     .panel-card {
-      border-radius: var(--radius-lg);
-      padding: 26px;
+
+      padding:
+        26px;
+
+      border-radius:
+        var(--radius-lg);
     }
 
+
     .card-icon {
-      width: 46px;
-      height: 46px;
-      border-radius: 15px;
-      background: rgba(59, 130, 246, 0.15);
-      color: #bfdbfe;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 14px;
-      font-size: 22px;
-      font-weight: 900;
+
+      width:
+        46px;
+
+      height:
+        46px;
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      margin-bottom:
+        14px;
+
+      border-radius:
+        15px;
+
+      background:
+        rgba(59, 130, 246, 0.15);
+
+      color:
+        #bfdbfe;
+
+      font-size:
+        22px;
+
+      font-weight:
+        900;
     }
+
 
     .tool-card h3,
     .service-card h3,
     .panel-card h3 {
-      margin: 0 0 8px;
-      font-size: 22px;
+
+      margin:
+        0 0 8px;
+
+      font-size:
+        22px;
     }
+
 
     .tool-card p,
     .service-card p,
     .panel-card p {
-      color: var(--muted);
-      margin: 0 0 18px;
+
+      margin:
+        0 0 18px;
+
+      color:
+        var(--muted);
     }
+
+
+
+    /* ======================================================
+       Portfolio
+    ======================================================= */
+
+    .portfolio-action {
+
+      margin-top:
+        28px;
+    }
+
+
+
+    /* ======================================================
+       Process
+    ======================================================= */
 
     .process-list {
-      display: grid;
-      gap: 12px;
-      margin-top: 18px;
+
+      display:
+        grid;
+
+      gap:
+        12px;
+
+      margin-top:
+        18px;
     }
+
 
     .process-item {
-      padding: 14px;
-      border-radius: 16px;
-      background: rgba(15, 23, 42, 0.78);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      color: var(--muted-2);
+
+      padding:
+        14px;
+
+      border-radius:
+        16px;
+
+      background:
+        rgba(15, 23, 42, 0.78);
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+      color:
+        var(--text-soft);
     }
+
 
     .process-item strong {
-      color: var(--text);
+
+      color:
+        var(--text);
     }
+
+
+
+    /* ======================================================
+       Share Widget
+    ======================================================= */
+
+    .share-widget {
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      gap:
+        10px;
+
+      flex-wrap:
+        wrap;
+
+      margin:
+        0 0 22px;
+    }
+
+
+    .share-label {
+
+      color:
+        var(--text-soft);
+
+      font-size:
+        14px;
+
+      font-weight:
+        800;
+    }
+
+
+    .share-buttons {
+
+      display:
+        flex;
+
+      gap:
+        10px;
+
+      flex-wrap:
+        wrap;
+    }
+
+
+    .share-btn {
+
+      display:
+        inline-flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      gap:
+        7px;
+
+      min-height:
+        40px;
+
+      padding:
+        10px 12px;
+
+      border-radius:
+        999px;
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.14);
+
+      background:
+        rgba(17, 24, 39, 0.82);
+
+      color:
+        var(--text);
+
+      font-size:
+        14px;
+
+      font-weight:
+        800;
+
+      cursor:
+        pointer;
+
+      transition:
+        transform 0.15s ease,
+        opacity 0.15s ease;
+    }
+
+
+    .share-btn:hover {
+
+      transform:
+        translateY(-1px);
+
+      opacity:
+        0.94;
+    }
+
+
+    .share-btn svg {
+
+      width:
+        16px;
+
+      height:
+        16px;
+
+      fill:
+        currentColor;
+    }
+
+
+    .share-btn.copy {
+
+      color:
+        #dcfce7;
+
+      border-color:
+        rgba(34, 197, 94, 0.35);
+    }
+
+
+    .share-btn.embed {
+
+      color:
+        #e9d5ff;
+
+      border-color:
+        rgba(139, 92, 246, 0.35);
+    }
+
+
+    .share-btn.facebook {
+
+      color:
+        #dbeafe;
+
+      border-color:
+        rgba(59, 130, 246, 0.35);
+    }
+
+
+    .share-btn.more {
+
+      color:
+        #cffafe;
+
+      border-color:
+        rgba(6, 182, 212, 0.35);
+    }
+
+
+    .share-message {
+
+      min-height:
+        18px;
+
+      color:
+        #9ff0be;
+
+      font-size:
+        13px;
+    }
+
+
+
+    /* ======================================================
+       Footer
+    ======================================================= */
 
     .footer {
-      padding: 34px 0 46px;
-      color: var(--muted);
-      text-align: center;
-      font-size: 14px;
+
+      padding:
+        38px 0 48px;
+
+      color:
+        var(--muted);
+
+      text-align:
+        center;
+
+      font-size:
+        14px;
     }
 
-   .menu-toggle {
-  display: none;
-  width: 42px;
-  height: 42px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 12px;
-  background: rgba(17, 24, 39, 0.82);
-  cursor: pointer;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 5px;
-}
 
-.menu-toggle span {
-  display: block;
-  width: 20px;
-  height: 2px;
-  border-radius: 999px;
-  background: var(--text);
-}
 
-@media (max-width: 900px) {
-  .hero-grid,
-  .tool-grid,
-  .services-grid,
-  .stats-grid {
-    grid-template-columns: 1fr;
-  }
+    /* ======================================================
+       Tablet + Mobile
+    ======================================================= */
 
-  .nav-inner {
-    position: relative;
-    flex-direction: row;
-    align-items: center;
-  }
+    @media (max-width: 900px) {
 
-  .menu-toggle {
-    display: inline-flex;
-    margin-left: auto;
-  }
+      .hero-grid,
+      .tool-grid,
+      .services-grid,
+      .stats-grid {
 
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 64px;
-    left: 20px;
-    right: 20px;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 8px;
-    padding: 14px;
-    border-radius: 18px;
-    background: rgba(7, 11, 22, 0.96);
-    border: 1px solid rgba(255, 255, 255, 0.10);
-    box-shadow: 0 20px 52px var(--shadow);
-  }
+        grid-template-columns:
+          1fr;
+      }
 
-  .nav-links.nav-open {
-    display: flex;
-  }
+    }
 
-  .nav-links a {
-    padding: 10px 12px;
-    border-radius: 12px;
-  }
 
-  .nav-links a:hover {
-    background: rgba(255, 255, 255, 0.06);
-  }
 
-  .nav-cta {
-    text-align: center;
-  }
-}
+    @media (max-width: 820px) {
+
+      .site-nav {
+
+        position:
+          relative;
+      }
+
+
+      .menu-toggle {
+
+        display:
+          inline-flex;
+      }
+
+
+      .site-menu {
+
+        display:
+          none;
+
+        position:
+          absolute;
+
+        top:
+          calc(100% + 1px);
+
+        left:
+          0;
+
+        right:
+          0;
+
+        flex-direction:
+          column;
+
+        align-items:
+          stretch;
+
+        padding:
+          12px;
+
+        border:
+          1px solid
+          rgba(255, 255, 255, 0.10);
+
+        border-radius:
+          0 0 16px 16px;
+
+        background:
+          rgba(7, 11, 22, 0.98);
+
+        box-shadow:
+          var(--shadow-md);
+      }
+
+
+      .site-menu.nav-open {
+
+        display:
+          flex;
+      }
+
+
+      .site-menu a {
+
+        padding:
+          12px 14px;
+      }
+
+
+      .site-menu .nav-cta {
+
+        margin-left:
+          0;
+
+        margin-top:
+          4px;
+
+        text-align:
+          center;
+      }
+
+    }
+
+
 
     @media (max-width: 620px) {
-      .hero {
-        padding: 52px 0 28px;
+
+      .container {
+
+        width:
+          min(
+            calc(100% - 28px),
+            var(--container)
+          );
       }
+
+
+      .hero {
+
+        padding:
+          52px 0 28px;
+      }
+
 
       .preview-card,
       .tool-card,
       .service-card,
       .panel-card,
       .stat-card {
-        padding: 20px;
+
+        padding:
+          20px;
       }
+
 
       .btn {
-        width: 100%;
+
+        width:
+          100%;
       }
+
+
+      .share-widget {
+
+        align-items:
+          flex-start;
+
+        flex-direction:
+          column;
+      }
+
     }
-    .hero-actions {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-top: 28px;
-}
 
-.hero-button {
-  display: inline-block;
-  padding: 14px 22px;
-  border-radius: 999px;
-  background: #ffffff;
-  color: #0f172a;
-  text-decoration: none;
-  font-weight: 700;
-  border: 1px solid #ffffff;
-  transition: 0.2s ease;
-}
-
-.hero-button:hover {
-  transform: translateY(-2px);
-  opacity: 0.9;
-}
-
-.hero-button-secondary {
-  background: transparent;
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.45);
-}
-  .hero-actions {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-top: 28px;
-}
-
-.hero-actions .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 14px 22px;
-  border-radius: 999px;
-  font-weight: 700;
-  text-decoration: none;
-  transition: 0.2s ease;
-}
-
-.hero-actions .btn:hover {
-  transform: translateY(-2px);
-}
-
-/* Green gradient for Use free tools */
-.hero-actions .btn-green {
-  background: linear-gradient(135deg, #22c55e, #16a34a);
-  color: #ffffff;
-  border: 1px solid transparent;
-}
-
-/* White button for Get Free SEO Planner */
-.hero-actions .btn-white {
-  background: #ffffff;
-  color: #0f172a;
-  border: 1px solid #ffffff;
-}
-
-/* Outline button for Work with me */
-.hero-actions .btn-outline {
-  background: transparent;
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-}
-/* Hero share buttons */
-.share-widget {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin: 0 0 22px;
-}
-
-.share-label {
-  color: var(--muted-2);
-  font-size: 14px;
-  font-weight: 800;
-}
-
-.share-buttons {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.share-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 7px;
-  min-height: 40px;
-  padding: 10px 12px;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(17, 24, 39, 0.82);
-  color: var(--text);
-  font-size: 14px;
-  font-weight: 800;
-  cursor: pointer;
-  text-decoration: none;
-  transition: transform 0.15s ease, opacity 0.15s ease, border 0.15s ease;
-}
-
-.share-btn:hover {
-  transform: translateY(-1px);
-  opacity: 0.94;
-}
-
-.share-btn svg {
-  width: 16px;
-  height: 16px;
-  fill: currentColor;
-}
-
-.share-btn.copy {
-  color: #dcfce7;
-  border-color: rgba(34, 197, 94, 0.35);
-}
-
-.share-btn.embed {
-  color: #e9d5ff;
-  border-color: rgba(139, 92, 246, 0.35);
-}
-
-.share-btn.facebook {
-  color: #dbeafe;
-  border-color: rgba(59, 130, 246, 0.35);
-}
-
-.share-btn.more {
-  color: #cffafe;
-  border-color: rgba(6, 182, 212, 0.35);
-}
-
-.share-message {
-  color: #9ff0be;
-  font-size: 13px;
-  min-height: 18px;
-}
-
-@media (max-width: 620px) {
-  .share-widget {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-}
   </style>
-  
+
+
+
+  <!-- ======================================================
+       Person Schema
+  ======================================================= -->
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Ed Umbao",
     "jobTitle": "SEO Consultant and SaaS Copywriter",
-    "url": "https://edumbao.com",
+    "url": "https://edumbao.com/",
     "sameAs": [
-      "https://www.linkedin.com/in/edumbao",
+      "https://www.linkedin.com/in/ed-umbao/",
       "https://github.com/edumbao"
     ],
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Self-Employed"
-    },
-    "description": "Ed Umbao helps lean SaaS and B2B teams turn search demand, product knowledge, and customer pain points into clear SEO content, landing page copy, and repeatable editorial workflows."
+    "description": "Ed Umbao helps lean B2B SaaS teams turn product knowledge, search demand, and customer problems into useful SEO content, copy, and repeatable editorial systems."
   }
   </script>
-  
+
 </head>
 
+
+
 <body>
-  <header class="nav">
-  <div class="nav-inner">
-    <a href="/index.html" class="brand">
-      <span class="brand-mark">↗</span>
-      <span>Ed Umbao</span>
-    </a>
 
-    <button class="menu-toggle" aria-label="Open menu" aria-controls="site-menu" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
 
-    <nav class="nav-links" id="site-menu">
-      <a href="/index.html">Home</a>
-      <a href="/blog.html">Blog</a>
-      <a href="/index.html#tools">Tools</a>
-      <a href="/index.html#services">Services</a>
-      <a href="/index.html#proof">Proof</a>
-      <a href="/index.html#process">Process</a>
-      <a href="/index.html#contact" class="nav-cta">Work with me</a>
-    </nav>
-  </div>
-</header>
+  <!-- ======================================================
+       Header
+  ======================================================= -->
+
+  <header class="site-header">
+
+    <div class="container site-nav">
+
+
+      <a
+        href="/"
+        class="site-brand"
+        aria-label="Ed Umbao homepage"
+      >
+
+        <span
+          class="brand-mark"
+          aria-hidden="true"
+        >
+          E
+        </span>
+
+        <span>
+          Ed Umbao
+        </span>
+
+      </a>
+
+
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-controls="site-menu"
+        aria-expanded="false"
+      >
+
+        <span></span>
+
+        <span></span>
+
+        <span></span>
+
+      </button>
+
+
+
+      <nav
+        class="site-menu"
+        id="site-menu"
+        aria-label="Main navigation"
+      >
+
+        <a href="/writing-portfolio/">
+          Work
+        </a>
+
+        <a href="/blog.html">
+          Writing
+        </a>
+
+        <a href="/index.html#tools">
+          Tools
+        </a>
+
+        <a href="/index.html#services">
+          Services
+        </a>
+
+        <a href="/index.html#process">
+          Process
+        </a>
+
+        <a
+          href="/index.html#contact"
+          class="nav-cta"
+        >
+          Work with me
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- ======================================================
+       Main Content
+  ======================================================= -->
 
   <main>
-    <section class="hero" id="home">
-      <div class="container hero-grid">
-        <div>
-          <div class="eyebrow">SEO Consultant & SaaS Copywriter</div>
 
-          <h1>I build content systems that rank, convert, and support SaaS growth.</h1>
+
+    <!-- ====================================================
+         Hero
+    ===================================================== -->
+
+    <section
+      class="hero"
+      id="home"
+    >
+
+      <div class="container hero-grid">
+
+
+        <!-- Hero Copy -->
+
+        <div>
+
+          <div class="eyebrow">
+            SEO Consultant & SaaS Copywriter
+          </div>
+
+
+          <h1>
+            I build content systems that rank, convert, and support SaaS growth.
+          </h1>
+
 
           <p class="hero-text">
-            I help lean SaaS and B2B teams turn search demand, product knowledge, and customer pain points
-            into clear SEO content, landing page copy, and repeatable editorial workflows.
+
+            I help lean SaaS and B2B teams turn search demand,
+            product knowledge, and customer pain points into clear
+            SEO content, landing page copy, and repeatable editorial
+            workflows.
+
           </p>
 
+
+
+          <!-- Hero CTA -->
+
           <div class="hero-actions">
-            <a href="#tools" class="btn btn-green">
-              Use Free tools
+
+            <a
+              href="#tools"
+              class="btn btn-green"
+            >
+              Use Free Tools
             </a>
 
-            <a href="/free-seo-content-strategy-planner/" class="btn btn-white" target="_blank" rel="noopener noreferrer">
+
+            <a
+              href="/free-seo-content-strategy-planner/"
+              class="btn btn-white"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Get Free SEO Planner
             </a>
 
-            <a href="#contact" class="btn btn-outline">
+
+            <a
+              href="#contact"
+              class="btn btn-outline"
+            >
               Work with me
             </a>
+
           </div>
-          <div class="share-widget" aria-label="Share this page">
-  <span class="share-label">Share this</span>
 
-  <div class="share-buttons">
-    <button type="button" class="share-btn copy" id="copyPageLink">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M3.9 12c0-1.71.69-3.31 1.9-4.52l2.12-2.12a6.39 6.39 0 0 1 9.03 0 1 1 0 0 1-1.41 1.41 4.39 4.39 0 0 0-6.2 0L7.22 8.9a4.39 4.39 0 0 0 0 6.2 1 1 0 0 1-1.41 1.41A6.35 6.35 0 0 1 3.9 12Zm6.34 2.83a1 1 0 0 1 0-1.41l3.18-3.18a1 1 0 1 1 1.41 1.41l-3.18 3.18a1 1 0 0 1-1.41 0Zm-1.78 2.4a4.39 4.39 0 0 0 6.2 0l2.12-2.13a4.39 4.39 0 0 0 0-6.2 1 1 0 0 1 1.41-1.41 6.39 6.39 0 0 1 0 9.03l-2.12 2.12a6.39 6.39 0 0 1-9.03 0 1 1 0 0 1 1.41-1.41Z"/>
-      </svg>
-      Copy Link
-    </button>
 
-    <button type="button" class="share-btn embed" id="copyEmbedCode">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M8.7 16.3a1 1 0 0 1-1.4 1.4l-5-5a1 1 0 0 1 0-1.4l5-5a1 1 0 1 1 1.4 1.4L4.42 12l4.28 4.3Zm6.6 0L19.58 12 15.3 7.7a1 1 0 1 1 1.4-1.4l5 5a1 1 0 0 1 0 1.4l-5 5a1 1 0 0 1-1.4-1.4Z"/>
-      </svg>
-      Embed
-    </button>
 
-    <a class="share-btn x" id="shareOnX" href="#" target="_blank" rel="noopener noreferrer">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3l-4.9-6.5L6.3 22H3.2l7.3-8.4L2.8 2h6.4l4.5 6 5.2-6Zm-1.1 17.8h1.7L8.3 4.1H6.5l11.3 15.7Z"/>
-      </svg>
-      X
-    </a>
+          <!-- Share Widget -->
 
-    <a class="share-btn facebook" id="shareOnFacebook" href="#" target="_blank" rel="noopener noreferrer">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M22 12.06C22 6.48 17.52 2 11.94 2S2 6.48 2 12.06c0 5.04 3.69 9.22 8.52 9.98v-7.06H8v-2.92h2.52V9.84c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.23.19 2.23.19v2.45h-1.26c-1.24 0-1.63.77-1.63 1.56v1.9h2.78l-.44 2.92h-2.34v7.06C18.31 21.28 22 17.1 22 12.06Z"/>
-      </svg>
-      Facebook
-    </a>
+          <div
+            class="share-widget"
+            aria-label="Share this page"
+          >
 
-    <button type="button" class="share-btn more" id="shareMore">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M18 8a3 3 0 1 0-2.83-4H15a3 3 0 0 0 .17 1L8.91 8.58A3 3 0 1 0 9 15.42L15.17 19A3 3 0 1 0 16 17.27l-6.17-3.58a3.14 3.14 0 0 0 0-3.38L16 6.73A2.99 2.99 0 0 0 18 8Z"/>
-      </svg>
-      More
-    </button>
-  </div>
+            <span class="share-label">
+              Share this
+            </span>
 
-  <span class="share-message" id="shareMessage" role="status" aria-live="polite"></span>
-</div>
+
+            <div class="share-buttons">
+
+
+              <!-- Copy -->
+
+              <button
+                type="button"
+                class="share-btn copy"
+                id="copyPageLink"
+              >
+
+                <svg
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+
+                  <path d="M3.9 12c0-1.71.69-3.31 1.9-4.52l2.12-2.12a6.39 6.39 0 0 1 9.03 0 1 1 0 0 1-1.41 1.41 4.39 4.39 0 0 0-6.2 0L7.22 8.9a4.39 4.39 0 0 0 0 6.2 1 1 0 0 1-1.41 1.41A6.35 6.35 0 0 1 3.9 12Zm6.34 2.83a1 1 0 0 1 0-1.41l3.18-3.18a1 1 0 1 1 1.41 1.41l-3.18 3.18a1 1 0 0 1-1.41 0Zm-1.78 2.4a4.39 4.39 0 0 0 6.2 0l2.12-2.13a4.39 4.39 0 0 0 0-6.2 1 1 0 0 1 1.41-1.41 6.39 6.39 0 0 1 0 9.03l-2.12 2.12a6.39 6.39 0 0 1-9.03 0 1 1 0 0 1 1.41-1.41Z"/>
+
+                </svg>
+
+                Copy Link
+
+              </button>
+
+
+
+              <!-- Embed -->
+
+              <button
+                type="button"
+                class="share-btn embed"
+                id="copyEmbedCode"
+              >
+
+                <svg
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+
+                  <path d="M8.7 16.3a1 1 0 0 1-1.4 1.4l-5-5a1 1 0 0 1 0-1.4l5-5a1 1 0 1 1 1.4 1.4L4.42 12l4.28 4.3Zm6.6 0L19.58 12 15.3 7.7a1 1 0 1 1 1.4-1.4l5 5a1 1 0 0 1 0 1.4l-5 5a1 1 0 0 1-1.4-1.4Z"/>
+
+                </svg>
+
+                Embed
+
+              </button>
+
+
+
+              <!-- X -->
+
+              <a
+                class="share-btn x"
+                id="shareOnX"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+
+                <svg
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+
+                  <path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3l-4.9-6.5L6.3 22H3.2l7.3-8.4L2.8 2h6.4l4.5 6 5.2-6Zm-1.1 17.8h1.7L8.3 4.1H6.5l11.3 15.7Z"/>
+
+                </svg>
+
+                X
+
+              </a>
+
+
+
+              <!-- Facebook -->
+
+              <a
+                class="share-btn facebook"
+                id="shareOnFacebook"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+
+                <svg
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+
+                  <path d="M22 12.06C22 6.48 17.52 2 11.94 2S2 6.48 2 12.06c0 5.04 3.69 9.22 8.52 9.98v-7.06H8v-2.92h2.52V9.84c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.23.19 2.23.19v2.45h-1.26c-1.24 0-1.63.77-1.63 1.56v1.9h2.78l-.44 2.92h-2.34v7.06C18.31 21.28 22 17.1 22 12.06Z"/>
+
+                </svg>
+
+                Facebook
+
+              </a>
+
+
+
+              <!-- More -->
+
+              <button
+                type="button"
+                class="share-btn more"
+                id="shareMore"
+              >
+
+                <svg
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+
+                  <path d="M18 8a3 3 0 1 0-2.83-4H15a3 3 0 0 0 .17 1L8.91 8.58A3 3 0 1 0 9 15.42L15.17 19A3 3 0 1 0 16 17.27l-6.17-3.58a3.14 3.14 0 0 0 0-3.38L16 6.73A2.99 2.99 0 0 0 18 8Z"/>
+
+                </svg>
+
+                More
+
+              </button>
+
+            </div>
+
+
+            <span
+              class="share-message"
+              id="shareMessage"
+              role="status"
+              aria-live="polite"
+            ></span>
+
+          </div>
+
+
+
+          <!-- Trust -->
+
           <div class="trust-row">
-            <span class="trust-pill">15 years in SEO</span>
-            <span class="trust-pill">SaaS & B2B content</span>
-            <span class="trust-pill">Content team leadership</span>
+
+            <span class="trust-pill">
+              15 years in SEO
+            </span>
+
+            <span class="trust-pill">
+              SaaS & B2B content
+            </span>
+
+            <span class="trust-pill">
+              Content team leadership
+            </span>
+
           </div>
+
         </div>
+
+
+
+        <!-- Hero Preview -->
 
         <div class="preview-card">
+
+
           <div class="preview-top">
+
             <div class="window-dots">
+
               <span class="dot"></span>
+
               <span class="dot"></span>
+
               <span class="dot"></span>
+
             </div>
-            <span class="score-badge">Growth system</span>
+
+
+            <span class="score-badge">
+              Growth system
+            </span>
+
           </div>
 
-          <div class="mock-line"><span style="width: 92%;"></span></div>
-          <div class="mock-line"><span style="width: 78%;"></span></div>
-          <div class="mock-line"><span style="width: 64%;"></span></div>
+
+
+          <div class="mock-line">
+            <span style="width: 92%;"></span>
+          </div>
+
+
+          <div class="mock-line">
+            <span style="width: 78%;"></span>
+          </div>
+
+
+          <div class="mock-line">
+            <span style="width: 64%;"></span>
+          </div>
+
+
 
           <div class="mock-list">
-            <div class="mock-item">
-              <div class="mock-icon">1</div>
-              <div>
-                <strong>Find search opportunities</strong>
-                <p>Use real queries, buyer pain points, and product use cases to shape the content plan.</p>
-              </div>
-            </div>
+
 
             <div class="mock-item">
-              <div class="mock-icon">2</div>
-              <div>
-                <strong>Build answer-based content</strong>
-                <p>Turn questions into clear articles, briefs, landing pages, and internal link paths.</p>
+
+              <div class="mock-icon">
+                1
               </div>
+
+              <div>
+
+                <strong>
+                  Find search opportunities
+                </strong>
+
+                <p>
+                  Use real queries, buyer pain points, and product
+                  use cases to shape the content plan.
+                </p>
+
+              </div>
+
             </div>
 
+
+
             <div class="mock-item">
-              <div class="mock-icon">3</div>
-              <div>
-                <strong>Improve with workflows</strong>
-                <p>Create repeatable systems the content team can use without slowing down execution.</p>
+
+              <div class="mock-icon">
+                2
               </div>
+
+              <div>
+
+                <strong>
+                  Build answer-based content
+                </strong>
+
+                <p>
+                  Turn questions into clear articles, briefs,
+                  landing pages, and internal link paths.
+                </p>
+
+              </div>
+
             </div>
+
+
+
+            <div class="mock-item">
+
+              <div class="mock-icon">
+                3
+              </div>
+
+              <div>
+
+                <strong>
+                  Improve with workflows
+                </strong>
+
+                <p>
+                  Create repeatable systems the content team can
+                  use without slowing down execution.
+                </p>
+
+              </div>
+
+            </div>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
 
-    <section id="proof" class="section">
+
+
+    <!-- ====================================================
+         Proof
+    ===================================================== -->
+
+    <section
+      id="proof"
+      class="section"
+    >
+
       <div class="container">
-        <h2 class="section-title">Built for lean SaaS teams that need content to do more than publish.</h2>
+
+        <h2 class="section-title">
+          Built for lean SaaS teams that need content to do more than publish.
+        </h2>
+
+
         <p class="section-subtitle">
-          My work sits at the intersection of SEO strategy, copywriting, technical content, and practical execution.
+
+          My work sits at the intersection of SEO strategy,
+          copywriting, technical content, and practical execution.
+
         </p>
+
+
 
         <div class="stats-grid">
-          <div class="stat-card">
-            <div class="stat-number">15+</div>
-            <p>Years of SEO experience across news websites, personal brands, SaaS, and B2B companies.</p>
-          </div>
+
 
           <div class="stat-card">
-            <div class="stat-number">550K+</div>
-            <p>Users generated in two years with a lean SaaS team of 15 people.</p>
+
+            <div class="stat-number">
+              15+
+            </div>
+
+            <p>
+              Years of SEO experience across news websites,
+              personal brands, SaaS, and B2B companies.
+            </p>
+
           </div>
 
+
+
           <div class="stat-card">
-            <div class="stat-number">2</div>
-            <p>Free tools already published to support SEO planning and conversion-focused copywriting.</p>
+
+            <div class="stat-number">
+              550K+
+            </div>
+
+            <p>
+              Users reached while working with a lean SaaS team
+              of 15 people over two years.
+            </p>
+
           </div>
+
+
+
+          <div class="stat-card">
+
+            <div class="stat-number">
+              2
+            </div>
+
+            <p>
+              Free tools already published to support SEO planning
+              and conversion-focused copywriting.
+            </p>
+
+          </div>
+
         </div>
+
       </div>
+
     </section>
 
-    <section id="tools" class="section">
+
+
+    <!-- ====================================================
+         Tools
+    ===================================================== -->
+
+    <section
+      id="tools"
+      class="section"
+    >
+
       <div class="container">
-        <h2 class="section-title">Free SEO & Copywriting Tools</h2>
+
+
+        <h2 class="section-title">
+          Free SEO & Copywriting Tools
+        </h2>
+
+
         <p class="section-subtitle">
-          I build simple tools to improve my work as a copywriter and SEO specialist for SaaS companies.
-          These tools help turn messy ideas into clearer content workflows.
+
+          I build simple tools to improve my work as a copywriter
+          and SEO specialist for SaaS companies. These tools help
+          turn messy ideas into clearer content workflows.
+
         </p>
+
+
 
         <div class="tool-grid">
+
+
           <div class="tool-card">
-            <div class="card-icon">⌕</div>
-            <h3>Answer-Based SEO Article Planner</h3>
+
+            <div class="card-icon">
+              ⌕
+            </div>
+
+
+            <h3>
+              Answer-Based SEO Article Planner
+            </h3>
+
+
             <p>
-              Turn a search question into a structured article planning prompt with audience,
-              angle, example, and CTA.
+
+              Turn a search question into a structured article
+              planning prompt with audience, angle, example,
+              and CTA.
+
             </p>
-            <a class="btn btn-primary" href="https://edumbao.github.io/answer-based-seo-planner/" target="_blank" rel="noopener">
+
+
+            <a
+              class="btn btn-primary"
+              href="https://edumbao.github.io/answer-based-seo-planner/"
+              target="_blank"
+              rel="noopener"
+            >
               Open SEO Planner
             </a>
+
           </div>
+
+
 
           <div class="tool-card">
-            <div class="card-icon">✦</div>
-            <h3>Benefit Headline Creator</h3>
+
+            <div class="card-icon">
+              ✦
+            </div>
+
+
+            <h3>
+              Benefit Headline Creator
+            </h3>
+
+
             <p>
-              Rewrite vague website headlines into clear action-benefit headlines that explain
-              what visitors do and what they get.
+
+              Rewrite vague website headlines into clear
+              action-benefit headlines that explain what
+              visitors do and what they get.
+
             </p>
-            <a class="btn btn-primary" href="https://edumbao.github.io/benefit-headline-creator/" target="_blank" rel="noopener">
+
+
+            <a
+              class="btn btn-primary"
+              href="https://edumbao.github.io/benefit-headline-creator/"
+              target="_blank"
+              rel="noopener"
+            >
               Open Headline Creator
             </a>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
 
-    <section id="services" class="section">
+
+
+    <!-- ====================================================
+         Services
+    ===================================================== -->
+
+    <section
+      id="services"
+      class="section"
+    >
+
       <div class="container">
-        <h2 class="section-title">How I can help</h2>
+
+
+        <h2 class="section-title">
+          How I can help
+        </h2>
+
+
         <p class="section-subtitle">
-          I help SaaS and B2B companies build content systems that connect SEO, copywriting, product use cases,
+
+          I help SaaS and B2B companies build content systems
+          that connect SEO, copywriting, product use cases,
           and business goals.
+
         </p>
 
+
+
         <div class="services-grid">
-          <div class="service-card">
-            <div class="card-icon">01</div>
-            <h3>SEO Content Strategy</h3>
-            <p>
-              Content plans built around search intent, topic clusters, internal links, and pages that support growth.
-            </p>
-          </div>
+
 
           <div class="service-card">
-            <div class="card-icon">02</div>
-            <h3>SaaS Copywriting</h3>
+
+            <div class="card-icon">
+              01
+            </div>
+
+
+            <h3>
+              SEO Content Strategy
+            </h3>
+
+
             <p>
-              Landing page copy, benefit-led messaging, and product explanations that make complex offers easier to understand.
+
+              Content plans built around search intent,
+              topic clusters, internal links, and pages
+              that support growth.
+
             </p>
+
           </div>
 
+
+
           <div class="service-card">
-            <div class="card-icon">03</div>
-            <h3>Editorial Workflows</h3>
+
+            <div class="card-icon">
+              02
+            </div>
+
+
+            <h3>
+              SaaS Copywriting
+            </h3>
+
+
             <p>
-              Repeatable briefs, checklists, and review systems that help small content teams publish with more consistency.
+
+              Landing page copy, benefit-led messaging,
+              and product explanations that make complex
+              products easier to understand.
+
             </p>
+
           </div>
-        </div>
-      </div>
-    <!-- Safe & Styled Professional Writing Section -->
-<section id="portfolio" class="section">
-      <div class="container">
-        <div class="panel-card">
-          <h2 class="section-title">My Professional Writing</h2>
-          <p class="section-subtitle">
-            I have published technical articles and SEO guides for several companies.
-          </p>
-          <div style="margin-top: 30px;">
-            <a href="/writing-portfolio/" 
-               target="_blank" 
-               rel="noopener noreferrer"
-               style="display: inline-block; 
-                      background: linear-gradient(135deg, #007bff 0%, #00d4ff 100%); 
-                      color: white; 
-                      padding: 12px 24px; 
-                      border-radius: 8px; 
-                      text-decoration: none; 
-                      font-weight: 700; 
-                      box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
-                      transition: transform 0.2s ease;">
-              View Published Articles
-            </a>
+
+
+
+          <div class="service-card">
+
+            <div class="card-icon">
+              03
+            </div>
+
+
+            <h3>
+              Editorial Workflows
+            </h3>
+
+
+            <p>
+
+              Repeatable briefs, checklists, and review
+              systems that help small content teams publish
+              with more consistency.
+
+            </p>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
-    <section id="process" class="section">
+
+
+
+    <!-- ====================================================
+         Professional Writing
+    ===================================================== -->
+
+    <section
+      id="portfolio"
+      class="section"
+    >
+
       <div class="container">
+
+
         <div class="panel-card">
-          <h2 class="section-title">My working process</h2>
+
+
+          <h2 class="section-title">
+            Featured SaaS SEO Work
+          </h2>
+
+
           <p class="section-subtitle">
-            I do not treat SEO content as random blog publishing. I build it as a system.
+
+            Selected technical, product, lead generation,
+            and B2B search content published for SaaS
+            companies including Outscraper and Targetron.
+
           </p>
+
+
+          <div class="portfolio-action">
+
+            <a
+              href="/writing-portfolio/"
+              class="btn btn-primary"
+            >
+              View Published Work
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ====================================================
+         Process
+    ===================================================== -->
+
+    <section
+      id="process"
+      class="section"
+    >
+
+      <div class="container">
+
+
+        <div class="panel-card">
+
+
+          <h2 class="section-title">
+            My working process
+          </h2>
+
+
+          <p class="section-subtitle">
+
+            I do not treat SEO content as random blog
+            publishing. I build it as a system.
+
+          </p>
+
+
 
           <div class="process-list">
-            <div class="process-item">
-              <strong>1. Start with real demand.</strong> Use Google Search Console, customer questions, ICP pain points, and product use cases to choose content topics.
-            </div>
+
 
             <div class="process-item">
-              <strong>2. Turn questions into structure.</strong> Build articles around direct answers, useful H2s, practical examples, and internal link paths.
+
+              <strong>
+                1. Start with real demand.
+              </strong>
+
+              Use Google Search Console, customer questions,
+              ICP pain points, and product use cases to choose
+              content topics.
+
             </div>
 
-            <div class="process-item">
-              <strong>3. Write for clarity and conversion.</strong> Make the page easy to understand, beginner-friendly, and connected to the next useful action.
-            </div>
+
 
             <div class="process-item">
-              <strong>4. Improve with repeatable workflows.</strong> Use templates, checklists, and review systems so the team can move faster without lowering quality.
+
+              <strong>
+                2. Turn questions into structure.
+              </strong>
+
+              Build articles around direct answers, useful H2s,
+              practical examples, and internal link paths.
+
             </div>
+
+
+
+            <div class="process-item">
+
+              <strong>
+                3. Write for clarity and conversion.
+              </strong>
+
+              Make the page easy to understand, beginner-friendly,
+              and connected to the next useful action.
+
+            </div>
+
+
+
+            <div class="process-item">
+
+              <strong>
+                4. Improve with repeatable workflows.
+              </strong>
+
+              Use templates, checklists, and review systems so the
+              team can move faster without lowering quality.
+
+            </div>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
 
-    <section id="contact" class="section">
+
+
+    <!-- ====================================================
+         Contact
+    ===================================================== -->
+
+    <section
+      id="contact"
+      class="section"
+    >
+
       <div class="container">
+
+
         <div class="panel-card">
-          <h2 class="section-title">Need help building SEO content systems for a SaaS or B2B website?</h2>
+
+
+          <h2 class="section-title">
+
+            Need help building SEO content systems for a SaaS or B2B website?
+
+          </h2>
+
+
           <p class="section-subtitle">
-            I am building this website as a home for my SEO work, copywriting projects, free tools, and content systems.
-            Connect with me while the full site is being prepared.
+
+            I use this website to share my SEO work,
+            SaaS copywriting projects, tools, experiments,
+            and the systems I build around content production.
+
           </p>
 
+
+
           <div class="hero-actions">
-            <a href="https://www.linkedin.com/in/ed-umbao/" class="btn btn-primary" target="_blank" rel="noopener">
+
+
+            <a
+              href="https://www.linkedin.com/in/ed-umbao/"
+              class="btn btn-primary"
+              target="_blank"
+              rel="noopener"
+            >
               Connect on LinkedIn
             </a>
-            <a href="https://edumbao.github.io/answer-based-seo-planner/" class="btn btn-secondary" target="_blank" rel="noopener">
+
+
+            <a
+              href="https://edumbao.github.io/answer-based-seo-planner/"
+              class="btn btn-secondary"
+              target="_blank"
+              rel="noopener"
+            >
               Try the SEO Planner
             </a>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
 
+
+
+    <!-- ====================================================
+         Footer
+    ===================================================== -->
+
     <footer class="footer">
+
       <div class="container">
-        Copyright © 2026 Ed Umbao. All rights reserved.
+
+        Copyright © 2026 Ed Umbao.
+        All rights reserved.
+
       </div>
+
     </footer>
+
+
   </main>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const menuButton = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
 
-    if (!menuButton || !navLinks) return;
 
-    menuButton.addEventListener('click', function () {
-      const isOpen = navLinks.classList.toggle('nav-open');
-      menuButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    });
+  <!-- ======================================================
+       Mobile Navigation
+  ======================================================= -->
 
-    navLinks.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        navLinks.classList.remove('nav-open');
-        menuButton.setAttribute('aria-expanded', 'false');
-      });
-    });
-  });
-</script>
-  
-<script>
-  (function () {
-    function getShareUrl() {
-      const canonical = document.querySelector('link[rel="canonical"]');
-      return canonical ? canonical.href : window.location.href.split('#')[0];
-    }
+  <script>
 
-    function showMessage(message) {
-      const messageBox = document.getElementById('shareMessage');
-      if (!messageBox) return;
+    document.addEventListener(
+      'DOMContentLoaded',
+      function () {
 
-      messageBox.textContent = message;
+        const menuButton =
+          document.querySelector('.menu-toggle');
 
-      window.clearTimeout(window.shareMessageTimer);
-      window.shareMessageTimer = window.setTimeout(function () {
-        messageBox.textContent = '';
-      }, 2500);
-    }
+        const navLinks =
+          document.querySelector('.site-menu');
 
-    async function copyText(text, successMessage) {
-      try {
-        await navigator.clipboard.writeText(text);
-        showMessage(successMessage);
-      } catch (error) {
-        const textArea = document.createElement('textarea');
-        textArea.value = text;
-        textArea.setAttribute('readonly', '');
-        textArea.style.position = 'absolute';
-        textArea.style.left = '-9999px';
-        document.body.appendChild(textArea);
-        textArea.select();
 
-        try {
-          document.execCommand('copy');
-          showMessage(successMessage);
-        } catch (copyError) {
-          showMessage('Copy failed. Please copy manually.');
+        if (
+          !menuButton ||
+          !navLinks
+        ) {
+          return;
         }
 
-        document.body.removeChild(textArea);
-      }
-    }
 
-    document.addEventListener('DOMContentLoaded', function () {
-      const pageUrl = getShareUrl();
-      const pageTitle = document.title || 'Ed Umbao';
+        menuButton.addEventListener(
+          'click',
+          function () {
 
-      const xLink = document.getElementById('shareOnX');
-      const facebookLink = document.getElementById('shareOnFacebook');
-      const copyLinkButton = document.getElementById('copyPageLink');
-      const embedButton = document.getElementById('copyEmbedCode');
-      const moreButton = document.getElementById('shareMore');
+            const isOpen =
+              navLinks.classList.toggle('nav-open');
 
-      if (xLink) {
-        xLink.href =
-          'https://twitter.com/intent/tweet?url=' +
-          encodeURIComponent(pageUrl) +
-          '&text=' +
-          encodeURIComponent(pageTitle);
-      }
 
-      if (facebookLink) {
-        facebookLink.href =
-          'https://www.facebook.com/sharer/sharer.php?u=' +
-          encodeURIComponent(pageUrl);
-      }
+            menuButton.setAttribute(
+              'aria-expanded',
+              isOpen ? 'true' : 'false'
+            );
 
-      if (copyLinkButton) {
-        copyLinkButton.addEventListener('click', function () {
-          copyText(pageUrl, 'Link copied.');
-        });
-      }
-
-      if (embedButton) {
-        embedButton.addEventListener('click', function () {
-          const embedCode =
-            '<iframe src="' +
-            pageUrl +
-            '" title="' +
-            pageTitle.replace(/"/g, '&quot;') +
-            '" width="100%" height="600" style="border:0;" loading="lazy"></iframe>';
-
-          copyText(embedCode, 'Embed code copied.');
-        });
-      }
-
-      if (moreButton) {
-        moreButton.addEventListener('click', async function () {
-          if (navigator.share) {
-            try {
-              await navigator.share({
-                title: pageTitle,
-                text: 'Check this out:',
-                url: pageUrl
-              });
-            } catch (error) {
-              // User cancelled share dialog.
-            }
-          } else {
-            copyText(pageUrl, 'Sharing is not supported here. Link copied instead.');
           }
-        });
+        );
+
+
+        navLinks
+          .querySelectorAll('a')
+          .forEach(
+            function (link) {
+
+              link.addEventListener(
+                'click',
+                function () {
+
+                  navLinks.classList.remove('nav-open');
+
+                  menuButton.setAttribute(
+                    'aria-expanded',
+                    'false'
+                  );
+
+                }
+              );
+
+            }
+          );
+
       }
-    });
-  })();
-</script>
+    );
+
+  </script>
+
+
+
+  <!-- ======================================================
+       Share Buttons
+  ======================================================= -->
+
+  <script>
+
+    (function () {
+
+
+      function getShareUrl() {
+
+        const canonical =
+          document.querySelector(
+            'link[rel="canonical"]'
+          );
+
+
+        return canonical
+          ? canonical.href
+          : window.location.href.split('#')[0];
+
+      }
+
+
+
+      function showMessage(message) {
+
+        const messageBox =
+          document.getElementById(
+            'shareMessage'
+          );
+
+
+        if (!messageBox) {
+          return;
+        }
+
+
+        messageBox.textContent =
+          message;
+
+
+        window.clearTimeout(
+          window.shareMessageTimer
+        );
+
+
+        window.shareMessageTimer =
+          window.setTimeout(
+            function () {
+
+              messageBox.textContent =
+                '';
+
+            },
+            2500
+          );
+
+      }
+
+
+
+      async function copyText(
+        text,
+        successMessage
+      ) {
+
+        try {
+
+          await navigator.clipboard.writeText(
+            text
+          );
+
+          showMessage(
+            successMessage
+          );
+
+        } catch (error) {
+
+          const textArea =
+            document.createElement(
+              'textarea'
+            );
+
+
+          textArea.value =
+            text;
+
+
+          textArea.setAttribute(
+            'readonly',
+            ''
+          );
+
+
+          textArea.style.position =
+            'absolute';
+
+
+          textArea.style.left =
+            '-9999px';
+
+
+          document.body.appendChild(
+            textArea
+          );
+
+
+          textArea.select();
+
+
+          try {
+
+            document.execCommand(
+              'copy'
+            );
+
+            showMessage(
+              successMessage
+            );
+
+          } catch (copyError) {
+
+            showMessage(
+              'Copy failed. Please copy manually.'
+            );
+
+          }
+
+
+          document.body.removeChild(
+            textArea
+          );
+
+        }
+
+      }
+
+
+
+      document.addEventListener(
+        'DOMContentLoaded',
+        function () {
+
+
+          const pageUrl =
+            getShareUrl();
+
+
+          const pageTitle =
+            document.title ||
+            'Ed Umbao';
+
+
+          const xLink =
+            document.getElementById(
+              'shareOnX'
+            );
+
+
+          const facebookLink =
+            document.getElementById(
+              'shareOnFacebook'
+            );
+
+
+          const copyLinkButton =
+            document.getElementById(
+              'copyPageLink'
+            );
+
+
+          const embedButton =
+            document.getElementById(
+              'copyEmbedCode'
+            );
+
+
+          const moreButton =
+            document.getElementById(
+              'shareMore'
+            );
+
+
+
+          if (xLink) {
+
+            xLink.href =
+
+              'https://twitter.com/intent/tweet?url=' +
+
+              encodeURIComponent(
+                pageUrl
+              ) +
+
+              '&text=' +
+
+              encodeURIComponent(
+                pageTitle
+              );
+
+          }
+
+
+
+          if (facebookLink) {
+
+            facebookLink.href =
+
+              'https://www.facebook.com/sharer/sharer.php?u=' +
+
+              encodeURIComponent(
+                pageUrl
+              );
+
+          }
+
+
+
+          if (copyLinkButton) {
+
+            copyLinkButton.addEventListener(
+              'click',
+              function () {
+
+                copyText(
+                  pageUrl,
+                  'Link copied.'
+                );
+
+              }
+            );
+
+          }
+
+
+
+          if (embedButton) {
+
+            embedButton.addEventListener(
+              'click',
+              function () {
+
+
+                const embedCode =
+
+                  '<iframe src="' +
+
+                  pageUrl +
+
+                  '" title="' +
+
+                  pageTitle.replace(
+                    /"/g,
+                    '&quot;'
+                  ) +
+
+                  '" width="100%" height="600" style="border:0;" loading="lazy"></iframe>';
+
+
+                copyText(
+                  embedCode,
+                  'Embed code copied.'
+                );
+
+              }
+            );
+
+          }
+
+
+
+          if (moreButton) {
+
+            moreButton.addEventListener(
+              'click',
+              async function () {
+
+
+                if (navigator.share) {
+
+                  try {
+
+                    await navigator.share({
+
+                      title:
+                        pageTitle,
+
+                      text:
+                        'Check this out:',
+
+                      url:
+                        pageUrl
+
+                    });
+
+                  } catch (error) {
+
+                    /* User cancelled */
+
+                  }
+
+                } else {
+
+                  copyText(
+
+                    pageUrl,
+
+                    'Sharing is not supported here. Link copied instead.'
+
+                  );
+
+                }
+
+              }
+            );
+
+          }
+
+        }
+      );
+
+    })();
+
+  </script>
+
+
 </body>
+
 </html>
