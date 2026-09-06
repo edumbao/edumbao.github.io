@@ -101,10 +101,6 @@
 
   <style>
 
-    /* ======================================================
-       Design System
-    ======================================================= */
-
     :root {
       --bg: #0b0f14;
       --bg-soft: #10151c;
@@ -120,7 +116,6 @@
       --green: #7dd3a8;
       --blue: #8ab4f8;
       --purple: #b8a1ff;
-      --warm: #e0c28f;
 
       --container: 1180px;
 
@@ -156,10 +151,13 @@
 
     body {
       margin: 0;
+
       background: var(--bg);
+
       color: var(--text);
 
       font-family: var(--sans);
+
       font-size: 16px;
       line-height: 1.7;
 
@@ -205,6 +203,7 @@
       z-index: 100;
 
       background: rgba(11, 15, 20, 0.94);
+
       border-bottom: 1px solid var(--line-soft);
 
       backdrop-filter: blur(14px);
@@ -212,7 +211,7 @@
     }
 
     .site-nav {
-      min-height: 72px;
+      min-height: 70px;
 
       display: flex;
       align-items: center;
@@ -224,6 +223,7 @@
     .site-brand {
       display: inline-flex;
       align-items: center;
+
       gap: 11px;
 
       font-weight: 750;
@@ -250,6 +250,7 @@
     .site-menu {
       display: flex;
       align-items: center;
+
       gap: 3px;
     }
 
@@ -285,7 +286,7 @@
     }
 
 
-    /* Mobile Menu */
+    /* Mobile menu */
 
     .menu-toggle {
       display: none;
@@ -323,6 +324,7 @@
 
     .section {
       padding: 84px 0;
+
       border-top: 1px solid var(--line-soft);
     }
 
@@ -371,9 +373,9 @@
       display: flex;
       flex-wrap: wrap;
 
-      gap: 12px;
+      gap: 10px;
 
-      margin-top: 32px;
+      margin-top: 24px;
     }
 
     .button {
@@ -383,9 +385,9 @@
 
       gap: 8px;
 
-      min-height: 46px;
+      min-height: 44px;
 
-      padding: 11px 17px;
+      padding: 10px 16px;
 
       border: 1px solid var(--line);
       border-radius: 8px;
@@ -425,6 +427,7 @@
 
     .button-text {
       border-color: transparent;
+
       color: var(--blue);
 
       padding-left: 4px;
@@ -438,31 +441,31 @@
 
 
     /* ======================================================
-       Hero
+       Compact Hero
     ======================================================= */
 
     .hero {
-      padding: 96px 0 86px;
+      padding: 72px 0 56px;
     }
 
     .hero-grid {
       display: grid;
 
       grid-template-columns:
-        minmax(0, 1.2fr)
-        minmax(320px, 0.8fr);
+        minmax(0, 1.25fr)
+        minmax(280px, 0.75fr);
 
-      gap: 72px;
+      gap: 56px;
 
       align-items: center;
     }
 
     .hero-eyebrow {
-      margin: 0 0 22px;
+      margin: 0 0 16px;
 
       color: var(--green);
 
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 800;
 
       text-transform: uppercase;
@@ -470,17 +473,17 @@
     }
 
     .hero h1 {
-      max-width: 820px;
+      max-width: 760px;
 
-      margin: 0 0 28px;
+      margin: 0 0 22px;
 
       font-family: var(--serif);
 
-      font-size: clamp(52px, 7vw, 86px);
+      font-size: clamp(48px, 6.2vw, 76px);
       font-weight: 500;
 
-      line-height: 0.98;
-      letter-spacing: -0.055em;
+      line-height: 0.99;
+      letter-spacing: -0.05em;
     }
 
     .hero h1 em {
@@ -489,7 +492,7 @@
     }
 
     .hero-copy {
-      max-width: 720px;
+      max-width: 700px;
     }
 
     .hero-copy p {
@@ -497,8 +500,8 @@
 
       color: var(--text-soft);
 
-      font-size: 19px;
-      line-height: 1.7;
+      font-size: 18px;
+      line-height: 1.65;
     }
 
     .hero-copy strong {
@@ -507,18 +510,18 @@
 
 
     /* ======================================================
-       Hero Portrait
+       Compact Hero Portrait
     ======================================================= */
 
     .hero-portrait {
-      max-width: 420px;
+      max-width: 340px;
       justify-self: end;
     }
 
     .portrait-frame {
       position: relative;
 
-      padding-top: 18px;
+      padding-top: 14px;
 
       border-top: 1px solid var(--line);
     }
@@ -526,13 +529,14 @@
     .portrait-label {
       display: flex;
       justify-content: space-between;
+
       gap: 16px;
 
-      margin-bottom: 12px;
+      margin-bottom: 10px;
 
       color: var(--muted);
 
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 700;
 
       text-transform: uppercase;
@@ -544,11 +548,10 @@
 
       display: block;
 
-      aspect-ratio: 4 / 5;
+      aspect-ratio: 4 / 4.4;
 
       object-fit: cover;
-
-      object-position: center 24%;
+      object-position: center 22%;
 
       border: 1px solid var(--line);
       border-radius: 10px;
@@ -561,10 +564,10 @@
 
       gap: 18px;
 
-      padding-top: 15px;
+      padding-top: 12px;
+      padding-bottom: 12px;
 
       border-bottom: 1px solid var(--line);
-      padding-bottom: 15px;
     }
 
     .portrait-caption strong {
@@ -574,7 +577,7 @@
 
       font-family: var(--serif);
 
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 500;
     }
 
@@ -583,7 +586,7 @@
 
       color: var(--muted);
 
-      font-size: 12px;
+      font-size: 11px;
     }
 
     .portrait-location {
@@ -604,11 +607,14 @@
 
     .proof-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+
+      grid-template-columns:
+        repeat(3, 1fr);
     }
 
     .proof-stat {
       padding: 28px 30px;
+
       border-right: 1px solid var(--line-soft);
     }
 
@@ -620,6 +626,7 @@
       margin-bottom: 7px;
 
       font-family: var(--serif);
+
       font-size: 38px;
 
       color: var(--text);
@@ -645,6 +652,7 @@
 
     .project-list {
       margin-top: 54px;
+
       border-top: 1px solid var(--line);
     }
 
@@ -664,6 +672,7 @@
     .project-meta {
       position: sticky;
       top: 100px;
+
       align-self: start;
     }
 
@@ -673,6 +682,7 @@
       color: var(--green);
 
       font-family: var(--serif);
+
       font-size: 16px;
     }
 
@@ -716,6 +726,7 @@
       color: var(--purple);
 
       font-family: var(--serif);
+
       font-size: 13px;
       font-weight: 700;
     }
@@ -767,6 +778,7 @@
 
     .project-column {
       border-top: 1px solid var(--line-soft);
+
       padding-top: 16px;
     }
 
@@ -881,6 +893,7 @@
 
     .tools-list {
       margin-top: 48px;
+
       border-top: 1px solid var(--line);
     }
 
@@ -909,6 +922,7 @@
 
     .tool-row h3 {
       margin: 0 0 4px;
+
       font-size: 18px;
     }
 
@@ -945,6 +959,7 @@
 
     .service {
       border-top: 1px solid var(--line);
+
       padding-top: 20px;
     }
 
@@ -980,6 +995,7 @@
 
     .process {
       margin-top: 48px;
+
       border-top: 1px solid var(--line);
     }
 
@@ -998,11 +1014,13 @@
 
     .process-number {
       color: var(--green);
+
       font-family: var(--serif);
     }
 
     .process-row h3 {
       margin: 0;
+
       font-size: 15px;
     }
 
@@ -1045,6 +1063,7 @@
 
     .writing-links {
       display: grid;
+
       gap: 10px;
     }
 
@@ -1136,12 +1155,12 @@
       }
 
       .hero-grid {
-        gap: 54px;
+        gap: 38px;
       }
 
       .hero-portrait {
+        max-width: 320px;
         justify-self: start;
-        max-width: 430px;
       }
 
       .project {
@@ -1199,16 +1218,14 @@
       .site-menu a {
         padding: 12px 0;
 
-        border-bottom:
-          1px solid var(--line-soft);
+        border-bottom: 1px solid var(--line-soft);
       }
 
       .site-menu .nav-cta {
         margin-left: 0;
 
         border: 0;
-        border-bottom:
-          1px solid var(--line-soft);
+        border-bottom: 1px solid var(--line-soft);
 
         border-radius: 0;
       }
@@ -1219,8 +1236,7 @@
 
       .proof-stat {
         border-right: 0;
-        border-bottom:
-          1px solid var(--line-soft);
+        border-bottom: 1px solid var(--line-soft);
       }
 
       .proof-stat:last-child {
@@ -1229,6 +1245,7 @@
 
       .project {
         grid-template-columns: 1fr;
+
         gap: 18px;
       }
 
@@ -1241,7 +1258,9 @@
       }
 
       .process-row {
-        grid-template-columns: 46px 1fr;
+        grid-template-columns:
+          46px 1fr;
+
         gap: 16px;
       }
 
@@ -1250,7 +1269,8 @@
       }
 
       .tool-row {
-        grid-template-columns: 45px 1fr;
+        grid-template-columns:
+          45px 1fr;
       }
 
       .tool-link {
@@ -1271,16 +1291,32 @@
       }
 
       .hero {
-        padding: 68px 0 62px;
+        padding: 54px 0 48px;
       }
 
       .hero h1 {
         font-size:
-          clamp(46px, 14vw, 66px);
+          clamp(44px, 13vw, 62px);
       }
 
       .hero-copy p {
         font-size: 17px;
+      }
+
+      .hero-portrait {
+        max-width: 280px;
+      }
+
+      .portrait-image {
+        aspect-ratio: 4 / 4.25;
+      }
+
+      .portrait-caption {
+        grid-template-columns: 1fr;
+      }
+
+      .portrait-location {
+        text-align: left;
       }
 
       .section {
@@ -1293,22 +1329,6 @@
 
       .button {
         width: 100%;
-      }
-
-      .hero-portrait {
-        max-width: 100%;
-      }
-
-      .portrait-image {
-        aspect-ratio: 4 / 4.8;
-      }
-
-      .portrait-caption {
-        grid-template-columns: 1fr;
-      }
-
-      .portrait-location {
-        text-align: left;
       }
 
       .footer-inner {
@@ -1517,7 +1537,7 @@
         </div>
 
 
-        <!-- Hero Portrait -->
+        <!-- Compact Hero Portrait -->
 
         <aside
           class="hero-portrait"
@@ -1530,7 +1550,7 @@
             <div class="portrait-label">
 
               <span>
-                Copywriter · SEO specialist
+                Writer · SEO specialist
               </span>
 
               <span>
@@ -1542,10 +1562,10 @@
 
             <img
               src="/images/ed-umbao-profile.jpg"
-              alt="Ed Umbao, SEO specialist and B2B SaaS Copywriter"
+              alt="Ed Umbao, SEO specialist and B2B SaaS writer"
               class="portrait-image"
               width="800"
-              height="1000"
+              height="880"
             >
 
 
