@@ -101,10 +101,6 @@
 
   <style>
 
-    /* ======================================================
-       Design System
-    ======================================================= */
-
     :root {
       --bg: #0b0f14;
       --bg-soft: #10151c;
@@ -677,7 +673,7 @@
 
 
     /* ======================================================
-       Featured Work - Editorial Rows
+       Featured Work
     ======================================================= */
 
     .featured-work {
@@ -715,13 +711,63 @@
 
 
     .project-number {
-      margin-bottom: 10px;
+      margin-bottom: 18px;
 
       color: var(--green);
 
       font-family: var(--serif);
 
       font-size: 16px;
+    }
+
+
+    /* ======================================================
+       Company Logo Treatment
+    ======================================================= */
+
+    .company-logo-wrap {
+      display: flex;
+      align-items: center;
+
+      min-height: 72px;
+
+      margin-bottom: 16px;
+    }
+
+
+    .company-logo {
+      width: 58px;
+      height: 58px;
+
+      object-fit: contain;
+
+      border-radius: 12px;
+
+      background: #ffffff;
+
+      padding: 7px;
+
+      border: 1px solid var(--line-soft);
+    }
+
+
+    .company-logo-placeholder {
+      width: 58px;
+      height: 58px;
+
+      display: grid;
+      place-items: center;
+
+      border: 1px solid var(--line);
+
+      border-radius: 12px;
+
+      color: var(--purple);
+
+      font-family: var(--serif);
+
+      font-size: 13px;
+      font-weight: 700;
     }
 
 
@@ -1551,8 +1597,6 @@
         </div>
 
 
-        <!-- Editorial workbench instead of SaaS mockup -->
-
         <aside
           class="workbench"
           aria-label="Areas of work"
@@ -1775,6 +1819,19 @@
                 01
               </div>
 
+
+              <div class="company-logo-wrap">
+
+                <img
+                  class="company-logo"
+                  src="https://www.google.com/s2/favicons?domain=outscraper.com&sz=128"
+                  alt="Outscraper logo"
+                  loading="lazy"
+                >
+
+              </div>
+
+
               <p class="project-type">
                 B2B SaaS · Data
               </p>
@@ -1901,6 +1958,19 @@
                 02
               </div>
 
+
+              <div class="company-logo-wrap">
+
+                <img
+                  class="company-logo"
+                  src="https://www.google.com/s2/favicons?domain=targetron.com&sz=128"
+                  alt="Targetron logo"
+                  loading="lazy"
+                >
+
+              </div>
+
+
               <p class="project-type">
                 B2B SaaS · Prospecting
               </p>
@@ -2026,6 +2096,19 @@
               <div class="project-number">
                 03
               </div>
+
+
+              <div class="company-logo-wrap">
+
+                <div
+                  class="company-logo-placeholder"
+                  aria-hidden="true"
+                >
+                  EU
+                </div>
+
+              </div>
+
 
               <p class="project-type">
                 SEO · Content operations
