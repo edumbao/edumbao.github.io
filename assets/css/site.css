@@ -653,6 +653,337 @@
     }
 
 
+
+    /* ======================================================
+       Latest Build
+    ======================================================= */
+
+    .latest-build {
+      padding: 58px 0 68px;
+
+      background: var(--bg-soft);
+
+      border-top: 1px solid var(--line-soft);
+      border-bottom: 1px solid var(--line-soft);
+    }
+
+    .latest-build-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+
+      gap: 24px;
+
+      margin-bottom: 30px;
+    }
+
+    .latest-build-header .section-kicker {
+      margin-bottom: 0;
+    }
+
+    .build-date {
+      color: var(--muted);
+
+      font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+      font-size: 10px;
+
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .latest-build-grid {
+      display: grid;
+
+      grid-template-columns:
+        170px minmax(0, 1fr);
+
+      gap: 54px;
+
+      padding-top: 28px;
+
+      border-top: 1px solid var(--line);
+    }
+
+    .latest-build-index {
+      display: grid;
+      align-content: start;
+
+      gap: 7px;
+
+      color: var(--muted);
+
+      font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+      font-size: 10px;
+
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+    }
+
+    .latest-build-index span:first-child {
+      color: var(--accent-text);
+
+      font-size: 13px;
+    }
+
+    .latest-build-content {
+      max-width: 850px;
+    }
+
+    .latest-build-content .section-title {
+      margin-bottom: 20px;
+    }
+
+    .latest-build-summary {
+      max-width: 760px;
+
+      margin: 0;
+
+      color: var(--text-soft);
+
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    .build-meta {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+      gap: 24px;
+
+      margin: 38px 0 0;
+    }
+
+    .build-meta div {
+      padding-top: 14px;
+
+      border-top: 1px solid var(--line);
+    }
+
+    .build-meta dt {
+      margin-bottom: 6px;
+
+      color: var(--muted);
+
+      font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+      font-size: 9px;
+      font-weight: 700;
+
+      text-transform: uppercase;
+      letter-spacing: 0.11em;
+    }
+
+    .build-meta dd {
+      margin: 0;
+
+      color: var(--text);
+
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+
+    /* ======================================================
+       Lab
+    ======================================================= */
+
+    .lab-section {
+      padding-top: 82px;
+      padding-bottom: 86px;
+    }
+
+    .lab-intro-grid {
+      display: grid;
+
+      grid-template-columns:
+        minmax(0, 0.65fr)
+        minmax(260px, 0.35fr);
+
+      gap: 70px;
+
+      align-items: end;
+    }
+
+    .lab-intro {
+      padding-bottom: 8px;
+
+      font-size: 15px;
+    }
+
+    .lab-list {
+      margin-top: 52px;
+
+      border-top: 1px solid var(--line);
+    }
+
+    .lab-item {
+      display: grid;
+
+      grid-template-columns:
+        58px minmax(0, 1fr) 130px;
+
+      gap: 28px;
+
+      align-items: start;
+
+      padding: 30px 0;
+
+      border-bottom: 1px solid var(--line);
+    }
+
+    .lab-number {
+      padding-top: 4px;
+
+      color: var(--accent-text);
+
+      font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+      font-size: 11px;
+    }
+
+    .lab-content {
+      max-width: 760px;
+    }
+
+    .lab-title-row {
+      display: flex;
+      align-items: baseline;
+
+      gap: 14px;
+
+      margin-bottom: 9px;
+    }
+
+    .lab-title-row h3 {
+      margin: 0;
+
+      font-family: var(--serif);
+
+      font-size: 24px;
+      font-weight: 500;
+
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+    }
+
+    .lab-status {
+      flex: 0 0 auto;
+
+      color: var(--muted);
+
+      font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+      font-size: 9px;
+
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .lab-content > p:not(.lab-meta) {
+      max-width: 690px;
+
+      margin: 0;
+
+      color: var(--text-soft);
+
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .lab-meta {
+      margin: 12px 0 0;
+
+      color: var(--muted);
+
+      font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+      font-size: 9px;
+      line-height: 1.55;
+
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .lab-links {
+      display: grid;
+
+      justify-items: end;
+
+      padding-top: 4px;
+    }
+
+    .lab-links a {
+      color: var(--accent-text);
+
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .lab-links a:hover {
+      color: var(--link-hover);
+    }
+
+    .lab-note {
+      max-width: 720px;
+
+      margin: 28px 0 0;
+      padding-left: 16px;
+
+      border-left: 2px solid var(--brand-blue);
+
+      color: var(--muted);
+
+      font-size: 12px;
+      line-height: 1.65;
+    }
+
+
     /* ======================================================
        Featured Work
     ======================================================= */
@@ -1254,7 +1585,19 @@
       .hero-grid,
       .about-grid,
       .contact-grid,
-      .writing-block {
+      .writing-block,
+      .lab-intro-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .latest-build-grid {
+        grid-template-columns:
+          130px minmax(0, 1fr);
+
+        gap: 34px;
+      }
+
+      .build-meta {
         grid-template-columns: 1fr;
       }
 
@@ -1381,6 +1724,32 @@
         grid-template-columns: 1fr;
       }
 
+      .latest-build-grid {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+      }
+
+      .latest-build-index {
+        grid-template-columns: auto auto;
+        justify-content: start;
+
+        gap: 14px;
+      }
+
+      .lab-item {
+        grid-template-columns:
+          42px minmax(0, 1fr);
+
+        gap: 18px;
+      }
+
+      .lab-links {
+        grid-column: 2;
+
+        justify-items: start;
+      }
+
       .stack-row {
         grid-template-columns: 1fr;
 
@@ -1444,6 +1813,33 @@
         gap: 16px;
 
         margin-top: 40px;
+      }
+
+      .latest-build {
+        padding: 46px 0 54px;
+      }
+
+      .latest-build-header {
+        align-items: flex-start;
+        flex-direction: column;
+
+        gap: 7px;
+      }
+
+      .lab-section {
+        padding-top: 62px;
+        padding-bottom: 66px;
+      }
+
+      .lab-title-row {
+        align-items: flex-start;
+        flex-direction: column;
+
+        gap: 5px;
+      }
+
+      .lab-title-row h3 {
+        font-size: 21px;
       }
 
       .actions {
