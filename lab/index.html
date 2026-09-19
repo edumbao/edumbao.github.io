@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LBQL9HBJNL"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-LBQL9HBJNL');
+  </script>
+
+
+  <!-- Basic Metadata -->
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Ed's Lab | SEO Tools, GitHub Projects & Technical Experiments</title>
+
+  <meta
+    name="description"
+    content="Ed Umbao's working lab for SEO tools, GitHub projects, content workflows, APIs, automation experiments, and technical learning notes."
+  >
+
+  <link
+    rel="canonical"
+    href="https://edumbao.com/lab/"
+  >
+
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+
+  <meta
+    property="og:title"
+    content="Ed's Lab | SEO Tools, GitHub Projects & Technical Experiments"
+  >
+
+  <meta
+    property="og:description"
+    content="A working archive of SEO tools, GitHub projects, automation experiments, and technical learning notes from Ed Umbao."
+  >
+
+  <meta
+    property="og:url"
+    content="https://edumbao.com/lab/"
+  >
+
+  <meta
+    property="og:site_name"
+    content="Ed Umbao"
+  >
+
+
+  <!-- Twitter / X -->
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <meta
+    name="twitter:title"
+    content="Ed's Lab | SEO Tools, GitHub Projects & Technical Experiments"
+  >
+
+  <meta
+    name="twitter:description"
+    content="A working archive of SEO tools, GitHub projects, automation experiments, and technical learning notes from Ed Umbao."
+  >
+
+
+  <!-- Apply saved/system theme before the page paints -->
+  <script>
+    (function () {
+      let savedTheme = null;
+
+      try {
+        savedTheme = localStorage.getItem('edumbao-theme');
+      } catch (error) {
+        savedTheme = null;
+      }
+
+      const preferredTheme =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: light)').matches
+          ? 'light'
+          : 'dark';
+
+      const theme =
+        savedTheme === 'light' || savedTheme === 'dark'
+          ? savedTheme
+          : preferredTheme;
+
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+
+</head>
+
+
+<body>
+
+  <!-- ======================================================
+       Header
+  ======================================================= -->
+
+  <header class="site-header">
+
+    <div class="container site-nav">
+
+      <a
+        href="/"
+        class="site-brand"
+        aria-label="Ed Umbao homepage"
+      >
+
+        <span
+          class="brand-mark"
+          aria-hidden="true"
+        >
+          EU
+        </span>
+
+        <span class="brand-name">
+          Ed Umbao
+        </span>
+
+      </a>
+
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-controls="site-menu"
+        aria-expanded="false"
+      >
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </button>
+
+
+      <nav
+        class="site-menu"
+        id="site-menu"
+        aria-label="Main navigation"
+      >
+
+        <a
+          href="/lab/"
+          class="is-active"
+          aria-current="page"
+        >
+          Lab
+        </a>
+
+        <a href="/blog.html">
+          Writing
+        </a>
+
+        <a href="/#work">
+          Work
+        </a>
+
+        <a href="/#about">
+          About
+        </a>
+
+        <a
+          href="https://github.com/edumbao"
+          target="_blank"
+          rel="noopener"
+          class="nav-external"
+        >
+          GitHub ↗
+        </a>
+
+        <a
+          href="#"
+          id="theme-toggle"
+          class="theme-link"
+          aria-label="Switch color theme"
+        >
+          Theme
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- ====================================================
+         Lab Intro
+    ===================================================== -->
+
+    <section class="lab-page-hero">
+
+      <div class="container lab-page-hero-grid">
+
+        <div>
+
+          <p class="hero-eyebrow">
+            Ed's Lab / Working archive
+          </p>
+
+          <h1>
+            Small tools.
+            <em>
+              Real learning.
+            </em>
+          </h1>
+
+        </div>
+
+
+        <div class="lab-page-hero-copy">
+
+          <p>
+            This is where I keep the technical side of my content journey:
+            SEO tools, GitHub projects, automation experiments, data workflows,
+            and the things that break while I'm learning how they work.
+          </p>
+
+          <p>
+            I'm not presenting these as polished software products.
+            The point is to build useful things, document the process,
+            and get better at the technical work around content.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================================
+         Lab Index
+    ===================================================== -->
+
+    <section class="lab-index-strip">
+
+      <div class="container lab-index-grid">
+
+        <a href="#active-builds">
+          01 / Active builds
+        </a>
+
+        <a href="#public-tools">
+          02 / Public tools
+        </a>
+
+        <a href="#documentation">
+          03 / How I document
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================================
+         Active Builds
+    ===================================================== -->
+
+    <section
+      class="section lab-archive-section"
+      id="active-builds"
+    >
+
+      <div class="container">
+
+        <div class="lab-archive-heading">
+
+          <div>
+
+            <p class="section-kicker">
+              01 / Active builds
+            </p>
+
+            <h2 class="section-title">
+              Projects I'm actively working through.
+            </h2>
+
+          </div>
+
+          <p class="section-intro">
+            These are current learning projects. The scope can change as I
+            understand the problem better, and some parts may stay unfinished.
+          </p>
+
+        </div>
+
+
+        <div class="lab-archive-list">
+
+
+          <article class="lab-archive-item">
+
+            <div class="lab-archive-number">
+              01
+            </div>
+
+
+            <div class="lab-archive-main">
+
+              <div class="lab-archive-title-row">
+
+                <div>
+
+                  <span class="lab-status">
+                    In progress
+                  </span>
+
+                  <h3>
+                    Targetron Knowledge Catalog
+                  </h3>
+
+                </div>
+
+                <span class="lab-archive-date">
+                  Sep 2026
+                </span>
+
+              </div>
+
+
+              <p>
+                I'm adapting the knowledge-catalog workflow I first worked
+                through for Outscraper so I can organize Targetron's public
+                product and content information into a structured reference.
+              </p>
+
+
+              <dl class="lab-archive-meta">
+
+                <div>
+                  <dt>
+                    Why I built it
+                  </dt>
+
+                  <dd>
+                    I wanted to test whether the catalog workflow could become
+                    reusable instead of being tied to one website.
+                  </dd>
+                </div>
+
+                <div>
+                  <dt>
+                    Working with
+                  </dt>
+
+                  <dd>
+                    Python · GitHub · sitemap discovery · normalization
+                  </dd>
+                </div>
+
+                <div>
+                  <dt>
+                    Current lesson
+                  </dt>
+
+                  <dd>
+                    Reusable technical workflows need clearer boundaries,
+                    naming, and documentation than one-off projects.
+                  </dd>
+                </div>
+
+              </dl>
+
+            </div>
+
+
+            <div class="lab-archive-actions">
+
+              <a
+                href="https://github.com/edumbao/targetron-knowledge-catalog"
+                target="_blank"
+                rel="noopener"
+              >
+                GitHub ↗
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <article class="lab-archive-item">
+
+            <div class="lab-archive-number">
+              02
+            </div>
+
+
+            <div class="lab-archive-main">
+
+              <div class="lab-archive-title-row">
+
+                <div>
+
+                  <span class="lab-status">
+                    Working project
+                  </span>
+
+                  <h3>
+                    Outscraper Knowledge Catalog
+                  </h3>
+
+                </div>
+
+                <span class="lab-archive-date">
+                  Sep 2026
+                </span>
+
+              </div>
+
+
+              <p>
+                A project for discovering, organizing, and normalizing public
+                Outscraper website information so I can understand the site
+                structure and turn that information into a more useful reference
+                for content work.
+              </p>
+
+
+              <dl class="lab-archive-meta">
+
+                <div>
+                  <dt>
+                    Why I built it
+                  </dt>
+
+                  <dd>
+                    Large websites are difficult to reason about from memory.
+                    I wanted a structured inventory I could inspect and learn from.
+                  </dd>
+                </div>
+
+                <div>
+                  <dt>
+                    Working with
+                  </dt>
+
+                  <dd>
+                    Python · GitHub · public URLs · structured data
+                  </dd>
+                </div>
+
+                <div>
+                  <dt>
+                    Current lesson
+                  </dt>
+
+                  <dd>
+                    Discovery, classification, and normalization are separate
+                    problems and should be documented separately.
+                  </dd>
+                </div>
+
+              </dl>
+
+            </div>
+
+
+            <div class="lab-archive-actions">
+
+              <a
+                href="https://github.com/edumbao/outscraper-knowledge-catalog"
+                target="_blank"
+                rel="noopener"
+              >
+                GitHub ↗
+              </a>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================================
+         Public Tools
+    ===================================================== -->
+
+    <section
+      class="section lab-archive-section lab-archive-alt"
+      id="public-tools"
+    >
+
+      <div class="container">
+
+        <div class="lab-archive-heading">
+
+          <div>
+
+            <p class="section-kicker">
+              02 / Public tools
+            </p>
+
+            <h2 class="section-title">
+              Small tools built from repeated content problems.
+            </h2>
+
+          </div>
+
+          <p class="section-intro">
+            These are simpler projects I can point people to directly.
+            They are useful for showing how a repeated writing or SEO task
+            can turn into a small web tool.
+          </p>
+
+        </div>
+
+
+        <div class="lab-archive-list">
+
+
+          <article class="lab-archive-item">
+
+            <div class="lab-archive-number">
+              03
+            </div>
+
+
+            <div class="lab-archive-main">
+
+              <div class="lab-archive-title-row">
+
+                <div>
+
+                  <span class="lab-status">
+                    Public tool
+                  </span>
+
+                  <h3>
+                    Answer-Based SEO Article Planner
+                  </h3>
+
+                </div>
+
+              </div>
+
+
+              <p>
+                A small planning tool that turns a search question into a more
+                structured article workflow.
+              </p>
+
+
+              <dl class="lab-archive-meta">
+
+                <div>
+                  <dt>
+                    Problem
+                  </dt>
+
+                  <dd>
+                    Article planning can become repetitive when the same
+                    question-to-outline process is repeated manually.
+                  </dd>
+                </div>
+
+                <div>
+                  <dt>
+                    Focus
+                  </dt>
+
+                  <dd>
+                    SEO workflow · content planning · web tool
+                  </dd>
+                </div>
+
+              </dl>
+
+            </div>
+
+
+            <div class="lab-archive-actions">
+
+              <a
+                href="https://edumbao.github.io/answer-based-seo-planner/"
+                target="_blank"
+                rel="noopener"
+              >
+                Open tool ↗
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <article class="lab-archive-item">
+
+            <div class="lab-archive-number">
+              04
+            </div>
+
+
+            <div class="lab-archive-main">
+
+              <div class="lab-archive-title-row">
+
+                <div>
+
+                  <span class="lab-status">
+                    Public tool
+                  </span>
+
+                  <h3>
+                    Benefit Headline Creator
+                  </h3>
+
+                </div>
+
+              </div>
+
+
+              <p>
+                A small copywriting experiment for turning vague headlines into
+                clearer statements built around an action and a user benefit.
+              </p>
+
+
+              <dl class="lab-archive-meta">
+
+                <div>
+                  <dt>
+                    Problem
+                  </dt>
+
+                  <dd>
+                    Headline revisions often repeat the same exercise:
+                    clarify what the reader can do and why it matters.
+                  </dd>
+                </div>
+
+                <div>
+                  <dt>
+                    Focus
+                  </dt>
+
+                  <dd>
+                    Copywriting workflow · messaging · web tool
+                  </dd>
+                </div>
+
+              </dl>
+
+            </div>
+
+
+            <div class="lab-archive-actions">
+
+              <a
+                href="https://edumbao.github.io/benefit-headline-creator/"
+                target="_blank"
+                rel="noopener"
+              >
+                Open tool ↗
+              </a>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================================
+         Documentation Approach
+    ===================================================== -->
+
+    <section
+      class="section lab-documentation"
+      id="documentation"
+    >
+
+      <div class="container">
+
+        <div class="lab-doc-grid">
+
+          <div>
+
+            <p class="section-kicker">
+              03 / Documentation
+            </p>
+
+            <h2 class="section-title">
+              I want the notes to be as useful as the build.
+            </h2>
+
+          </div>
+
+
+          <div class="lab-doc-content">
+
+            <p>
+              Each project gives me something technical to practice,
+              but it also gives me a technical-writing exercise.
+              I use the same questions to keep the documentation honest.
+            </p>
+
+
+            <ol class="lab-doc-list">
+
+              <li>
+                <span>
+                  01
+                </span>
+
+                <strong>
+                  What I tried
+                </strong>
+              </li>
+
+              <li>
+                <span>
+                  02
+                </span>
+
+                <strong>
+                  Why I tried it
+                </strong>
+              </li>
+
+              <li>
+                <span>
+                  03
+                </span>
+
+                <strong>
+                  What worked
+                </strong>
+              </li>
+
+              <li>
+                <span>
+                  04
+                </span>
+
+                <strong>
+                  What broke or confused me
+                </strong>
+              </li>
+
+              <li>
+                <span>
+                  05
+                </span>
+
+                <strong>
+                  What I learned
+                </strong>
+              </li>
+
+              <li>
+                <span>
+                  06
+                </span>
+
+                <strong>
+                  How it connects to SEO, content, APIs, or documentation
+                </strong>
+              </li>
+
+              <li>
+                <span>
+                  07
+                </span>
+
+                <strong>
+                  What I will try next
+                </strong>
+              </li>
+
+            </ol>
+
+
+            <p class="lab-doc-note">
+              Some projects will become useful tools. Some will stay experiments.
+              Failed attempts still belong here if they taught me something worth
+              documenting.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================================
+         Lab CTA
+    ===================================================== -->
+
+    <section class="section lab-page-cta">
+
+      <div class="container lab-page-cta-grid">
+
+        <div>
+
+          <p class="section-kicker">
+            Follow the work
+          </p>
+
+          <h2 class="section-title">
+            The Lab will keep changing as I build.
+          </h2>
+
+        </div>
+
+
+        <div>
+
+          <p class="section-intro">
+            GitHub holds the code. This site holds the story behind the code.
+            My writing is where I go deeper into what I learned.
+          </p>
+
+          <div class="actions">
+
+            <a
+              href="https://github.com/edumbao"
+              target="_blank"
+              rel="noopener"
+              class="button button-primary"
+            >
+              Follow on GitHub ↗
+            </a>
+
+            <a
+              href="/blog.html"
+              class="button button-text"
+            >
+              Read my writing →
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================================
+         Footer
+    ===================================================== -->
+
+    <footer class="footer">
+
+      <div class="container footer-inner">
+
+        <span>
+          © 2026 Ed Umbao
+        </span>
+
+        <span>
+          Content · SEO · GitHub · Technical learning
+        </span>
+
+      </div>
+
+    </footer>
+
+  </main>
+
+
+  <!-- ======================================================
+       Navigation + Theme
+  ======================================================= -->
+
+  <script>
+
+    document.addEventListener(
+      'DOMContentLoaded',
+      function () {
+
+        const menuButton =
+          document.querySelector('.menu-toggle');
+
+        const siteMenu =
+          document.querySelector('.site-menu');
+
+        const themeToggle =
+          document.getElementById('theme-toggle');
+
+
+        if (menuButton && siteMenu) {
+
+          menuButton.addEventListener(
+            'click',
+            function () {
+
+              const isOpen =
+                siteMenu.classList.toggle('nav-open');
+
+              menuButton.setAttribute(
+                'aria-expanded',
+                isOpen ? 'true' : 'false'
+              );
+
+            }
+          );
+
+
+          siteMenu
+            .querySelectorAll('a')
+            .forEach(
+              function (link) {
+
+                link.addEventListener(
+                  'click',
+                  function () {
+
+                    siteMenu.classList.remove('nav-open');
+
+                    menuButton.setAttribute(
+                      'aria-expanded',
+                      'false'
+                    );
+
+                  }
+                );
+
+              }
+            );
+
+        }
+
+
+        function currentTheme() {
+          return document.documentElement.getAttribute('data-theme') === 'light'
+            ? 'light'
+            : 'dark';
+        }
+
+
+        function updateThemeLabel() {
+
+          if (!themeToggle) {
+            return;
+          }
+
+          const theme = currentTheme();
+          const nextTheme = theme === 'dark' ? 'Light' : 'Dark';
+
+          themeToggle.textContent = nextTheme;
+          themeToggle.setAttribute(
+            'aria-label',
+            'Switch to ' + nextTheme.toLowerCase() + ' theme'
+          );
+
+        }
+
+
+        updateThemeLabel();
+
+
+        if (themeToggle) {
+
+          themeToggle.addEventListener(
+            'click',
+            function (event) {
+
+              event.preventDefault();
+
+              const nextTheme =
+                currentTheme() === 'dark'
+                  ? 'light'
+                  : 'dark';
+
+              document.documentElement.setAttribute(
+                'data-theme',
+                nextTheme
+              );
+
+              try {
+                localStorage.setItem(
+                  'edumbao-theme',
+                  nextTheme
+                );
+              } catch (error) {
+                // The theme still works for the current page
+                // if localStorage is unavailable.
+              }
+
+              updateThemeLabel();
+
+            }
+          );
+
+        }
+
+      }
+    );
+
+  </script>
+
+</body>
+
+</html>
