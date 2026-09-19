@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found | Ed Umbao</title>
+  <meta name="robots" content="noindex, follow">
+
+  <script>
+    (function () {
+      let savedTheme = null;
+      try {
+        savedTheme = localStorage.getItem('edumbao-theme');
+      } catch (error) {
+        savedTheme = null;
+      }
+
+      const preferredTheme =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: light)').matches
+          ? 'light'
+          : 'dark';
+
+      const theme =
+        savedTheme === 'light' || savedTheme === 'dark'
+          ? savedTheme
+          : preferredTheme;
+
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container site-nav">
+      <a href="/" class="site-brand" aria-label="Ed Umbao homepage">
+        <span class="brand-mark" aria-hidden="true">EU</span>
+        <span class="brand-name">Ed Umbao</span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-controls="site-menu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-menu" id="site-menu" aria-label="Main navigation">
+        <a href="/lab/">Lab</a>
+        <a href="/work/">Work</a>
+        <a href="/writing/">Writing</a>
+        <a href="/#about">About</a>
+        <a
+          href="https://github.com/edumbao"
+          target="_blank"
+          rel="noopener"
+          class="nav-external"
+        >
+          GitHub ↗
+        </a>
+        <a
+          href="#"
+          id="theme-toggle"
+          class="theme-link"
+          aria-label="Switch color theme"
+        >
+          Theme
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <p class="section-kicker">404 / Page not found</p>
+
+        <h1 class="section-title">
+          This page isn't here.
+        </h1>
+
+        <p class="section-intro">
+          The URL may be old, mistyped, or moved during the site rebuild.
+          You can return home or continue through the main sections.
+        </p>
+
+        <div class="actions">
+          <a class="button button-primary" href="/">
+            Back to homepage →
+          </a>
+
+          <a class="button button-text" href="/writing/">
+            Read my writing →
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuButton = document.querySelector('.menu-toggle');
+      const siteMenu = document.querySelector('.site-menu');
+      const themeToggle = document.getElementById('theme-toggle');
+
+      if (menuButton && siteMenu) {
+        menuButton.addEventListener('click', function () {
+          const isOpen = siteMenu.classList.toggle('nav-open');
+          menuButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+
+        siteMenu.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            siteMenu.classList.remove('nav-open');
+            menuButton.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+
+      function currentTheme() {
+        return document.documentElement.getAttribute('data-theme') === 'light'
+          ? 'light'
+          : 'dark';
+      }
+
+      function updateThemeLabel() {
+        if (!themeToggle) return;
+
+        const theme = currentTheme();
+        const nextTheme = theme === 'dark' ? 'Light' : 'Dark';
+
+        themeToggle.textContent = nextTheme;
+        themeToggle.setAttribute(
+          'aria-label',
+          'Switch to ' + nextTheme.toLowerCase() + ' theme'
+        );
+      }
+
+      updateThemeLabel();
+
+      if (themeToggle) {
+        themeToggle.addEventListener('click', function (event) {
+          event.preventDefault();
+
+          const nextTheme =
+            currentTheme() === 'dark'
+              ? 'light'
+              : 'dark';
+
+          document.documentElement.setAttribute('data-theme', nextTheme);
+
+          try {
+            localStorage.setItem('edumbao-theme', nextTheme);
+          } catch (error) {
+            // Theme switching still works if storage is unavailable.
+          }
+
+          updateThemeLabel();
+        });
+      }
+    });
+  </script>
+</body>
+</html>
