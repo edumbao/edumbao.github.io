@@ -2056,6 +2056,589 @@
     }
 
 
+
+    /* ======================================================
+       Lab Project Detail
+    ======================================================= */
+
+    .project-page-hero {
+      padding: 58px 0 72px;
+    }
+
+    .project-breadcrumb {
+      display: flex;
+      align-items: center;
+
+      gap: 8px;
+
+      margin-bottom: 54px;
+
+      color: var(--muted);
+
+      font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+      font-size: 9px;
+
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .project-breadcrumb a {
+      color: var(--accent-text);
+    }
+
+    .project-page-hero-grid {
+      display: grid;
+
+      grid-template-columns:
+        minmax(0, 0.62fr)
+        minmax(320px, 0.38fr);
+
+      gap: 80px;
+
+      align-items: end;
+    }
+
+    .project-page-hero h1 {
+      max-width: 780px;
+
+      margin: 0;
+
+      font-family: var(--serif);
+
+      font-size: clamp(58px, 7.5vw, 92px);
+      font-weight: 500;
+
+      line-height: 0.92;
+      letter-spacing: -0.055em;
+    }
+
+    .project-page-hero h1 em {
+      display: block;
+
+      margin-top: 7px;
+
+      color: var(--accent-text);
+      font-style: normal;
+    }
+
+    .project-page-summary {
+      padding-top: 18px;
+
+      border-top: 1px solid var(--line);
+    }
+
+    .project-page-summary p {
+      margin: 0 0 16px;
+
+      color: var(--text-soft);
+
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .project-page-summary .actions {
+      margin-top: 26px;
+    }
+
+    .project-snapshot {
+      background: var(--bg-soft);
+
+      border-top: 1px solid var(--line-soft);
+      border-bottom: 1px solid var(--line-soft);
+    }
+
+    .project-snapshot-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+    }
+
+    .project-snapshot-grid > div {
+      padding: 24px 28px;
+
+      border-right: 1px solid var(--line-soft);
+    }
+
+    .project-snapshot-grid > div:last-child {
+      border-right: 0;
+    }
+
+    .project-snapshot span {
+      display: block;
+
+      margin-bottom: 7px;
+
+      color: var(--muted);
+
+      font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+      font-size: 9px;
+
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .project-snapshot strong {
+      display: block;
+
+      margin-bottom: 6px;
+
+      color: var(--text);
+
+      font-family: var(--serif);
+
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    .project-snapshot p {
+      margin: 0;
+
+      color: var(--muted);
+
+      font-size: 11px;
+      line-height: 1.55;
+    }
+
+    .project-story-section {
+      padding-top: 86px;
+      padding-bottom: 92px;
+    }
+
+    .project-story-alt {
+      background: var(--bg-soft);
+    }
+
+    .project-story-grid {
+      display: grid;
+
+      grid-template-columns:
+        170px minmax(0, 1fr);
+
+      gap: 64px;
+
+      align-items: start;
+    }
+
+    .project-story-index {
+      position: sticky;
+      top: 96px;
+
+      padding-top: 8px;
+
+      border-top: 1px solid var(--line);
+    }
+
+    .project-story-index span {
+      display: block;
+
+      margin-bottom: 7px;
+
+      color: var(--accent-text);
+
+      font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+      font-size: 11px;
+    }
+
+    .project-story-index p {
+      margin: 0;
+
+      color: var(--muted);
+
+      font-size: 11px;
+      line-height: 1.5;
+
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .project-story-content {
+      max-width: 880px;
+    }
+
+    .project-story-content > p {
+      max-width: 780px;
+
+      margin: 0 0 20px;
+
+      color: var(--text-soft);
+
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .project-process {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+      gap: 0;
+
+      margin-top: 42px;
+
+      border-top: 1px solid var(--line);
+    }
+
+    .project-process > div {
+      padding: 22px 24px 24px 0;
+
+      border-bottom: 1px solid var(--line);
+    }
+
+    .project-process > div:nth-child(odd) {
+      padding-right: 30px;
+
+      border-right: 1px solid var(--line);
+    }
+
+    .project-process > div:nth-child(even) {
+      padding-left: 30px;
+    }
+
+    .project-process span {
+      display: block;
+
+      margin-bottom: 10px;
+
+      color: var(--accent-text);
+
+      font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+      font-size: 10px;
+    }
+
+    .project-process strong {
+      display: block;
+
+      margin-bottom: 6px;
+
+      color: var(--text);
+
+      font-size: 13px;
+    }
+
+    .project-process p {
+      margin: 0;
+
+      color: var(--muted);
+
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .project-metrics {
+      display: grid;
+
+      grid-template-columns:
+        repeat(5, minmax(0, 1fr));
+
+      gap: 0;
+
+      margin: 42px 0;
+
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .project-metrics > div {
+      padding: 20px 18px;
+
+      border-right: 1px solid var(--line-soft);
+    }
+
+    .project-metrics > div:last-child {
+      border-right: 0;
+    }
+
+    .project-metrics strong {
+      display: block;
+
+      margin-bottom: 6px;
+
+      color: var(--text);
+
+      font-family: var(--serif);
+
+      font-size: 32px;
+      font-weight: 500;
+    }
+
+    .project-metrics span {
+      display: block;
+
+      color: var(--muted);
+
+      font-size: 10px;
+      line-height: 1.5;
+    }
+
+    .project-connection-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+      gap: 26px;
+
+      margin-top: 38px;
+    }
+
+    .project-connection-grid > div {
+      padding-top: 16px;
+
+      border-top: 1px solid var(--line);
+    }
+
+    .project-connection-grid h3 {
+      margin: 0 0 8px;
+
+      color: var(--text);
+
+      font-family: var(--serif);
+
+      font-size: 22px;
+      font-weight: 500;
+    }
+
+    .project-connection-grid p {
+      margin: 0;
+
+      color: var(--muted);
+
+      font-size: 12px;
+      line-height: 1.65;
+    }
+
+    .project-next-list {
+      max-width: 780px;
+
+      margin: 34px 0 0;
+      padding: 0;
+
+      list-style: none;
+
+      border-top: 1px solid var(--line);
+    }
+
+    .project-next-list li {
+      position: relative;
+
+      padding: 16px 0 16px 34px;
+
+      border-bottom: 1px solid var(--line-soft);
+
+      color: var(--text-soft);
+
+      font-size: 13px;
+      line-height: 1.6;
+
+      counter-increment: project-next;
+    }
+
+    .project-next-list {
+      counter-reset: project-next;
+    }
+
+    .project-next-list li::before {
+      content: "0" counter(project-next);
+
+      position: absolute;
+      left: 0;
+
+      color: var(--accent-text);
+
+      font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+      font-size: 9px;
+    }
+
+    .project-final-note {
+      max-width: 760px;
+
+      margin-top: 34px;
+      padding: 18px 20px;
+
+      border-left: 2px solid var(--brand-blue);
+
+      background: var(--bg-soft);
+    }
+
+    .project-story-alt .project-final-note {
+      background: var(--bg);
+    }
+
+    .project-final-note p {
+      margin: 0;
+
+      color: var(--text-soft);
+
+      font-family: var(--serif);
+
+      font-size: 18px;
+      line-height: 1.55;
+    }
+
+
+    @media (max-width: 980px) {
+
+      .project-page-hero-grid {
+        grid-template-columns: 1fr;
+
+        gap: 38px;
+      }
+
+      .project-story-grid {
+        grid-template-columns:
+          130px minmax(0, 1fr);
+
+        gap: 38px;
+      }
+
+      .project-metrics {
+        grid-template-columns:
+          repeat(3, minmax(0, 1fr));
+      }
+
+      .project-metrics > div:nth-child(3) {
+        border-right: 0;
+      }
+
+    }
+
+
+    @media (max-width: 820px) {
+
+      .project-snapshot-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-snapshot-grid > div {
+        border-right: 0;
+        border-bottom: 1px solid var(--line-soft);
+      }
+
+      .project-snapshot-grid > div:last-child {
+        border-bottom: 0;
+      }
+
+      .project-story-grid {
+        grid-template-columns: 1fr;
+
+        gap: 24px;
+      }
+
+      .project-story-index {
+        position: static;
+
+        display: flex;
+        align-items: baseline;
+
+        gap: 10px;
+      }
+
+      .project-process,
+      .project-connection-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-process > div:nth-child(odd) {
+        padding-right: 0;
+
+        border-right: 0;
+      }
+
+      .project-process > div:nth-child(even) {
+        padding-left: 0;
+      }
+
+      .project-metrics {
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+      }
+
+      .project-metrics > div {
+        border-right: 0;
+        border-bottom: 1px solid var(--line-soft);
+      }
+
+    }
+
+
+    @media (max-width: 620px) {
+
+      .project-page-hero {
+        padding: 46px 0 56px;
+      }
+
+      .project-breadcrumb {
+        margin-bottom: 38px;
+      }
+
+      .project-page-hero h1 {
+        font-size:
+          clamp(46px, 14vw, 64px);
+      }
+
+      .project-story-section {
+        padding-top: 62px;
+        padding-bottom: 68px;
+      }
+
+      .project-metrics {
+        grid-template-columns: 1fr;
+      }
+
+      .project-metrics > div {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .project-final-note p {
+        font-size: 16px;
+      }
+
+    }
+
+
     /* ======================================================
        Responsive
     ======================================================= */
@@ -2400,4 +2983,16 @@
         flex-direction: column;
       }
 
+    }
+
+    .lab-archive-actions {
+      gap: 10px;
+    }
+
+    .lab-archive-actions a + a {
+      color: var(--muted);
+    }
+
+    .lab-archive-actions a + a:hover {
+      color: var(--accent-text);
     }
