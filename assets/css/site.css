@@ -2996,3 +2996,67 @@
     .lab-archive-actions a + a:hover {
       color: var(--accent-text);
     }
+
+
+    /* ======================================================
+       Private Repository Labels
+    ======================================================= */
+
+    .button-private {
+      cursor: default;
+
+      background: transparent;
+      border-color: var(--line);
+
+      color: var(--muted);
+    }
+
+    .button-private:hover {
+      transform: none;
+
+      border-color: var(--line);
+
+      color: var(--muted);
+    }
+
+    .repository-private {
+      color: var(--muted);
+
+      font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+      font-size: 10px;
+
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .project-privacy-note {
+      padding: 18px 0;
+
+      background: var(--bg-soft);
+
+      border-bottom: 1px solid var(--line-soft);
+    }
+
+    .project-privacy-note p {
+      max-width: 860px;
+
+      margin: 0;
+
+      color: var(--muted);
+
+      font-size: 12px;
+      line-height: 1.65;
+    }
+
+    .project-privacy-note strong {
+      color: var(--text-soft);
+      font-weight: 700;
+    }
