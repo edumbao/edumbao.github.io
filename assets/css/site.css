@@ -3499,3 +3499,236 @@
       }
 
     }
+
+
+    /* ======================================================
+       Work Page
+    ======================================================= */
+
+    .work-page-hero {
+      padding: 76px 0 66px;
+
+      border-bottom: 1px solid var(--line-soft);
+    }
+
+    .work-page-hero-grid {
+      display: grid;
+
+      grid-template-columns:
+        minmax(0, 0.64fr)
+        minmax(300px, 0.36fr);
+
+      gap: 78px;
+
+      align-items: end;
+    }
+
+    .work-page-hero h1 {
+      max-width: 820px;
+
+      margin: 0;
+
+      font-family: var(--serif);
+      font-size: clamp(58px, 7.5vw, 92px);
+      font-weight: 500;
+
+      line-height: 0.92;
+      letter-spacing: -0.055em;
+    }
+
+    .work-page-hero h1 em {
+      display: block;
+
+      margin-top: 7px;
+
+      color: var(--accent-text);
+      font-style: normal;
+    }
+
+    .work-page-intro {
+      padding-top: 18px;
+
+      border-top: 1px solid var(--line);
+    }
+
+    .work-page-intro p {
+      margin: 0 0 16px;
+
+      color: var(--text-soft);
+
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    .work-page-intro p:last-child {
+      margin-bottom: 0;
+    }
+
+    .work-overview {
+      padding: 76px 0 84px;
+    }
+
+    .work-overview-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+      border-top: 1px solid var(--line);
+    }
+
+    .work-overview-item {
+      min-height: 290px;
+
+      padding: 28px 30px 30px 0;
+
+      border-right: 1px solid var(--line-soft);
+      border-bottom: 1px solid var(--line-soft);
+    }
+
+    .work-overview-item + .work-overview-item {
+      padding-left: 30px;
+    }
+
+    .work-overview-item:last-child {
+      border-right: 0;
+    }
+
+    .work-overview-number {
+      display: block;
+
+      margin-bottom: 46px;
+
+      color: var(--accent-text);
+
+      font-family: var(--mono);
+      font-size: 10px;
+    }
+
+    .work-overview-item h2 {
+      margin: 0 0 14px;
+
+      font-family: var(--serif);
+      font-size: 28px;
+      font-weight: 500;
+
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+
+    .work-overview-item p {
+      margin: 0 0 22px;
+
+      color: var(--text-soft);
+
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .work-overview-link {
+      color: var(--text);
+
+      font-family: var(--mono);
+      font-size: 10px;
+
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .work-overview-link:hover {
+      color: var(--accent-text);
+    }
+
+    .work-brands {
+      padding: 84px 0 94px;
+
+      background: var(--bg-soft);
+
+      border-top: 1px solid var(--line-soft);
+      border-bottom: 1px solid var(--line-soft);
+    }
+
+    .work-brands .project-list {
+      margin-top: 40px;
+    }
+
+    .work-page-note {
+      padding: 82px 0 92px;
+    }
+
+    .work-page-note-grid {
+      display: grid;
+
+      grid-template-columns:
+        minmax(0, 0.42fr)
+        minmax(0, 0.58fr);
+
+      gap: 80px;
+    }
+
+    .work-page-note-copy {
+      max-width: 740px;
+    }
+
+    .work-page-note-copy p {
+      margin: 0 0 18px;
+
+      color: var(--text-soft);
+
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    .work-page-note-copy p:last-of-type {
+      margin-bottom: 0;
+    }
+
+
+    @media (max-width: 980px) {
+
+      .work-page-hero-grid,
+      .work-page-note-grid {
+        grid-template-columns: 1fr;
+
+        gap: 34px;
+      }
+
+      .work-overview-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .work-overview-item,
+      .work-overview-item + .work-overview-item {
+        min-height: 0;
+
+        padding: 26px 0;
+
+        border-right: 0;
+      }
+
+      .work-overview-number {
+        margin-bottom: 24px;
+      }
+
+    }
+
+
+    @media (max-width: 620px) {
+
+      .work-page-hero {
+        padding: 54px 0 48px;
+      }
+
+      .work-page-hero h1 {
+        font-size:
+          clamp(48px, 14vw, 64px);
+      }
+
+      .work-overview,
+      .work-brands,
+      .work-page-note {
+        padding-top: 62px;
+        padding-bottom: 68px;
+      }
+
+    }
