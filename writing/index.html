@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LBQL9HBJNL"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-LBQL9HBJNL');
+  </script>
+
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Writing &amp; Learning Notes | Ed Umbao</title>
+
+  <meta
+    name="description"
+    content="Personal writing by Ed Umbao about SEO, technical writing, analytics, GitHub, small web projects, and lessons from learning technical workflows through real work."
+  >
+
+  <link
+    rel="canonical"
+    href="https://edumbao.com/writing/"
+  >
+
+
+  <meta property="og:type" content="website">
+
+  <meta
+    property="og:title"
+    content="Writing &amp; Learning Notes | Ed Umbao"
+  >
+
+  <meta
+    property="og:description"
+    content="Notes on SEO, technical writing, analytics, GitHub, small web projects, and what I learn while building and documenting technical workflows."
+  >
+
+  <meta
+    property="og:url"
+    content="https://edumbao.com/writing/"
+  >
+
+  <meta
+    property="og:site_name"
+    content="Ed Umbao"
+  >
+
+
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <meta
+    name="twitter:title"
+    content="Writing &amp; Learning Notes | Ed Umbao"
+  >
+
+  <meta
+    name="twitter:description"
+    content="Notes on SEO, technical writing, analytics, GitHub, small web projects, and what I learn while building and documenting technical workflows."
+  >
+
+
+  <script>
+    (function () {
+      let savedTheme = null;
+
+      try {
+        savedTheme = localStorage.getItem('edumbao-theme');
+      } catch (error) {
+        savedTheme = null;
+      }
+
+      const preferredTheme =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: light)').matches
+          ? 'light'
+          : 'dark';
+
+      const theme =
+        savedTheme === 'light' || savedTheme === 'dark'
+          ? savedTheme
+          : preferredTheme;
+
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+
+</head>
+
+
+<body>
+
+  <header class="site-header">
+
+    <div class="container site-nav">
+
+      <a
+        href="/"
+        class="site-brand"
+        aria-label="Ed Umbao homepage"
+      >
+
+        <span
+          class="brand-mark"
+          aria-hidden="true"
+        >
+          EU
+        </span>
+
+        <span class="brand-name">
+          Ed Umbao
+        </span>
+
+      </a>
+
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-controls="site-menu"
+        aria-expanded="false"
+      >
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </button>
+
+
+      <nav
+        class="site-menu"
+        id="site-menu"
+        aria-label="Main navigation"
+      >
+
+        <a href="/lab/">
+          Lab
+        </a>
+
+        <a href="/work/">
+          Work
+        </a>
+
+        <a
+          href="/writing/"
+          class="is-active"
+          aria-current="page"
+        >
+          Writing
+        </a>
+
+        <a href="/#about">
+          About
+        </a>
+
+        <a
+          href="https://github.com/edumbao"
+          target="_blank"
+          rel="noopener"
+          class="nav-external"
+        >
+          GitHub ↗
+        </a>
+
+        <a
+          href="#"
+          id="theme-toggle"
+          class="theme-link"
+          aria-label="Switch color theme"
+        >
+          Theme
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <section class="journal-page-hero">
+
+      <div class="container journal-page-hero-grid">
+
+        <div>
+
+          <p class="hero-eyebrow">
+            Writing / Learning notes
+          </p>
+
+          <h1>
+            Notes from my
+            <em>
+              technical writing journey.
+            </em>
+          </h1>
+
+        </div>
+
+
+        <div class="journal-page-intro">
+
+          <p>
+            I use this part of the site to document what I am learning
+            through SEO work, analytics, GitHub, small technical projects,
+            and the systems around publishing.
+          </p>
+
+          <p>
+            Some posts are tutorials. Others are reflections on what worked,
+            what confused me, and what I want to try next.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="journal-topics">
+
+      <div class="container">
+
+        <ul
+          class="journal-topic-list"
+          aria-label="Writing topics"
+        >
+          <li>SEO</li>
+          <li>Technical writing</li>
+          <li>Analytics</li>
+          <li>GitHub</li>
+          <li>Small web projects</li>
+          <li>Learning in public</li>
+        </ul>
+
+      </div>
+
+    </section>
+
+
+    <section class="journal-archive">
+
+      <div class="container">
+
+        <div class="journal-archive-head">
+
+          <div>
+
+            <p class="section-kicker">
+              Latest writing
+            </p>
+
+            <h2 class="section-title">
+              Six notes from the journey so far.
+            </h2>
+
+          </div>
+
+
+          <p class="journal-archive-note">
+            This is still a small archive. I am keeping it that way on purpose:
+            publish what is useful, document real learning, and add to it as
+            the work gives me something worth explaining.
+          </p>
+
+        </div>
+
+
+        <ol class="journal-list">
+
+          <li class="journal-entry">
+
+            <span class="journal-entry-number">
+              06
+            </span>
+
+            <div class="journal-entry-main">
+
+              <a
+                href="/posts/what-is-an-seo-score.html"
+                class="journal-entry-image"
+                aria-label="Read What Does an SEO Score Really Tell You? Why I Built SEO Battle"
+              >
+                <img
+                  src="/images/seo-battle.webp"
+                  alt="SEO score history and website comparison showing improvement from 92 to 97"
+                  loading="lazy"
+                >
+              </a>
+
+              <div class="journal-entry-copy">
+
+                <h2>
+                  <a href="/posts/what-is-an-seo-score.html">
+                    What Does an SEO Score Really Tell You? Why I Built SEO Battle
+                  </a>
+                </h2>
+
+                <p>
+                  What I learned from turning a repeated SEO review problem
+                  into a small comparison tool.
+                </p>
+
+              </div>
+
+            </div>
+
+            <time
+              class="journal-entry-date"
+              datetime="2026-08-31"
+            >
+              Aug 31, 2026
+            </time>
+
+          </li>
+
+
+          <li class="journal-entry">
+
+            <span class="journal-entry-number">
+              05
+            </span>
+
+            <div class="journal-entry-main">
+
+              <a
+                href="/posts/how-to-transfer-xyz-domain-namecheap-cloudflare.html"
+                class="journal-entry-image"
+                aria-label="Read How to Transfer .xyz Domain from Namecheap to Cloudflare"
+              >
+                <img
+                  src="/images/namecheap-to-cloudflare-transfer.webp"
+                  alt="Diagram showing domain transfer steps from Namecheap to Cloudflare"
+                  loading="lazy"
+                >
+              </a>
+
+              <div class="journal-entry-copy">
+
+                <h2>
+                  <a href="/posts/how-to-transfer-xyz-domain-namecheap-cloudflare.html">
+                    How to Transfer .xyz Domain from Namecheap to Cloudflare
+                  </a>
+                </h2>
+
+                <p>
+                  A practical walkthrough from moving a domain while keeping
+                  an existing Blogger-hosted site in place.
+                </p>
+
+              </div>
+
+            </div>
+
+            <time
+              class="journal-entry-date"
+              datetime="2026-08-09"
+            >
+              Aug 9, 2026
+            </time>
+
+          </li>
+
+
+          <li class="journal-entry">
+
+            <span class="journal-entry-number">
+              04
+            </span>
+
+            <div class="journal-entry-main">
+
+              <a
+                href="/posts/how-to-build-answer-based-seo-strategy.html"
+                class="journal-entry-image"
+                aria-label="Read Stop Targeting Keywords: How to Build an Answer-Based SEO Strategy"
+              >
+                <img
+                  src="/images/answer_based_seo_planner.webp"
+                  alt="Screenshot of the Answer-Based SEO Planner tool"
+                  loading="lazy"
+                >
+              </a>
+
+              <div class="journal-entry-copy">
+
+                <h2>
+                  <a href="/posts/how-to-build-answer-based-seo-strategy.html">
+                    Stop Targeting Keywords: How to Build an Answer-Based SEO Strategy
+                  </a>
+                </h2>
+
+                <p>
+                  How I started thinking about article planning around
+                  questions, reader intent, and useful answers instead of
+                  treating the keyword as the whole brief.
+                </p>
+
+              </div>
+
+            </div>
+
+            <time
+              class="journal-entry-date"
+              datetime="2026-07-02"
+            >
+              Jul 2, 2026
+            </time>
+
+          </li>
+
+
+          <li class="journal-entry">
+
+            <span class="journal-entry-number">
+              03
+            </span>
+
+            <div class="journal-entry-main">
+
+              <a
+                href="/posts/beginner-roadmap.html"
+                class="journal-entry-image"
+                aria-label="Read You Don't Need an Expensive Course to Start Your Digital Career"
+              >
+                <img
+                  src="/images/beginner-digital-career-roadmap.webp"
+                  alt="Illustration of a beginner digital career roadmap with laptop and milestones"
+                  loading="lazy"
+                >
+              </a>
+
+              <div class="journal-entry-copy">
+
+                <h2>
+                  <a href="/posts/beginner-roadmap.html">
+                    You Don't Need an Expensive Course to Start Your Digital Career
+                  </a>
+                </h2>
+
+                <p>
+                  A beginner-friendly roadmap built around learning by doing,
+                  using free resources, and creating small pieces of evidence
+                  along the way.
+                </p>
+
+              </div>
+
+            </div>
+
+            <time
+              class="journal-entry-date"
+              datetime="2026-06-30"
+            >
+              Jun 30, 2026
+            </time>
+
+          </li>
+
+
+          <li class="journal-entry">
+
+            <span class="journal-entry-number">
+              02
+            </span>
+
+            <div class="journal-entry-main">
+
+              <a
+                href="/posts/how-to-track-chatgpt-referral-traffic-ga4.html"
+                class="journal-entry-image"
+                aria-label="Read How to Track ChatGPT Referral Traffic in GA4"
+              >
+                <img
+                  src="/images/chatgpt-ga4-featured.webp"
+                  alt="Illustration showing ChatGPT referral traffic being tracked in GA4"
+                  loading="lazy"
+                >
+              </a>
+
+              <div class="journal-entry-copy">
+
+                <h2>
+                  <a href="/posts/how-to-track-chatgpt-referral-traffic-ga4.html">
+                    How to Track ChatGPT Referral Traffic in GA4
+                  </a>
+                </h2>
+
+                <p>
+                  A practical analytics note on finding and reviewing
+                  ChatGPT referral traffic inside Google Analytics 4.
+                </p>
+
+              </div>
+
+            </div>
+
+            <time
+              class="journal-entry-date"
+              datetime="2026-06-29"
+            >
+              Jun 29, 2026
+            </time>
+
+          </li>
+
+
+          <li class="journal-entry">
+
+            <span class="journal-entry-number">
+              01
+            </span>
+
+            <div class="journal-entry-main">
+
+              <a
+                href="/posts/learning-seo-journey.html"
+                class="journal-entry-image"
+                aria-label="Read My SEO Journey"
+              >
+                <img
+                  src="/images/ed_umbao_seo_saudi.jpg"
+                  alt="Ed Umbao with a colleague while working in Saudi Arabia"
+                  loading="lazy"
+                >
+              </a>
+
+              <div class="journal-entry-copy">
+
+                <h2>
+                  <a href="/posts/learning-seo-journey.html">
+                    My SEO Journey
+                  </a>
+                </h2>
+
+                <p>
+                  A personal look at how publishing my own sites eventually
+                  led into professional SEO and content work.
+                </p>
+
+              </div>
+
+            </div>
+
+            <time
+              class="journal-entry-date"
+              datetime="2026-05-26"
+            >
+              May 26, 2026
+            </time>
+
+          </li>
+
+        </ol>
+
+      </div>
+
+    </section>
+
+
+    <section class="journal-footer-note">
+
+      <div class="container journal-footer-grid">
+
+        <div>
+
+          <p class="section-kicker">
+            Why I keep writing
+          </p>
+
+          <h2 class="section-title">
+            The notes help me make the learning concrete.
+          </h2>
+
+        </div>
+
+
+        <div class="journal-footer-copy">
+
+          <p>
+            Building a tool or following a technical workflow teaches me one
+            thing. Trying to explain it clearly shows me what I actually
+            understood and what I still need to work through.
+          </p>
+
+          <p>
+            That is the role of Writing on this site: a record of the learning
+            behind the Work and the Lab.
+          </p>
+
+
+          <div class="actions">
+
+            <a
+              href="/lab/"
+              class="button button-primary"
+            >
+              Explore the Lab →
+            </a>
+
+            <a
+              href="/work/"
+              class="button button-text"
+            >
+              View professional work →
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <footer class="footer">
+
+      <div class="container footer-inner">
+
+        <span>
+          © 2026 Ed Umbao
+        </span>
+
+        <span>
+          Writing · SEO · Technical learning · Small projects
+        </span>
+
+      </div>
+
+    </footer>
+
+  </main>
+
+
+  <script>
+
+    document.addEventListener(
+      'DOMContentLoaded',
+      function () {
+
+        const menuButton =
+          document.querySelector('.menu-toggle');
+
+        const siteMenu =
+          document.querySelector('.site-menu');
+
+        const themeToggle =
+          document.getElementById('theme-toggle');
+
+
+        if (menuButton && siteMenu) {
+
+          menuButton.addEventListener(
+            'click',
+            function () {
+
+              const isOpen =
+                siteMenu.classList.toggle('nav-open');
+
+              menuButton.setAttribute(
+                'aria-expanded',
+                isOpen ? 'true' : 'false'
+              );
+
+            }
+          );
+
+
+          siteMenu
+            .querySelectorAll('a')
+            .forEach(
+              function (link) {
+
+                link.addEventListener(
+                  'click',
+                  function () {
+
+                    siteMenu.classList.remove('nav-open');
+
+                    menuButton.setAttribute(
+                      'aria-expanded',
+                      'false'
+                    );
+
+                  }
+                );
+
+              }
+            );
+
+        }
+
+
+        function currentTheme() {
+          return document.documentElement.getAttribute('data-theme') === 'light'
+            ? 'light'
+            : 'dark';
+        }
+
+
+        function updateThemeLabel() {
+
+          if (!themeToggle) {
+            return;
+          }
+
+          const theme = currentTheme();
+          const nextTheme = theme === 'dark' ? 'Light' : 'Dark';
+
+          themeToggle.textContent = nextTheme;
+          themeToggle.setAttribute(
+            'aria-label',
+            'Switch to ' + nextTheme.toLowerCase() + ' theme'
+          );
+
+        }
+
+
+        updateThemeLabel();
+
+
+        if (themeToggle) {
+
+          themeToggle.addEventListener(
+            'click',
+            function (event) {
+
+              event.preventDefault();
+
+              const nextTheme =
+                currentTheme() === 'dark'
+                  ? 'light'
+                  : 'dark';
+
+              document.documentElement.setAttribute(
+                'data-theme',
+                nextTheme
+              );
+
+              try {
+                localStorage.setItem(
+                  'edumbao-theme',
+                  nextTheme
+                );
+              } catch (error) {
+                // Theme switching still works if storage is unavailable.
+              }
+
+              updateThemeLabel();
+
+            }
+          );
+
+        }
+
+      }
+    );
+
+  </script>
+
+</body>
+
+</html>
