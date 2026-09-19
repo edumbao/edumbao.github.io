@@ -1,18 +1,42 @@
 :root {
-      --bg: #0b0f14;
-      --bg-soft: #10151c;
-      --surface: #141a22;
+      color-scheme: dark;
 
-      --text: #f3f1eb;
-      --text-soft: #c8cbd0;
-      --muted: #8f98a3;
+      /* Core backgrounds */
+      --bg: #090b0f;
+      --bg-soft: #0f1319;
+      --surface: #141922;
 
-      --line: #27303a;
+      /* Typography */
+      --text: #f5f7fa;
+      --text-soft: #c7ced8;
+      --muted: #8d97a5;
+
+      /* Borders */
+      --line: #29313d;
       --line-soft: rgba(255, 255, 255, 0.08);
 
-      --green: #7dd3a8;
-      --blue: #8ab4f8;
-      --purple: #b8a1ff;
+      /* Brand */
+      --brand-blue: #194294;
+      --brand-blue-hover: #2858b5;
+      --brand-blue-soft: rgba(25, 66, 148, 0.18);
+      --brand-blue-contrast: #ffffff;
+
+      /* Accessible accent text for dark backgrounds */
+      --accent-text: #7fa6eb;
+      --link-blue: #6f9ee8;
+      --link-blue-hover: #b9d3ff;
+      --focus: #8ab4f8;
+
+      /* Theme-aware header */
+      --header-bg: rgba(9, 11, 15, 0.94);
+
+      /*
+        Compatibility aliases.
+        Existing components currently reference these variables.
+      */
+      --green: var(--accent-text);
+      --blue: var(--link-blue);
+      --purple: var(--accent-text);
 
       --container: 1180px;
 
@@ -29,6 +53,38 @@
         BlinkMacSystemFont,
         "Segoe UI",
         sans-serif;
+    }
+
+
+    /* ======================================================
+       Light Theme
+       ======================================================= */
+
+    html[data-theme="light"] {
+      color-scheme: light;
+
+      --bg: #f7f7f4;
+      --bg-soft: #efefeb;
+      --surface: #ffffff;
+
+      --text: #121417;
+      --text-soft: #3f4650;
+      --muted: #707985;
+
+      --line: #d7dbe0;
+      --line-soft: rgba(18, 20, 23, 0.09);
+
+      --brand-blue: #194294;
+      --brand-blue-hover: #123472;
+      --brand-blue-soft: rgba(25, 66, 148, 0.10);
+      --brand-blue-contrast: #ffffff;
+
+      --accent-text: #194294;
+      --link-blue: #194294;
+      --link-blue-hover: #123472;
+      --focus: #194294;
+
+      --header-bg: rgba(247, 247, 244, 0.94);
     }
 
 
@@ -78,7 +134,7 @@
 
     a:focus-visible,
     button:focus-visible {
-      outline: 3px solid var(--blue);
+      outline: 3px solid var(--focus);
       outline-offset: 4px;
     }
 
@@ -97,7 +153,7 @@
       top: 0;
       z-index: 100;
 
-      background: rgba(11, 15, 20, 0.94);
+      background: var(--header-bg);
 
       border-bottom: 1px solid var(--line-soft);
 
@@ -175,7 +231,7 @@
     }
 
     .site-menu .nav-cta:hover {
-      border-color: var(--green);
+      border-color: var(--brand-blue);
     }
 
 
@@ -299,14 +355,14 @@
     }
 
     .button-primary {
-      background: var(--green);
-      border-color: var(--green);
+      background: var(--brand-blue);
+      border-color: var(--brand-blue);
 
-      color: #08120d;
+      color: var(--brand-blue-contrast);
     }
 
     .button-primary:hover {
-      background: #96dfba;
+      background: var(--brand-blue-hover);
     }
 
     .button-secondary {
@@ -328,7 +384,7 @@
     }
 
     .button-text:hover {
-      color: #b9d3ff;
+      color: var(--link-blue-hover);
       border-color: transparent;
     }
 
@@ -724,7 +780,7 @@
     }
 
     .project-link:hover {
-      color: #b9d3ff;
+      color: var(--link-blue-hover);
     }
 
 

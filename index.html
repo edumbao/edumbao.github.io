@@ -80,6 +80,34 @@
   >
 
 
+  <!-- Theme preference: apply before CSS to avoid a flash of the wrong theme -->
+  <script>
+    (function () {
+      const root = document.documentElement;
+      let savedTheme = null;
+
+      try {
+        savedTheme = localStorage.getItem('edumbao-theme');
+      } catch (error) {
+        savedTheme = null;
+      }
+
+      const systemPrefersLight =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: light)').matches;
+
+      const initialTheme =
+        savedTheme === 'light' || savedTheme === 'dark'
+          ? savedTheme
+          : systemPrefersLight
+            ? 'light'
+            : 'dark';
+
+      root.setAttribute('data-theme', initialTheme);
+    })();
+  </script>
+
+
   <link rel="stylesheet" href="/assets/css/site.css">
 
 
@@ -189,6 +217,14 @@
 
         <a href="/blog.html">
           Writing
+        </a>
+
+        <a
+          href="#"
+          id="theme-toggle"
+          aria-label="Switch color theme"
+        >
+          Theme
         </a>
 
         <a
@@ -1830,6 +1866,81 @@
       }
     );
 
+  </script>
+
+
+  <!-- ======================================================
+       Theme Toggle
+  ======================================================= -->
+
+  <script>
+    (function () {
+      const root = document.documentElement;
+      const themeToggle = document.getElementById('theme-toggle');
+
+      if (!themeToggle) {
+        return;
+      }
+
+      function getCurrentTheme() {
+        return root.getAttribute('data-theme') === 'light'
+          ? 'light'
+          : 'dark';
+      }
+
+      function updateThemeToggle() {
+        const currentTheme = getCurrentTheme();
+        const nextTheme =
+          currentTheme === 'dark'
+            ? 'light'
+            : 'dark';
+
+        themeToggle.textContent =
+          nextTheme === 'light'
+            ? 'Light'
+            : 'Dark';
+
+        themeToggle.setAttribute(
+          'aria-label',
+          'Switch to ' + nextTheme + ' theme'
+        );
+
+        themeToggle.setAttribute(
+          'title',
+          'Switch to ' + nextTheme + ' theme'
+        );
+      }
+
+      themeToggle.addEventListener(
+        'click',
+        function (event) {
+          event.preventDefault();
+
+          const nextTheme =
+            getCurrentTheme() === 'dark'
+              ? 'light'
+              : 'dark';
+
+          root.setAttribute(
+            'data-theme',
+            nextTheme
+          );
+
+          try {
+            localStorage.setItem(
+              'edumbao-theme',
+              nextTheme
+            );
+          } catch (error) {
+            /* The theme still changes even if storage is unavailable. */
+          }
+
+          updateThemeToggle();
+        }
+      );
+
+      updateThemeToggle();
+    })();
   </script>
 
 
