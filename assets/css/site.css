@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap");
+
 :root {
       color-scheme: dark;
 
@@ -41,18 +43,26 @@
       --container: 1180px;
 
       --serif:
+        "Newsreader",
         Georgia,
         "Times New Roman",
         serif;
 
       --sans:
-        Inter,
+        "IBM Plex Sans",
         ui-sans-serif,
         system-ui,
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
         sans-serif;
+
+      --mono:
+        "IBM Plex Mono",
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
     }
 
 
@@ -110,9 +120,12 @@
 
       font-family: var(--sans);
       font-size: 16px;
+      font-weight: 400;
       line-height: 1.7;
+      letter-spacing: -0.006em;
 
       -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
 
     img,
@@ -141,6 +154,56 @@
     .container {
       width: min(calc(100% - 40px), var(--container));
       margin-inline: auto;
+    }
+
+
+
+    /* ======================================================
+       Typography Identity
+    ======================================================= */
+
+    h1,
+    h2,
+    h3,
+    .section-title,
+    .project-content h3,
+    .about-note,
+    .portrait-caption strong,
+    .latest-build-content .section-title,
+    .lab-title-row h3,
+    .lab-archive-title-row h3,
+    .project-page-hero h1,
+    .project-final-note p {
+      font-family: var(--serif);
+      font-optical-sizing: auto;
+    }
+
+    .hero-eyebrow,
+    .section-kicker,
+    .project-type,
+    .build-date,
+    .lab-status,
+    .lab-meta,
+    .project-number,
+    .tool-mark,
+    .service-number,
+    .stack-number,
+    .process-number,
+    .lab-number,
+    .lab-archive-number,
+    .lab-archive-date,
+    .project-breadcrumb,
+    .project-story-index,
+    .project-snapshot span {
+      font-family: var(--mono);
+    }
+
+    .site-menu a,
+    .button,
+    .tool-link,
+    .project-link,
+    .writing-links a {
+      letter-spacing: -0.01em;
     }
 
 
