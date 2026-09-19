@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LBQL9HBJNL"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-LBQL9HBJNL');
+  </script>
+
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Answer-Based SEO Article Planner | Ed's Lab</title>
+
+  <meta
+    name="description"
+    content="Build notes from Ed Umbao's Answer-Based SEO Article Planner, a small HTML, CSS, and JavaScript tool for turning a search question into a structured article-planning prompt."
+  >
+
+  <link
+    rel="canonical"
+    href="https://edumbao.com/lab/answer-based-seo-planner/"
+  >
+
+
+  <meta property="og:type" content="article">
+
+  <meta
+    property="og:title"
+    content="Answer-Based SEO Article Planner | Ed's Lab"
+  >
+
+  <meta
+    property="og:description"
+    content="What I learned while turning a repeated SEO article-planning workflow into a small public web tool."
+  >
+
+  <meta
+    property="og:url"
+    content="https://edumbao.com/lab/answer-based-seo-planner/"
+  >
+
+  <meta
+    property="og:site_name"
+    content="Ed Umbao"
+  >
+
+
+  <script>
+    (function () {
+      let savedTheme = null;
+
+      try {
+        savedTheme = localStorage.getItem('edumbao-theme');
+      } catch (error) {
+        savedTheme = null;
+      }
+
+      const preferredTheme =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: light)').matches
+          ? 'light'
+          : 'dark';
+
+      const theme =
+        savedTheme === 'light' || savedTheme === 'dark'
+          ? savedTheme
+          : preferredTheme;
+
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+
+</head>
+
+
+<body>
+
+  <header class="site-header">
+
+    <div class="container site-nav">
+
+      <a
+        href="/"
+        class="site-brand"
+        aria-label="Ed Umbao homepage"
+      >
+
+        <span
+          class="brand-mark"
+          aria-hidden="true"
+        >
+          EU
+        </span>
+
+        <span class="brand-name">
+          Ed Umbao
+        </span>
+
+      </a>
+
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-controls="site-menu"
+        aria-expanded="false"
+      >
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </button>
+
+
+      <nav
+        class="site-menu"
+        id="site-menu"
+        aria-label="Main navigation"
+      >
+
+        <a
+          href="/lab/"
+          class="is-active"
+        >
+          Lab
+        </a>
+
+        <a href="/blog.html">
+          Writing
+        </a>
+
+        <a href="/#work">
+          Work
+        </a>
+
+        <a href="/#about">
+          About
+        </a>
+
+        <a
+          href="https://github.com/edumbao"
+          target="_blank"
+          rel="noopener"
+          class="nav-external"
+        >
+          GitHub ↗
+        </a>
+
+        <a
+          href="#"
+          id="theme-toggle"
+          class="theme-link"
+          aria-label="Switch color theme"
+        >
+          Theme
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <section class="project-page-hero">
+
+      <div class="container">
+
+        <div class="project-breadcrumb">
+
+          <a href="/lab/">
+            Ed's Lab
+          </a>
+
+          <span aria-hidden="true">
+            /
+          </span>
+
+          <span>
+            Answer-Based SEO Article Planner
+          </span>
+
+        </div>
+
+
+        <div class="project-page-hero-grid">
+
+          <div>
+
+            <p class="hero-eyebrow">
+              Public tool / Learning project
+            </p>
+
+            <h1>
+              Answer-Based
+              <em>
+                SEO Article Planner
+              </em>
+            </h1>
+
+          </div>
+
+
+          <div class="project-page-summary">
+
+            <p>
+              I built this after noticing that article planning often starts
+              with a search question but still needs more context before a useful
+              draft can begin.
+            </p>
+
+            <p>
+              The tool asks for the question, audience, angle, example, and CTA,
+              then turns those inputs into a structured planning prompt for an
+              initial article review draft.
+            </p>
+
+
+            <div class="actions">
+
+              <a
+                href="https://edumbao.github.io/answer-based-seo-planner/"
+                target="_blank"
+                rel="noopener"
+                class="button button-primary"
+              >
+                Open live tool ↗
+              </a>
+
+              <a
+                href="https://github.com/edumbao/answer-based-seo-planner"
+                target="_blank"
+                rel="noopener"
+                class="button button-text"
+              >
+                View GitHub ↗
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="project-snapshot">
+
+      <div class="container project-snapshot-grid">
+
+        <div>
+
+          <span>
+            Status
+          </span>
+
+          <strong>
+            Working learning project
+          </strong>
+
+          <p>
+            Public and functional, with small improvements still planned.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <span>
+            Built with
+          </span>
+
+          <strong>
+            HTML · CSS · JavaScript
+          </strong>
+
+          <p>
+            Published through GitHub Pages with no backend or login system.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <span>
+            Focus
+          </span>
+
+          <strong>
+            SEO article planning
+          </strong>
+
+          <p>
+            Turning a repeated content-planning step into a small browser tool.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="section project-story-section">
+
+      <div class="container project-story-grid">
+
+        <aside class="project-story-index">
+
+          <span>
+            01
+          </span>
+
+          <p>
+            What I tried
+          </p>
+
+        </aside>
+
+
+        <div class="project-story-content">
+
+          <h2 class="section-title">
+            Turn a repeated article-planning step into a browser tool.
+          </h2>
+
+          <p>
+            I wanted to take a planning process I already use in content work
+            and make it easier to repeat. Instead of starting with a broad topic,
+            the tool begins with the question the article should answer.
+          </p>
+
+          <p>
+            From there, it asks for the main audience, the article angle,
+            an example or scenario, and the call to action. Those inputs become
+            a structured prompt that can be copied into a writing workflow.
+          </p>
+
+
+          <div class="project-process">
+
+            <div>
+              <span>
+                01
+              </span>
+
+              <strong>
+                Question
+              </strong>
+
+              <p>
+                Start with the search question the article should answer.
+              </p>
+            </div>
+
+            <div>
+              <span>
+                02
+              </span>
+
+              <strong>
+                Reader
+              </strong>
+
+              <p>
+                Add the audience so the article has a clearer direction.
+              </p>
+            </div>
+
+            <div>
+              <span>
+                03
+              </span>
+
+              <strong>
+                Direction
+              </strong>
+
+              <p>
+                Add the angle, example, and CTA.
+              </p>
+            </div>
+
+            <div>
+              <span>
+                04
+              </span>
+
+              <strong>
+                Prompt
+              </strong>
+
+              <p>
+                Generate a copy-ready planning prompt for an initial draft.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="section project-story-section project-story-alt">
+
+      <div class="container project-story-grid">
+
+        <aside class="project-story-index">
+
+          <span>
+            02
+          </span>
+
+          <p>
+            Why I tried it
+          </p>
+
+        </aside>
+
+
+        <div class="project-story-content">
+
+          <h2 class="section-title">
+            A search question is useful, but it is not the whole brief.
+          </h2>
+
+          <p>
+            In my SEO and content work, I still need to think about who the
+            article is for, what angle makes sense, what example will make the
+            explanation clearer, and what action should follow.
+          </p>
+
+          <p>
+            I built the planner so those decisions are visible before drafting.
+            It also gave me a small project where I could practice front-end code,
+            GitHub Pages, analytics, and documentation without needing a large
+            software stack.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="section project-story-section">
+
+      <div class="container project-story-grid">
+
+        <aside class="project-story-index">
+
+          <span>
+            03
+          </span>
+
+          <p>
+            What worked
+          </p>
+
+        </aside>
+
+
+        <div class="project-story-content">
+
+          <h2 class="section-title">
+            A static page was enough for the workflow.
+          </h2>
+
+          <p>
+            The current version works without a backend, database, login system,
+            or framework. Plain HTML, CSS, and JavaScript were enough to collect
+            the inputs, generate the prompt, copy the result, and reset the form.
+          </p>
+
+          <p>
+            I also added Google Analytics event tracking to the Generate action,
+            which gives me a better signal of tool use than page views alone.
+          </p>
+
+
+          <div class="project-connection-grid">
+
+            <div>
+
+              <h3>
+                Public tool
+              </h3>
+
+              <p>
+                The planner is published through GitHub Pages and can be used
+                without an account.
+              </p>
+
+            </div>
+
+
+            <div>
+
+              <h3>
+                Simple stack
+              </h3>
+
+              <p>
+                The implementation stays small because the current workflow
+                does not need a backend.
+              </p>
+
+            </div>
+
+
+            <div>
+
+              <h3>
+                Copy-ready output
+              </h3>
+
+              <p>
+                The generated prompt can be moved into another writing workflow
+                instead of trying to write the entire article inside the tool.
+              </p>
+
+            </div>
+
+
+            <div>
+
+              <h3>
+                Usage signal
+              </h3>
+
+              <p>
+                The Generate action is tracked so I can see whether people
+                actually use the planner.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="section project-story-section project-story-alt">
+
+      <div class="container project-story-grid">
+
+        <aside class="project-story-index">
+
+          <span>
+            04
+          </span>
+
+          <p>
+            What broke or confused me
+          </p>
+
+        </aside>
+
+
+        <div class="project-story-content">
+
+          <h2 class="section-title">
+            The first version worked, but the surrounding project felt unfinished.
+          </h2>
+
+          <p>
+            The original README was only two lines long, so the repository did
+            not explain why the tool existed, what it did, or what I learned.
+            The code was more complete than the documentation made it look.
+          </p>
+
+          <p>
+            The first version also allowed a prompt to be generated with an empty
+            article question, and the Copy action used a browser alert. I later
+            added basic validation and inline feedback so the tool behaves more
+            clearly without making the project much larger.
+          </p>
+
+          <p>
+            I also realized the sharing interface has more options than the core
+            tool probably needs. That is a useful reminder that adding interface
+            elements is not always the same as making a tool more useful.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="section project-story-section">
+
+      <div class="container project-story-grid">
+
+        <aside class="project-story-index">
+
+          <span>
+            05
+          </span>
+
+          <p>
+            What I learned
+          </p>
+
+        </aside>
+
+
+        <div class="project-story-content">
+
+          <h2 class="section-title">
+            Small tools can still teach me useful technical habits.
+          </h2>
+
+          <p>
+            This project helped me see that a useful workflow tool does not need
+            a large framework. It also made the relationship between code and
+            documentation more obvious: a working tool is harder to understand
+            if the repository does not explain the problem, scope, setup, and
+            limitations.
+          </p>
+
+          <p>
+            I also learned to keep the project boundaries clear. This is an
+            article-planning utility. It does not perform keyword research,
+            retrieve SERP data, measure search volume, or generate a finished
+            publish-ready article.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="section project-story-section project-story-alt">
+
+      <div class="container project-story-grid">
+
+        <aside class="project-story-index">
+
+          <span>
+            06
+          </span>
+
+          <p>
+            Connection to my work
+          </p>
+
+        </aside>
+
+
+        <div class="project-story-content">
+
+          <h2 class="section-title">
+            The tool came directly from my SEO and content workflow.
+          </h2>
+
+
+          <div class="project-connection-grid">
+
+            <div>
+
+              <h3>
+                SEO planning
+              </h3>
+
+              <p>
+                The workflow starts with the question an article should answer
+                instead of treating the topic as the entire brief.
+              </p>
+
+            </div>
+
+
+            <div>
+
+              <h3>
+                Content writing
+              </h3>
+
+              <p>
+                Audience, angle, examples, and CTA are made explicit before
+                the drafting step begins.
+              </p>
+
+            </div>
+
+
+            <div>
+
+              <h3>
+                Technical writing
+              </h3>
+
+              <p>
+                Improving the README became part of the project because the
+                documentation needs to explain scope, setup, behavior, and limits.
+              </p>
+
+            </div>
+
+
+            <div>
+
+              <h3>
+                Analytics
+              </h3>
+
+              <p>
+                Event tracking gives me a simple way to distinguish actual
+                Generate-button use from passive page visits.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="section project-story-section">
+
+      <div class="container project-story-grid">
+
+        <aside class="project-story-index">
+
+          <span>
+            07
+          </span>
+
+          <p>
+            What I will try next
+          </p>
+
+        </aside>
+
+
+        <div class="project-story-content">
+
+          <h2 class="section-title">
+            Keep the tool focused instead of making it look bigger.
+          </h2>
+
+          <p>
+            I do not want to add features simply to make the repository appear
+            more advanced. The next changes should solve a real planning problem
+            or make the current workflow clearer.
+          </p>
+
+
+          <ol class="project-next-list">
+
+            <li>
+              Simplify the sharing interface if most of the current options are not useful.
+            </li>
+
+            <li>
+              Add a clearer distinction between a weak article question and a stronger one.
+            </li>
+
+            <li>
+              Keep the README and project notes updated as the tool changes.
+            </li>
+
+            <li>
+              Use analytics to see whether people actually generate prompts before deciding what to add next.
+            </li>
+
+          </ol>
+
+
+          <div class="project-final-note">
+
+            <p>
+              The useful part of this project is not its size. It is that a
+              repeated content-planning task became something I could build,
+              test, document, and improve.
+            </p>
+
+          </div>
+
+
+          <div class="actions">
+
+            <a
+              href="https://edumbao.github.io/answer-based-seo-planner/"
+              target="_blank"
+              rel="noopener"
+              class="button button-primary"
+            >
+              Open the tool ↗
+            </a>
+
+            <a
+              href="https://github.com/edumbao/answer-based-seo-planner"
+              target="_blank"
+              rel="noopener"
+              class="button button-text"
+            >
+              View source on GitHub ↗
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <footer class="footer">
+
+      <div class="container footer-inner">
+
+        <span>
+          © 2026 Ed Umbao
+        </span>
+
+        <span>
+          Ed's Lab · Answer-Based SEO Article Planner
+        </span>
+
+      </div>
+
+    </footer>
+
+  </main>
+
+
+  <script>
+
+    document.addEventListener(
+      'DOMContentLoaded',
+      function () {
+
+        const menuButton =
+          document.querySelector('.menu-toggle');
+
+        const siteMenu =
+          document.querySelector('.site-menu');
+
+        const themeToggle =
+          document.getElementById('theme-toggle');
+
+
+        if (menuButton && siteMenu) {
+
+          menuButton.addEventListener(
+            'click',
+            function () {
+
+              const isOpen =
+                siteMenu.classList.toggle('nav-open');
+
+              menuButton.setAttribute(
+                'aria-expanded',
+                isOpen ? 'true' : 'false'
+              );
+
+            }
+          );
+
+
+          siteMenu
+            .querySelectorAll('a')
+            .forEach(
+              function (link) {
+
+                link.addEventListener(
+                  'click',
+                  function () {
+
+                    siteMenu.classList.remove('nav-open');
+
+                    menuButton.setAttribute(
+                      'aria-expanded',
+                      'false'
+                    );
+
+                  }
+                );
+
+              }
+            );
+
+        }
+
+
+        function currentTheme() {
+          return document.documentElement.getAttribute('data-theme') === 'light'
+            ? 'light'
+            : 'dark';
+        }
+
+
+        function updateThemeLabel() {
+
+          if (!themeToggle) {
+            return;
+          }
+
+          const theme = currentTheme();
+          const nextTheme = theme === 'dark' ? 'Light' : 'Dark';
+
+          themeToggle.textContent = nextTheme;
+          themeToggle.setAttribute(
+            'aria-label',
+            'Switch to ' + nextTheme.toLowerCase() + ' theme'
+          );
+
+        }
+
+
+        updateThemeLabel();
+
+
+        if (themeToggle) {
+
+          themeToggle.addEventListener(
+            'click',
+            function (event) {
+
+              event.preventDefault();
+
+              const nextTheme =
+                currentTheme() === 'dark'
+                  ? 'light'
+                  : 'dark';
+
+              document.documentElement.setAttribute(
+                'data-theme',
+                nextTheme
+              );
+
+              try {
+                localStorage.setItem(
+                  'edumbao-theme',
+                  nextTheme
+                );
+              } catch (error) {
+                // The current page can still switch themes
+                // if localStorage is unavailable.
+              }
+
+              updateThemeLabel();
+
+            }
+          );
+
+        }
+
+      }
+    );
+
+  </script>
+
+</body>
+
+</html>
