@@ -4178,3 +4178,62 @@
   }
 
 }
+
+/* ======================================================
+   Footer / Elsewhere
+======================================================= */
+
+.footer-social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 24px;
+
+  padding-top: 18px;
+  padding-bottom: 24px;
+
+  border-top: 1px solid var(--line-soft);
+}
+
+.footer-social-label {
+  color: var(--muted);
+
+  font-family: var(--mono);
+  font-size: 9px;
+
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+}
+
+.footer-social-links {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 12px 22px;
+}
+
+.footer-social-links a {
+  color: var(--text-soft);
+
+  font-family: var(--mono);
+  font-size: 10px;
+
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.footer-social-links a:hover {
+  color: var(--accent-text);
+}
+
+@media (max-width: 720px) {
+
+  .footer-social {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 14px;
+  }
+
+}
