@@ -8,45 +8,134 @@
 
     <meta name="description" content="What does an SEO score really tell you? I built SEO Battle to track homepage SEO health, score history, improvement, and head-to-head website comparisons.">
 
-    <link rel="stylesheet" href="/style.css">
+      <script>
+    (function () {
+      let savedTheme = null;
+
+      try {
+        savedTheme = localStorage.getItem('edumbao-theme');
+      } catch (error) {
+        savedTheme = null;
+      }
+
+      const preferredTheme =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: light)').matches
+          ? 'light'
+          : 'dark';
+
+      const theme =
+        savedTheme === 'light' || savedTheme === 'dark'
+          ? savedTheme
+          : preferredTheme;
+
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+  <link rel="stylesheet" href="/assets/css/site.css">
 </head>
 
 <body>
 
-    <header class="nav">
-        <div class="nav-inner">
+      <header class="site-header">
 
-            <a href="/index.html" class="brand">
-                <span class="brand-mark">↗</span>
-                <span>Ed Umbao</span>
-            </a>
+    <div class="container site-nav">
 
-            <nav class="nav-links">
-                <a href="/index.html">Home</a>
-                <a href="/blog.html">Blog</a>
-                <a href="/index.html#tools">Tools</a>
-                <a href="/index.html#services">Services</a>
-                <a href="/index.html#proof">Proof</a>
-                <a href="/index.html#process">Process</a>
-                <a href="/index.html#contact" class="nav-cta">Work with me</a>
-            </nav>
+      <a
+        href="/"
+        class="site-brand"
+        aria-label="Ed Umbao homepage"
+      >
+        <span
+          class="brand-mark"
+          aria-hidden="true"
+        >
+          EU
+        </span>
 
-        </div>
-    </header>
+        <span class="brand-name">
+          Ed Umbao
+        </span>
+      </a>
 
 
-    <main class="container" style="padding: 60px 20px;">
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-controls="site-menu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-        <article>
 
-            <h1 class="section-title">
+      <nav
+        class="site-menu"
+        id="site-menu"
+        aria-label="Main navigation"
+      >
+
+        <a href="/lab/">
+          Lab
+        </a>
+
+        <a href="/work/">
+          Work
+        </a>
+
+        <a
+          href="/writing/"
+          class="is-active"
+          aria-current="page"
+        >
+          Writing
+        </a>
+
+        <a href="/#about">
+          About
+        </a>
+
+        <a
+          href="https://github.com/edumbao"
+          target="_blank"
+          rel="noopener"
+          class="nav-external"
+        >
+          GitHub ↗
+        </a>
+
+        <a
+          href="#"
+          id="theme-toggle"
+          class="theme-link"
+          aria-label="Switch color theme"
+        >
+          Theme
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+    <main class="article-page">
+  <div class="container article-shell">
+
+        <article class="article-content">
+
+            <h1 class="article-title">
                 What Does an SEO Score Really Tell You? Why I Built SEO Battle
             </h1>
 
-            <p style="color: var(--muted); margin-bottom: 30px;">
+            <p class="article-date">
                 Published on August 31, 2026
             </p>
-          
+
             <!-- Featured Image -->
             <div style="background: var(--bg-secondary); padding: 20px; border-radius: 8px; margin: 30px 0;">
             <img
@@ -646,8 +735,222 @@
             </div>
 
         </article>
+  </div>
+</main>
 
-    </main>
 
+  <footer class="footer">
+
+    <div class="container footer-inner">
+
+      <span>
+        © 2026 Ed Umbao
+      </span>
+
+      <span>
+        Writing · SEO · Technical learning · Small projects
+      </span>
+
+    </div>
+
+
+  <div class="container footer-social">
+
+    <span class="footer-social-label">
+      Elsewhere
+    </span>
+
+    <nav
+      class="footer-social-links"
+      aria-label="Elsewhere"
+    >
+
+      <a
+        href="https://www.linkedin.com/in/ed-umbao/"
+        target="_blank"
+        rel="noopener"
+      >
+        LinkedIn ↗
+      </a>
+
+      <a
+        href="https://x.com/edmundumbao"
+        target="_blank"
+        rel="noopener"
+      >
+        X ↗
+      </a>
+
+      <a
+        href="https://github.com/edumbao"
+        target="_blank"
+        rel="noopener"
+      >
+        GitHub ↗
+      </a>
+
+      <a
+        href="https://edumbao.substack.com"
+        target="_blank"
+        rel="noopener"
+      >
+        Substack ↗
+      </a>
+
+      <a
+        href="https://edumbao.medium.com/"
+        target="_blank"
+        rel="noopener"
+      >
+        Medium ↗
+      </a>
+
+    </nav>
+
+  </div>
+</footer>
+
+
+  <script>
+
+    document.addEventListener(
+      'DOMContentLoaded',
+      function () {
+
+        const menuButton =
+          document.querySelector('.menu-toggle');
+
+        const siteMenu =
+          document.querySelector('.site-menu');
+
+        const themeToggle =
+          document.getElementById('theme-toggle');
+
+
+        if (menuButton && siteMenu) {
+
+          menuButton.addEventListener(
+            'click',
+            function () {
+
+              const isOpen =
+                siteMenu.classList.toggle('nav-open');
+
+              menuButton.setAttribute(
+                'aria-expanded',
+                isOpen ? 'true' : 'false'
+              );
+
+            }
+          );
+
+
+          siteMenu
+            .querySelectorAll('a')
+            .forEach(
+              function (link) {
+
+                link.addEventListener(
+                  'click',
+                  function () {
+
+                    siteMenu.classList.remove('nav-open');
+
+                    menuButton.setAttribute(
+                      'aria-expanded',
+                      'false'
+                    );
+
+                  }
+                );
+
+              }
+            );
+
+        }
+
+
+        function currentTheme() {
+
+          return document.documentElement
+            .getAttribute('data-theme') === 'light'
+              ? 'light'
+              : 'dark';
+
+        }
+
+
+        function updateThemeLabel() {
+
+          if (!themeToggle) {
+            return;
+          }
+
+          const theme = currentTheme();
+
+          const nextTheme =
+            theme === 'dark'
+              ? 'Light'
+              : 'Dark';
+
+          themeToggle.textContent = nextTheme;
+
+          themeToggle.setAttribute(
+            'aria-label',
+            'Switch to ' +
+            nextTheme.toLowerCase() +
+            ' theme'
+          );
+
+        }
+
+
+        updateThemeLabel();
+
+
+        if (themeToggle) {
+
+          themeToggle.addEventListener(
+            'click',
+            function (event) {
+
+              event.preventDefault();
+
+              const nextTheme =
+                currentTheme() === 'dark'
+                  ? 'light'
+                  : 'dark';
+
+              document.documentElement.setAttribute(
+                'data-theme',
+                nextTheme
+              );
+
+              try {
+
+                localStorage.setItem(
+                  'edumbao-theme',
+                  nextTheme
+                );
+
+              }
+              catch (error) {
+
+                // Theme switching still works
+                // if storage is unavailable.
+
+              }
+
+              updateThemeLabel();
+
+            }
+          );
+
+        }
+
+      }
+    );
+
+  </script>
 </body>
 </html>

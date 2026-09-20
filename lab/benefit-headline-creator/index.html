@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LBQL9HBJNL"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-LBQL9HBJNL');
+  </script>
+
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Benefit Headline Creator | Ed's Lab</title>
+
+  <meta
+    name="description"
+    content="Build notes from Ed Umbao's Benefit Headline Creator, a small HTML, CSS, and JavaScript tool for turning vague website headlines into clearer action-benefit headline options."
+  >
+
+  <link
+    rel="canonical"
+    href="https://edumbao.com/lab/benefit-headline-creator/"
+  >
+
+
+  <meta property="og:type" content="article">
+
+  <meta
+    property="og:title"
+    content="Benefit Headline Creator | Ed's Lab"
+  >
+
+  <meta
+    property="og:description"
+    content="What I learned while turning a repeated copywriting exercise into a small public web tool."
+  >
+
+  <meta
+    property="og:url"
+    content="https://edumbao.com/lab/benefit-headline-creator/"
+  >
+
+  <meta
+    property="og:site_name"
+    content="Ed Umbao"
+  >
+
+
+  <script>
+    (function () {
+      let savedTheme = null;
+
+      try {
+        savedTheme = localStorage.getItem('edumbao-theme');
+      } catch (error) {
+        savedTheme = null;
+      }
+
+      const preferredTheme =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: light)').matches
+          ? 'light'
+          : 'dark';
+
+      const theme =
+        savedTheme === 'light' || savedTheme === 'dark'
+          ? savedTheme
+          : preferredTheme;
+
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+
+</head>
+
+
+<body>
+
+  <header class="site-header">
+
+    <div class="container site-nav">
+
+      <a
+        href="/"
+        class="site-brand"
+        aria-label="Ed Umbao homepage"
+      >
+
+        <span
+          class="brand-mark"
+          aria-hidden="true"
+        >
+          EU
+        </span>
+
+        <span class="brand-name">
+          Ed Umbao
+        </span>
+
+      </a>
+
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-controls="site-menu"
+        aria-expanded="false"
+      >
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </button>
+
+
+      <nav
+        class="site-menu"
+        id="site-menu"
+        aria-label="Main navigation"
+      >
+
+        <a
+          href="/lab/"
+          class="is-active"
+          aria-current="page"
+        >
+          Lab
+        </a>
+
+        <a href="/work/">
+          Work
+        </a>
+
+        <a href="/writing/">
+          Writing
+        </a>
+
+        <a href="/#about">
+          About
+        </a>
+
+        <a
+          href="https://github.com/edumbao"
+          target="_blank"
+          rel="noopener"
+          class="nav-external"
+        >
+          GitHub ↗
+        </a>
+
+        <a
+          href="#"
+          id="theme-toggle"
+          class="theme-link"
+          aria-label="Switch color theme"
+        >
+          Theme
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <section class="project-page-hero">
+
+      <div class="container">
+
+        <div class="project-breadcrumb">
+
+          <a href="/lab/">
+            Ed's Lab
+          </a>
+
+          <span aria-hidden="true">
+            /
+          </span>
+
+          <span>
+            Benefit Headline Creator
+          </span>
+
+        </div>
+
+
+        <div class="project-page-hero-grid">
+
+          <div>
+
+            <p class="hero-eyebrow">
+              Public tool / Learning project
+            </p>
+
+            <h1>
+              Benefit
+              <em>
+                Headline Creator
+              </em>
+            </h1>
+
+          </div>
+
+
+          <div class="project-page-summary">
+
+            <p>
+              I built this after repeatedly seeing website headlines that sounded
+              polished but did not explain clearly what the visitor could do or
+              what they would get.
+            </p>
+
+            <p>
+              The tool turns a simple action-benefit framework into a browser
+              workflow for generating headline options with audience, offer,
+              proof, friction, and tone as supporting inputs.
+            </p>
+
+
+            <div class="actions">
+
+              <a
+                href="https://edumbao.github.io/benefit-headline-creator/"
+                target="_blank"
+                rel="noopener"
+                class="button button-primary"
+              >
+                Open live tool ↗
+              </a>
+
+              <a
+                href="https://github.com/edumbao/benefit-headline-creator"
+                target="_blank"
+                rel="noopener"
+                class="button button-text"
+              >
+                View GitHub ↗
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="project-snapshot">
+
+      <div class="container project-snapshot-grid">
+
+        <div>
+
+          <span>
+            Status
+          </span>
+
+          <strong>
+            Working learning project
+          </strong>
+
+          <p>
+            Public and functional, with small usability improvements still planned.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <span>
+            Built with
+          </span>
+
+          <strong>
+            HTML · CSS · JavaScript
+          </strong>
+
+          <p>
+            Published through GitHub Pages with no backend or login system.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <span>
+            Focus
+          </span>
+
+          <strong>
+            Landing-page headline clarity
+          </strong>
+
+          <p>
+            Turning a repeated copywriting exercise into a small browser tool.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="section project-story-section">
+
+      <div class="container project-story-grid">
+
+        <aside class="project-story-index">
+
+          <span>
+            01
+          </span>
+
+          <p>
+            What I tried
+          </p>
+
+        </aside>
+
+
+        <div class="project-story-content">
+
+          <h2 class="section-title">
+            Turn an action-benefit headline exercise into a repeatable tool.
+          </h2>
+
+          <p>
+            I wanted a faster way to work through a headline rewrite without
+            jumping straight to clever wording. The tool starts by asking what
+            the visitor should do and what benefit they should get.
+          </p>
+
+          <p>
+            It then adds supporting context such as the audience, offer, proof,
+            friction removed, and tone before generating several headline options
+            that can be reviewed and rewritten further.
+          </p>
+
+
+          <div class="project-process">
+
+            <div>
+              <span>
+                01
+              </span>
+
+              <strong>
+                Action
+              </strong>
+
+              <p>
+                Define the thing the visitor should be able to do.
+              </p>
+            </div>
+
+            <div>
+              <span>
+                02
+              </span>
+
+              <strong>
+                Benefit
+              </strong>
+
+              <p>
+                Clarify the result or improvement the visitor should get.
+              </p>
+            </div>
+
+            <div>
+              <span>
+                03
+              </span>
+
+              <strong>
+                Specificity
+              </strong>
+
+              <p>
+                Add proof, a timeframe, a number, or friction removed where useful.
+              </p>
+            </div>
+
+            <div>
+              <span>
+                04
+              </span>
+
+              <strong>
+                Variations
+              </strong>
+
+              <p>
+                Generate several headline patterns to use as starting points.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="section project-story-section project-story-alt">
+
+      <div class="container project-story-grid">
+
+        <aside class="project-story-index">
+
+          <span>
+            02
+          </span>
+
+          <p>
+            Why I tried it
+          </p>
+
+        </aside>
+
+
+        <div class="project-story-content">
+
+          <h2 class="section-title">
+            Clearer headlines usually start with clearer inputs.
+          </h2>
+
+          <p>
+            In copywriting work, a headline can fail because the offer itself
+            has not been reduced to a clear action and outcome. I wanted the tool
+            to make those inputs visible instead of only asking for the old headline.
+          </p>
+
+          <p>
+            This gave me a way to turn a copywriting principle into something
+            interactive while also practicing front-end logic, GitHub Pages,
+            browser behavior, and technical documentation.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="section project-story-section">
+
+      <div class="container project-story-grid">
+
+        <aside class="project-story-index">
+
+          <span>
+            03
+          </span>
+
+          <p>
+            What worked
+          </p>
+
+        </aside>
+
+
+        <div class="project-story-content">
+
+          <h2 class="section-title">
+            A lightweight static tool was enough for the first version.
+          </h2>
+
+          <p>
+            The current version can collect the inputs, clean some common phrasing,
+            generate eight headline options, load a sample, copy the output, and
+            reset the form without a backend or external API.
+          </p>
+
+          <p>
+            I also added simple input-cleaning functions so phrases like
+            “the visitor should...” or “use the tool to...” do not automatically
+            carry into every generated headline pattern.
+          </p>
+
+
+          <div class="project-connection-grid">
+
+            <div>
+
+              <h3>
+                Eight variations
+              </h3>
+
+              <p>
+                The output gives me several patterns to compare instead of treating
+                one generated line as the final answer.
+              </p>
+
+            </div>
+
+
+            <div>
+
+              <h3>
+                Input cleanup
+              </h3>
+
+              <p>
+                Small text-cleaning rules make the output less dependent on how
+                someone phrases the form inputs.
+              </p>
+
+            </div>
+
+
+            <div>
+
+              <h3>
+                Example loader
+              </h3>
+
+              <p>
+                A sample makes the workflow easier to understand without reading
+                detailed setup instructions.
+              </p>
+
+            </div>
+
+
+            <div>
+
+              <h3>
+                No backend
+              </h3>
+
+              <p>
+                The first version stays simple because the workflow does not need
+                accounts, databases, or server-side processing.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="section project-story-section project-story-alt">
+
+      <div class="container project-story-grid">
+
+        <aside class="project-story-index">
+
+          <span>
+            04
+          </span>
+
+          <p>
+            What broke or confused me
+          </p>
+
+        </aside>
+
+
+        <div class="project-story-content">
+
+          <h2 class="section-title">
+            More interface did not always make the tool more useful.
+          </h2>
+
+          <p>
+            The first version had a large sharing widget with many destination
+            options. It worked, but it distracted from the main job of the page:
+            generate and copy headline ideas.
+          </p>
+
+          <p>
+            I later reduced that to a simple Copy tool link action and kept the
+            core workflow focused on the form itself.
+          </p>
+
+          <p>
+            The original repository also had no README, so someone looking at the
+            code could not easily tell why the tool existed, what it was meant to
+            do, or where its limits were.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="section project-story-section">
+
+      <div class="container project-story-grid">
+
+        <aside class="project-story-index">
+
+          <span>
+            05
+          </span>
+
+          <p>
+            What I learned
+          </p>
+
+        </aside>
+
+
+        <div class="project-story-content">
+
+          <h2 class="section-title">
+            Small input rules can matter as much as adding more features.
+          </h2>
+
+          <p>
+            The headline patterns depend heavily on the phrases someone enters,
+            so even basic cleanup functions improve the result. That made me think
+            more about input design instead of treating the interface as a set of
+            empty text boxes.
+          </p>
+
+          <p>
+            I also learned that documenting the boundaries of a tool matters.
+            This project does not test conversions, analyze a live landing page,
+            validate claims, or guarantee that a generated headline will perform.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="section project-story-section project-story-alt">
+
+      <div class="container project-story-grid">
+
+        <aside class="project-story-index">
+
+          <span>
+            06
+          </span>
+
+          <p>
+            Connection to my work
+          </p>
+
+        </aside>
+
+
+        <div class="project-story-content">
+
+          <h2 class="section-title">
+            The project connects copywriting decisions with a technical workflow.
+          </h2>
+
+
+          <div class="project-connection-grid">
+
+            <div>
+
+              <h3>
+                Copywriting
+              </h3>
+
+              <p>
+                The tool starts with clarity: action, benefit, proof, friction,
+                and tone before trying to create headline options.
+              </p>
+
+            </div>
+
+
+            <div>
+
+              <h3>
+                Product content
+              </h3>
+
+              <p>
+                It pushes me to describe what the visitor can actually do and
+                what outcome the product or service supports.
+              </p>
+
+            </div>
+
+
+            <div>
+
+              <h3>
+                Technical writing
+              </h3>
+
+              <p>
+                The README and build notes explain the scope, setup, behavior,
+                and limitations of the tool alongside the code.
+              </p>
+
+            </div>
+
+
+            <div>
+
+              <h3>
+                Front-end learning
+              </h3>
+
+              <p>
+                I practiced form handling, string cleanup, clipboard behavior,
+                theme switching, and responsive UI in a project tied to real work.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="section project-story-section">
+
+      <div class="container project-story-grid">
+
+        <aside class="project-story-index">
+
+          <span>
+            07
+          </span>
+
+          <p>
+            What I will try next
+          </p>
+
+        </aside>
+
+
+        <div class="project-story-content">
+
+          <h2 class="section-title">
+            Keep improving clarity instead of adding features for appearance.
+          </h2>
+
+          <p>
+            I want future changes to improve the core headline workflow rather
+            than make the project look larger than it needs to be.
+          </p>
+
+
+          <ol class="project-next-list">
+
+            <li>
+              Review which generated headline patterns are actually the most useful.
+            </li>
+
+            <li>
+              Improve the examples so different types of offers are easier to test.
+            </li>
+
+            <li>
+              Keep the README and build notes aligned with the live tool.
+            </li>
+
+            <li>
+              Consider simple analytics later if I need better evidence of how the tool is used.
+            </li>
+
+          </ol>
+
+
+          <div class="project-final-note">
+
+            <p>
+              I built this because headline clarity is a repeated writing problem.
+              Turning that problem into a small tool gave me a practical way to
+              connect copywriting, front-end code, and documentation.
+            </p>
+
+          </div>
+
+
+          <div class="actions">
+
+            <a
+              href="https://edumbao.github.io/benefit-headline-creator/"
+              target="_blank"
+              rel="noopener"
+              class="button button-primary"
+            >
+              Open the tool ↗
+            </a>
+
+            <a
+              href="https://github.com/edumbao/benefit-headline-creator"
+              target="_blank"
+              rel="noopener"
+              class="button button-text"
+            >
+              View source on GitHub ↗
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <footer class="footer">
+
+      <div class="container footer-inner">
+
+        <span>
+          © 2026 Ed Umbao
+        </span>
+
+        <span>
+          Ed's Lab · Benefit Headline Creator
+        </span>
+
+      </div>
+
+
+  <div class="container footer-social">
+
+    <span class="footer-social-label">
+      Elsewhere
+    </span>
+
+    <nav
+      class="footer-social-links"
+      aria-label="Elsewhere"
+    >
+
+      <a
+        href="https://www.linkedin.com/in/ed-umbao/"
+        target="_blank"
+        rel="noopener"
+      >
+        LinkedIn ↗
+      </a>
+
+      <a
+        href="https://x.com/edmundumbao"
+        target="_blank"
+        rel="noopener"
+      >
+        X ↗
+      </a>
+
+      <a
+        href="https://github.com/edumbao"
+        target="_blank"
+        rel="noopener"
+      >
+        GitHub ↗
+      </a>
+
+      <a
+        href="https://edumbao.substack.com"
+        target="_blank"
+        rel="noopener"
+      >
+        Substack ↗
+      </a>
+
+      <a
+        href="https://edumbao.medium.com/"
+        target="_blank"
+        rel="noopener"
+      >
+        Medium ↗
+      </a>
+
+    </nav>
+
+  </div>
+</footer>
+
+  </main>
+
+
+  <script>
+
+    document.addEventListener(
+      'DOMContentLoaded',
+      function () {
+
+        const menuButton =
+          document.querySelector('.menu-toggle');
+
+        const siteMenu =
+          document.querySelector('.site-menu');
+
+        const themeToggle =
+          document.getElementById('theme-toggle');
+
+
+        if (menuButton && siteMenu) {
+
+          menuButton.addEventListener(
+            'click',
+            function () {
+
+              const isOpen =
+                siteMenu.classList.toggle('nav-open');
+
+              menuButton.setAttribute(
+                'aria-expanded',
+                isOpen ? 'true' : 'false'
+              );
+
+            }
+          );
+
+
+          siteMenu
+            .querySelectorAll('a')
+            .forEach(
+              function (link) {
+
+                link.addEventListener(
+                  'click',
+                  function () {
+
+                    siteMenu.classList.remove('nav-open');
+
+                    menuButton.setAttribute(
+                      'aria-expanded',
+                      'false'
+                    );
+
+                  }
+                );
+
+              }
+            );
+
+        }
+
+
+        function currentTheme() {
+          return document.documentElement.getAttribute('data-theme') === 'light'
+            ? 'light'
+            : 'dark';
+        }
+
+
+        function updateThemeLabel() {
+
+          if (!themeToggle) {
+            return;
+          }
+
+          const theme = currentTheme();
+          const nextTheme = theme === 'dark' ? 'Light' : 'Dark';
+
+          themeToggle.textContent = nextTheme;
+          themeToggle.setAttribute(
+            'aria-label',
+            'Switch to ' + nextTheme.toLowerCase() + ' theme'
+          );
+
+        }
+
+
+        updateThemeLabel();
+
+
+        if (themeToggle) {
+
+          themeToggle.addEventListener(
+            'click',
+            function (event) {
+
+              event.preventDefault();
+
+              const nextTheme =
+                currentTheme() === 'dark'
+                  ? 'light'
+                  : 'dark';
+
+              document.documentElement.setAttribute(
+                'data-theme',
+                nextTheme
+              );
+
+              try {
+                localStorage.setItem(
+                  'edumbao-theme',
+                  nextTheme
+                );
+              } catch (error) {
+                // The current page can still switch themes
+                // if localStorage is unavailable.
+              }
+
+              updateThemeLabel();
+
+            }
+          );
+
+        }
+
+      }
+    );
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<!-- Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-LBQL9HBJNL"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-LBQL9HBJNL');
+  </script>
+<!-- Basic Metadata -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ed's Lab | SEO Tools, GitHub Projects &amp; Technical Experiments</title>
+<meta content="Ed Umbao's working lab for SEO tools, GitHub projects, content workflows, APIs, automation experiments, and technical learning notes." name="description"/>
+<link href="https://edumbao.com/lab/" rel="canonical"/>
+<!-- Open Graph -->
+<meta content="website" property="og:type"/>
+<meta content="Ed's Lab | SEO Tools, GitHub Projects &amp; Technical Experiments" property="og:title"/>
+<meta content="A working archive of SEO tools, GitHub projects, automation experiments, and technical learning notes from Ed Umbao." property="og:description"/>
+<meta content="https://edumbao.com/lab/" property="og:url"/>
+<meta content="Ed Umbao" property="og:site_name"/>
+<!-- Twitter / X -->
+<meta content="Ed's Lab | SEO Tools, GitHub Projects &amp; Technical Experiments" name="twitter:title"/>
+<meta content="A working archive of SEO tools, GitHub projects, automation experiments, and technical learning notes from Ed Umbao." name="twitter:description"/>
+<!-- Apply saved/system theme before the page paints -->
+<script>
+    (function () {
+      let savedTheme = null;
+
+      try {
+        savedTheme = localStorage.getItem('edumbao-theme');
+      } catch (error) {
+        savedTheme = null;
+      }
+
+      const preferredTheme =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: light)').matches
+          ? 'light'
+          : 'dark';
+
+      const theme =
+        savedTheme === 'light' || savedTheme === 'dark'
+          ? savedTheme
+          : preferredTheme;
+
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+<link href="/assets/css/site.css" rel="stylesheet"/>
+
+  <meta
+    property="og:image"
+    content="https://edumbao.com/images/ed-umbao-social-preview.webp"
+  >
+
+  <meta
+    property="og:image:alt"
+    content="Ed Umbao - Content, SEO, technical writing, and technical learning"
+  >
+
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <meta
+    name="twitter:image"
+    content="https://edumbao.com/images/ed-umbao-social-preview.webp"
+  >
+
+  <meta
+    name="twitter:image:alt"
+    content="Ed Umbao - Content, SEO, technical writing, and technical learning"
+  >
+</head>
+<body>
+<!-- ======================================================
+       Header
+  ======================================================= -->
+<header class="site-header">
+<div class="container site-nav">
+<a aria-label="Ed Umbao homepage" class="site-brand" href="/">
+<span aria-hidden="true" class="brand-mark">
+          EU
+        </span>
+<span class="brand-name">
+          Ed Umbao
+        </span>
+</a>
+<button aria-controls="site-menu" aria-expanded="false" aria-label="Open navigation menu" class="menu-toggle" type="button">
+<span></span>
+<span></span>
+<span></span>
+</button>
+<nav aria-label="Main navigation" class="site-menu" id="site-menu">
+<a aria-current="page" class="is-active" href="/lab/">
+          Lab
+        </a>
+<a href="/work/">
+          Work
+        </a>
+<a href="/writing/">
+          Writing
+        </a>
+<a href="/#about">
+          About
+        </a>
+<a class="nav-external" href="https://github.com/edumbao" rel="noopener" target="_blank">
+          GitHub ↗
+        </a>
+<a aria-label="Switch color theme" class="theme-link" href="#" id="theme-toggle">
+          Theme
+        </a>
+</nav>
+</div>
+</header>
+<main>
+<!-- ====================================================
+         Lab Intro
+    ===================================================== -->
+<section class="lab-page-hero">
+<div class="container lab-page-hero-grid">
+<div>
+<p class="hero-eyebrow">
+            Ed's Lab / Working archive
+          </p>
+<h1>
+            Small tools.
+            <em>
+              Real learning.
+            </em>
+</h1>
+</div>
+<div class="lab-page-hero-copy">
+<p>
+            This is where I keep the technical side of my content journey:
+            SEO tools, GitHub projects, automation experiments, data workflows,
+            and the things that break while I'm learning how they work.
+          </p>
+<p>
+            I'm not presenting these as polished software products.
+            The point is to build useful things, document the process,
+            and get better at the technical work around content.
+          </p>
+</div>
+</div>
+</section>
+<!-- ====================================================
+         Lab Index
+    ===================================================== -->
+<section class="lab-index-strip">
+<div class="container lab-index-grid">
+<a href="#active-builds">
+          01 / Active builds
+        </a>
+<a href="#public-tools">
+          02 / Public tools
+        </a>
+<a href="#documentation">
+          03 / How I document
+        </a>
+</div>
+</section>
+<!-- ====================================================
+         Active Builds
+    ===================================================== -->
+<section class="section lab-archive-section" id="active-builds">
+<div class="container">
+<div class="lab-archive-heading">
+<div>
+<p class="section-kicker">
+              01 / Active builds
+            </p>
+<h2 class="section-title">
+              Projects I'm actively working through.
+            </h2>
+</div>
+<p class="section-intro">
+            These are current learning projects. The scope can change as I
+            understand the problem better, and some parts may stay unfinished.
+          </p>
+</div>
+<div class="lab-archive-list">
+<article class="lab-archive-item">
+<div class="lab-archive-number">
+              01
+            </div>
+<div class="lab-archive-main">
+<div class="lab-archive-title-row">
+<div>
+<span class="lab-status">
+                    Working project
+                  </span>
+<h3>
+                    Targetron Knowledge Catalog
+                  </h3>
+</div>
+<span class="lab-archive-date">
+                  Sep 2026
+                </span>
+</div>
+<p>
+                I adapted the reusable knowledge-catalog workflow I first worked
+                through for Outscraper and ran a real-site pilot against Targetron.
+                The pilot is complete, while the reusable workflow and interface
+                work are still evolving.
+              </p>
+<dl class="lab-archive-meta">
+<div>
+<dt>
+                    Why I built it
+                  </dt>
+<dd>
+                    I wanted to test whether the catalog workflow could become
+                    reusable instead of being tied to one website.
+                  </dd>
+</div>
+<div>
+<dt>
+                    Working with
+                  </dt>
+<dd>
+                    Python · GitHub · sitemap discovery · normalization
+                  </dd>
+</div>
+<div>
+<dt>
+                    Current lesson
+                  </dt>
+<dd>
+                    Reusable technical workflows need clearer boundaries,
+                    naming, and documentation than one-off projects.
+                  </dd>
+</div>
+</dl>
+</div>
+<div class="lab-archive-actions"><a href="/lab/targetron-knowledge-catalog/">Build notes →</a><span aria-label="Targetron Knowledge Catalog repository is private" class="repository-private">Private repository</span></div>
+</article>
+
+</div>
+</div>
+</section>
+<!-- ====================================================
+         Public Tools
+    ===================================================== -->
+<section class="section lab-archive-section lab-archive-alt" id="public-tools">
+<div class="container">
+<div class="lab-archive-heading">
+<div>
+<p class="section-kicker">
+              02 / Public tools
+            </p>
+<h2 class="section-title">
+              Small tools built from repeated content problems.
+            </h2>
+</div>
+<p class="section-intro">
+            These are simpler projects I can point people to directly.
+            They are useful for showing how a repeated writing or SEO task
+            can turn into a small web tool.
+          </p>
+</div>
+<div class="lab-archive-list">
+<article class="lab-archive-item">
+<div class="lab-archive-number">02</div>
+<div class="lab-archive-main">
+<div class="lab-archive-title-row">
+<div>
+<span class="lab-status">
+                    Public tool
+                  </span>
+<h3>
+                    Answer-Based SEO Article Planner
+                  </h3>
+</div>
+</div>
+<p>A small public tool that turns a search question, audience, angle, example, and CTA into a structured article-planning prompt.</p>
+<dl class="lab-archive-meta">
+<div>
+<dt>
+                    Problem
+                  </dt>
+<dd>
+                    Article planning can become repetitive when the same
+                    question-to-outline process is repeated manually.
+                  </dd>
+</div>
+<div>
+<dt>
+                    Focus
+                  </dt>
+<dd>HTML · CSS · JavaScript · GitHub Pages · Analytics</dd>
+</div>
+</dl>
+</div>
+<div class="lab-archive-actions"><a href="/lab/answer-based-seo-planner/">Build notes →</a><a href="https://edumbao.github.io/answer-based-seo-planner/" rel="noopener" target="_blank">Open tool ↗</a><a href="https://github.com/edumbao/answer-based-seo-planner" rel="noopener" target="_blank">GitHub ↗</a></div>
+</article>
+<article class="lab-archive-item">
+<div class="lab-archive-number">03</div>
+<div class="lab-archive-main">
+<div class="lab-archive-title-row">
+<div>
+<span class="lab-status">
+                    Public tool
+                  </span>
+<h3>
+                    Benefit Headline Creator
+                  </h3>
+</div>
+</div>
+<p>A small public copywriting tool for turning vague website headlines into clearer action-benefit headline options.</p>
+<dl class="lab-archive-meta">
+<div>
+<dt>
+                    Problem
+                  </dt>
+<dd>
+                    Headline revisions often repeat the same exercise:
+                    clarify what the reader can do and why it matters.
+                  </dd>
+</div>
+<div>
+<dt>
+                    Focus
+                  </dt>
+<dd>HTML · CSS · JavaScript · GitHub Pages</dd>
+</div>
+</dl>
+</div>
+<div class="lab-archive-actions"><a href="/lab/benefit-headline-creator/">Build notes →</a><a href="https://edumbao.github.io/benefit-headline-creator/" rel="noopener" target="_blank">Open tool ↗</a><a href="https://github.com/edumbao/benefit-headline-creator" rel="noopener" target="_blank">GitHub ↗</a></div>
+</article>
+</div>
+</div>
+</section>
+<!-- ====================================================
+         Documentation Approach
+    ===================================================== -->
+<section class="section lab-documentation" id="documentation">
+<div class="container">
+<div class="lab-doc-grid">
+<div>
+<p class="section-kicker">
+              03 / Documentation
+            </p>
+<h2 class="section-title">
+              I want the notes to be as useful as the build.
+            </h2>
+</div>
+<div class="lab-doc-content">
+<p>
+              Each project gives me something technical to practice,
+              but it also gives me a technical-writing exercise.
+              I use the same questions to keep the documentation honest.
+            </p>
+<ol class="lab-doc-list">
+<li>
+<span>
+                  01
+                </span>
+<strong>
+                  What I tried
+                </strong>
+</li>
+<li>
+<span>
+                  02
+                </span>
+<strong>
+                  Why I tried it
+                </strong>
+</li>
+<li>
+<span>
+                  03
+                </span>
+<strong>
+                  What worked
+                </strong>
+</li>
+<li>
+<span>
+                  04
+                </span>
+<strong>
+                  What broke or confused me
+                </strong>
+</li>
+<li>
+<span>
+                  05
+                </span>
+<strong>
+                  What I learned
+                </strong>
+</li>
+<li>
+<span>
+                  06
+                </span>
+<strong>
+                  How it connects to SEO, content, APIs, or documentation
+                </strong>
+</li>
+<li>
+<span>
+                  07
+                </span>
+<strong>
+                  What I will try next
+                </strong>
+</li>
+</ol>
+<p class="lab-doc-note">
+              Some projects will become useful tools. Some will stay experiments.
+              Failed attempts still belong here if they taught me something worth
+              documenting.
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- ====================================================
+         Lab CTA
+    ===================================================== -->
+<section class="section lab-page-cta">
+<div class="container lab-page-cta-grid">
+<div>
+<p class="section-kicker">
+            Follow the work
+          </p>
+<h2 class="section-title">
+            The Lab will keep changing as I build.
+          </h2>
+</div>
+<div>
+<p class="section-intro">
+            GitHub holds the code. This site holds the story behind the code.
+            My writing is where I go deeper into what I learned.
+          </p>
+<div class="actions">
+<a class="button button-primary" href="https://github.com/edumbao" rel="noopener" target="_blank">
+              Follow on GitHub ↗
+            </a>
+<a class="button button-text" href="/writing/">
+              Read my writing →
+            </a>
+</div>
+</div>
+</div>
+</section>
+<!-- ====================================================
+         Footer
+    ===================================================== -->
+<footer class="footer">
+<div class="container footer-inner">
+<span>
+          © 2026 Ed Umbao
+        </span>
+<span>
+          Content · SEO · GitHub · Technical learning
+        </span>
+</div>
+
+  <div class="container footer-social">
+
+    <span class="footer-social-label">
+      Elsewhere
+    </span>
+
+    <nav
+      class="footer-social-links"
+      aria-label="Elsewhere"
+    >
+
+      <a
+        href="https://www.linkedin.com/in/ed-umbao/"
+        target="_blank"
+        rel="noopener"
+      >
+        LinkedIn ↗
+      </a>
+
+      <a
+        href="https://x.com/edmundumbao"
+        target="_blank"
+        rel="noopener"
+      >
+        X ↗
+      </a>
+
+      <a
+        href="https://github.com/edumbao"
+        target="_blank"
+        rel="noopener"
+      >
+        GitHub ↗
+      </a>
+
+      <a
+        href="https://edumbao.substack.com"
+        target="_blank"
+        rel="noopener"
+      >
+        Substack ↗
+      </a>
+
+      <a
+        href="https://edumbao.medium.com/"
+        target="_blank"
+        rel="noopener"
+      >
+        Medium ↗
+      </a>
+
+    </nav>
+
+  </div>
+</footer>
+</main>
+<!-- ======================================================
+       Navigation + Theme
+  ======================================================= -->
+<script>
+
+    document.addEventListener(
+      'DOMContentLoaded',
+      function () {
+
+        const menuButton =
+          document.querySelector('.menu-toggle');
+
+        const siteMenu =
+          document.querySelector('.site-menu');
+
+        const themeToggle =
+          document.getElementById('theme-toggle');
+
+
+        if (menuButton && siteMenu) {
+
+          menuButton.addEventListener(
+            'click',
+            function () {
+
+              const isOpen =
+                siteMenu.classList.toggle('nav-open');
+
+              menuButton.setAttribute(
+                'aria-expanded',
+                isOpen ? 'true' : 'false'
+              );
+
+            }
+          );
+
+
+          siteMenu
+            .querySelectorAll('a')
+            .forEach(
+              function (link) {
+
+                link.addEventListener(
+                  'click',
+                  function () {
+
+                    siteMenu.classList.remove('nav-open');
+
+                    menuButton.setAttribute(
+                      'aria-expanded',
+                      'false'
+                    );
+
+                  }
+                );
+
+              }
+            );
+
+        }
+
+
+        function currentTheme() {
+          return document.documentElement.getAttribute('data-theme') === 'light'
+            ? 'light'
+            : 'dark';
+        }
+
+
+        function updateThemeLabel() {
+
+          if (!themeToggle) {
+            return;
+          }
+
+          const theme = currentTheme();
+          const nextTheme = theme === 'dark' ? 'Light' : 'Dark';
+
+          themeToggle.textContent = nextTheme;
+          themeToggle.setAttribute(
+            'aria-label',
+            'Switch to ' + nextTheme.toLowerCase() + ' theme'
+          );
+
+        }
+
+
+        updateThemeLabel();
+
+
+        if (themeToggle) {
+
+          themeToggle.addEventListener(
+            'click',
+            function (event) {
+
+              event.preventDefault();
+
+              const nextTheme =
+                currentTheme() === 'dark'
+                  ? 'light'
+                  : 'dark';
+
+              document.documentElement.setAttribute(
+                'data-theme',
+                nextTheme
+              );
+
+              try {
+                localStorage.setItem(
+                  'edumbao-theme',
+                  nextTheme
+                );
+              } catch (error) {
+                // The theme still works for the current page
+                // if localStorage is unavailable.
+              }
+
+              updateThemeLabel();
+
+            }
+          );
+
+        }
+
+      }
+    );
+
+  </script>
+</body>
+</html>

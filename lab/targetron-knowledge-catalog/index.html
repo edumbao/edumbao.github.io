@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LBQL9HBJNL"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-LBQL9HBJNL');
+  </script>
+
+
+  <!-- Basic Metadata -->
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Targetron Knowledge Catalog | Ed's Lab</title>
+
+  <meta
+    name="description"
+    content="Build notes from Ed Umbao's Targetron Knowledge Catalog project: adapting a reusable website knowledge-catalog workflow, testing it on Targetron, and documenting what worked, what was difficult, and what comes next."
+  >
+
+  <link
+    rel="canonical"
+    href="https://edumbao.com/lab/targetron-knowledge-catalog/"
+  >
+
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+
+  <meta
+    property="og:title"
+    content="Targetron Knowledge Catalog | Ed's Lab"
+  >
+
+  <meta
+    property="og:description"
+    content="A real-site knowledge-catalog experiment covering URL discovery, routing, crawling, QA, classification, and reusable workflow design."
+  >
+
+  <meta
+    property="og:url"
+    content="https://edumbao.com/lab/targetron-knowledge-catalog/"
+  >
+
+  <meta
+    property="og:site_name"
+    content="Ed Umbao"
+  >
+
+
+  <!-- Twitter / X -->
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <meta
+    name="twitter:title"
+    content="Targetron Knowledge Catalog | Ed's Lab"
+  >
+
+  <meta
+    name="twitter:description"
+    content="What I learned while adapting a reusable website knowledge-catalog workflow to Targetron."
+  >
+
+
+  <!-- Apply saved/system theme before the page paints -->
+  <script>
+    (function () {
+      let savedTheme = null;
+
+      try {
+        savedTheme = localStorage.getItem('edumbao-theme');
+      } catch (error) {
+        savedTheme = null;
+      }
+
+      const preferredTheme =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: light)').matches
+          ? 'light'
+          : 'dark';
+
+      const theme =
+        savedTheme === 'light' || savedTheme === 'dark'
+          ? savedTheme
+          : preferredTheme;
+
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+
+</head>
+
+
+<body>
+
+  <!-- ======================================================
+       Header
+  ======================================================= -->
+
+  <header class="site-header">
+
+    <div class="container site-nav">
+
+      <a
+        href="/"
+        class="site-brand"
+        aria-label="Ed Umbao homepage"
+      >
+
+        <span
+          class="brand-mark"
+          aria-hidden="true"
+        >
+          EU
+        </span>
+
+        <span class="brand-name">
+          Ed Umbao
+        </span>
+
+      </a>
+
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-controls="site-menu"
+        aria-expanded="false"
+      >
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </button>
+
+
+      <nav
+        class="site-menu"
+        id="site-menu"
+        aria-label="Main navigation"
+      >
+
+        <a
+          href="/lab/"
+          class="is-active"
+          aria-current="page"
+        >
+          Lab
+        </a>
+
+        <a href="/work/">
+          Work
+        </a>
+
+        <a href="/writing/">
+          Writing
+        </a>
+
+        <a href="/#about">
+          About
+        </a>
+
+        <a
+          href="https://github.com/edumbao"
+          target="_blank"
+          rel="noopener"
+          class="nav-external"
+        >
+          GitHub ↗
+        </a>
+
+        <a
+          href="#"
+          id="theme-toggle"
+          class="theme-link"
+          aria-label="Switch color theme"
+        >
+          Theme
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- ====================================================
+         Project Hero
+    ===================================================== -->
+
+    <section class="project-page-hero">
+
+      <div class="container">
+
+        <div class="project-breadcrumb">
+
+          <a href="/lab/">
+            Ed's Lab
+          </a>
+
+          <span aria-hidden="true">
+            /
+          </span>
+
+          <span>
+            Targetron Knowledge Catalog
+          </span>
+
+        </div>
+
+
+        <div class="project-page-hero-grid">
+
+          <div>
+
+            <p class="hero-eyebrow">
+              Working project / September 2026
+            </p>
+
+            <h1>
+              Targetron
+              <em>
+                Knowledge Catalog
+              </em>
+            </h1>
+
+          </div>
+
+
+          <div class="project-page-summary">
+
+            <p>
+              I wanted to see whether a knowledge-catalog workflow I had already
+              worked through for Outscraper could be reused for another real website
+              instead of rebuilding the process from scratch.
+            </p>
+
+            <p>
+              The Targetron pilot gave me a practical way to test URL discovery,
+              routing, crawling, QA, classification, and refresh logic while also
+              forcing me to document where a reusable workflow needs clearer rules.
+            </p>
+
+
+            <div class="actions">
+
+              <a
+                href="/lab/"
+                class="button button-primary"
+              >
+                Back to the Lab →
+              </a>
+
+              <span
+                class="button button-private"
+                aria-label="Targetron Knowledge Catalog repository is private"
+              >
+                Repository: Private
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================================
+         Project Snapshot
+    ===================================================== -->
+
+    <section class="project-snapshot">
+
+      <div class="container project-snapshot-grid">
+
+        <div>
+
+          <span>
+            Status
+          </span>
+
+          <strong>
+            Real-site pilot complete
+          </strong>
+
+          <p>
+            The reusable workflow and interface work are still evolving.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <span>
+            Site tested
+          </span>
+
+          <strong>
+            Targetron.com
+          </strong>
+
+          <p>
+            Public website discovery and knowledge-catalog workflow.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <span>
+            Main tools
+          </span>
+
+          <strong>
+            Python · GitHub · YAML
+          </strong>
+
+          <p>
+            With CSV/JSONL artifacts, PowerShell, VS Code, and validation steps.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="project-privacy-note">
+
+      <div class="container">
+
+        <p>
+          <strong>Repository note:</strong>
+          The source repository is private because this project is tied to
+          company-specific work. I am sharing the process, results, and lessons
+          publicly without exposing the private codebase or internal artifacts.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================================
+         01 What I tried
+    ===================================================== -->
+
+    <section
+      class="section project-story-section"
+      id="what-i-tried"
+    >
+
+      <div class="container project-story-grid">
+
+        <aside class="project-story-index">
+
+          <span>
+            01
+          </span>
+
+          <p>
+            What I tried
+          </p>
+
+        </aside>
+
+
+        <div class="project-story-content">
+
+          <h2 class="section-title">
+            Reuse the workflow on a second real website.
+          </h2>
+
+          <p>
+            I started with a reusable knowledge-catalog structure rather than a
+            blank repository. The goal was to point the workflow at Targetron,
+            keep the brand-specific rules separate, and see how much of the
+            process could stay reusable.
+          </p>
+
+          <p>
+            The workflow covered site discovery, URL routing, metadata crawling,
+            QA, taxonomy and classification work, catalog generation, graph and
+            link intelligence, coverage checks, overlap or refresh signals, and
+            a refresh baseline.
+          </p>
+
+
+          <div class="project-process">
+
+            <div>
+              <span>
+                01
+              </span>
+
+              <strong>
+                Discover
+              </strong>
+
+              <p>
+                Collect the public URL inventory from the site's sitemap sources.
+              </p>
+            </div>
+
+            <div>
+              <span>
+                02
+              </span>
+
+              <strong>
+                Route
+              </strong>
+
+              <p>
+                Separate semantic content from reference or navigation-oriented URLs.
+              </p>
+            </div>
+
+            <div>
+              <span>
+                03
+              </span>
+
+              <strong>
+                Crawl + QA
+              </strong>
+
+              <p>
+                Collect metadata and send uncertain records through review gates.
+              </p>
+            </div>
+
+            <div>
+              <span>
+                04
+              </span>
+
+              <strong>
+                Classify
+              </strong>
+
+              <p>
+                Apply controlled taxonomy and keep approved knowledge separate
+                from generated intelligence.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================================
+         02 Why I tried it
+    ===================================================== -->
+
+    <section
+      class="section project-story-section project-story-alt"
+      id="why-i-tried-it"
+    >
+
+      <div class="container project-story-grid">
+
+        <aside class="project-story-index">
+
+          <span>
+            02
+          </span>
+
+          <p>
+            Why I tried it
+          </p>
+
+        </aside>
+
+
+        <div class="project-story-content">
+
+          <h2 class="section-title">
+            I wanted something more useful than keeping a large site in my head.
+          </h2>
+
+          <p>
+            Content work across a growing SaaS site involves product pages,
+            articles, categories, reference URLs, internal links, and older content
+            that can overlap with newer pages. A structured catalog gives me a way
+            to inspect that system instead of relying on memory.
+          </p>
+
+          <p>
+            The second reason was technical. I wanted to know whether the workflow
+            was actually reusable. A process can look reusable when it has only
+            been tested once. Applying it to Targetron exposed the parts that
+            belonged in the common framework and the parts that needed brand-specific
+            configuration.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================================
+         03 What worked
+    ===================================================== -->
+
+    <section
+      class="section project-story-section"
+      id="what-worked"
+    >
+
+      <div class="container project-story-grid">
+
+        <aside class="project-story-index">
+
+          <span>
+            03
+          </span>
+
+          <p>
+            What worked
+          </p>
+
+        </aside>
+
+
+        <div class="project-story-content">
+
+          <h2 class="section-title">
+            The pilot made it through the full workflow.
+          </h2>
+
+          <p>
+            The discovery and routing stages produced a usable inventory, and the
+            later QA and classification stages reached a clean review state.
+          </p>
+
+
+          <div class="project-metrics">
+
+            <div>
+              <strong>
+                798
+              </strong>
+
+              <span>
+                unique URLs discovered
+              </span>
+            </div>
+
+            <div>
+              <strong>
+                698
+              </strong>
+
+              <span>
+                semantic / navigation URLs routed
+              </span>
+            </div>
+
+            <div>
+              <strong>
+                100
+              </strong>
+
+              <span>
+                reference URLs routed separately
+              </span>
+            </div>
+
+            <div>
+              <strong>
+                153
+              </strong>
+
+              <span>
+                candidates crawled
+              </span>
+            </div>
+
+            <div>
+              <strong>
+                0
+              </strong>
+
+              <span>
+                unresolved records at the final gate
+              </span>
+            </div>
+
+          </div>
+
+
+          <p>
+            The final gate contained 133 semantic records and 20 reference-only
+            records, with no unresolved records left at that stage. I also ran
+            a 20-page classification pilot and a 20-page refresh baseline.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================================
+         04 What broke or confused me
+    ===================================================== -->
+
+    <section
+      class="section project-story-section project-story-alt"
+      id="what-broke"
+    >
+
+      <div class="container project-story-grid">
+
+        <aside class="project-story-index">
+
+          <span>
+            04
+          </span>
+
+          <p>
+            What broke or confused me
+          </p>
+
+        </aside>
+
+
+        <div class="project-story-content">
+
+          <h2 class="section-title">
+            Discovery was easier than deciding what each URL should mean.
+          </h2>
+
+          <p>
+            The first challenge was that a discovered URL is not automatically
+            useful knowledge. Targetron's discovery run found 798 URLs, but the
+            workflow still had to separate 100 business-data reference URLs from
+            the larger semantic and navigation inventory.
+          </p>
+
+          <p>
+            One sitemap source also failed while eight succeeded. That reinforced
+            an important lesson for me: discovery needs its own reporting and QA.
+            I should not assume every candidate source works just because the final
+            URL list looks plausible.
+          </p>
+
+          <p>
+            I also ran into a practical project-organization problem while moving
+            between the reusable template, the Targetron-specific repository, and
+            the separate web interface. Similar folder and repository names made
+            it easy to run a command from the wrong location. That sounds small,
+            but it showed me why setup instructions and repository responsibilities
+            need to be explicit.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================================
+         05 What I learned
+    ===================================================== -->
+
+    <section
+      class="section project-story-section"
+      id="what-i-learned"
+    >
+
+      <div class="container project-story-grid">
+
+        <aside class="project-story-index">
+
+          <span>
+            05
+          </span>
+
+          <p>
+            What I learned
+          </p>
+
+        </aside>
+
+
+        <div class="project-story-content">
+
+          <h2 class="section-title">
+            Reusable workflows need boundaries, not just reusable code.
+          </h2>
+
+          <p>
+            The project helped me understand that discovery, routing, crawling,
+            human review, taxonomy, classification, and derived intelligence are
+            different jobs. Keeping them separate makes the system easier to
+            inspect and easier to explain.
+          </p>
+
+          <p>
+            It also changed how I think about automation. Rules and AI can propose
+            classifications, relationships, and review signals, but I do not want
+            them silently approving changes to the knowledge base. Controlled
+            taxonomy, review gates, and regenerable outputs make the workflow easier
+            to trust.
+          </p>
+
+          <p>
+            From a GitHub perspective, I am also learning that a useful technical
+            project is more than the Python scripts. The repository structure,
+            configuration files, generated artifacts, validation commands, and
+            README all affect whether I can understand the project again later.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================================
+         06 Connection to my work
+    ===================================================== -->
+
+    <section
+      class="section project-story-section project-story-alt"
+      id="connection"
+    >
+
+      <div class="container project-story-grid">
+
+        <aside class="project-story-index">
+
+          <span>
+            06
+          </span>
+
+          <p>
+            Connection to my work
+          </p>
+
+        </aside>
+
+
+        <div class="project-story-content">
+
+          <h2 class="section-title">
+            This sits between SEO, content operations, and technical writing.
+          </h2>
+
+
+          <div class="project-connection-grid">
+
+            <div>
+
+              <h3>
+                SEO
+              </h3>
+
+              <p>
+                A structured URL inventory can support content-gap review,
+                overlap checks, internal-link analysis, and refresh decisions.
+              </p>
+
+            </div>
+
+
+            <div>
+
+              <h3>
+                Content operations
+              </h3>
+
+              <p>
+                The catalog gives me a repeatable reference for understanding
+                what already exists before deciding what should be created or updated.
+              </p>
+
+            </div>
+
+
+            <div>
+
+              <h3>
+                Technical writing
+              </h3>
+
+              <p>
+                I have to document the workflow well enough that I can tell
+                which steps are reusable, which are brand-specific, and where
+                human review belongs.
+              </p>
+
+            </div>
+
+
+            <div>
+
+              <h3>
+                APIs and automation
+              </h3>
+
+              <p>
+                The next layer connects background jobs, persisted artifacts,
+                API results, and browser-based review panels instead of treating
+                each script as an isolated task.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================================
+         07 What I will try next
+    ===================================================== -->
+
+    <section
+      class="section project-story-section"
+      id="next"
+    >
+
+      <div class="container project-story-grid">
+
+        <aside class="project-story-index">
+
+          <span>
+            07
+          </span>
+
+          <p>
+            What I will try next
+          </p>
+
+        </aside>
+
+
+        <div class="project-story-content">
+
+          <h2 class="section-title">
+            Make the workflow easier to inspect from the browser.
+          </h2>
+
+          <p>
+            The real-site pilot proved that the workflow can run end to end.
+            My next work is less about adding another crawler and more about
+            making the workflow easier to operate and review.
+          </p>
+
+
+          <ol class="project-next-list">
+
+            <li>
+              Continue connecting background jobs to API results and persisted artifacts.
+            </li>
+
+            <li>
+              Improve the browser panels for discovery, routing, metadata, and QA review.
+            </li>
+
+            <li>
+              Keep the reusable framework separate from Targetron-specific configuration.
+            </li>
+
+            <li>
+              Document the workflow well enough that I can repeat the process on another site.
+            </li>
+
+          </ol>
+
+
+          <div class="project-final-note">
+
+            <p>
+              The useful part of this project is not that I built a crawler.
+              It is that I am learning how discovery, classification, review,
+              documentation, and maintenance fit together as one content-data workflow.
+            </p>
+
+          </div>
+
+
+          <div class="actions">
+
+            <a
+              href="/lab/"
+              class="button button-primary"
+            >
+              More experiments →
+            </a>
+
+            <span
+              class="button button-private"
+              aria-label="Targetron Knowledge Catalog repository is private"
+            >
+              Repository: Private
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================================
+         Footer
+    ===================================================== -->
+
+    <footer class="footer">
+
+      <div class="container footer-inner">
+
+        <span>
+          © 2026 Ed Umbao
+        </span>
+
+        <span>
+          Ed's Lab · Targetron Knowledge Catalog
+        </span>
+
+      </div>
+
+
+  <div class="container footer-social">
+
+    <span class="footer-social-label">
+      Elsewhere
+    </span>
+
+    <nav
+      class="footer-social-links"
+      aria-label="Elsewhere"
+    >
+
+      <a
+        href="https://www.linkedin.com/in/ed-umbao/"
+        target="_blank"
+        rel="noopener"
+      >
+        LinkedIn ↗
+      </a>
+
+      <a
+        href="https://x.com/edmundumbao"
+        target="_blank"
+        rel="noopener"
+      >
+        X ↗
+      </a>
+
+      <a
+        href="https://github.com/edumbao"
+        target="_blank"
+        rel="noopener"
+      >
+        GitHub ↗
+      </a>
+
+      <a
+        href="https://edumbao.substack.com"
+        target="_blank"
+        rel="noopener"
+      >
+        Substack ↗
+      </a>
+
+      <a
+        href="https://edumbao.medium.com/"
+        target="_blank"
+        rel="noopener"
+      >
+        Medium ↗
+      </a>
+
+    </nav>
+
+  </div>
+</footer>
+
+  </main>
+
+
+  <!-- ======================================================
+       Navigation + Theme
+  ======================================================= -->
+
+  <script>
+
+    document.addEventListener(
+      'DOMContentLoaded',
+      function () {
+
+        const menuButton =
+          document.querySelector('.menu-toggle');
+
+        const siteMenu =
+          document.querySelector('.site-menu');
+
+        const themeToggle =
+          document.getElementById('theme-toggle');
+
+
+        if (menuButton && siteMenu) {
+
+          menuButton.addEventListener(
+            'click',
+            function () {
+
+              const isOpen =
+                siteMenu.classList.toggle('nav-open');
+
+              menuButton.setAttribute(
+                'aria-expanded',
+                isOpen ? 'true' : 'false'
+              );
+
+            }
+          );
+
+
+          siteMenu
+            .querySelectorAll('a')
+            .forEach(
+              function (link) {
+
+                link.addEventListener(
+                  'click',
+                  function () {
+
+                    siteMenu.classList.remove('nav-open');
+
+                    menuButton.setAttribute(
+                      'aria-expanded',
+                      'false'
+                    );
+
+                  }
+                );
+
+              }
+            );
+
+        }
+
+
+        function currentTheme() {
+          return document.documentElement.getAttribute('data-theme') === 'light'
+            ? 'light'
+            : 'dark';
+        }
+
+
+        function updateThemeLabel() {
+
+          if (!themeToggle) {
+            return;
+          }
+
+          const theme = currentTheme();
+          const nextTheme = theme === 'dark' ? 'Light' : 'Dark';
+
+          themeToggle.textContent = nextTheme;
+          themeToggle.setAttribute(
+            'aria-label',
+            'Switch to ' + nextTheme.toLowerCase() + ' theme'
+          );
+
+        }
+
+
+        updateThemeLabel();
+
+
+        if (themeToggle) {
+
+          themeToggle.addEventListener(
+            'click',
+            function (event) {
+
+              event.preventDefault();
+
+              const nextTheme =
+                currentTheme() === 'dark'
+                  ? 'light'
+                  : 'dark';
+
+              document.documentElement.setAttribute(
+                'data-theme',
+                nextTheme
+              );
+
+              try {
+                localStorage.setItem(
+                  'edumbao-theme',
+                  nextTheme
+                );
+              } catch (error) {
+                // The theme still works for the current page
+                // if localStorage is unavailable.
+              }
+
+              updateThemeLabel();
+
+            }
+          );
+
+        }
+
+      }
+    );
+
+  </script>
+
+</body>
+
+</html>

@@ -5,36 +5,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How to Transfer .xyz Domain from Namecheap to Cloudflare (Hosted on Blogger) | Ed Umbao</title>
     <meta name="description" content=" Learn how to transfer your .xyz domain from Namecheap to Cloudflare without downtime or SSL issues for your Google Blogger site, plus get a free 1-year registration extension.">
-    <link rel="stylesheet" href="/style.css">
+      <script>
+    (function () {
+      let savedTheme = null;
+
+      try {
+        savedTheme = localStorage.getItem('edumbao-theme');
+      } catch (error) {
+        savedTheme = null;
+      }
+
+      const preferredTheme =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: light)').matches
+          ? 'light'
+          : 'dark';
+
+      const theme =
+        savedTheme === 'light' || savedTheme === 'dark'
+          ? savedTheme
+          : preferredTheme;
+
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+  <link rel="stylesheet" href="/assets/css/site.css">
 </head>
 <body>
 
-    <header class="nav">
-        <div class="nav-inner">
-          <a href="/index.html" class="brand">
-            <span class="brand-mark">↗</span>
-            <span>Ed Umbao</span>
-          </a>
+      <header class="site-header">
 
-          <nav class="nav-links">
-            <a href="/index.html">Home</a>
-            <a href="/blog.html">Blog</a>
-            <a href="/index.html#tools">Tools</a>
-            <a href="/index.html#services">Services</a>
-            <a href="/index.html#proof">Proof</a>
-            <a href="/index.html#process">Process</a>
-            <a href="/index.html#contact" class="nav-cta">Work with me</a>
-          </nav>
-        </div>
-    </header>
+    <div class="container site-nav">
 
-    <main class="container" style="padding: 60px 20px;">
-        <article>
-            <h1 class="section-title">How to Transfer .xyz Domain from Namecheap to Cloudflare (Hosted on Blogger)</h1>
-            <p style="color: var(--muted); margin-bottom: 30px;">Published on August 9, 2026</p>
-            
+      <a
+        href="/"
+        class="site-brand"
+        aria-label="Ed Umbao homepage"
+      >
+        <span
+          class="brand-mark"
+          aria-hidden="true"
+        >
+          EU
+        </span>
+
+        <span class="brand-name">
+          Ed Umbao
+        </span>
+      </a>
+
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-controls="site-menu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+
+      <nav
+        class="site-menu"
+        id="site-menu"
+        aria-label="Main navigation"
+      >
+
+        <a href="/lab/">
+          Lab
+        </a>
+
+        <a href="/work/">
+          Work
+        </a>
+
+        <a
+          href="/writing/"
+          class="is-active"
+          aria-current="page"
+        >
+          Writing
+        </a>
+
+        <a href="/#about">
+          About
+        </a>
+
+        <a
+          href="https://github.com/edumbao"
+          target="_blank"
+          rel="noopener"
+          class="nav-external"
+        >
+          GitHub ↗
+        </a>
+
+        <a
+          href="#"
+          id="theme-toggle"
+          class="theme-link"
+          aria-label="Switch color theme"
+        >
+          Theme
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+    <main class="article-page">
+  <div class="container article-shell">
+        <article class="article-content">
+            <h1 class="article-title">How to Transfer .xyz Domain from Namecheap to Cloudflare (Hosted on Blogger)</h1>
+            <p class="article-date">Published on August 9, 2026</p>
+
             <div style="color: var(--text); font-size: 1.1rem; line-height: 1.8;">
-                
+
                 <p>Transferring your domain to Cloudflare Registrar allows you to manage your DNS and domain registration at cost without markups. If your site is hosted on Google Blogger, following the correct setup ensures zero downtime and prevents SSL configuration issues.</p>
 
                 <div style="background: var(--bg-secondary); padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid var(--accent, #2563eb);">
@@ -43,11 +134,11 @@
 
                 <!-- Featured Image Before Step 1 -->
                 <div style="background: var(--bg-secondary); padding: 20px; border-radius: 8px; margin: 30px 0;">
-                    <img src="../images/namecheap-to-cloudflare-transfer.webp" 
-                         alt="Step-by-step visual roadmap for transferring a domain from Namecheap to Cloudflare" 
+                    <img src="../images/namecheap-to-cloudflare-transfer.webp"
+                         alt="Step-by-step visual roadmap for transferring a domain from Namecheap to Cloudflare"
                          style="width: 100%; border-radius: 8px;">
                 </div>
-                
+
                 <h2>Step 1: Add the Domain to Cloudflare & Update Nameservers</h2>
                 <ol>
                     <li>Log in to your <strong>Cloudflare</strong> account and click <strong>Add a site</strong>.</li>
@@ -76,7 +167,7 @@
                 <ol>
                     <li>In Namecheap, go to <strong>Domain List</strong> &rarr; <strong>Manage</strong> &rarr; <strong>Sharing & Transfer</strong>.</li>
                     <li>Ensure <strong>Domain Lock</strong> is toggled to <strong>OFF</strong>.</li>
-                    <li>Verify that your <strong>Registrant Contact Email</strong> is up to date and accessible. 
+                    <li>Verify that your <strong>Registrant Contact Email</strong> is up to date and accessible.
                         <br><em style="font-size: 0.95rem; color: var(--muted);">(Caution: If updating your email address, make sure to <strong>opt out</strong> of the optional 60-day transfer lock prompt).</em>
                     </li>
                     <li>Click <strong>Auth Code</strong>, select a transfer reason, and submit to request your transfer authorization code via email.</li>
@@ -100,13 +191,228 @@
                 <p>Once approved, Namecheap immediately releases the domain, and Cloudflare finalizes the migration within minutes while keeping your Blogger site online throughout the entire process.</p>
 
                 <p style="margin-top: 40px; font-weight: bold; border-top: 1px solid var(--border); padding-top: 20px;">
-                    Have you transferred your domains to Cloudflare yet? 
+                    Have you transferred your domains to Cloudflare yet?
                     <a href="https://www.linkedin.com/feed/update/urn:li:activity:7492034014212562944/" target="_blank" rel="noopener noreferrer">
                         Drop a comment on my LinkedIn post</a> and let's discuss your setup.
                 </p>
             </div>
         </article>
-    </main>
+  </div>
+</main>
 
+
+  <footer class="footer">
+
+    <div class="container footer-inner">
+
+      <span>
+        © 2026 Ed Umbao
+      </span>
+
+      <span>
+        Writing · SEO · Technical learning · Small projects
+      </span>
+
+    </div>
+
+
+  <div class="container footer-social">
+
+    <span class="footer-social-label">
+      Elsewhere
+    </span>
+
+    <nav
+      class="footer-social-links"
+      aria-label="Elsewhere"
+    >
+
+      <a
+        href="https://www.linkedin.com/in/ed-umbao/"
+        target="_blank"
+        rel="noopener"
+      >
+        LinkedIn ↗
+      </a>
+
+      <a
+        href="https://x.com/edmundumbao"
+        target="_blank"
+        rel="noopener"
+      >
+        X ↗
+      </a>
+
+      <a
+        href="https://github.com/edumbao"
+        target="_blank"
+        rel="noopener"
+      >
+        GitHub ↗
+      </a>
+
+      <a
+        href="https://edumbao.substack.com"
+        target="_blank"
+        rel="noopener"
+      >
+        Substack ↗
+      </a>
+
+      <a
+        href="https://edumbao.medium.com/"
+        target="_blank"
+        rel="noopener"
+      >
+        Medium ↗
+      </a>
+
+    </nav>
+
+  </div>
+</footer>
+
+
+  <script>
+
+    document.addEventListener(
+      'DOMContentLoaded',
+      function () {
+
+        const menuButton =
+          document.querySelector('.menu-toggle');
+
+        const siteMenu =
+          document.querySelector('.site-menu');
+
+        const themeToggle =
+          document.getElementById('theme-toggle');
+
+
+        if (menuButton && siteMenu) {
+
+          menuButton.addEventListener(
+            'click',
+            function () {
+
+              const isOpen =
+                siteMenu.classList.toggle('nav-open');
+
+              menuButton.setAttribute(
+                'aria-expanded',
+                isOpen ? 'true' : 'false'
+              );
+
+            }
+          );
+
+
+          siteMenu
+            .querySelectorAll('a')
+            .forEach(
+              function (link) {
+
+                link.addEventListener(
+                  'click',
+                  function () {
+
+                    siteMenu.classList.remove('nav-open');
+
+                    menuButton.setAttribute(
+                      'aria-expanded',
+                      'false'
+                    );
+
+                  }
+                );
+
+              }
+            );
+
+        }
+
+
+        function currentTheme() {
+
+          return document.documentElement
+            .getAttribute('data-theme') === 'light'
+              ? 'light'
+              : 'dark';
+
+        }
+
+
+        function updateThemeLabel() {
+
+          if (!themeToggle) {
+            return;
+          }
+
+          const theme = currentTheme();
+
+          const nextTheme =
+            theme === 'dark'
+              ? 'Light'
+              : 'Dark';
+
+          themeToggle.textContent = nextTheme;
+
+          themeToggle.setAttribute(
+            'aria-label',
+            'Switch to ' +
+            nextTheme.toLowerCase() +
+            ' theme'
+          );
+
+        }
+
+
+        updateThemeLabel();
+
+
+        if (themeToggle) {
+
+          themeToggle.addEventListener(
+            'click',
+            function (event) {
+
+              event.preventDefault();
+
+              const nextTheme =
+                currentTheme() === 'dark'
+                  ? 'light'
+                  : 'dark';
+
+              document.documentElement.setAttribute(
+                'data-theme',
+                nextTheme
+              );
+
+              try {
+
+                localStorage.setItem(
+                  'edumbao-theme',
+                  nextTheme
+                );
+
+              }
+              catch (error) {
+
+                // Theme switching still works
+                // if storage is unavailable.
+
+              }
+
+              updateThemeLabel();
+
+            }
+          );
+
+        }
+
+      }
+    );
+
+  </script>
 </body>
 </html>

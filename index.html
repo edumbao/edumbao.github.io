@@ -1,12 +1,10 @@
 <!DOCTYPE html>
+
 <html lang="en">
-
 <head>
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LBQL9HBJNL"></script>
-
-  <script>
+<!-- Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-LBQL9HBJNL"></script>
+<script>
     window.dataLayer = window.dataLayer || [];
 
     function gtag() {
@@ -16,1475 +14,80 @@
     gtag('js', new Date());
     gtag('config', 'G-LBQL9HBJNL');
   </script>
-
-
-  <!-- Basic Metadata -->
-  <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <title>Ed Umbao | SEO & Content Systems for Lean B2B SaaS Teams</title>
-
-  <meta
-    name="description"
-    content="Ed Umbao works with lean B2B SaaS teams on SEO content, technical writing, topical planning, analytics, editorial systems, and practical web tools."
-  >
-
-  <link
-    rel="canonical"
-    href="https://edumbao.com/"
-  >
-
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-
-  <meta
-    property="og:title"
-    content="Ed Umbao | SEO & Content Systems for Lean B2B SaaS Teams"
-  >
-
-  <meta
-    property="og:description"
-    content="SEO content, technical writing, editorial systems, analytics, tools, and selected work from lean B2B SaaS teams."
-  >
-
-  <meta
-    property="og:url"
-    content="https://edumbao.com/"
-  >
-
-  <meta
-    property="og:site_name"
-    content="Ed Umbao"
-  >
-
-
-  <!-- Twitter / X -->
-  <meta
-    name="twitter:card"
-    content="summary_large_image"
-  >
-
-  <meta
-    name="twitter:title"
-    content="Ed Umbao | SEO & Content Systems for Lean B2B SaaS Teams"
-  >
-
-  <meta
-    name="twitter:description"
-    content="SEO content, technical writing, editorial systems, analytics, tools, and selected work from lean B2B SaaS teams."
-  >
-
-
-  <style>
-
-    :root {
-      --bg: #0b0f14;
-      --bg-soft: #10151c;
-      --surface: #141a22;
-
-      --text: #f3f1eb;
-      --text-soft: #c8cbd0;
-      --muted: #8f98a3;
-
-      --line: #27303a;
-      --line-soft: rgba(255, 255, 255, 0.08);
-
-      --green: #7dd3a8;
-      --blue: #8ab4f8;
-      --purple: #b8a1ff;
-
-      --container: 1180px;
-
-      --serif:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-      --sans:
-        Inter,
-        ui-sans-serif,
-        system-ui,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        sans-serif;
-    }
-
-
-    /* ======================================================
-       Reset
-    ======================================================= */
-
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-
-      background: var(--bg);
-      color: var(--text);
-
-      font-family: var(--sans);
-      font-size: 16px;
-      line-height: 1.7;
-
-      -webkit-font-smoothing: antialiased;
-    }
-
-    img,
-    svg {
-      max-width: 100%;
-    }
-
-    button,
-    input,
-    textarea,
-    select {
-      font: inherit;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    a:focus-visible,
-    button:focus-visible {
-      outline: 3px solid var(--blue);
-      outline-offset: 4px;
-    }
-
-    .container {
-      width: min(calc(100% - 40px), var(--container));
-      margin-inline: auto;
-    }
-
-
-    /* ======================================================
-       Header
-    ======================================================= */
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-
-      background: rgba(11, 15, 20, 0.94);
-
-      border-bottom: 1px solid var(--line-soft);
-
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-    }
-
-    .site-nav {
-      min-height: 70px;
-
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      gap: 24px;
-    }
-
-    .site-brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 11px;
-
-      font-weight: 750;
-      letter-spacing: -0.02em;
-    }
-
-    .brand-mark {
-      width: 38px;
-      height: 38px;
-
-      display: grid;
-      place-items: center;
-
-      border: 1px solid var(--green);
-      border-radius: 8px;
-
-      color: var(--green);
-
-      font-family: var(--serif);
-      font-size: 15px;
-      font-weight: 700;
-    }
-
-    .site-menu {
-      display: flex;
-      align-items: center;
-      gap: 3px;
-    }
-
-    .site-menu a {
-      padding: 9px 10px;
-
-      color: var(--muted);
-
-      font-size: 14px;
-      font-weight: 600;
-
-      border-bottom: 1px solid transparent;
-    }
-
-    .site-menu a:hover {
-      color: var(--text);
-      border-bottom-color: var(--green);
-    }
-
-    .site-menu .nav-cta {
-      margin-left: 6px;
-
-      padding: 9px 13px;
-
-      border: 1px solid var(--line);
-      border-radius: 8px;
-
-      color: var(--text);
-    }
-
-    .site-menu .nav-cta:hover {
-      border-color: var(--green);
-    }
-
-
-    /* Mobile menu */
-
-    .menu-toggle {
-      display: none;
-
-      width: 42px;
-      height: 42px;
-
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-
-      gap: 5px;
-
-      border: 1px solid var(--line);
-      border-radius: 8px;
-
-      background: transparent;
-
-      cursor: pointer;
-    }
-
-    .menu-toggle span {
-      display: block;
-
-      width: 20px;
-      height: 2px;
-
-      background: var(--text);
-    }
-
-
-    /* ======================================================
-       General Sections
-    ======================================================= */
-
-    .section {
-      padding: 84px 0;
-
-      border-top: 1px solid var(--line-soft);
-    }
-
-    .section-kicker {
-      margin: 0 0 12px;
-
-      color: var(--green);
-
-      font-size: 12px;
-      font-weight: 800;
-
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-    }
-
-    .section-title {
-      max-width: 820px;
-
-      margin: 0 0 18px;
-
-      font-family: var(--serif);
-
-      font-size: clamp(34px, 5vw, 58px);
-      font-weight: 500;
-
-      line-height: 1.08;
-      letter-spacing: -0.035em;
-    }
-
-    .section-intro {
-      max-width: 760px;
-
-      margin: 0;
-
-      color: var(--text-soft);
-
-      font-size: 18px;
-    }
-
-
-    /* ======================================================
-       Buttons
-    ======================================================= */
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-
-      gap: 10px;
-
-      margin-top: 22px;
-    }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-
-      gap: 8px;
-
-      min-height: 44px;
-
-      padding: 10px 16px;
-
-      border: 1px solid var(--line);
-      border-radius: 8px;
-
-      font-size: 14px;
-      font-weight: 750;
-
-      transition:
-        border-color 0.15s ease,
-        background 0.15s ease,
-        transform 0.15s ease;
-    }
-
-    .button:hover {
-      transform: translateY(-1px);
-    }
-
-    .button-primary {
-      background: var(--green);
-      border-color: var(--green);
-
-      color: #08120d;
-    }
-
-    .button-primary:hover {
-      background: #96dfba;
-    }
-
-    .button-secondary {
-      color: var(--text);
-      background: transparent;
-    }
-
-    .button-secondary:hover {
-      border-color: var(--blue);
-    }
-
-    .button-text {
-      border-color: transparent;
-
-      color: var(--blue);
-
-      padding-left: 4px;
-      padding-right: 4px;
-    }
-
-    .button-text:hover {
-      color: #b9d3ff;
-      border-color: transparent;
-    }
-
-
-    /* ======================================================
-       Compact Hero
-    ======================================================= */
-
-    .hero {
-      padding: 56px 0 44px;
-    }
-
-    .hero-grid {
-      display: grid;
-
-      grid-template-columns:
-        minmax(0, 1.3fr)
-        minmax(260px, 0.7fr);
-
-      gap: 48px;
-
-      align-items: center;
-    }
-
-    .hero-eyebrow {
-      margin: 0 0 14px;
-
-      color: var(--green);
-
-      font-size: 12px;
-      font-weight: 800;
-
-      text-transform: uppercase;
-      letter-spacing: 0.11em;
-    }
-
-    .hero h1 {
-      max-width: 760px;
-
-      margin: 0 0 20px;
-
-      font-family: var(--serif);
-
-      font-size: clamp(46px, 5.8vw, 72px);
-      font-weight: 500;
-
-      line-height: 0.99;
-      letter-spacing: -0.05em;
-    }
-
-    .hero h1 em {
-      color: var(--green);
-      font-style: normal;
-    }
-
-    .hero-copy {
-      max-width: 680px;
-    }
-
-    .hero-copy p {
-      margin: 0;
-
-      color: var(--text-soft);
-
-      font-size: 17px;
-      line-height: 1.6;
-    }
-
-    .hero-copy strong {
-      color: var(--text);
-    }
-
-
-    /* ======================================================
-       Cropped Hero Portrait
-    ======================================================= */
-
-    .hero-portrait {
-      width: 100%;
-      max-width: 320px;
-
-      justify-self: end;
-    }
-
-    .portrait-frame {
-      padding-top: 10px;
-
-      border-top: 1px solid var(--line);
-    }
-
-    .portrait-label {
-      display: flex;
-      justify-content: space-between;
-
-      gap: 16px;
-
-      margin-bottom: 8px;
-
-      color: var(--muted);
-
-      font-size: 10px;
-      font-weight: 700;
-
-      text-transform: uppercase;
-      letter-spacing: 0.09em;
-    }
-
-    .portrait-image {
-      width: 100%;
-      height: 300px;
-
-      display: block;
-
-      object-fit: cover;
-      object-position: center 20%;
-
-      border: 1px solid var(--line);
-      border-radius: 10px;
-    }
-
-    .portrait-caption {
-      display: grid;
-
-      grid-template-columns: 1fr auto;
-
-      gap: 16px;
-
-      padding-top: 10px;
-      padding-bottom: 10px;
-
-      border-bottom: 1px solid var(--line);
-    }
-
-    .portrait-caption strong {
-      display: block;
-
-      margin-bottom: 2px;
-
-      font-family: var(--serif);
-
-      font-size: 16px;
-      font-weight: 500;
-    }
-
-    .portrait-caption span {
-      display: block;
-
-      color: var(--muted);
-
-      font-size: 10px;
-    }
-
-    .portrait-location {
-      text-align: right;
-    }
-
-
-    /* ======================================================
-       Proof Strip
-    ======================================================= */
-
-    .proof-strip {
-      border-top: 1px solid var(--line-soft);
-      border-bottom: 1px solid var(--line-soft);
-
-      background: var(--bg-soft);
-    }
-
-    .proof-grid {
-      display: grid;
-
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .proof-stat {
-      padding: 28px 30px;
-
-      border-right: 1px solid var(--line-soft);
-    }
-
-    .proof-stat:last-child {
-      border-right: 0;
-    }
-
-    .proof-number {
-      margin-bottom: 7px;
-
-      font-family: var(--serif);
-      font-size: 38px;
-
-      color: var(--text);
-    }
-
-    .proof-stat p {
-      margin: 0;
-
-      color: var(--muted);
-
-      font-size: 14px;
-      line-height: 1.55;
-    }
-
-
-    /* ======================================================
-       Featured Work
-    ======================================================= */
-
-    .featured-work {
-      padding-top: 96px;
-    }
-
-    .project-list {
-      margin-top: 54px;
-
-      border-top: 1px solid var(--line);
-    }
-
-    .project {
-      display: grid;
-
-      grid-template-columns:
-        190px minmax(0, 1fr);
-
-      gap: 48px;
-
-      padding: 48px 0;
-
-      border-bottom: 1px solid var(--line);
-    }
-
-    .project-meta {
-      position: sticky;
-      top: 100px;
-
-      align-self: start;
-    }
-
-    .project-number {
-      margin-bottom: 18px;
-
-      color: var(--green);
-
-      font-family: var(--serif);
-
-      font-size: 16px;
-    }
-
-    .company-logo-wrap {
-      display: flex;
-      align-items: center;
-
-      min-height: 72px;
-
-      margin-bottom: 16px;
-    }
-
-    .company-logo {
-      width: 58px;
-      height: 58px;
-
-      object-fit: contain;
-
-      border-radius: 12px;
-
-      background: #ffffff;
-
-      padding: 7px;
-
-      border: 1px solid var(--line-soft);
-    }
-
-    .company-logo-placeholder {
-      width: 58px;
-      height: 58px;
-
-      display: grid;
-      place-items: center;
-
-      border: 1px solid var(--line);
-      border-radius: 12px;
-
-      color: var(--purple);
-
-      font-family: var(--serif);
-
-      font-size: 13px;
-      font-weight: 700;
-    }
-
-    .project-type {
-      margin: 0;
-
-      color: var(--muted);
-
-      font-size: 12px;
-      font-weight: 700;
-
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .project-content h3 {
-      margin: 0 0 12px;
-
-      font-family: var(--serif);
-
-      font-size: clamp(30px, 4vw, 48px);
-      font-weight: 500;
-
-      line-height: 1.1;
-      letter-spacing: -0.035em;
-    }
-
-    .project-summary {
-      max-width: 780px;
-
-      margin: 0 0 28px;
-
-      color: var(--text-soft);
-
-      font-size: 17px;
-    }
-
-    .project-columns {
-      display: grid;
-
-      grid-template-columns:
-        repeat(2, minmax(0, 1fr));
-
-      gap: 32px;
-
-      margin-top: 32px;
-    }
-
-    .project-column {
-      border-top: 1px solid var(--line-soft);
-
-      padding-top: 16px;
-    }
-
-    .project-column h4 {
-      margin: 0 0 10px;
-
-      color: var(--text);
-
-      font-size: 13px;
-      font-weight: 800;
-
-      text-transform: uppercase;
-      letter-spacing: 0.07em;
-    }
-
-    .project-column ul {
-      list-style: none;
-
-      margin: 0;
-      padding: 0;
-    }
-
-    .project-column li {
-      position: relative;
-
-      margin-bottom: 8px;
-
-      padding-left: 15px;
-
-      color: var(--muted);
-
-      font-size: 14px;
-    }
-
-    .project-column li::before {
-      content: "—";
-
-      position: absolute;
-      left: 0;
-
-      color: var(--green);
-    }
-
-    .project-link {
-      display: inline-flex;
-      align-items: center;
-
-      gap: 7px;
-
-      margin-top: 28px;
-
-      color: var(--blue);
-
-      font-size: 14px;
-      font-weight: 750;
-    }
-
-    .project-link:hover {
-      color: #b9d3ff;
-    }
-
-
-    /* ======================================================
-       About
-    ======================================================= */
-
-    .about-grid {
-      display: grid;
-
-      grid-template-columns:
-        minmax(220px, 0.35fr)
-        minmax(0, 0.65fr);
-
-      gap: 72px;
-
-      align-items: start;
-    }
-
-    .about-note {
-      border-top: 1px solid var(--line);
-
-      padding-top: 16px;
-
-      color: var(--muted);
-
-      font-family: var(--serif);
-
-      font-size: 20px;
-      line-height: 1.5;
-    }
-
-    .about-copy {
-      max-width: 760px;
-    }
-
-    .about-copy p {
-      margin: 0 0 20px;
-
-      color: var(--text-soft);
-
-      font-size: 17px;
-    }
-
-    .about-copy strong {
-      color: var(--text);
-    }
-
-
-    /* ======================================================
-       Public Tools
-    ======================================================= */
-
-    .tools-list {
-      margin-top: 48px;
-
-      border-top: 1px solid var(--line);
-    }
-
-    .tool-row {
-      display: grid;
-
-      grid-template-columns:
-        70px minmax(0, 1fr) auto;
-
-      gap: 24px;
-
-      align-items: center;
-
-      padding: 26px 0;
-
-      border-bottom: 1px solid var(--line);
-    }
-
-    .tool-mark {
-      color: var(--green);
-
-      font-family: var(--serif);
-
-      font-size: 20px;
-    }
-
-    .tool-row h3 {
-      margin: 0 0 4px;
-
-      font-size: 18px;
-    }
-
-    .tool-row p {
-      margin: 0;
-
-      color: var(--muted);
-
-      font-size: 14px;
-    }
-
-    .tool-link {
-      color: var(--blue);
-
-      font-size: 13px;
-      font-weight: 750;
-    }
-
-
-    /* ======================================================
-       Services
-    ======================================================= */
-
-    .services-grid {
-      display: grid;
-
-      grid-template-columns:
-        repeat(3, minmax(0, 1fr));
-
-      gap: 28px;
-
-      margin-top: 48px;
-    }
-
-    .service {
-      border-top: 1px solid var(--line);
-
-      padding-top: 20px;
-    }
-
-    .service-number {
-      margin-bottom: 28px;
-
-      color: var(--green);
-
-      font-family: var(--serif);
-    }
-
-    .service h3 {
-      margin: 0 0 10px;
-
-      font-family: var(--serif);
-
-      font-size: 26px;
-      font-weight: 500;
-    }
-
-    .service p {
-      margin: 0;
-
-      color: var(--muted);
-
-      font-size: 14px;
-    }
-
-
-    /* ======================================================
-       Working Stack
-    ======================================================= */
-
-    .stack-intro {
-      max-width: 800px;
-    }
-
-    .stack {
-      margin-top: 52px;
-
-      border-top: 1px solid var(--line);
-    }
-
-    .stack-row {
-      display: grid;
-
-      grid-template-columns:
-        220px minmax(0, 1fr);
-
-      gap: 48px;
-
-      padding: 28px 0;
-
-      border-bottom: 1px solid var(--line);
-    }
-
-    .stack-heading {
-      display: flex;
-      gap: 13px;
-
-      align-items: flex-start;
-    }
-
-    .stack-number {
-      min-width: 28px;
-
-      color: var(--green);
-
-      font-family: var(--serif);
-
-      font-size: 14px;
-    }
-
-    .stack-heading h3 {
-      margin: 0;
-
-      font-size: 14px;
-      font-weight: 750;
-
-      line-height: 1.4;
-    }
-
-    .stack-content {
-      display: flex;
-      flex-wrap: wrap;
-
-      gap: 8px;
-    }
-
-    .stack-item {
-      display: inline-flex;
-      align-items: center;
-
-      min-height: 34px;
-
-      padding: 6px 10px;
-
-      border: 1px solid var(--line);
-
-      border-radius: 6px;
-
-      color: var(--text-soft);
-
-      font-size: 13px;
-
-      background: transparent;
-    }
-
-    .stack-item:hover {
-      border-color: #3a4654;
-      color: var(--text);
-    }
-
-    .stack-note {
-      max-width: 760px;
-
-      margin: 24px 0 0;
-
-      color: var(--muted);
-
-      font-size: 13px;
-      line-height: 1.6;
-    }
-
-
-    /* ======================================================
-       Process
-    ======================================================= */
-
-    .process {
-      margin-top: 48px;
-
-      border-top: 1px solid var(--line);
-    }
-
-    .process-row {
-      display: grid;
-
-      grid-template-columns:
-        80px 270px minmax(0, 1fr);
-
-      gap: 28px;
-
-      padding: 24px 0;
-
-      border-bottom: 1px solid var(--line);
-    }
-
-    .process-number {
-      color: var(--green);
-
-      font-family: var(--serif);
-    }
-
-    .process-row h3 {
-      margin: 0;
-
-      font-size: 15px;
-    }
-
-    .process-row p {
-      margin: 0;
-
-      color: var(--muted);
-
-      font-size: 14px;
-    }
-
-
-    /* ======================================================
-       Writing
-    ======================================================= */
-
-    .writing-block {
-      display: grid;
-
-      grid-template-columns:
-        minmax(0, 0.65fr)
-        minmax(250px, 0.35fr);
-
-      gap: 64px;
-
-      margin-top: 46px;
-
-      padding-top: 32px;
-
-      border-top: 1px solid var(--line);
-    }
-
-    .writing-block p {
-      margin: 0;
-
-      color: var(--text-soft);
-
-      font-size: 17px;
-    }
-
-    .writing-links {
-      display: grid;
-
-      gap: 10px;
-    }
-
-    .writing-links a {
-      display: flex;
-      justify-content: space-between;
-
-      gap: 20px;
-
-      padding-bottom: 10px;
-
-      border-bottom: 1px solid var(--line-soft);
-
-      color: var(--blue);
-
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-
-    /* ======================================================
-       Contact
-    ======================================================= */
-
-    .contact {
-      background: var(--bg-soft);
-    }
-
-    .contact-grid {
-      display: grid;
-
-      grid-template-columns:
-        minmax(0, 0.7fr)
-        minmax(220px, 0.3fr);
-
-      gap: 64px;
-
-      align-items: end;
-    }
-
-    .contact-copy {
-      max-width: 800px;
-    }
-
-    .contact-aside {
-      border-top: 1px solid var(--line);
-
-      padding-top: 16px;
-
-      color: var(--muted);
-
-      font-size: 14px;
-    }
-
-
-    /* ======================================================
-       Footer
-    ======================================================= */
-
-    .footer {
-      padding: 32px 0 42px;
-
-      border-top: 1px solid var(--line-soft);
-
-      color: var(--muted);
-
-      font-size: 13px;
-    }
-
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-
-      gap: 30px;
-    }
-
-
-    /* ======================================================
-       Responsive
-    ======================================================= */
-
-    @media (max-width: 980px) {
-
-      .hero-grid,
-      .about-grid,
-      .contact-grid,
-      .writing-block {
-        grid-template-columns: 1fr;
+<!-- Basic Metadata -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+<title>Ed Umbao | Content, SEO &amp; Technical Writing</title>
+
+<meta
+  content="Ed Umbao works across SEO, technical writing, content systems, and small web projects while documenting what he learns about GitHub, APIs, automation, and web tools."
+  name="description"
+/>
+
+<link href="https://edumbao.com/" rel="canonical"/>
+
+<!-- Open Graph -->
+<meta content="website" property="og:type"/>
+
+<meta
+  content="Ed Umbao | Content, SEO &amp; Technical Writing"
+  property="og:title"
+/>
+
+<meta
+  content="SEO, technical writing, content systems, small tools, and notes from learning GitHub, APIs, automation, and web development."
+  property="og:description"
+/>
+
+<meta content="https://edumbao.com/" property="og:url"/>
+<meta content="Ed Umbao" property="og:site_name"/>
+
+<!-- Twitter / X -->
+<meta
+  content="Ed Umbao | Content, SEO &amp; Technical Writing"
+  name="twitter:title"
+/>
+
+<meta
+  content="SEO, technical writing, content systems, small tools, and notes from learning GitHub, APIs, automation, and web development."
+  name="twitter:description"
+/>
+
+<!-- Theme preference: apply before CSS to avoid a flash of the wrong theme -->
+<script>
+    (function () {
+      const root = document.documentElement;
+      let savedTheme = null;
+
+      try {
+        savedTheme = localStorage.getItem('edumbao-theme');
+      } catch (error) {
+        savedTheme = null;
       }
 
-      .hero-grid {
-        gap: 32px;
-      }
-
-      .hero-portrait {
-        max-width: 280px;
-
-        justify-self: start;
-      }
-
-      .portrait-image {
-        height: 260px;
-      }
-
-      .project {
-        grid-template-columns:
-          130px minmax(0, 1fr);
-
-        gap: 34px;
-      }
-
-      .services-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .stack-row {
-        grid-template-columns:
-          180px minmax(0, 1fr);
-
-        gap: 30px;
-      }
-
-      .process-row {
-        grid-template-columns:
-          55px 220px minmax(0, 1fr);
-      }
-
-    }
-
-
-    @media (max-width: 820px) {
-
-      .site-nav {
-        position: relative;
-      }
-
-      .menu-toggle {
-        display: inline-flex;
-      }
-
-      .site-menu {
-        display: none;
-
-        position: absolute;
-
-        top: calc(100% + 1px);
-        left: 0;
-        right: 0;
-
-        flex-direction: column;
-        align-items: stretch;
-
-        padding: 10px 0;
-
-        background: var(--bg);
-
-        border-bottom: 1px solid var(--line);
-      }
-
-      .site-menu.nav-open {
-        display: flex;
-      }
-
-      .site-menu a {
-        padding: 12px 0;
-
-        border-bottom: 1px solid var(--line-soft);
-      }
-
-      .site-menu .nav-cta {
-        margin-left: 0;
-
-        border: 0;
-        border-bottom: 1px solid var(--line-soft);
-
-        border-radius: 0;
-      }
-
-      .proof-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .proof-stat {
-        border-right: 0;
-
-        border-bottom:
-          1px solid var(--line-soft);
-      }
-
-      .proof-stat:last-child {
-        border-bottom: 0;
-      }
-
-      .project {
-        grid-template-columns: 1fr;
-
-        gap: 18px;
-      }
-
-      .project-meta {
-        position: static;
-      }
-
-      .project-columns {
-        grid-template-columns: 1fr;
-      }
-
-      .stack-row {
-        grid-template-columns: 1fr;
-
-        gap: 18px;
-      }
-
-      .process-row {
-        grid-template-columns:
-          46px 1fr;
-
-        gap: 16px;
-      }
-
-      .process-row p {
-        grid-column: 2;
-      }
-
-      .tool-row {
-        grid-template-columns:
-          45px 1fr;
-      }
-
-      .tool-link {
-        grid-column: 2;
-      }
-
-    }
-
-
-    @media (max-width: 620px) {
-
-      .container {
-        width:
-          min(
-            calc(100% - 28px),
-            var(--container)
-          );
-      }
-
-      .hero {
-        padding: 44px 0 38px;
-      }
-
-      .hero h1 {
-        font-size:
-          clamp(40px, 11.5vw, 54px);
-      }
-
-      .hero-copy p {
-        font-size: 16px;
-        line-height: 1.55;
-      }
-
-      .hero-grid {
-        gap: 26px;
-      }
-
-      .actions {
-        flex-direction: column;
-
-        margin-top: 20px;
-      }
-
-      .button {
-        width: 100%;
-      }
-
-      .hero-portrait {
-        max-width: 190px;
-
-        justify-self: center;
-      }
-
-      .portrait-label {
-        display: none;
-      }
-
-      .portrait-image {
-        height: 190px;
-
-        object-fit: cover;
-        object-position: center 18%;
-
-        border-radius: 8px;
-      }
-
-      .portrait-caption {
-        display: block;
-
-        padding-top: 8px;
-        padding-bottom: 8px;
-
-        text-align: center;
-      }
-
-      .portrait-location {
-        display: none;
-      }
-
-      .portrait-caption strong {
-        font-size: 14px;
-      }
-
-      .portrait-caption span {
-        font-size: 10px;
-      }
-
-      .section {
-        padding: 62px 0;
-      }
-
-      .stack {
-        margin-top: 38px;
-      }
-
-      .stack-row {
-        padding: 24px 0;
-      }
-
-      .stack-content {
-        gap: 7px;
-      }
-
-      .stack-item {
-        min-height: 32px;
-
-        padding: 5px 8px;
-
-        font-size: 12px;
-      }
-
-      .footer-inner {
-        flex-direction: column;
-      }
-
-    }
-
-  </style>
-
-
-  <!-- Person Schema -->
-  <script type="application/ld+json">
+      const systemPrefersLight =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: light)').matches;
+
+      const initialTheme =
+        savedTheme === 'light' || savedTheme === 'dark'
+          ? savedTheme
+          : systemPrefersLight
+            ? 'light'
+            : 'dark';
+
+      root.setAttribute('data-theme', initialTheme);
+    })();
+  </script>
+<link href="/assets/css/site.css" rel="stylesheet"/>
+<!-- Person Schema -->
+<script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Ed Umbao",
-    "jobTitle": "SEO Consultant and SaaS Copywriter",
+    "jobTitle": "Head of Content",
     "url": "https://edumbao.com/",
     "sameAs": [
       "https://www.linkedin.com/in/ed-umbao/",
@@ -1503,357 +106,373 @@
       "JavaScript",
       "Next.js"
     ],
-    "description": "Ed Umbao works with lean B2B SaaS teams on SEO content, technical writing, topical planning, analytics, internal linking, editorial systems, and practical web tools."
+    "description": "Ed Umbao works across SEO, technical writing, content systems, and small technical projects while documenting what he learns about GitHub, APIs, automation, and web tools."
   }
   </script>
 
+  <meta
+    property="og:image"
+    content="https://edumbao.com/images/ed-umbao-social-preview.webp"
+  >
+
+  <meta
+    property="og:image:alt"
+    content="Ed Umbao - Content, SEO, technical writing, and technical learning"
+  >
+
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <meta
+    name="twitter:image"
+    content="https://edumbao.com/images/ed-umbao-social-preview.webp"
+  >
+
+  <meta
+    name="twitter:image:alt"
+    content="Ed Umbao - Content, SEO, technical writing, and technical learning"
+  >
 </head>
-
-
 <body>
-
-
-  <!-- ======================================================
+<!-- ======================================================
        Header
   ======================================================= -->
-
-  <header class="site-header">
-
-    <div class="container site-nav">
-
-      <a
-        href="/"
-        class="site-brand"
-        aria-label="Ed Umbao homepage"
-      >
-
-        <span
-          class="brand-mark"
-          aria-hidden="true"
-        >
+<header class="site-header">
+<div class="container site-nav">
+<a aria-label="Ed Umbao homepage" class="site-brand" href="/">
+<span aria-hidden="true" class="brand-mark">
           EU
         </span>
-
-        <span>
+<span class="brand-name">
           Ed Umbao
         </span>
+</a>
+<button aria-controls="site-menu" aria-expanded="false" aria-label="Open navigation menu" class="menu-toggle" type="button">
+<span></span>
+<span></span>
+<span></span>
+</button>
+<nav
+  aria-label="Main navigation"
+  class="site-menu"
+  id="site-menu"
+>
+  <a href="/lab/">
+    Lab
+  </a>
 
-      </a>
+  <a href="/work/">
+    Work
+  </a>
 
+  <a href="/writing/">
+    Writing
+  </a>
 
-      <button
-        class="menu-toggle"
-        type="button"
-        aria-label="Open navigation menu"
-        aria-controls="site-menu"
-        aria-expanded="false"
-      >
+  <a href="#about">
+    About
+  </a>
 
-        <span></span>
-        <span></span>
-        <span></span>
+  <a
+    class="nav-external"
+    href="https://github.com/edumbao"
+    rel="noopener"
+    target="_blank"
+  >
+    GitHub ↗
+  </a>
 
-      </button>
-
-
-      <nav
-        class="site-menu"
-        id="site-menu"
-        aria-label="Main navigation"
-      >
-
-        <a href="#work">
-          Work
-        </a>
-
-        <a href="#about">
-          About
-        </a>
-
-        <a href="#tools">
-          Tools
-        </a>
-
-        <a href="#stack">
-          Stack
-        </a>
-
-        <a href="#process">
-          Process
-        </a>
-
-        <a href="/blog.html">
-          Writing
-        </a>
-
-        <a
-          href="#contact"
-          class="nav-cta"
-        >
-          Work with me
-        </a>
-
-      </nav>
-
-    </div>
-
-  </header>
-
-
-  <main>
-
-
-    <!-- ====================================================
+  <a
+    aria-label="Switch color theme"
+    class="theme-link"
+    href="#"
+    id="theme-toggle"
+  >
+    Theme
+  </a>
+</nav>
+</div>
+</header>
+<main>
+<!-- ====================================================
          Hero
     ===================================================== -->
-
-    <section
-      class="hero"
-      id="home"
-    >
-
-      <div class="container hero-grid">
-
-
-        <div>
-
-          <p class="hero-eyebrow">
-            SEO · SaaS writing · Content systems
+<section class="hero" id="home">
+<div class="container hero-grid">
+<div class="hero-main">
+<p class="hero-eyebrow">
+            Content / SEO / Building
           </p>
-
-
-          <h1>
-
-            I help lean B2B SaaS teams turn
-
+<h1>
+            I work in content.
             <em>
-              product knowledge
+              I'm learning to build.
             </em>
-
-            into useful search content.
-
-          </h1>
-
-
-          <div class="hero-copy">
-
-            <p>
-
-              I work across
-              <strong>
-                SEO research, technical writing, SaaS copy,
-                topical planning, internal linking, and editorial review.
-              </strong>
-
-              The goal is to understand the reader's problem,
-              understand the product, and make every page earn its
-              place in the wider content system.
-
+</h1>
+<div class="hero-copy">
+<p>
+              I'm Head of Content at
+              <strong>Outscraper</strong>.
+              I work across SEO, technical writing, and content systems
+              while learning GitHub, APIs, automation, and code by building
+              small tools for problems I run into at work.
             </p>
-
-          </div>
-
-
-          <div class="actions">
-
-            <a
-              href="#work"
-              class="button button-primary"
-            >
-              View selected work
+</div>
+<div class="actions hero-actions">
+<a class="button button-primary" href="/lab/">
+              Explore the Lab →
             </a>
-
-
-            <a
-              href="/files/ed-umbao-resume.pdf"
-              class="button button-secondary"
-              download
-            >
-              Download résumé ↓
+<a class="button button-text" href="/writing/">
+              Read my writing →
             </a>
-
-
-            <a
-              href="https://www.linkedin.com/in/ed-umbao/"
-              target="_blank"
-              rel="noopener"
-              class="button button-text"
-            >
-              LinkedIn ↗
-            </a>
-
-          </div>
-
-        </div>
-
-
-        <!-- Cropped Portrait -->
-
-        <aside
-          class="hero-portrait"
-          aria-label="Ed Umbao profile"
-        >
-
-          <div class="portrait-frame">
-
-
-            <div class="portrait-label">
-
-              <span>
-                Writer · SEO specialist
+</div>
+<div aria-label="Current technical learning focus" class="hero-status">
+<div class="hero-status-item">
+<span>
+                Current focus
               </span>
-
-              <span>
-                Davao City
+<strong>
+                GitHub · APIs · Automation
+              </strong>
+</div>
+<div class="hero-status-item">
+<span>
+                Approach
               </span>
-
-            </div>
-
-
-            <img
-              src="/images/ed-umbao-profile.jpg"
-              alt="Ed Umbao, SEO specialist and B2B SaaS writer"
-              class="portrait-image"
-              width="800"
-              height="750"
-            >
-
-
-            <div class="portrait-caption">
-
-
-              <div>
-
-                <strong>
-                  Ed Umbao
+<strong>
+                Build · Document · Improve
+              </strong>
+</div>
+</div>
+</div>
+<aside aria-label="Ed Umbao profile" class="hero-portrait">
+<div class="portrait-frame">
+<div class="portrait-label">
+<span>
+                Ed Umbao
+              </span>
+<span>
+                2026
+              </span>
+</div>
+<img alt="Ed Umbao, content and SEO professional learning to build technical tools" class="portrait-image" height="750" src="/images/ed-umbao-profile.jpg" width="800"/>
+<div class="portrait-caption">
+<div>
+<strong>
+                  Head of Content
                 </strong>
-
-                <span>
-                  SEO · B2B SaaS · Technical content
+<span>
+                  SEO · Technical writing · Content systems
                 </span>
-
-              </div>
-
-
-              <div class="portrait-location">
-
-                <span>
-                  Philippines
+</div>
+<div class="portrait-location">
+<span>
+                  Learning by building
                 </span>
-
-                <span>
-                  Working remotely
+<span>
+                  GitHub · APIs · Automation
                 </span>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </aside>
-
-      </div>
-
-    </section>
-
-
-    <!-- ====================================================
-         Proof Strip
+</div>
+</div>
+</div>
+</aside>
+</div>
+</section>
+<!-- ====================================================
+         Latest Build
     ===================================================== -->
-
-    <section
-      class="proof-strip"
-      aria-label="Experience highlights"
-    >
-
-      <div class="container proof-grid">
-
-
-        <div class="proof-stat">
-
-          <div class="proof-number">
-            15+
-          </div>
-
-          <p>
-            Years spent learning and working with SEO,
-            publishing and search-driven content.
+<section aria-labelledby="latest-build-title" class="latest-build">
+<div class="container">
+<div class="latest-build-header">
+<p class="section-kicker">
+            Latest build
           </p>
-
-        </div>
-
-
-        <div class="proof-stat">
-
-          <div class="proof-number">
-            550K+
-          </div>
-
-          <p>
-            Users reached while working with a lean SaaS
-            team of around 15 people over two years.
+<span class="build-date">
+            September 2026
+          </span>
+</div>
+<div class="latest-build-grid">
+<div class="latest-build-index">
+<span>
+              01
+            </span>
+<span>
+              Working project
+            </span>
+</div>
+<div class="latest-build-content">
+<h2 class="section-title" id="latest-build-title">
+              Targetron Knowledge Catalog
+            </h2>
+<p class="latest-build-summary">
+              I adapted the reusable knowledge-catalog workflow I first worked
+              through for Outscraper and ran it against Targetron's public site.
+              The real-site pilot completed successfully, and I am continuing
+              to work on making the workflow easier to reuse, review, and inspect.
+            </p>
+<dl class="build-meta">
+<div>
+<dt>
+                  Status
+                </dt>
+<dd>
+                  Real-site pilot complete · reusable workflow still evolving
+                </dd>
+</div>
+<div>
+<dt>
+                  Working with
+                </dt>
+<dd>
+                  Python · GitHub · sitemap data
+                </dd>
+</div>
+<div>
+<dt>
+                  Learning
+                </dt>
+<dd>
+                  Reusable project structure · crawling · normalization
+                </dd>
+</div>
+</dl>
+<div class="actions">
+<a class="button button-primary" href="/lab/targetron-knowledge-catalog/">
+                Read the build notes →
+              </a>
+<span aria-label="Targetron Knowledge Catalog repository is private" class="button button-private">
+                Repository: Private
+              </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ====================================================
+         Lab
+    ===================================================== -->
+<section class="section lab-section" id="tools">
+<div class="container">
+<div class="lab-intro-grid">
+<div>
+<p class="section-kicker">
+              Ed's Lab
+            </p>
+<h2 class="section-title">
+              Small tools, data projects, and experiments I'm building as I learn.
+            </h2>
+</div>
+<p class="section-intro lab-intro">
+            These are not finished SaaS products. They are working projects
+            I use to understand SEO workflows, GitHub, APIs, automation,
+            data handling, and the technical side of content work.
           </p>
-
-        </div>
-
-
-        <div class="proof-stat">
-
-          <div class="proof-number">
-            2+
-          </div>
-
-          <p>
-            Public SEO and copywriting tools built from
-            problems I encountered in my own work.
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ====================================================
+</div>
+<div class="lab-list">
+<article class="lab-item">
+<div class="lab-number">
+              01
+            </div>
+<div class="lab-content">
+<div class="lab-title-row">
+<h3>
+                  Targetron Knowledge Catalog
+                </h3>
+<span class="lab-status">
+                  Working project
+                </span>
+</div>
+<p>
+                A company-specific technical learning project for testing
+                a reusable website knowledge-catalog workflow.
+              </p>
+<p class="lab-meta">
+                Python · GitHub · Sitemap crawling · Data normalization
+              </p>
+</div>
+<div class="lab-links"><a href="/lab/targetron-knowledge-catalog/">Build notes →</a><span aria-label="Targetron Knowledge Catalog repository is private" class="repository-private">Private repository</span></div>
+</article>
+<article class="lab-item">
+<div class="lab-number">
+              02
+            </div>
+<div class="lab-content">
+<div class="lab-title-row">
+<h3>
+                  Answer-Based SEO Article Planner
+                </h3>
+<span class="lab-status">
+                  Public tool
+                </span>
+</div>
+<p>
+                A small planning tool that turns a search question, audience,
+                angle, example, and CTA into a structured article-planning prompt.
+              </p>
+<p class="lab-meta">
+                HTML · CSS · JavaScript · GitHub Pages · Analytics
+              </p>
+</div>
+<div class="lab-links"><a href="/lab/answer-based-seo-planner/">Build notes →</a><a href="https://edumbao.github.io/answer-based-seo-planner/" rel="noopener" target="_blank">Open tool ↗</a><a href="https://github.com/edumbao/answer-based-seo-planner" rel="noopener" target="_blank">GitHub ↗</a></div>
+</article>
+<article class="lab-item">
+<div class="lab-number">
+              03
+            </div>
+<div class="lab-content">
+<div class="lab-title-row">
+<h3>
+                  Benefit Headline Creator
+                </h3>
+<span class="lab-status">
+                  Public tool
+                </span>
+</div>
+<p>
+                A small copywriting experiment for rewriting vague headlines
+                around a clearer user action and benefit.
+              </p>
+<p class="lab-meta">HTML · CSS · JavaScript · GitHub Pages</p>
+</div>
+<div class="lab-links"><a href="/lab/benefit-headline-creator/">Build notes →</a><a href="https://edumbao.github.io/benefit-headline-creator/" rel="noopener" target="_blank">Open tool ↗</a><a href="https://github.com/edumbao/benefit-headline-creator" rel="noopener" target="_blank">GitHub ↗</a></div>
+</article>
+</div>
+<p class="lab-note">
+          I will keep adding projects here as I build them, including experiments
+          that fail or stay unfinished. The point of the Lab is to document the work,
+          not make every project look like a finished product.
+        </p>
+</div>
+</section>
+<!-- ====================================================
          Featured Work
     ===================================================== -->
-
-    <section
-      class="section featured-work"
-      id="work"
-    >
-
+<!-- ====================================================
+         Featured Work
+    ===================================================== -->
+    <section class="section featured-work" id="work">
       <div class="container">
 
-
         <p class="section-kicker">
-          Selected work
+          Professional work
         </p>
-
 
         <h2 class="section-title">
           The writing is only one part of the job.
         </h2>
 
-
         <p class="section-intro">
-
-          My strongest SaaS work sits between search research,
-          product knowledge, technical writing and the systems
-          used to decide what should be published next.
-
+          I work across SEO research, technical writing, product content,
+          editorial systems, and the workflows around publishing for B2B SaaS.
+          The full Work section goes deeper into the professional side of what I do.
         </p>
-
 
         <div class="project-list">
 
-
           <!-- Outscraper -->
-
           <article class="project">
-
 
             <div class="project-meta">
 
@@ -1861,134 +480,43 @@
                 01
               </div>
 
-
               <div class="company-logo-wrap">
 
                 <img
-                  class="company-logo"
-                  src="https://www.google.com/s2/favicons?domain=outscraper.com&sz=128"
-                  alt="Outscraper logo"
+                 alt="Outscraper logo"
+                 class="company-logo"
                   loading="lazy"
-                >
+                  src="https://www.google.com/s2/favicons?domain=outscraper.com&amp;sz=128"
+                />
 
               </div>
 
-
               <p class="project-type">
                 B2B SaaS · Data
-              </p>
+             </p>
 
             </div>
 
 
             <div class="project-content">
 
-
               <h3>
                 Outscraper
               </h3>
 
-
               <p class="project-summary">
-
-                SEO and technical content for a SaaS platform
-                working with Google Maps data, local business data,
-                reviews, lead generation, APIs and business research.
-
-                The work requires understanding both the search problem
-                and the product workflow before deciding how an article
-                should be structured.
-
+                SEO and technical content around Google Maps data,
+               local business data, APIs, lead generation,
+                enrichment, and business research.
               </p>
-
-
-              <div class="project-columns">
-
-
-                <div class="project-column">
-
-                  <h4>
-                    What I work on
-                  </h4>
-
-                  <ul>
-
-                    <li>
-                      Product-led SEO articles
-                    </li>
-
-                    <li>
-                      Technical tutorials
-                    </li>
-
-                    <li>
-                      API and data-workflow content
-                    </li>
-
-                    <li>
-                      Lead-generation use cases
-                    </li>
-
-                    <li>
-                      Existing-content updates
-                    </li>
-
-                  </ul>
-
-                </div>
-
-
-                <div class="project-column">
-
-                  <h4>
-                    Work around the writing
-                  </h4>
-
-                  <ul>
-
-                    <li>
-                      Search-intent review
-                    </li>
-
-                    <li>
-                      Topic clustering
-                    </li>
-
-                    <li>
-                      Cannibalization checks
-                    </li>
-
-                    <li>
-                      Internal-link planning
-                    </li>
-
-                    <li>
-                      Product-claim review
-                    </li>
-
-                  </ul>
-
-                </div>
-
-              </div>
-
-
-              <a
-                href="/writing-portfolio/"
-                class="project-link"
-              >
-                Browse published Outscraper work →
-              </a>
 
             </div>
 
-          </article>
+         </article>
 
 
-          <!-- Targetron -->
-
+         <!-- Targetron -->
           <article class="project">
-
 
             <div class="project-meta">
 
@@ -1996,18 +524,16 @@
                 02
               </div>
 
-
               <div class="company-logo-wrap">
 
                 <img
-                  class="company-logo"
-                  src="https://www.google.com/s2/favicons?domain=targetron.com&sz=128"
                   alt="Targetron logo"
-                  loading="lazy"
-                >
+                 class="company-logo"
+                 loading="lazy"
+                 src="https://www.google.com/s2/favicons?domain=targetron.com&amp;sz=128"
+               />
 
               </div>
-
 
               <p class="project-type">
                 B2B SaaS · Prospecting
@@ -2018,112 +544,23 @@
 
             <div class="project-content">
 
-
               <h3>
                 Targetron
-              </h3>
-
+             </h3>
 
               <p class="project-summary">
-
                 Search-led content around B2B prospecting,
-                business research, lead-list quality and local
-                business signals.
-
-                This work requires keeping the product claims
-                separate from other SaaS brands while connecting
-                each article to a clear reader problem.
-
-              </p>
-
-
-              <div class="project-columns">
-
-
-                <div class="project-column">
-
-                  <h4>
-                    Content areas
-                  </h4>
-
-                  <ul>
-
-                    <li>
-                      B2B lead generation
-                    </li>
-
-                    <li>
-                      Prospect research
-                    </li>
-
-                    <li>
-                      Market research
-                    </li>
-
-                    <li>
-                      Local business workflows
-                    </li>
-
-                    <li>
-                      Product education
-                    </li>
-
-                  </ul>
-
-                </div>
-
-
-                <div class="project-column">
-
-                  <h4>
-                    Editorial work
-                  </h4>
-
-                  <ul>
-
-                    <li>
-                      Keyword review
-                    </li>
-
-                    <li>
-                      Search-intent checks
-                    </li>
-
-                    <li>
-                      Draft QA
-                    </li>
-
-                    <li>
-                      Internal linking
-                    </li>
-
-                    <li>
-                      Product-claim checks
-                    </li>
-
-                  </ul>
-
-                </div>
-
-              </div>
-
-
-              <a
-                href="/writing-portfolio/"
-                class="project-link"
-              >
-                Browse published Targetron work →
-              </a>
+               lead generation, market research,
+               local business signals, and product education.
+             </p>
 
             </div>
 
           </article>
 
 
-          <!-- Systems -->
-
+          <!-- Content Systems -->
           <article class="project">
-
 
             <div class="project-meta">
 
@@ -2131,18 +568,16 @@
                 03
               </div>
 
-
               <div class="company-logo-wrap">
 
                 <div
-                  class="company-logo-placeholder"
                   aria-hidden="true"
+                  class="company-logo-placeholder"
                 >
                   EU
                 </div>
 
               </div>
-
 
               <p class="project-type">
                 SEO · Content operations
@@ -2153,101 +588,15 @@
 
             <div class="project-content">
 
-
               <h3>
-                Content systems & small tools
+               Content systems
               </h3>
 
-
-              <p class="project-summary">
-
-                Repeated content problems often turn into
-                trackers, templates, checklists or small applications.
-
-                I use these projects to make my own work easier to repeat
-                and to learn more about the technical side of SEO,
-                websites and SaaS products.
-
-              </p>
-
-
-              <div class="project-columns">
-
-
-                <div class="project-column">
-
-                  <h4>
-                    Systems
-                  </h4>
-
-                  <ul>
-
-                    <li>
-                      Topical authority trackers
-                    </li>
-
-                    <li>
-                      Cannibalization maps
-                    </li>
-
-                    <li>
-                      Internal-link maps
-                    </li>
-
-                    <li>
-                      Article review checklists
-                    </li>
-
-                    <li>
-                      Content planning templates
-                    </li>
-
-                  </ul>
-
-                </div>
-
-
-                <div class="project-column">
-
-                  <h4>
-                    Technical learning
-                  </h4>
-
-                  <ul>
-
-                    <li>
-                      GitHub Pages
-                    </li>
-
-                    <li>
-                      HTML and CSS
-                    </li>
-
-                    <li>
-                      JavaScript experiments
-                    </li>
-
-                    <li>
-                      Next.js SEO tools
-                    </li>
-
-                    <li>
-                      Workflow automation
-                    </li>
-
-                  </ul>
-
-                </div>
-
-              </div>
-
-
-              <a
-                href="#tools"
-                class="project-link"
-              >
-                See public tools →
-              </a>
+             <p class="project-summary">
+                Internal-link planning, topical authority work,
+                content updates, editorial QA, analytics,
+                and small tools built around repeated content problems.
+             </p>
 
             </div>
 
@@ -2255,58 +604,89 @@
 
         </div>
 
+
+        <div class="actions">
+
+          <a
+            class="button button-primary"
+            href="/work/"
+          >
+            View professional work →
+          </a>
+
+          <a
+            class="button button-text"
+            href="/writing-portfolio/"
+          >
+            Browse writing portfolio →
+          </a>
+
+        </div>
+
       </div>
-
     </section>
-
-
-    <!-- ====================================================
+ <!-- ====================================================
+         Proof Strip
+    ===================================================== -->
+<section aria-label="Experience highlights" class="proof-strip">
+<div class="container proof-grid">
+<div class="proof-stat">
+<div class="proof-number">
+            15+
+          </div>
+<p>
+            Years spent learning and working with SEO,
+            publishing and search-driven content.
+          </p>
+</div>
+<div class="proof-stat">
+<div class="proof-number">
+            550K+
+          </div>
+<p>
+            Users reached while working with a lean SaaS
+            team of around 15 people over two years.
+          </p>
+</div>
+<div class="proof-stat">
+<div class="proof-number">
+            2+
+          </div>
+<p>
+            Public SEO and copywriting tools built from
+            problems I encountered in my own work.
+          </p>
+</div>
+</div>
+</section>
+<!-- ====================================================
          About
     ===================================================== -->
-
-    <section
-      class="section"
-      id="about"
-    >
-
-      <div class="container about-grid">
-
-
-        <div>
-
-          <p class="section-kicker">
+<section class="section" id="about">
+<div class="container about-grid">
+<div>
+<p class="section-kicker">
             About
           </p>
-
-
-          <p class="about-note">
+<p class="about-note">
 
             I learned SEO by publishing first,
             long before I worked inside a SaaS content team.
 
           </p>
-
-        </div>
-
-
-        <div class="about-copy">
-
-
-          <h2 class="section-title">
+</div>
+<div class="about-copy">
+<h2 class="section-title">
             My path into SEO has always been practical.
           </h2>
-
-
-          <p>
+<p>
 
             I started working online through my own websites
             and learned search by trying to understand why
             some pages were discovered and others were not.
 
           </p>
-
-
-          <p>
+<p>
 
             That eventually led me into professional SEO
             and content work for companies such as
@@ -2315,9 +695,7 @@
             individual blog posts.
 
           </p>
-
-
-          <p>
+<p>
 
             Today I spend a large part of my work connecting
             search intent, customer problems, product capabilities,
@@ -2328,260 +706,30 @@
             JavaScript, GitHub and newer web frameworks.
 
           </p>
-
-
-          <div class="actions">
-
-            <a
-              href="/blog.html"
-              class="button button-secondary"
-            >
+<div class="actions">
+<a class="button button-secondary" href="/writing/">
               Read what I'm learning
             </a>
-
-
-            <a
-              href="/files/ed-umbao-resume.pdf"
-              class="button button-secondary"
-              download
-            >
+<a class="button button-secondary" download="" href="/files/ed-umbao-resume.pdf">
               Download résumé ↓
             </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ====================================================
-         Public Tools
-    ===================================================== -->
-
-    <section
-      class="section"
-      id="tools"
-    >
-
-      <div class="container">
-
-
-        <p class="section-kicker">
-          Workbench
-        </p>
-
-
-        <h2 class="section-title">
-          Small tools built around problems I keep running into.
-        </h2>
-
-
-        <p class="section-intro">
-
-          These are working experiments rather than finished SaaS products.
-          I use them to make repeated SEO and copywriting tasks easier
-          and to learn how web tools are built.
-
-        </p>
-
-
-        <div class="tools-list">
-
-
-          <div class="tool-row">
-
-            <div class="tool-mark">
-              01
-            </div>
-
-
-            <div>
-
-              <h3>
-                Answer-Based SEO Article Planner
-              </h3>
-
-              <p>
-                Turns a search question into a more structured
-                article-planning workflow.
-              </p>
-
-            </div>
-
-
-            <a
-              href="https://edumbao.github.io/answer-based-seo-planner/"
-              target="_blank"
-              rel="noopener"
-              class="tool-link"
-            >
-              Open tool →
-            </a>
-
-          </div>
-
-
-          <div class="tool-row">
-
-            <div class="tool-mark">
-              02
-            </div>
-
-
-            <div>
-
-              <h3>
-                Benefit Headline Creator
-              </h3>
-
-              <p>
-                Helps rewrite vague headlines around a clearer
-                user action and benefit.
-              </p>
-
-            </div>
-
-
-            <a
-              href="https://edumbao.github.io/benefit-headline-creator/"
-              target="_blank"
-              rel="noopener"
-              class="tool-link"
-            >
-              Open tool →
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ====================================================
-         Services
-    ===================================================== -->
-
-    <section
-      class="section"
-      id="services"
-    >
-
-      <div class="container">
-
-
-        <p class="section-kicker">
-          Where I help
-        </p>
-
-
-        <h2 class="section-title">
-          Writing, planning and the systems around publishing.
-        </h2>
-
-
-        <p class="section-intro">
-
-          I am most useful when the work requires more
-          than handing over a keyword and asking for an article.
-
-        </p>
-
-
-        <div class="services-grid">
-
-
-          <div class="service">
-
-            <div class="service-number">
-              01
-            </div>
-
-            <h3>
-              SEO content planning
-            </h3>
-
-            <p>
-              Search intent, topic clusters, content gaps,
-              keyword overlap, internal-link planning
-              and publishing priorities.
-            </p>
-
-          </div>
-
-
-          <div class="service">
-
-            <div class="service-number">
-              02
-            </div>
-
-            <h3>
-              SaaS & technical writing
-            </h3>
-
-            <p>
-              Product-led articles, tutorials, use cases,
-              technical explanations and B2B content
-              built around reader problems.
-            </p>
-
-          </div>
-
-
-          <div class="service">
-
-            <div class="service-number">
-              03
-            </div>
-
-            <h3>
-              Editorial systems
-            </h3>
-
-            <p>
-              Briefs, trackers, QA checklists,
-              internal-link maps and review processes
-              for small content teams.
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ====================================================
+</div>
+</div>
+</div>
+</section>
+
+<!-- ====================================================
          Working Stack
     ===================================================== -->
-
-    <section
-      class="section"
-      id="stack"
-    >
-
-      <div class="container">
-
-
-        <p class="section-kicker">
+<section class="section" id="stack">
+<div class="container">
+<p class="section-kicker">
           Working stack
         </p>
-
-
-        <h2 class="section-title">
-          Tools & platforms I use across SEO, content and technical work.
+<h2 class="section-title">
+          Tools &amp; platforms I use across SEO, content and technical work.
         </h2>
-
-
-        <p class="section-intro stack-intro">
+<p class="section-intro stack-intro">
 
           I work across publishing, analytics, remote-team communication,
           AI-assisted research, website management and small web projects.
@@ -2589,242 +737,155 @@
           most often.
 
         </p>
-
-
-        <div class="stack">
-
-
-          <!-- SEO -->
-
-          <div class="stack-row">
-
-            <div class="stack-heading">
-
-              <span class="stack-number">
+<div class="stack">
+<!-- SEO -->
+<div class="stack-row">
+<div class="stack-heading">
+<span class="stack-number">
                 01
               </span>
-
-              <h3>
-                SEO & analytics
+<h3>
+                SEO &amp; analytics
               </h3>
-
-            </div>
-
-
-            <div class="stack-content">
-
-              <span class="stack-item">
+</div>
+<div class="stack-content">
+<span class="stack-item">
                 Google Analytics
               </span>
-
-              <span class="stack-item">
+<span class="stack-item">
                 Google Search Console
               </span>
-
-              <span class="stack-item">
+<span class="stack-item">
                 Bing Webmaster Tools
               </span>
-
-              <span class="stack-item">
+<span class="stack-item">
                 DataForSEO
               </span>
-
-              <span class="stack-item">
+<span class="stack-item">
                 AIOSEO
               </span>
-
-            </div>
-
-          </div>
-
-
-          <!-- Publishing -->
-
-          <div class="stack-row">
-
-            <div class="stack-heading">
-
-              <span class="stack-number">
+</div>
+</div>
+<!-- Publishing -->
+<div class="stack-row">
+<div class="stack-heading">
+<span class="stack-number">
                 02
               </span>
-
-              <h3>
-                Publishing & web
+<h3>
+                Publishing &amp; web
               </h3>
-
-            </div>
-
-
-            <div class="stack-content">
-
-              <span class="stack-item">
+</div>
+<div class="stack-content">
+<span class="stack-item">
                 WordPress
               </span>
-
-              <span class="stack-item">
+<span class="stack-item">
                 Elementor
               </span>
-
-              <span class="stack-item">
+<span class="stack-item">
                 Hostinger
               </span>
-
-              <span class="stack-item">
+<span class="stack-item">
                 Cloudflare
               </span>
-
-              <span class="stack-item">
+<span class="stack-item">
                 Google Drive
               </span>
-
-            </div>
-
-          </div>
-
-
-          <!-- Team -->
-
-          <div class="stack-row">
-
-            <div class="stack-heading">
-
-              <span class="stack-number">
+</div>
+</div>
+<!-- Team -->
+<div class="stack-row">
+<div class="stack-heading">
+<span class="stack-number">
                 03
               </span>
-
-              <h3>
+<h3>
                 Team workflows
               </h3>
-
-            </div>
-
-
-            <div class="stack-content">
-
-              <span class="stack-item">
+</div>
+<div class="stack-content">
+<span class="stack-item">
                 Slack
               </span>
-
-              <span class="stack-item">
+<span class="stack-item">
                 Telegram
               </span>
-
-              <span class="stack-item">
+<span class="stack-item">
                 GitHub
               </span>
-
-              <span class="stack-item">
+<span class="stack-item">
                 Zoom
               </span>
-
-              <span class="stack-item">
+<span class="stack-item">
                 Google Meet
               </span>
-
-            </div>
-
-          </div>
-
-
-          <!-- AI -->
-
-          <div class="stack-row">
-
-            <div class="stack-heading">
-
-              <span class="stack-number">
+</div>
+</div>
+<!-- AI -->
+<div class="stack-row">
+<div class="stack-heading">
+<span class="stack-number">
                 04
               </span>
-
-              <h3>
+<h3>
                 AI-assisted work
               </h3>
-
-            </div>
-
-
-            <div class="stack-content">
-
-              <span class="stack-item">
+</div>
+<div class="stack-content">
+<span class="stack-item">
                 ChatGPT
               </span>
-
-              <span class="stack-item">
+<span class="stack-item">
                 Claude
               </span>
-
-              <span class="stack-item">
+<span class="stack-item">
                 Claude Code
               </span>
-
-              <span class="stack-item">
+<span class="stack-item">
                 Gemini
               </span>
-
-              <span class="stack-item">
+<span class="stack-item">
                 Perplexity
               </span>
-
-            </div>
-
-          </div>
-
-
-          <!-- Technical -->
-
-          <div class="stack-row">
-
-            <div class="stack-heading">
-
-              <span class="stack-number">
+</div>
+</div>
+<!-- Technical -->
+<div class="stack-row">
+<div class="stack-heading">
+<span class="stack-number">
                 05
               </span>
-
-              <h3>
+<h3>
                 Technical stack
               </h3>
-
-            </div>
-
-
-            <div class="stack-content">
-
-              <span class="stack-item">
+</div>
+<div class="stack-content">
+<span class="stack-item">
                 HTML
               </span>
-
-              <span class="stack-item">
+<span class="stack-item">
                 CSS
               </span>
-
-              <span class="stack-item">
+<span class="stack-item">
                 JavaScript
               </span>
-
-              <span class="stack-item">
+<span class="stack-item">
                 TypeScript
               </span>
-
-              <span class="stack-item">
+<span class="stack-item">
                 Next.js
               </span>
-
-              <span class="stack-item">
+<span class="stack-item">
                 Supabase
               </span>
-
-              <span class="stack-item">
+<span class="stack-item">
                 Vercel
               </span>
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <p class="stack-note">
+</div>
+</div>
+</div>
+<p class="stack-note">
 
           My technical stack reflects tools I actively work with
           while building SEO utilities and managing web projects.
@@ -2832,162 +893,22 @@
           presenting myself as a full-time software engineer.
 
         </p>
+</div>
+</section>
 
-      </div>
-
-    </section>
-
-
-    <!-- ====================================================
-         Process
-    ===================================================== -->
-
-    <section
-      class="section"
-      id="process"
-    >
-
-      <div class="container">
-
-
-        <p class="section-kicker">
-          Process
-        </p>
-
-
-        <h2 class="section-title">
-          How I decide what a page should do.
-        </h2>
-
-
-        <div class="process">
-
-
-          <div class="process-row">
-
-            <div class="process-number">
-              01
-            </div>
-
-            <h3>
-              Start with the reader
-            </h3>
-
-            <p>
-              Define who is searching, what they are trying
-              to accomplish and what is making the task difficult.
-            </p>
-
-          </div>
-
-
-          <div class="process-row">
-
-            <div class="process-number">
-              02
-            </div>
-
-            <h3>
-              Check the existing site
-            </h3>
-
-            <p>
-              Review related pages, search intent, keyword overlap,
-              internal links and whether an older URL should be improved first.
-            </p>
-
-          </div>
-
-
-          <div class="process-row">
-
-            <div class="process-number">
-              03
-            </div>
-
-            <h3>
-              Study the product
-            </h3>
-
-            <p>
-              Check current documentation, screenshots,
-              workflows and supported claims before writing
-              product-focused sections.
-            </p>
-
-          </div>
-
-
-          <div class="process-row">
-
-            <div class="process-number">
-              04
-            </div>
-
-            <h3>
-              Build useful structure
-            </h3>
-
-            <p>
-              Use direct answers, practical examples,
-              workflows and clear sections instead of
-              repeating a keyword around the page.
-            </p>
-
-          </div>
-
-
-          <div class="process-row">
-
-            <div class="process-number">
-              05
-            </div>
-
-            <h3>
-              Review the page as part of the system
-            </h3>
-
-            <p>
-              Check links, CTAs, metadata, visuals,
-              supporting pages and the older content
-              that should point back to the new page.
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ====================================================
+<!-- ====================================================
          Writing
     ===================================================== -->
-
-    <section
-      class="section"
-      id="writing"
-    >
-
-      <div class="container">
-
-
-        <p class="section-kicker">
+<section class="section" id="writing">
+<div class="container">
+<p class="section-kicker">
           Writing
         </p>
-
-
-        <h2 class="section-title">
+<h2 class="section-title">
           I also write about what I'm learning.
         </h2>
-
-
-        <div class="writing-block">
-
-
-          <p>
+<div class="writing-block">
+<p>
 
             My personal writing covers SEO, content systems,
             analytics, small technical projects and what I learn
@@ -2997,175 +918,152 @@
             behind the polished portfolio pieces.
 
           </p>
-
-
-          <div class="writing-links">
-
-            <a href="/blog.html">
-
-              <span>
+<div class="writing-links">
+<a href="/writing/">
+<span>
                 Personal blog
               </span>
-
-              <span>
+<span>
                 →
               </span>
-
-            </a>
-
-
-            <a href="/writing-portfolio/">
-
-              <span>
+</a>
+<a href="/writing-portfolio/">
+<span>
                 Published SaaS work
               </span>
-
-              <span>
+<span>
                 →
               </span>
-
-            </a>
-
-
-            <a
-              href="/files/ed-umbao-resume.pdf"
-              download
-            >
-
-              <span>
+</a>
+<a download="" href="/files/ed-umbao-resume.pdf">
+<span>
                 Public résumé
               </span>
-
-              <span>
+<span>
                 ↓
               </span>
-
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ====================================================
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- ====================================================
          Contact
     ===================================================== -->
-
-    <section
-      class="section contact"
-      id="contact"
-    >
-
-      <div class="container contact-grid">
-
-
-        <div class="contact-copy">
-
-
-          <p class="section-kicker">
+<section class="section contact" id="contact">
+<div class="container contact-grid">
+<div class="contact-copy">
+<p class="section-kicker">
             Work with me
           </p>
-
-
-          <h2 class="section-title">
+<h2 class="section-title">
             Building content inside a small B2B SaaS team?
           </h2>
-
-
-          <p class="section-intro">
+<p class="section-intro">
 
             If you need someone who can move between search research,
             SaaS writing, product understanding, analytics and the
             editorial work around publishing, you can reach me through LinkedIn.
 
           </p>
-
-
-          <div class="actions">
-
-            <a
-              href="https://www.linkedin.com/in/ed-umbao/"
-              target="_blank"
-              rel="noopener"
-              class="button button-primary"
-            >
+<div class="actions">
+<a class="button button-primary" href="https://www.linkedin.com/in/ed-umbao/" rel="noopener" target="_blank">
               Connect on LinkedIn
             </a>
-
-
-            <a
-              href="/writing-portfolio/"
-              class="button button-secondary"
-            >
+<a class="button button-secondary" href="/writing-portfolio/">
               View published work
             </a>
-
-
-            <a
-              href="/files/ed-umbao-resume.pdf"
-              class="button button-secondary"
-              download
-            >
+<a class="button button-secondary" download="" href="/files/ed-umbao-resume.pdf">
               Download résumé
             </a>
-
-          </div>
-
-        </div>
-
-
-        <aside class="contact-aside">
-
-          <strong>
+</div>
+</div>
+<aside class="contact-aside">
+<strong>
             Best fit
           </strong>
-
-          <br><br>
+<br/><br/>
 
           Lean B2B SaaS teams that need help connecting
           SEO research, product knowledge, writing,
           analytics and content operations.
 
         </aside>
-
-      </div>
-
-    </section>
-
-
-    <!-- ====================================================
+</div>
+</section>
+<!-- ====================================================
          Footer
     ===================================================== -->
-
-    <footer class="footer">
-
-      <div class="container footer-inner">
-
-        <span>
+<footer class="footer">
+<div class="container footer-inner">
+<span>
           © 2026 Ed Umbao
         </span>
-
-
-        <span>
+<span>
           SEO · SaaS content · Analytics · Technical learning
         </span>
+</div>
 
-      </div>
+  <div class="container footer-social">
 
-    </footer>
+    <span class="footer-social-label">
+      Elsewhere
+    </span>
 
-  </main>
+    <nav
+      class="footer-social-links"
+      aria-label="Elsewhere"
+    >
 
+      <a
+        href="https://www.linkedin.com/in/ed-umbao/"
+        target="_blank"
+        rel="noopener"
+      >
+        LinkedIn ↗
+      </a>
 
-  <!-- ======================================================
+      <a
+        href="https://x.com/edmundumbao"
+        target="_blank"
+        rel="noopener"
+      >
+        X ↗
+      </a>
+
+      <a
+        href="https://github.com/edumbao"
+        target="_blank"
+        rel="noopener"
+      >
+        GitHub ↗
+      </a>
+
+      <a
+        href="https://edumbao.substack.com"
+        target="_blank"
+        rel="noopener"
+      >
+        Substack ↗
+      </a>
+
+      <a
+        href="https://edumbao.medium.com/"
+        target="_blank"
+        rel="noopener"
+      >
+        Medium ↗
+      </a>
+
+    </nav>
+
+  </div>
+</footer>
+</main>
+<!-- ======================================================
        Mobile Navigation
   ======================================================= -->
-
-  <script>
+<script>
 
     document.addEventListener(
       'DOMContentLoaded',
@@ -3226,8 +1124,77 @@
     );
 
   </script>
+<!-- ======================================================
+       Theme Toggle
+  ======================================================= -->
+<script>
+    (function () {
+      const root = document.documentElement;
+      const themeToggle = document.getElementById('theme-toggle');
 
+      if (!themeToggle) {
+        return;
+      }
 
+      function getCurrentTheme() {
+        return root.getAttribute('data-theme') === 'light'
+          ? 'light'
+          : 'dark';
+      }
+
+      function updateThemeToggle() {
+        const currentTheme = getCurrentTheme();
+        const nextTheme =
+          currentTheme === 'dark'
+            ? 'light'
+            : 'dark';
+
+        themeToggle.textContent =
+          nextTheme === 'light'
+            ? 'Light'
+            : 'Dark';
+
+        themeToggle.setAttribute(
+          'aria-label',
+          'Switch to ' + nextTheme + ' theme'
+        );
+
+        themeToggle.setAttribute(
+          'title',
+          'Switch to ' + nextTheme + ' theme'
+        );
+      }
+
+      themeToggle.addEventListener(
+        'click',
+        function (event) {
+          event.preventDefault();
+
+          const nextTheme =
+            getCurrentTheme() === 'dark'
+              ? 'light'
+              : 'dark';
+
+          root.setAttribute(
+            'data-theme',
+            nextTheme
+          );
+
+          try {
+            localStorage.setItem(
+              'edumbao-theme',
+              nextTheme
+            );
+          } catch (error) {
+            /* The theme still changes even if storage is unavailable. */
+          }
+
+          updateThemeToggle();
+        }
+      );
+
+      updateThemeToggle();
+    })();
+  </script>
 </body>
-
 </html>
