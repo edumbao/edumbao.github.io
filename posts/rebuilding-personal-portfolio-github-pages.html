@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>What I Learned Rebuilding My Personal Portfolio with GitHub Pages | Ed Umbao</title>
+
+  <meta
+    name="description"
+    content="I rebuilt edumbao.com using Git branches, GitHub Pages, HTML, CSS, redirects, metadata, and manual QA. Here is what worked, what broke, and what I learned."
+  >
+
+  <link
+    rel="canonical"
+    href="https://edumbao.com/posts/rebuilding-personal-portfolio-github-pages.html"
+  >
+
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+
+  <meta
+    property="og:title"
+    content="What I Learned Rebuilding My Personal Portfolio with GitHub Pages"
+  >
+
+  <meta
+    property="og:description"
+    content="A content writer's project notes from rebuilding edumbao.com with Git branches, GitHub Pages, HTML, CSS, redirects, metadata, and manual QA."
+  >
+
+  <meta
+    property="og:url"
+    content="https://edumbao.com/posts/rebuilding-personal-portfolio-github-pages.html"
+  >
+
+  <meta
+    property="og:image"
+    content="https://edumbao.com/images/rebuilding-personal-portfolio-github-pages.webp"
+  >
+
+  <meta
+    property="og:image:alt"
+    content="Illustration of rebuilding edumbao.com with VS Code, Git workflow, localhost testing, site navigation, and GitHub Pages deployment."
+  >
+
+  <meta
+    property="og:site_name"
+    content="Ed Umbao"
+  >
+
+
+  <!-- Twitter / X -->
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <meta
+    name="twitter:title"
+    content="What I Learned Rebuilding My Personal Portfolio with GitHub Pages"
+  >
+
+  <meta
+    name="twitter:description"
+    content="What worked, what broke, and what I learned while rebuilding edumbao.com with GitHub Pages and a branch-based workflow."
+  >
+
+  <meta
+    name="twitter:image"
+    content="https://edumbao.com/images/rebuilding-personal-portfolio-github-pages.webp"
+  >
+
+
+  <!-- Apply theme before page paint -->
+  <script>
+    (function () {
+      let savedTheme = null;
+
+      try {
+        savedTheme = localStorage.getItem('edumbao-theme');
+      } catch (error) {
+        savedTheme = null;
+      }
+
+      const preferredTheme =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: light)').matches
+          ? 'light'
+          : 'dark';
+
+      const theme =
+        savedTheme === 'light' || savedTheme === 'dark'
+          ? savedTheme
+          : preferredTheme;
+
+      document.documentElement.setAttribute(
+        'data-theme',
+        theme
+      );
+    })();
+  </script>
+
+
+  <link
+    rel="stylesheet"
+    href="/assets/css/site.css"
+  >
+
+</head>
+
+
+<body>
+
+  <header class="site-header">
+
+    <div class="container site-nav">
+
+      <a
+        href="/"
+        class="site-brand"
+        aria-label="Ed Umbao homepage"
+      >
+
+        <span
+          class="brand-mark"
+          aria-hidden="true"
+        >
+          EU
+        </span>
+
+        <span class="brand-name">
+          Ed Umbao
+        </span>
+
+      </a>
+
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-controls="site-menu"
+        aria-expanded="false"
+      >
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </button>
+
+
+      <nav
+        class="site-menu"
+        id="site-menu"
+        aria-label="Main navigation"
+      >
+
+        <a href="/lab/">
+          Lab
+        </a>
+
+        <a href="/work/">
+          Work
+        </a>
+
+        <a
+          href="/writing/"
+          class="is-active"
+          aria-current="page"
+        >
+          Writing
+        </a>
+
+        <a href="/#about">
+          About
+        </a>
+
+        <a
+          href="https://github.com/edumbao"
+          target="_blank"
+          rel="noopener"
+          class="nav-external"
+        >
+          GitHub ↗
+        </a>
+
+        <a
+          href="#"
+          id="theme-toggle"
+          class="theme-link"
+          aria-label="Switch color theme"
+        >
+          Theme
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <main class="article-page">
+
+    <div class="container article-shell">
+
+      <article class="article-content">
+
+        <h1 class="article-title">
+          What I Learned Rebuilding My Personal Portfolio with GitHub Pages
+        </h1>
+
+        <p class="article-date">
+          Published on September 20, 2026
+        </p>
+
+        <figure class="article-featured-image">
+
+            <img
+                src="/images/rebuilding-personal-portfolio-github-pages.webp"
+                alt="Illustration of rebuilding edumbao.com with VS Code, Git workflow, localhost testing, site navigation, and GitHub Pages deployment."
+                width="1792"
+                height="1024"
+            >
+
+            <figcaption>
+                Rebuilding edumbao.com became a hands-on lesson in Git branches,
+                local testing, navigation cleanup, responsive QA, and deploying a
+                redesigned site through GitHub Pages.
+            </figcaption>
+
+        </figure>
+
+        <p>
+          I recently rebuilt <strong>edumbao.com</strong>, but I did not
+          approach it as a developer trying to create the most technically
+          impressive portfolio possible.
+        </p>
+
+        <p>
+          I approached it as a content writer who wanted to understand more
+          of the technical work behind the websites, tools, and workflows
+          I write about.
+        </p>
+
+        <p>
+          The project started as a redesign.
+        </p>
+
+        <p>
+          It quickly turned into a hands-on lesson in Git branches,
+          GitHub Pages, HTML, CSS, redirects, metadata, responsive layouts,
+          testing, and what it actually means to move a new version of a
+          website into production.
+        </p>
+
+        <p>
+          I made mistakes along the way. Some links broke. Some pages used
+          old navigation. I ran into character-encoding problems. I created
+          inconsistent layouts between pages. At several points, a change
+          looked correct in the file but did not appear in localhost.
+        </p>
+
+        <p>
+          That was exactly why the project became useful.
+        </p>
+
+
+        <h2>
+          1. What I tried
+        </h2>
+
+        <p>
+          My original goal was simple: redesign my personal website so it
+          better reflected where I am now.
+        </p>
+
+        <p>
+          The old version mostly presented my SEO and content work.
+        </p>
+
+        <p>
+          I wanted the new version to show three different parts of what I do:
+        </p>
+
+        <ul>
+          <li>
+            <strong>Work</strong> for professional SEO, content,
+            and technical writing.
+          </li>
+
+          <li>
+            <strong>Lab</strong> for small tools and technical experiments.
+          </li>
+
+          <li>
+            <strong>Writing</strong> for learning notes, tutorials,
+            and reflections.
+          </li>
+        </ul>
+
+        <p>
+          I also wanted to keep the site simple enough that I could understand
+          how it worked.
+        </p>
+
+        <p>
+          The site is hosted through GitHub Pages, so I worked directly
+          in my existing repository:
+        </p>
+
+        <pre><code>edumbao.github.io</code></pre>
+
+        <p>
+          Instead of redesigning the live site directly, I created a separate
+          branch:
+        </p>
+
+        <pre><code>site-v2</code></pre>
+
+        <p>
+          That became the working version of the redesign while
+          <code>main</code> continued to represent the live website.
+        </p>
+
+        <p>
+          From there, the project expanded into several smaller tasks.
+        </p>
+
+        <p>
+          I moved the homepage CSS into a shared stylesheet. I added dark and
+          light modes. I rebuilt the navigation. I created a dedicated Lab
+          section and project case studies.
+        </p>
+
+        <p>
+          I also created a Work hub, recovered and redesigned my old Writing
+          Portfolio, and changed my old <code>blog.html</code> page into a
+          redirect to a cleaner Writing section:
+        </p>
+
+        <pre><code>/writing/</code></pre>
+
+        <p>
+          By the end of the project, the website structure looked more like this:
+        </p>
+
+        <pre><code>/
+├── lab/
+├── work/
+├── writing/
+├── writing-portfolio/
+├── posts/
+├── images/
+├── assets/css/
+├── 404.html
+├── robots.txt
+└── sitemap.xml</code></pre>
+
+
+        <h2>
+          2. Why I tried it
+        </h2>
+
+        <p>
+          The redesign was partly about presentation, but the bigger reason
+          was technical learning.
+        </p>
+
+        <p>
+          As a content writer, I regularly work around websites, SEO metadata,
+          internal links, analytics, APIs, product documentation, technical
+          tutorials, and structured content.
+        </p>
+
+        <p>
+          I understand many of those things from the content side.
+          I wanted to understand more of what happens underneath them.
+        </p>
+
+        <p>
+          For example, it is easy to tell someone that a website needs clean
+          navigation.
+        </p>
+
+        <p>
+          It is different when you change the navigation yourself and discover
+          that several pages all use slightly different markup.
+        </p>
+
+        <p>
+          It is also easy to recommend redirects.
+        </p>
+
+        <p>
+          It became more concrete when I actually moved:
+        </p>
+
+        <pre><code>/blog.html</code></pre>
+
+        <p>
+          to:
+        </p>
+
+        <pre><code>/writing/</code></pre>
+
+        <p>
+          and then had to decide what should happen to the old URL.
+        </p>
+
+        <p>
+          This project gave me a small environment where I could practice
+          those ideas without pretending I was building a complex
+          software product.
+        </p>
+
+
+        <h2>
+          3. What worked
+        </h2>
+
+        <p>
+          The biggest thing that worked was using a separate Git branch.
+        </p>
+
+        <p>
+          Instead of modifying the live site directly, I could keep working on:
+        </p>
+
+        <pre><code>site-v2</code></pre>
+
+        <p>
+          until I was comfortable with the result.
+        </p>
+
+        <p>
+          That gave me room to make mistakes without immediately affecting
+          the live website.
+        </p>
+
+        <p>
+          I also started making small Git checkpoints throughout the project.
+        </p>
+
+        <p>
+          Some of those commits included:
+        </p>
+
+        <pre><code>Move homepage styles to shared stylesheet
+Add dark and light theme support
+Redesign portfolio header and hero
+Add dedicated experiments lab
+Add professional work hub
+Add redesigned writing portfolio
+Add Writing hub and clean site navigation
+Redesign writing posts for site v2</code></pre>
+
+        <p>
+          Those checkpoints made the project easier to reason about.
+        </p>
+
+        <p>
+          Instead of thinking about the redesign as one huge change,
+          I could see it as a sequence of smaller decisions.
+        </p>
+
+        <p>
+          Another thing that worked well was testing everything through
+          localhost before pushing changes.
+        </p>
+
+        <p>
+          I used:
+        </p>
+
+        <pre><code>python -m http.server 8000 --directory C:\Dev\Projects\edumbao.github.io</code></pre>
+
+        <p>
+          and checked the site at:
+        </p>
+
+        <pre><code>http://localhost:8000/</code></pre>
+
+        <p>
+          That became part of the workflow.
+        </p>
+
+        <p>
+          I could change a file in VS Code, save it, refresh localhost,
+          and see what actually happened.
+        </p>
+
+        <p>
+          Toward the end, I also tested desktop layouts, mobile layouts,
+          tablet layouts, dark mode, light mode, navigation, redirects,
+          internal links, article readability, and horizontal overflow.
+        </p>
+
+        <p>
+          One simple browser check I found useful was:
+        </p>
+
+        <pre><code>document.documentElement.scrollWidth &gt; document.documentElement.clientWidth</code></pre>
+
+        <p>
+          If it returned:
+        </p>
+
+        <pre><code>false</code></pre>
+
+        <p>
+          the page did not have horizontal overflow.
+        </p>
+
+
+        <h2>
+          4. What broke or confused me
+        </h2>
+
+        <h3>
+          File encoding caused strange characters
+        </h3>
+
+        <p>
+          At one point, characters such as arrows and middle dots appeared
+          incorrectly in PowerShell.
+        </p>
+
+        <p>
+          The files themselves were not always broken. Sometimes PowerShell
+          was displaying UTF-8 content differently than expected.
+        </p>
+
+        <p>
+          That taught me to be more careful about how I read and write files
+          from PowerShell.
+        </p>
+
+        <p>
+          I started explicitly using UTF-8:
+        </p>
+
+        <pre><code>$utf8 = New-Object System.Text.UTF8Encoding($false)</code></pre>
+
+        <p>
+          together with:
+        </p>
+
+        <pre><code>[System.IO.File]::ReadAllText(...)
+[System.IO.File]::WriteAllText(...)</code></pre>
+
+        <p>
+          instead of casually rewriting files with commands that could
+          change their encoding.
+        </p>
+
+
+        <h3>
+          Localhost sometimes appeared to ignore my changes
+        </h3>
+
+        <p>
+          There were moments when I edited the correct file but the browser
+          still showed an older version.
+        </p>
+
+        <p>
+          That forced me to check three things:
+        </p>
+
+        <ol>
+          <li>
+            Was I editing the correct repository?
+          </li>
+
+          <li>
+            Was the local server running from the correct directory?
+          </li>
+
+          <li>
+            Was the browser showing a cached version?
+          </li>
+        </ol>
+
+        <p>
+          I eventually started launching the server with an explicit directory:
+        </p>
+
+        <pre><code>python -m http.server 8000 --directory C:\Dev\Projects\edumbao.github.io</code></pre>
+
+        <p>
+          That removed one source of confusion.
+        </p>
+
+
+        <h3>
+          Navigation drifted between pages
+        </h3>
+
+        <p>
+          The site evolved gradually, so not every page had the same
+          navigation.
+        </p>
+
+        <p>
+          Some older pages still had:
+        </p>
+
+        <pre><code>Home | Blog | Tools | Services | Proof | Process</code></pre>
+
+        <p>
+          while the new site had become:
+        </p>
+
+        <pre><code>Lab | Work | Writing | About | GitHub</code></pre>
+
+        <p>
+          The old post pages were especially easy to forget.
+        </p>
+
+        <p>
+          I eventually ran audits across all HTML files instead of checking
+          pages manually one at a time.
+        </p>
+
+        <p>
+          That exposed links to sections I had already removed, including:
+        </p>
+
+        <pre><code>#services
+#proof
+#process</code></pre>
+
+
+        <h3>
+          The Writing section created a URL decision
+        </h3>
+
+        <p>
+          My old site used:
+        </p>
+
+        <pre><code>/blog.html</code></pre>
+
+        <p>
+          but the new architecture used folder-based URLs such as:
+        </p>
+
+        <pre><code>/lab/
+/work/</code></pre>
+
+        <p>
+          I decided the Writing section should follow the same pattern:
+        </p>
+
+        <pre><code>/writing/</code></pre>
+
+        <p>
+          Instead of deleting <code>blog.html</code>, I kept it as a redirect.
+        </p>
+
+        <p>
+          That let the new site use a cleaner URL without immediately breaking
+          the old one.
+        </p>
+
+
+        <h3>
+          Small visual problems were easier to miss
+        </h3>
+
+        <p>
+          The homepage portrait looked fine on desktop but was left-aligned
+          on mobile and tablet.
+        </p>
+
+        <p>
+          The cause was not the image itself.
+        </p>
+
+        <p>
+          It came from responsive CSS such as:
+        </p>
+
+        <pre><code>justify-self: start;</code></pre>
+
+        <p>
+          Changing the tablet and mobile rules to:
+        </p>
+
+        <pre><code>justify-self: center;</code></pre>
+
+        <p>
+          fixed it without changing the desktop layout.
+        </p>
+
+        <p>
+          That was a useful reminder that responsive problems are often caused
+          by layout rules rather than the asset itself.
+        </p>
+
+
+        <h2>
+          5. What I learned
+        </h2>
+
+        <p>
+          The main lesson was that website work is often less about writing
+          code from scratch and more about managing a lot of small
+          dependencies.
+        </p>
+
+        <p>
+          Changing one navigation label affected the homepage, Lab, Work,
+          Writing, Writing Portfolio, individual project pages, and individual
+          articles.
+        </p>
+
+        <p>
+          Moving one page affected links, redirects, canonical URLs,
+          sitemap entries, and social metadata.
+        </p>
+
+        <p>
+          Changing the design affected shared CSS, desktop layouts,
+          mobile layouts, article readability, dark mode, and light mode.
+        </p>
+
+        <p>
+          I also learned why Git branches matter.
+        </p>
+
+        <p>
+          Before this project, it would have been easy for me to think of
+          a branch as just another Git concept to memorize.
+        </p>
+
+        <p>
+          Using <code>site-v2</code> made the benefit concrete.
+        </p>
+
+        <p>
+          I could redesign freely while keeping <code>main</code> untouched.
+        </p>
+
+        <p>
+          When the site was ready, I compared the two branches:
+        </p>
+
+        <pre><code>git diff --stat origin/main..site-v2</code></pre>
+
+        <p>
+          and:
+        </p>
+
+        <pre><code>git diff --name-status origin/main..site-v2</code></pre>
+
+        <p>
+          Before merging, I also created a safety tag:
+        </p>
+
+        <pre><code>git tag pre-v2-launch-2026-09-20</code></pre>
+
+        <p>
+          Then I merged:
+        </p>
+
+        <pre><code>git merge --no-ff site-v2 -m "Merge site v2 redesign"</code></pre>
+
+        <p>
+          and only pushed <code>main</code> after testing the merged version
+          locally.
+        </p>
+
+        <p>
+          That workflow made much more sense after actually using it.
+        </p>
+
+
+        <h2>
+          6. How this connects to SEO, content writing, APIs, and documentation
+        </h2>
+
+        <h3>
+          Internal linking is a technical problem too
+        </h3>
+
+        <p>
+          I spend a lot of time thinking about internal links from an SEO
+          perspective.
+        </p>
+
+        <p>
+          During this rebuild, I had to think about them as a site-maintenance
+          problem.
+        </p>
+
+        <p>
+          When sections disappeared or URLs changed, I needed to audit links
+          rather than assume everything was still valid.
+        </p>
+
+        <p>
+          It is the same problem at a different layer.
+        </p>
+
+
+        <h3>
+          Metadata needs to match the actual site
+        </h3>
+
+        <p>
+          The old homepage metadata still described me mainly around
+          SEO and content systems for lean B2B SaaS teams.
+        </p>
+
+        <p>
+          The redesigned site had become broader.
+        </p>
+
+        <p>
+          It now included technical writing, learning projects,
+          GitHub experiments, and a Lab.
+        </p>
+
+        <p>
+          So I updated the title and descriptions to reflect what the
+          site had actually become.
+        </p>
+
+
+        <h3>
+          Documentation becomes more useful when it follows real work
+        </h3>
+
+        <p>
+          The Lab project pages now follow a structure I want to keep using:
+        </p>
+
+        <ol>
+          <li>What I tried</li>
+          <li>Why I tried it</li>
+          <li>What worked</li>
+          <li>What broke or confused me</li>
+          <li>What I learned</li>
+          <li>How it connects to my work</li>
+          <li>What I will try next</li>
+        </ol>
+
+        <p>
+          That structure is simple, but it forces me to document the process
+          honestly.
+        </p>
+
+        <p>
+          It also gives me a way to turn technical learning into writing
+          samples without pretending every experiment was a success.
+        </p>
+
+
+        <h3>
+          Publishing is part of the technical workflow
+        </h3>
+
+        <p>
+          By the end of the rebuild, the site included:
+        </p>
+
+        <pre><code>404.html
+robots.txt
+sitemap.xml</code></pre>
+
+        <p>
+          I also added social preview metadata with:
+        </p>
+
+        <pre><code>og:image
+twitter:card
+twitter:image</code></pre>
+
+        <p>
+          None of those pieces are especially advanced by themselves.
+        </p>
+
+        <p>
+          Together, they helped me understand how a content page becomes
+          part of a real website rather than just an HTML file.
+        </p>
+
+
+        <h2>
+          7. What I will try next
+        </h2>
+
+        <p>
+          For now, I do not want to keep redesigning the site.
+        </p>
+
+        <p>
+          The goal was to create a stable home for the next stage of my
+          learning, and I think the new structure does that.
+        </p>
+
+        <p>
+          The next step is to use it.
+        </p>
+
+        <p>
+          I want to keep adding small projects to the
+          <a href="/lab/">Lab</a>.
+        </p>
+
+        <p>
+          I want to document more of the technical work I am learning around
+          GitHub, APIs, automation, SEO tooling, data workflows, and technical
+          documentation.
+        </p>
+
+        <p>
+          I also want to keep improving the site gradually instead of
+          rebuilding it every time I learn something new.
+        </p>
+
+        <p>
+          There are still lower-priority things I could change later.
+        </p>
+
+        <p>
+          For example, the individual article URLs still live under:
+        </p>
+
+        <pre><code>/posts/</code></pre>
+
+        <p>
+          while the Writing hub lives under:
+        </p>
+
+        <pre><code>/writing/</code></pre>
+
+        <p>
+          I could eventually migrate those URLs.
+        </p>
+
+        <p>
+          But they work today, so I am leaving them alone for now.
+        </p>
+
+        <p>
+          That may be one of the more useful lessons from this project.
+        </p>
+
+        <p>
+          Learning technical work does not mean changing everything at once.
+        </p>
+
+        <p>
+          Sometimes the better decision is knowing what is working well
+          enough, documenting what you learned, and moving on to the next
+          problem.
+        </p>
+
+
+        <h2>
+          Explore the rest of the project
+        </h2>
+
+        <p>
+          I am documenting these projects as I learn more about the technical
+          side of content work.
+        </p>
+
+        <p>
+          You can explore the current experiments in
+          <a href="/lab/">Ed's Lab</a>, browse my
+          <a href="/work/">professional work</a>, or read more of my
+          <a href="/writing/">learning notes</a>.
+        </p>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+  <footer class="footer">
+
+    <div class="container footer-inner">
+
+      <span>
+        © 2026 Ed Umbao
+      </span>
+
+      <span>
+        Writing · SEO · Technical learning · Small projects
+      </span>
+
+    </div>
+
+
+    <div class="container footer-social">
+
+      <span class="footer-social-label">
+        Elsewhere
+      </span>
+
+      <nav
+        class="footer-social-links"
+        aria-label="Elsewhere"
+      >
+
+        <a
+          href="https://www.linkedin.com/in/ed-umbao/"
+          target="_blank"
+          rel="noopener"
+        >
+          LinkedIn ↗
+        </a>
+
+        <a
+          href="https://x.com/edmundumbao"
+          target="_blank"
+          rel="noopener"
+        >
+          X ↗
+        </a>
+
+        <a
+          href="https://github.com/edumbao"
+          target="_blank"
+          rel="noopener"
+        >
+          GitHub ↗
+        </a>
+
+        <a
+          href="https://edumbao.substack.com"
+          target="_blank"
+          rel="noopener"
+        >
+          Substack ↗
+        </a>
+
+        <a
+          href="https://edumbao.medium.com/"
+          target="_blank"
+          rel="noopener"
+        >
+          Medium ↗
+        </a>
+
+      </nav>
+
+    </div>
+
+  </footer>
+
+
+  <script>
+
+    document.addEventListener(
+      'DOMContentLoaded',
+      function () {
+
+        const menuButton =
+          document.querySelector('.menu-toggle');
+
+        const siteMenu =
+          document.querySelector('.site-menu');
+
+        const themeToggle =
+          document.getElementById('theme-toggle');
+
+
+        if (menuButton && siteMenu) {
+
+          menuButton.addEventListener(
+            'click',
+            function () {
+
+              const isOpen =
+                siteMenu.classList.toggle('nav-open');
+
+              menuButton.setAttribute(
+                'aria-expanded',
+                isOpen ? 'true' : 'false'
+              );
+
+            }
+          );
+
+
+          siteMenu
+            .querySelectorAll('a')
+            .forEach(
+              function (link) {
+
+                link.addEventListener(
+                  'click',
+                  function () {
+
+                    siteMenu.classList.remove('nav-open');
+
+                    menuButton.setAttribute(
+                      'aria-expanded',
+                      'false'
+                    );
+
+                  }
+                );
+
+              }
+            );
+
+        }
+
+
+        function currentTheme() {
+          return document.documentElement
+            .getAttribute('data-theme') === 'light'
+              ? 'light'
+              : 'dark';
+        }
+
+
+        function updateThemeLabel() {
+
+          if (!themeToggle) {
+            return;
+          }
+
+          const theme = currentTheme();
+
+          const nextTheme =
+            theme === 'dark'
+              ? 'Light'
+              : 'Dark';
+
+          themeToggle.textContent = nextTheme;
+
+          themeToggle.setAttribute(
+            'aria-label',
+            'Switch to ' +
+            nextTheme.toLowerCase() +
+            ' theme'
+          );
+
+        }
+
+
+        updateThemeLabel();
+
+
+        if (themeToggle) {
+
+          themeToggle.addEventListener(
+            'click',
+            function (event) {
+
+              event.preventDefault();
+
+              const nextTheme =
+                currentTheme() === 'dark'
+                  ? 'light'
+                  : 'dark';
+
+              document.documentElement.setAttribute(
+                'data-theme',
+                nextTheme
+              );
+
+              try {
+
+                localStorage.setItem(
+                  'edumbao-theme',
+                  nextTheme
+                );
+
+              } catch (error) {
+
+                // Theme switching still works
+                // if storage is unavailable.
+
+              }
+
+              updateThemeLabel();
+
+            }
+          );
+
+        }
+
+      }
+    );
+
+  </script>
+
+</body>
+
+</html>

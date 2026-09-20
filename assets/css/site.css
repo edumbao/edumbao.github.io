@@ -4237,3 +4237,28 @@
   }
 
 }
+
+/* Article featured image */
+
+.article-featured-image {
+  margin: 0 0 48px;
+}
+
+.article-featured-image img {
+  width: 100%;
+  height: auto;
+
+  margin: 0;
+
+  border: 1px solid var(--line-soft);
+  border-radius: 4px;
+}
+
+.article-featured-image figcaption {
+  margin-top: 10px;
+
+  color: var(--muted);
+
+  font-size: 13px;
+  line-height: 1.6;
+}
