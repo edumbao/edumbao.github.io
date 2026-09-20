@@ -2734,7 +2734,7 @@
       .hero-portrait {
         max-width: 280px;
 
-        justify-self: start;
+        justify-self: center;
       }
 
       .portrait-image {
@@ -2981,7 +2981,7 @@
       .hero-portrait {
         max-width: 240px;
 
-        justify-self: start;
+        justify-self: center;
       }
 
       .portrait-label {
