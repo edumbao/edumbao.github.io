@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>I Took an Unfinished AI-Generated App From Grok Build to GitHub and Vercel | Ed Umbao</title>
+
+  <meta
+    name="description"
+    content="I took an unfinished Grok Build export, got it running in VS Code, cleaned the project, pushed it to GitHub, deployed it to Vercel, and started removing platform-specific scaffolding."
+  >
+
+  <link
+    rel="canonical"
+    href="https://edumbao.com/posts/grok-build-to-github-vercel.html"
+  >
+
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+
+  <meta
+    property="og:title"
+    content="I Took an Unfinished AI-Generated App From Grok Build to GitHub and Vercel"
+  >
+
+  <meta
+    property="og:description"
+    content="A content writer's project notes from taking an unfinished AI-generated app from ZIP export to VS Code, GitHub, Vercel, and a cleaner codebase."
+  >
+
+  <meta
+    property="og:url"
+    content="https://edumbao.com/posts/grok-build-to-github-vercel.html"
+  >
+
+  <meta
+    property="og:image"
+    content="https://edumbao.com/images/grok-build-to-github-vercel.webp"
+  >
+
+  <meta
+    property="og:image:alt"
+    content="Illustration of an AI-generated app moving from a ZIP export into VS Code, GitHub, and Vercel."
+  >
+
+  <meta
+    property="og:site_name"
+    content="Ed Umbao"
+  >
+
+
+  <!-- Twitter / X -->
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <meta
+    name="twitter:title"
+    content="I Took an Unfinished AI-Generated App From Grok Build to GitHub and Vercel"
+  >
+
+  <meta
+    name="twitter:description"
+    content="What worked, what broke, and what I learned while taking an unfinished Grok Build app into a normal GitHub and Vercel workflow."
+  >
+
+  <meta
+    name="twitter:image"
+    content="https://edumbao.com/images/grok-build-to-github-vercel.webp"
+  >
+
+
+  <!-- Apply theme before page paint -->
+  <script>
+    (function () {
+      let savedTheme = null;
+
+      try {
+        savedTheme = localStorage.getItem('edumbao-theme');
+      } catch (error) {
+        savedTheme = null;
+      }
+
+      const preferredTheme =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: light)').matches
+          ? 'light'
+          : 'dark';
+
+      const theme =
+        savedTheme === 'light' || savedTheme === 'dark'
+          ? savedTheme
+          : preferredTheme;
+
+      document.documentElement.setAttribute(
+        'data-theme',
+        theme
+      );
+    })();
+  </script>
+
+
+  <link
+    rel="stylesheet"
+    href="/assets/css/site.css"
+  >
+
+</head>
+
+
+<body>
+
+  <header class="site-header">
+
+    <div class="container site-nav">
+
+      <a
+        href="/"
+        class="site-brand"
+        aria-label="Ed Umbao homepage"
+      >
+
+        <span
+          class="brand-mark"
+          aria-hidden="true"
+        >
+          EU
+        </span>
+
+        <span class="brand-name">
+          Ed Umbao
+        </span>
+
+      </a>
+
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-controls="site-menu"
+        aria-expanded="false"
+      >
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </button>
+
+
+      <nav
+        class="site-menu"
+        id="site-menu"
+        aria-label="Main navigation"
+      >
+
+        <a href="/lab/">
+          Lab
+        </a>
+
+        <a href="/work/">
+          Work
+        </a>
+
+        <a
+          href="/writing/"
+          class="is-active"
+          aria-current="page"
+        >
+          Writing
+        </a>
+
+        <a href="/#about">
+          About
+        </a>
+
+        <a
+          href="https://github.com/edumbao"
+          target="_blank"
+          rel="noopener"
+          class="nav-external"
+        >
+          GitHub ↗
+        </a>
+
+        <a
+          href="#"
+          id="theme-toggle"
+          class="theme-link"
+          aria-label="Switch color theme"
+        >
+          Theme
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <main class="article-page">
+
+    <div class="container article-shell">
+
+      <article class="article-content">
+
+        <h1 class="article-title">
+          I Took an Unfinished AI-Generated App From Grok Build to GitHub and Vercel
+        </h1>
+
+        <p class="article-date">
+          Published on September 24, 2026
+        </p>
+
+        <figure class="article-featured-image">
+
+          <img
+            src="/images/grok-build-to-github-vercel.webp"
+            alt="Illustration of an AI-generated app moving from a ZIP export into VS Code, GitHub, and Vercel."
+            width="1792"
+            height="1024"
+          >
+
+          <figcaption>
+            CAP Pit Timer started as an unfinished Grok Build export. The project became a hands-on lesson in reading an unfamiliar codebase, fixing local setup problems, using Git safely, deploying to Vercel, and removing platform-specific scaffolding.
+          </figcaption>
+
+        </figure>
+
+        <p>
+          I recently tested Grok Build with a simple idea: create a time-tracking
+          alarm clock for the Calisthenics Association of the Philippines.
+        </p>
+
+        <p>
+          I wanted athletes to be able to manage training schedules, create
+          alarms, track activity time, and review completed sessions. I also
+          asked for a mobile-first interface inspired by a futuristic
+          racing-game dashboard.
+        </p>
+
+        <p>
+          Grok generated something more complete than I expected, but the build
+          stopped before the project was really mine.
+        </p>
+
+        <p>
+          What I had was a ZIP file containing an unfamiliar codebase.
+        </p>
+
+        <p>
+          That became the more useful part of the experiment.
+        </p>
+
+
+        <h2>
+          1. What I tried
+        </h2>
+
+        <p>
+          My first goal was not to add more features.
+        </p>
+
+        <p>
+          I wanted to answer a simpler question:
+        </p>
+
+        <p>
+          <strong>
+            Could I take an unfinished AI-generated project, understand enough
+            of it to run it myself, and move it into a normal GitHub and Vercel
+            workflow?
+          </strong>
+        </p>
+
+        <p>
+          The exported project turned out to be a mobile-first web application
+          built with React, TypeScript, Vite, TanStack Start, Tailwind CSS,
+          Zustand, and Nitro/Vercel tooling.
+        </p>
+
+        <p>
+          It was not a native Android or iOS app.
+        </p>
+
+        <p>
+          That distinction mattered because my original prompt described the
+          product clearly, but it did not define the technical architecture.
+          Grok chose the implementation.
+        </p>
+
+        <p>
+          I moved the exported project into:
+        </p>
+
+        <pre><code>C:\Dev\Projects\cap-pit-timer</code></pre>
+
+        <p>
+          From there, I started treating the generated code as a project I
+          needed to inspect rather than something I could simply upload and
+          trust.
+        </p>
+
+
+        <h2>
+          2. Why I tried it
+        </h2>
+
+        <p>
+          As a content writer learning GitHub, coding, APIs, automation, and
+          technical workflows, I am interested in what happens after AI
+          produces code.
+        </p>
+
+        <p>
+          Generating an application is becoming easier.
+        </p>
+
+        <p>
+          Taking responsibility for what was generated is a different problem.
+        </p>
+
+        <p>
+          I wanted to learn how to ask practical questions about an unfamiliar
+          project:
+        </p>
+
+        <ul>
+          <li>What framework did the AI choose?</li>
+          <li>Can the project run outside the original builder?</li>
+          <li>Are there secrets or environment files I should not commit?</li>
+          <li>Which files actually belong in GitHub?</li>
+          <li>Which files are only there for the builder platform?</li>
+          <li>Do the tests really run on my machine?</li>
+          <li>Can the project build and deploy somewhere else?</li>
+        </ul>
+
+        <p>
+          Those questions became the real project.
+        </p>
+
+
+        <h2>
+          3. What worked
+        </h2>
+
+        <p>
+          The first good sign was that the ZIP contained a real application
+          rather than just mockups.
+        </p>
+
+        <p>
+          I created a normal environment setup with:
+        </p>
+
+        <pre><code>VITE_AUTH_ENABLED=false</code></pre>
+
+        <p>
+          I renamed the npm package to:
+        </p>
+
+        <pre><code>cap-pit-timer</code></pre>
+
+        <p>
+          Then I installed the dependencies with:
+        </p>
+
+        <pre><code>npm ci</code></pre>
+
+        <p>
+          That installed 418 packages and reported zero vulnerabilities.
+        </p>
+
+        <p>
+          The application did not start immediately.
+        </p>
+
+        <p>
+          Grok's original development command used a custom wrapper that tried
+          to launch Vite. On my Windows machine, it failed with:
+        </p>
+
+        <pre><code>spawn vite ENOENT</code></pre>
+
+        <p>
+          The problem was not the whole application. It was the wrapper around
+          Vite.
+        </p>
+
+        <p>
+          I changed the development command to run Vite normally:
+        </p>
+
+        <pre><code>vite dev --host 0.0.0.0 --port 8080</code></pre>
+
+        <p>
+          After that:
+        </p>
+
+        <pre><code>npm run dev</code></pre>
+
+        <p>
+          worked, and the application loaded at:
+        </p>
+
+        <pre><code>http://localhost:8080/</code></pre>
+
+        <p>
+          The dashboard appeared correctly. I could create alarms, start and
+          stop timers, and see completed activities in the history.
+        </p>
+
+        <p>
+          I also ran:
+        </p>
+
+        <pre><code>npm run typecheck
+npm test
+npm run lint
+npm run build</code></pre>
+
+        <p>
+          TypeScript passed. The original app test group passed 55 out of 55
+          tests. Lint reached zero errors, with a few warnings still left to
+          clean up later. The production Vercel/Nitro build also completed
+          successfully.
+        </p>
+
+        <p>
+          Once the project was stable locally, I created a Git repository,
+          committed the baseline, and pushed it to:
+        </p>
+
+        <p>
+          <a
+            href="https://github.com/edumbao/cap-pit-timer"
+            target="_blank"
+            rel="noopener"
+          >
+            github.com/edumbao/cap-pit-timer ↗
+          </a>
+        </p>
+
+        <p>
+          I then deployed the same project to Vercel:
+        </p>
+
+        <p>
+          <a
+            href="https://cap-pit-timer.vercel.app/"
+            target="_blank"
+            rel="noopener"
+          >
+            cap-pit-timer.vercel.app ↗
+          </a>
+        </p>
+
+
+        <h2>
+          4. What broke or confused me
+        </h2>
+
+        <h3>
+          A small lint fix turned into a syntax error
+        </h3>
+
+        <p>
+          One lint error came from an empty <code>catch</code> block inside
+          <code>client.server.ts</code>.
+        </p>
+
+        <p>
+          I tried to fix it manually and accidentally broke the brace structure
+          around the function.
+        </p>
+
+        <p>
+          That created a new parsing error:
+        </p>
+
+        <pre><code>Parsing error: '}' expected</code></pre>
+
+        <p>
+          Instead of continuing to edit individual lines in a file I did not
+          fully understand, I replaced the full file with a corrected version.
+        </p>
+
+        <p>
+          That was a useful lesson for me. When I am still learning an
+          unfamiliar codebase, a full replacement I can compare is sometimes
+          safer than making several small edits without understanding the
+          surrounding code.
+        </p>
+
+
+        <h3>
+          Passing tests did not mean every test was running
+        </h3>
+
+        <p>
+          The original test command included:
+        </p>
+
+        <pre><code>scripts/**/*.test.mjs</code></pre>
+
+        <p>
+          On Windows, that part of the command returned:
+        </p>
+
+        <pre><code>tests 0
+suites 0</code></pre>
+
+        <p>
+          Another test group still ran and passed, so at first the project
+          looked healthier than it really was.
+        </p>
+
+        <p>
+          I changed the command temporarily so the remaining script tests could
+          actually run.
+        </p>
+
+        <p>
+          That exposed 106 tests:
+        </p>
+
+        <pre><code>106 tests
+96 passed
+10 failed</code></pre>
+
+        <p>
+          Two of the failures were Windows symlink-permission errors.
+        </p>
+
+        <p>
+          Most of the others were not CAP Pit Timer failures. They were tests
+          expecting Grok-specific behavior such as generic Grok titles, Grok
+          social-card URLs, and Grok PWA behavior.
+        </p>
+
+        <p>
+          That helped me separate an application problem from a platform-template
+          problem.
+        </p>
+
+
+        <h3>
+          I could not just delete everything named Grok
+        </h3>
+
+        <p>
+          Once the app was running, I wanted to clean the project.
+        </p>
+
+        <p>
+          At first, it was tempting to remove every file containing the word
+          <code>grok</code>.
+        </p>
+
+        <p>
+          That would have broken the application.
+        </p>
+
+        <p>
+          Some of those files were still connected to:
+        </p>
+
+        <ul>
+          <li>Vite configuration</li>
+          <li>PWA metadata</li>
+          <li>middleware</li>
+          <li>install assets</li>
+          <li>preview behavior</li>
+          <li>authentication scaffolding</li>
+        </ul>
+
+        <p>
+          Instead of mass deletion, I started tracing references with:
+        </p>
+
+        <pre><code>git --no-pager grep -n -i "grok"</code></pre>
+
+        <p>
+          and more focused searches such as:
+        </p>
+
+        <pre><code>git --no-pager grep -n "grokPwaPlugin"</code></pre>
+
+        <p>
+          That made the cleanup slower, but much safer.
+        </p>
+
+
+        <h2>
+          5. What I learned
+        </h2>
+
+        <p>
+          The biggest lesson was that an AI-generated project contains more
+          than the application I asked for.
+        </p>
+
+        <p>
+          It can also contain:
+        </p>
+
+        <ul>
+          <li>preview infrastructure</li>
+          <li>authentication scaffolding</li>
+          <li>environment wrappers</li>
+          <li>database helpers</li>
+          <li>platform branding</li>
+          <li>internal QA scripts</li>
+          <li>generated middleware</li>
+          <li>tests built around the original platform</li>
+        </ul>
+
+        <p>
+          Some of those pieces are useful. Some are temporary. Some become
+          unnecessary once the project leaves the original builder.
+        </p>
+
+        <p>
+          I also learned why branches matter in a more practical way.
+        </p>
+
+        <p>
+          Before starting the cleanup, I kept the working application on:
+        </p>
+
+        <pre><code>main</code></pre>
+
+        <p>
+          and created:
+        </p>
+
+        <pre><code>cleanup/grok-scaffolding</code></pre>
+
+        <p>
+          for the risky cleanup work.
+        </p>
+
+        <p>
+          That meant I could remove generated files and change the build setup
+          without immediately affecting the stable version deployed from
+          <code>main</code>.
+        </p>
+
+        <p>
+          The cleanup became a series of smaller Git checkpoints instead of one
+          large rewrite.
+        </p>
+
+        <p>
+          So far, I have removed Grok workspace instructions, Grok preview
+          tooling, Grok browser QA tooling, and the Grok PWA layer.
+        </p>
+
+        <p>
+          The PWA cleanup was the most meaningful change.
+        </p>
+
+        <p>
+          The project previously depended on Grok-specific manifest paths,
+          install assets, middleware, and an external Grok script.
+        </p>
+
+        <p>
+          I replaced that with a normal project-owned manifest:
+        </p>
+
+        <pre><code>public/manifest.webmanifest</code></pre>
+
+        <p>
+          with CAP Pit Timer metadata such as:
+        </p>
+
+        <pre><code>{
+  "name": "CAP Pit Timer",
+  "short_name": "CAP Timer",
+  "display": "standalone"
+}</code></pre>
+
+        <p>
+          After removing the Grok PWA system, TypeScript still passed, lint
+          stayed at zero errors, the production build succeeded, and the new
+          manifest loaded correctly on localhost.
+        </p>
+
+
+        <h2>
+          6. How this connects to SEO, content writing, APIs, and documentation
+        </h2>
+
+        <h3>
+          Reading code changes how I think about documentation
+        </h3>
+
+        <p>
+          I normally approach software from the outside.
+        </p>
+
+        <p>
+          As a content writer, I think about what a product does, who it is for,
+          how someone uses it, and how it should be explained.
+        </p>
+
+        <p>
+          This project forced me to approach those questions from the inside.
+        </p>
+
+        <p>
+          I had to trace dependencies, understand configuration files, read test
+          output, compare generated code with application code, and decide which
+          parts of a project belonged to the product and which belonged to the
+          original platform.
+        </p>
+
+        <p>
+          That is directly useful for API documentation, developer tutorials,
+          implementation guides, GitHub READMEs, troubleshooting content, and
+          technical case studies.
+        </p>
+
+
+        <h3>
+          Metadata and PWA files are part of product content
+        </h3>
+
+        <p>
+          Replacing the Grok PWA layer also made metadata feel more concrete.
+        </p>
+
+        <p>
+          A manifest is not just another technical file. It contains the
+          product name, short name, description, icons, colors, and application
+          behavior when installed.
+        </p>
+
+        <p>
+          The root route also controls social metadata and other information
+          that affects how the application is represented outside the app
+          itself.
+        </p>
+
+        <p>
+          That connects directly to the work I already do around SEO metadata
+          and content presentation.
+        </p>
+
+
+        <h3>
+          Git history can become part of the documentation
+        </h3>
+
+        <p>
+          I also started seeing commits as a form of project documentation.
+        </p>
+
+        <p>
+          Instead of one vague cleanup commit, the branch now records smaller
+          decisions such as:
+        </p>
+
+        <pre><code>Remove Grok workspace instructions
+Remove Grok preview tooling
+Remove Grok browser QA tooling
+Replace Grok PWA layer with CAP manifest</code></pre>
+
+        <p>
+          Those messages make it easier to understand how the project changed
+          and why.
+        </p>
+
+
+        <h2>
+          7. What I will try next
+        </h2>
+
+        <p>
+          The cleanup is not finished.
+        </p>
+
+        <p>
+          There is still generated infrastructure around authentication,
+          environment handling, connector support, and preview behavior that I
+          need to review.
+        </p>
+
+        <p>
+          I also want to clean up the remaining lint warnings and make the test
+          setup work more consistently across operating systems.
+        </p>
+
+        <p>
+          The larger product question comes later.
+        </p>
+
+        <p>
+          CAP Pit Timer is currently a mobile-first web application.
+        </p>
+
+        <p>
+          If I want its alarms to behave like real phone alarms when the browser
+          is closed or the device is locked, I will eventually need to look at
+          native mobile capabilities, possibly through React Native or Expo.
+        </p>
+
+        <p>
+          I am deliberately not jumping there yet.
+        </p>
+
+        <p>
+          My next steps are:
+        </p>
+
+        <ol>
+          <li>Finish separating CAP Pit Timer from unnecessary Grok scaffolding.</li>
+          <li>Improve the cross-platform test setup.</li>
+          <li>Document the current architecture.</li>
+          <li>Review which features belong in the MVP.</li>
+          <li>Decide whether the next version should remain a PWA or move toward a native mobile app.</li>
+        </ol>
+
+        <p>
+          The interesting part of this project is no longer that an AI tool
+          generated an app.
+        </p>
+
+        <p>
+          It is that I am learning what to do after the generation stops.
+        </p>
+
+
+        <h2>
+          Explore the project
+        </h2>
+
+        <p>
+          You can view the current repository on
+          <a
+            href="https://github.com/edumbao/cap-pit-timer"
+            target="_blank"
+            rel="noopener"
+          >
+            GitHub ↗
+          </a>
+          or try the current
+          <a
+            href="https://cap-pit-timer.vercel.app/"
+            target="_blank"
+            rel="noopener"
+          >
+            live Vercel demo ↗
+          </a>.
+        </p>
+
+        <p>
+          I am documenting projects like this as I learn more about the
+          technical side of content work.
+        </p>
+
+        <p>
+          You can explore more experiments in
+          <a href="/lab/">Ed's Lab</a>, browse my
+          <a href="/work/">professional work</a>, or read more
+          <a href="/writing/">learning notes</a>.
+        </p>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+  <footer class="footer">
+
+    <div class="container footer-inner">
+
+      <span>
+        © 2026 Ed Umbao
+      </span>
+
+      <span>
+        Writing · SEO · Technical learning · Small projects
+      </span>
+
+    </div>
+
+
+    <div class="container footer-social">
+
+      <span class="footer-social-label">
+        Elsewhere
+      </span>
+
+      <nav
+        class="footer-social-links"
+        aria-label="Elsewhere"
+      >
+
+        <a
+          href="https://www.linkedin.com/in/ed-umbao/"
+          target="_blank"
+          rel="noopener"
+        >
+          LinkedIn ↗
+        </a>
+
+        <a
+          href="https://x.com/edmundumbao"
+          target="_blank"
+          rel="noopener"
+        >
+          X ↗
+        </a>
+
+        <a
+          href="https://github.com/edumbao"
+          target="_blank"
+          rel="noopener"
+        >
+          GitHub ↗
+        </a>
+
+        <a
+          href="https://edumbao.substack.com"
+          target="_blank"
+          rel="noopener"
+        >
+          Substack ↗
+        </a>
+
+        <a
+          href="https://edumbao.medium.com/"
+          target="_blank"
+          rel="noopener"
+        >
+          Medium ↗
+        </a>
+
+      </nav>
+
+    </div>
+
+  </footer>
+
+
+  <script>
+
+    document.addEventListener(
+      'DOMContentLoaded',
+      function () {
+
+        const menuButton =
+          document.querySelector('.menu-toggle');
+
+        const siteMenu =
+          document.querySelector('.site-menu');
+
+        const themeToggle =
+          document.getElementById('theme-toggle');
+
+
+        if (menuButton && siteMenu) {
+
+          menuButton.addEventListener(
+            'click',
+            function () {
+
+              const isOpen =
+                siteMenu.classList.toggle('nav-open');
+
+              menuButton.setAttribute(
+                'aria-expanded',
+                isOpen ? 'true' : 'false'
+              );
+
+            }
+          );
+
+
+          siteMenu
+            .querySelectorAll('a')
+            .forEach(
+              function (link) {
+
+                link.addEventListener(
+                  'click',
+                  function () {
+
+                    siteMenu.classList.remove('nav-open');
+
+                    menuButton.setAttribute(
+                      'aria-expanded',
+                      'false'
+                    );
+
+                  }
+                );
+
+              }
+            );
+
+        }
+
+
+        function currentTheme() {
+          return document.documentElement
+            .getAttribute('data-theme') === 'light'
+              ? 'light'
+              : 'dark';
+        }
+
+
+        function updateThemeLabel() {
+
+          if (!themeToggle) {
+            return;
+          }
+
+          const theme = currentTheme();
+
+          const nextTheme =
+            theme === 'dark'
+              ? 'Light'
+              : 'Dark';
+
+          themeToggle.textContent = nextTheme;
+
+          themeToggle.setAttribute(
+            'aria-label',
+            'Switch to ' +
+            nextTheme.toLowerCase() +
+            ' theme'
+          );
+
+        }
+
+
+        updateThemeLabel();
+
+
+        if (themeToggle) {
+
+          themeToggle.addEventListener(
+            'click',
+            function (event) {
+
+              event.preventDefault();
+
+              const nextTheme =
+                currentTheme() === 'dark'
+                  ? 'light'
+                  : 'dark';
+
+              document.documentElement.setAttribute(
+                'data-theme',
+                nextTheme
+              );
+
+              try {
+
+                localStorage.setItem(
+                  'edumbao-theme',
+                  nextTheme
+                );
+
+              } catch (error) {
+
+                // Theme switching still works
+                // if storage is unavailable.
+
+              }
+
+              updateThemeLabel();
+
+            }
+          );
+
+        }
+
+      }
+    );
+
+  </script>
+
+</body>
+
+</html>
