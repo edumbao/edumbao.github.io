@@ -22,6 +22,9 @@ I am not a coder, but I am actively learning to improve my technical writing thr
 * **Languages:** Python (Streamlit for web apps) & HTML/CSS for web design.
 
 ## Get in Touch
-* **Website:** [edumbao.com](https://edumbao.com)
-* **GitHub:** [github.com/edumbao](https://github.com/edumbao)
-* **LinkedIn:** [linkedin.com/in/ed-umbao](https://www.linkedin.com/in/ed-umbao)
+- **Website:** [edumbao.com](https://edumbao.com)
+- **GitHub:** [github.com/edumbao](https://github.com/edumbao)
+- **LinkedIn:** [linkedin.com/in/ed-umbao](https://www.linkedin.com/in/ed-umbao)
+- **Substack:** [Surviving SEO with Ed Umbao](https://edumbao.substack.com/)
+- **Medium:** [edumbao.medium.com](https://edumbao.medium.com/)
+- **X / Twitter:** [@edmundumbao](https://x.com/edmundumbao)
