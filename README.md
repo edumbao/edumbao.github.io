@@ -1,27 +1,124 @@
-# Welcome to EdUmbao.com
+# Hi, I'm Ed Umbao
 
-I am **Ed Umbao**, a professional copywriter, technical writer, and SEO strategist based in Davao City, Philippines. With over 15,000 articles published throughout my career, I specialize in creating high-authority, human-first technical content and in automating lead-generation workflows.
+I work at the intersection of **B2B SaaS SEO, technical writing, and content systems**.
+
+I'm Head of Content at **Outscraper**, where my work includes search research, technical and product content, internal linking, editorial workflows, structured data, and practical content systems.
+
+I'm also documenting my journey as a content and SEO professional becoming more technically capable through GitHub, APIs, AI-assisted workflows, Vercel, data projects, and small tools built around real content problems.
+
+## What I Work On
+
+- **B2B SaaS SEO:** Search research, content strategy, topical coverage, internal linking, and content optimization.
+- **Technical Writing:** Tutorials, product documentation, workflow-based articles, API-related content, and data-focused guides.
+- **Content Systems:** Editorial workflows, publishing processes, content operations, and repeatable SEO systems.
+- **Data Workflows:** Business data, enrichment, structured datasets, directories, and lead research workflows.
+- **AI-Assisted Workflows:** Using AI to support research, writing, technical experimentation, automation, and content production.
 
 ## Professional Experience
-* **Head of Content:** Outscraper and Targetron.
-* **Journalism & Content:** Extensive background as a former co-founder of a Philippine-based news website and independent journalist.
-* **SEO Strategy:** Expert in Information Gain, topical authority, and E-E-A-T principles to differentiate content from generic AI outputs.
-* **Automation & Development:** Proficient in building web directories and lead generation workflows using Python, n8n, and Apify.
 
-## Current Projects
-* **[Targetron.com](https://targetron.com):** A B2B local leads directory and B2B Lead Generation Database.
-* **[Outscraper.com](https://outscraper.com):** A Business Data and Enrichment Platform.
-* **[BantayanVibes.com](https://bantayanvibes.com):** A travel and tourism blog project for my hometown.
-* **Technical Portfolio:** Developing a portfolio using Lovable AI and syncing to GitHub to showcase technical content and automation projects.
-* **E-book Author:** Creator of *"5 Ready-to-Launch AI Side Hustles"* (available on Gumroad).
+- **Head of Content — Outscraper:** SEO and technical content around Google Maps data, business data, APIs, lead generation, enrichment, directories, and related workflows.
+- **Targetron:** B2B prospecting, lead research, content strategy, and knowledge catalog projects.
+- **Journalism & Content:** Former co-founder of a Philippine-based news website with extensive experience in online publishing and independent journalism.
+- **SEO Strategy:** Practical experience with information gain, topical authority, E-E-A-T, search intent, internal linking, and content differentiation.
 
-## Technical Journey
-I am not a coder, but I am actively learning to improve my technical writing through Vibe coding and AI integration. I am documenting my journey from a writer to a copywriter with first-hand developer experience using a local-first development workflow with:
-* **Editor:** VS Code
-* **Version Control:** GitHub Desktop & Git
-* **Languages:** Python (Streamlit for web apps) & HTML/CSS for web design.
+## Selected Projects
+
+### Targetron Knowledge Catalog
+
+A structured knowledge-catalog workflow for organizing and reviewing Targetron's public content, products, positioning, and related information.
+
+### Outscraper Knowledge Catalog
+
+A technical content and site-inventory project for organizing Outscraper's public pages, sitemap data, content types, and knowledge assets.
+
+### Answer-Based SEO Article Planner
+
+A practical SEO planning tool designed around answer-focused content structure, search intent, article planning, and editorial workflows.
+
+### Benefit Headline Creator
+
+A lightweight content tool for turning product features and value propositions into clearer benefit-focused headlines.
+
+### Chicago Dental Clinics Directory
+
+A directory project built from structured business data, including normalization, category mapping, filtering, clinic detail pages, and public/private data separation.
+
+### Personal Portfolio
+
+My portfolio at [edumbao.com](https://edumbao.com), where I document my work across B2B SaaS SEO, technical writing, content systems, technical projects, and practical experiments.
+
+## Technical & Content Stack
+
+### SEO & Analytics
+
+- Google Analytics 4
+- Google Search Console
+- SEO research and content audits
+- Internal linking
+- Search intent analysis
+- Content performance analysis
+
+### Publishing & Content
+
+- WordPress
+- Elementor
+- Medium
+- Substack
+- Markdown
+- Editorial workflows
+- Technical documentation
+
+### AI & Research
+
+- ChatGPT
+- Claude
+- Gemini
+- Perplexity
+- AI-assisted research
+- Prompt-based workflows
+- Content analysis
+
+### Technical Workflow
+
+- Git
+- GitHub
+- GitHub Desktop
+- VS Code
+- Vercel
+- APIs
+- JSON
+- CSV
+- HTML
+- CSS
+- Python
+- Streamlit
+- n8n
+
+## What I'm Learning
+
+I'm continuing to build practical technical skills through real projects rather than trying to become a traditional software developer.
+
+My current focus includes:
+
+- Working more confidently with Git and GitHub
+- Understanding APIs and structured data
+- Building small tools for SEO and content workflows
+- Working with JSON and CSV datasets
+- Deploying projects with Vercel
+- Using AI-assisted development workflows
+- Connecting content strategy with technical implementation
+- Documenting repeatable workflows for non-developers
+
+## Writing
+
+I write about practical SEO, technical writing, AI-assisted workflows, APIs, data, content systems, GitHub, Vercel, and what I learn while building.
+
+- **Substack:** [Surviving SEO with Ed Umbao](https://edumbao.substack.com/)
+- **Medium:** [edumbao.medium.com](https://edumbao.medium.com/)
+- **Website:** [edumbao.com](https://edumbao.com)
 
 ## Get in Touch
+
 - **Website:** [edumbao.com](https://edumbao.com)
 - **GitHub:** [github.com/edumbao](https://github.com/edumbao)
 - **LinkedIn:** [linkedin.com/in/ed-umbao](https://www.linkedin.com/in/ed-umbao)
