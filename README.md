@@ -1,10 +1,10 @@
 # Hi, I'm Ed Umbao
 
-I work at the intersection of **B2B SaaS SEO, technical writing, and content systems**.
+I'm a content and SEO professional working mainly on B2B SaaS, technical content, and practical content workflows.
 
-I'm Head of Content at **Outscraper**, where my work includes search research, technical and product content, internal linking, editorial workflows, structured data, and practical content systems.
+As Head of Content at Outscraper, my work covers search research, product and technical writing, internal linking, editorial processes, structured data, and improving how content moves from research to publication.
 
-I'm also documenting my journey as a content and SEO professional becoming more technically capable through GitHub, APIs, AI-assisted workflows, Vercel, data projects, and small tools built around real content problems.
+I'm also learning how to become more technically capable in my own work. I document what I learn while using GitHub, APIs, AI-assisted workflows, Vercel, data projects, and small tools built to solve real content problems.
 
 ## What I Work On
 
@@ -16,8 +16,8 @@ I'm also documenting my journey as a content and SEO professional becoming more 
 
 ## Professional Experience
 
-- **Head of Content — Outscraper:** SEO and technical content around Google Maps data, business data, APIs, lead generation, enrichment, directories, and related workflows.
-- **Targetron:** B2B prospecting, lead research, content strategy, and knowledge catalog projects.
+- **Head of Content - [Outscraper](https://outscraper.com/):** SEO and technical content around Google Maps data, business data, APIs, lead generation, enrichment, directories, and related workflows.
+- **Technical Writer - [Targetron](https://targetron.com/):** B2B prospecting, lead research, content strategy, and knowledge catalog projects.
 - **Journalism & Content:** Former co-founder of a Philippine-based news website with extensive experience in online publishing and independent journalism.
 - **SEO Strategy:** Practical experience with information gain, topical authority, E-E-A-T, search intent, internal linking, and content differentiation.
 
