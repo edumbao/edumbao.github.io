@@ -242,21 +242,42 @@
       letter-spacing: -0.02em;
     }
 
-    .brand-mark {
-      width: 30px;
-      height: 30px;
+    .brand-logo-wrap {
+      width: 40px;
+      height: 40px;
 
-      display: grid;
-      place-items: center;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
 
-      border: 1px solid var(--brand-blue);
-      border-radius: 2px;
+      flex: 0 0 40px;
+    }
 
-      color: var(--accent-text);
+    .brand-logo {
+      width: 40px;
+      height: 40px;
 
-      font-family: var(--serif);
-      font-size: 12px;
-      font-weight: 700;
+      display: block;
+
+      object-fit: contain;
+    }
+
+    /* Light mode: show the dark/navy logo */
+    html[data-theme="light"] .brand-logo-on-light {
+      display: block;
+    }
+
+    html[data-theme="light"] .brand-logo-on-dark {
+      display: none;
+    }
+
+    /* Dark mode: show the light logo */
+    html[data-theme="dark"] .brand-logo-on-light {
+      display: none;
+    }
+
+    html[data-theme="dark"] .brand-logo-on-dark {
+      display: block;
     }
 
     .brand-name {
@@ -2906,6 +2927,16 @@
 
 
     @media (max-width: 620px) {
+
+      .brand-logo-wrap,
+      .brand-logo {
+        width: 36px;
+        height: 36px;
+      }
+
+      .brand-logo-wrap {
+        flex-basis: 36px;
+      }
 
       .container {
         width:
