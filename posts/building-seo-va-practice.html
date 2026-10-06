@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Why I Built an SEO Practice Platform for Aspiring Virtual Assistants | Ed Umbao</title>
+
+  <meta
+    name="description"
+    content="I built SEO VA Practice to help aspiring SEO VAs practice realistic assignments. Here is what building it taught me about GitHub, Vercel, and technical work."
+  >
+
+  <link
+    rel="canonical"
+    href="https://edumbao.com/posts/building-seo-va-practice.html"
+  >
+
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+
+  <meta
+    property="og:title"
+    content="Why I Built an SEO Practice Platform for Aspiring Virtual Assistants"
+  >
+
+  <meta
+    property="og:description"
+    content="Why I started building SEO VA Practice and what the project is teaching me about realistic SEO practice, GitHub, Vercel, and technical workflows."
+  >
+
+  <meta
+    property="og:url"
+    content="https://edumbao.com/posts/building-seo-va-practice.html"
+  >
+
+  <meta
+    property="og:image"
+    content="https://edumbao.com/images/building-seo-va-practice.webp"
+  >
+
+  <meta
+    property="og:image:alt"
+    content="SEO VA Practice project showing simulated SEO assignments and the learning process behind building the Practice Lab."
+  >
+
+  <meta
+    property="og:site_name"
+    content="Ed Umbao"
+  >
+
+
+  <!-- Twitter / X -->
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <meta
+    name="twitter:title"
+    content="Why I Built an SEO Practice Platform for Aspiring Virtual Assistants"
+  >
+
+  <meta
+    name="twitter:description"
+    content="What I am learning while building SEO VA Practice as a content writer working with GitHub, Vercel, domains, and technical workflows."
+  >
+
+  <meta
+    name="twitter:image"
+    content="https://edumbao.com/images/building-seo-va-practice.webp"
+  >
+
+
+  <!-- Apply theme before page paint -->
+  <script>
+    (function () {
+      let savedTheme = null;
+
+      try {
+        savedTheme = localStorage.getItem('edumbao-theme');
+      } catch (error) {
+        savedTheme = null;
+      }
+
+      const preferredTheme =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: light)').matches
+          ? 'light'
+          : 'dark';
+
+      const theme =
+        savedTheme === 'light' || savedTheme === 'dark'
+          ? savedTheme
+          : preferredTheme;
+
+      document.documentElement.setAttribute(
+        'data-theme',
+        theme
+      );
+    })();
+  </script>
+
+
+  <link
+    rel="stylesheet"
+    href="/assets/css/site.css"
+  >
+
+</head>
+
+
+<body>
+
+  <header class="site-header">
+
+    <div class="container site-nav">
+
+      <a
+        href="/"
+        class="site-brand"
+        aria-label="Ed Umbao homepage"
+      >
+
+        <span
+          class="brand-mark"
+          aria-hidden="true"
+        >
+          EU
+        </span>
+
+        <span class="brand-name">
+          Ed Umbao
+        </span>
+
+      </a>
+
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-controls="site-menu"
+        aria-expanded="false"
+      >
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </button>
+
+
+      <nav
+        class="site-menu"
+        id="site-menu"
+        aria-label="Main navigation"
+      >
+
+        <a href="/lab/">
+          Lab
+        </a>
+
+        <a href="/work/">
+          Work
+        </a>
+
+        <a
+          href="/writing/"
+          class="is-active"
+          aria-current="page"
+        >
+          Writing
+        </a>
+
+        <a href="/#about">
+          About
+        </a>
+
+        <a
+          href="https://github.com/edumbao"
+          target="_blank"
+          rel="noopener"
+          class="nav-external"
+        >
+          GitHub ↗
+        </a>
+
+        <a
+          href="#"
+          id="theme-toggle"
+          class="theme-link"
+          aria-label="Switch color theme"
+        >
+          Theme
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <main class="article-page">
+
+    <div class="container article-shell">
+
+      <article class="article-content">
+
+        <h1 class="article-title">
+          Why I Built an SEO Practice Platform for Aspiring Virtual Assistants
+        </h1>
+
+        <p class="article-date">
+          Published on October 6, 2026
+        </p>
+
+        <figure class="article-featured-image">
+          <img
+            src="/images/building-seo-va-practice.webp"
+            alt="SEO VA Practice project showing simulated SEO assignments and the learning process behind building the Practice Lab."
+            width="1792"
+            height="1024"
+          >
+          <figcaption>
+            SEO VA Practice started as an idea for practicing SEO work before handling a real client. Building it is also teaching me how GitHub, Vercel, domains, and web projects fit together.
+          </figcaption>
+        </figure>
+
+        <p>
+          Aspiring <strong>SEO virtual assistants</strong> have an awkward problem:
+          they are expected to understand SEO work before they have had a real client to practice with.
+        </p>
+
+        <p>
+          Competition for virtual assistant work can also be high. Between January 2025 and July 2026,
+          <a href="https://vamasters.com/filipino-virtual-assistant-statistics-2026/" target="_blank" rel="noopener">VA Masters</a>
+          reported processing more than 166,000 applications from Filipino virtual assistants, with roughly one placement for every 508 applicants in its recruitment pipeline.
+        </p>
+
+        <p>
+          That statistic describes one recruitment company's data, not the entire Philippine VA industry. Still, it gives some context for how competitive the path into VA work can be.
+        </p>
+
+        <p>
+          That is one reason I started building <strong>SEO VA Practice</strong>, a personal project where people preparing for SEO VA work can complete realistic simulated assignments before handling client work.
+        </p>
+
+        <p>
+          Instead of building another collection of SEO lessons, I wanted to create a place where someone could receive an assignment, work with practice data, complete a deliverable, and review the result.
+        </p>
+
+        <p>I am also using the project to learn.</p>
+
+        <p>
+          My background is in content writing, SEO, and content planning. Building SEO VA Practice has given me a reason to work directly with GitHub, Next.js, Vercel, domains, builds, browser storage, and other technical workflows that I previously understood mostly from the content side.
+        </p>
+
+        <p>
+          This is the first article in a series documenting what I am building, what has confused me, and what I am learning along the way.
+        </p>
+
+        <h2>What Is SEO VA Practice?</h2>
+
+        <p>
+          SEO VA Practice is a personal project I am building to help aspiring SEO virtual assistants practice realistic SEO tasks before working with a real client.
+        </p>
+
+        <p>
+          The Practice Lab uses simulated assignments instead of relying only on lessons or tutorials. Each assignment follows a simple learning flow:
+        </p>
+
+        <p><strong>Client Brief → Deliverable → Practice Data → Do the Work → Review</strong></p>
+
+        <figure>
+          <img
+            src="/images/seo-va-practice-learning-flow.png"
+            alt="Five-step SEO VA Practice learning flow from client brief to deliverable, practice data, doing the work, and review."
+            loading="lazy"
+          >
+          <figcaption>
+            The SEO VA Practice learning flow uses simulated assignments from client brief to review.
+          </figcaption>
+        </figure>
+
+        <p>
+          A learner starts with a brief, sees what needs to be completed, works with practice data, produces the required deliverable, and then reviews the result.
+        </p>
+
+        <p>
+          The assignments are simulated practice exercises. They are not real client projects and should not be presented as professional client experience.
+        </p>
+
+        <p>
+          My goal is to make the learning process feel closer to SEO work while giving someone room to practice before working with a client.
+        </p>
+
+        <h2>What I Was Trying to Build</h2>
+
+        <p>The idea behind SEO VA Practice came from a gap I kept thinking about.</p>
+
+        <p>
+          Someone can read about keyword research, on-page SEO, content briefs, competitor research, technical SEO, and other common SEO tasks. They can also watch tutorials showing how the work is done.
+        </p>
+
+        <p>But knowing what a task is and completing it are two different things.</p>
+
+        <p>
+          Someone preparing for SEO VA work may understand the theory but still wonder what to do when they are given a brief, a spreadsheet, a website, or a specific deliverable.
+        </p>
+
+        <p>That was the gap I wanted SEO VA Practice to address.</p>
+
+        <p>
+          I wanted to create a place where someone could practice receiving an assignment, figuring out what is expected, working with realistic practice materials, and completing the task without the pressure of working on a real client account.
+        </p>
+
+        <p>
+          The simulated assignments are not meant to look like real client experience. They are a structured way to practice before that first opportunity arrives.
+        </p>
+
+        <p>I also wanted the project to stay focused.</p>
+
+        <p>
+          Rather than trying to cover every part of SEO at once, I started with two assignments: <strong>Local SEO Competitor Research</strong> and <strong>Keyword Research + Search Intent</strong>.
+        </p>
+
+        <p>
+          I chose those because both require more than knowing a definition. You have to review information, make decisions, organize your findings, and produce something another person can use.
+        </p>
+
+        <p>Here are the first two assignments currently available in the Practice Lab.</p>
+
+        <figure>
+          <img
+            src="/images/seo-va-practice-first-two-assignments.png"
+            alt="SEO VA Practice assignment library showing Local SEO Competitor Research and Keyword Research plus Search Intent."
+            loading="lazy"
+          >
+          <figcaption>
+            Early Practice Lab assignments: Local SEO Competitor Research and Keyword Research + Search Intent.
+          </figcaption>
+        </figure>
+
+        <h2>Why I Decided to Build It Myself</h2>
+
+        <p>
+          I could have stopped at planning the assignments, writing the content, and defining how the Practice Lab should work.
+        </p>
+
+        <p>That would have stayed close to the kind of work I already know.</p>
+
+        <p>Instead, I decided to use SEO VA Practice to learn more of the technical side too.</p>
+
+        <p>
+          My background is in content writing, SEO, and content planning. I am not a software developer, and I did not start this project with a strong background in GitHub, Next.js, Vercel, deployment workflows, or domain configuration.
+        </p>
+
+        <p>That was part of the reason I wanted to work on it myself.</p>
+
+        <p>
+          I have written about technical products and workflows for years. Working through one when something breaks is a different experience.
+        </p>
+
+        <p>With SEO VA Practice, I had a reason to learn by doing.</p>
+
+        <p>If I wanted to change a page, I had to find the right file.</p>
+
+        <p>
+          If I wanted to publish that change, I had to understand what happened between my local project, GitHub, and Vercel.
+        </p>
+
+        <p>
+          If I wanted the marketing site and Practice Lab to use separate domains, I had to work through DNS and custom-domain settings.
+        </p>
+
+        <p>
+          I used ChatGPT throughout the process to help me understand unfamiliar commands, errors, warnings, and possible fixes.
+        </p>
+
+        <p>
+          I still wanted to know what was changing. I tried to inspect the files, test the result, and understand enough of the workflow before moving on.
+        </p>
+
+        <p>That became one of the reasons I kept working on the project myself.</p>
+
+        <p>
+          SEO VA Practice was becoming a place for other people to practice SEO work. At the same time, it was giving me a practical reason to become more comfortable with the technical systems behind a website.
+        </p>
+
+        <h2>From an Idea to Two Working Websites</h2>
+
+        <p>As the project took shape, it became clear that I was building two separate parts.</p>
+
+        <p>
+          The first is the main website at
+          <a href="https://seovapractice.com/" target="_blank" rel="noopener"><strong>seovapractice.com</strong> ↗</a>.
+        </p>
+
+        <p>
+          This is where I explain what SEO VA Practice is, who it is for, and how the practice approach works.
+        </p>
+
+        <p>
+          The second is the Practice Lab at
+          <a href="https://app.seovapractice.com/" target="_blank" rel="noopener"><strong>app.seovapractice.com</strong> ↗</a>.
+        </p>
+
+        <p>This is where the simulated assignments live.</p>
+
+        <p>
+          At the moment, the project includes an assignment library, individual assignment workspaces, practice materials, and progress that can persist in the browser.
+        </p>
+
+        <p>
+          The setup is still simple, but separating the marketing site from the Practice Lab helped me understand the project more clearly.
+        </p>
+
+        <p>One site explains the idea.</p>
+        <p>The other is where the work happens.</p>
+
+        <p>
+          Behind both sites, I use GitHub to manage the project files and Vercel to publish changes.
+        </p>
+
+        <p>Working on them also gave me a repeatable process:</p>
+
+        <ol>
+          <li>Make one small change.</li>
+          <li>Test it locally.</li>
+          <li>Run the production build.</li>
+          <li>Inspect what Git shows as changed.</li>
+          <li>Commit the update.</li>
+          <li>Push it to GitHub.</li>
+          <li>Check the Vercel deployment.</li>
+        </ol>
+
+        <p>
+          Those checkpoints make it easier for me to see what happened before moving to the next change.
+        </p>
+
+        <p>
+          They have also helped me understand how something I edit locally eventually becomes part of a live website.
+        </p>
+
+        <p>Before this project, I understood pieces of that process from the content side.</p>
+        <p>Now I am working through the sequence myself.</p>
+
+        <h2>What Broke Along the Way</h2>
+
+        <p>A lot of the learning came from things that did not work the way I expected.</p>
+        <p>One of the first confusing areas was the domain setup.</p>
+
+        <p>
+          I wanted <strong>seovapractice.com</strong> to point to the main website and <strong>app.seovapractice.com</strong> to point to the Practice Lab.
+        </p>
+
+        <p>
+          The idea sounded straightforward. Configuring the domains, checking DNS records, and confirming that each one was connected to the correct Vercel project took more effort than I expected.
+        </p>
+
+        <p>Navigation between the two sites created another set of small problems.</p>
+
+        <p>
+          A button on the main website needed to open the Practice Lab correctly. Links inside the Lab also needed to make sense when someone wanted to return to the main site.
+        </p>
+
+        <p>Smaller inconsistencies became easier to notice once both sites were live.</p>
+        <p>Favicons did not always match.</p>
+        <p>Branding needed to stay consistent across two separate projects.</p>
+        <p>Links that worked during local testing still needed another check after deployment.</p>
+
+        <p>Git introduced a different kind of confusion.</p>
+
+        <p>
+          I started seeing line-ending warnings that looked serious at first. I also had to pay attention to accidental files and changes I did not mean to include in a commit.
+        </p>
+
+        <p>
+          I started to see that running Git commands was only one part of the process. I also needed to inspect what Git was telling me before committing anything.
+        </p>
+
+        <p>Build and lint output took time to understand too.</p>
+
+        <p>
+          At the beginning, a long block of terminal output made it difficult to tell whether I had a real problem or a warning.
+        </p>
+
+        <p>I learned to ask more specific questions:</p>
+
+        <ul>
+          <li>Did the build fail?</li>
+          <li>Is this an error or a warning?</li>
+          <li>Which file is causing it?</li>
+          <li>Did my latest change create the problem?</li>
+          <li>Does it need fixing before I push?</li>
+        </ul>
+
+        <p>I used ChatGPT often during these situations.</p>
+
+        <p>
+          Sometimes I needed help interpreting an error message. Other times I needed help figuring out what to check next.
+        </p>
+
+        <p>
+          Over time, the process became less about copying a command and more about inspecting the problem, making one change, testing again, and checking whether the result made sense.
+        </p>
+
+        <p>
+          One example was Git line-ending warnings. At first, I thought I had broken something. After checking the build and reviewing the changed files, I learned that the warning itself was not the failure I thought it was.
+        </p>
+
+        <p>That was a small lesson, but it changed how I reacted to unfamiliar terminal output.</p>
+
+        <h2>What Building It Is Teaching Me</h2>
+
+        <p>The biggest lesson so far has less to do with memorizing commands.</p>
+
+        <p>
+          I am learning that I do not need to become a professional developer to become more technically capable.
+        </p>
+
+        <p>
+          For me, that means understanding enough of the workflow to make a small change, check what happened, test it, and continue without treating every technical step as a black box.
+        </p>
+
+        <p>
+          That can be as simple as knowing which file I need to edit, running the project locally, checking whether the production build succeeds, looking at what Git says has changed, and confirming that the deployed version still works.
+        </p>
+
+        <p>I still need help with unfamiliar errors and parts of the stack I have not worked with before.</p>
+        <p>But I am getting better at asking more specific questions.</p>
+
+        <p>
+          A warning no longer automatically means something is broken. I can first check whether the build failed.
+        </p>
+
+        <p>Before pushing a change, I can inspect the files.</p>
+
+        <p>
+          When I need to change several things, I can work through them one at a time and test each step.
+        </p>
+
+        <p>That way of working has made the project easier for me to manage.</p>
+        <p>I can always look up a command when I forget it.</p>
+
+        <p>
+          What matters more to me is understanding why I am using it, what I should check afterward, and how it fits into the wider workflow.
+        </p>
+
+        <p>
+          SEO VA Practice gives me a reason to repeat that process often enough for parts of it to start feeling familiar.
+        </p>
+
+        <h2>Why This Matters to Me as a Content Writer</h2>
+
+        <p>Building SEO VA Practice is changing the way I think about technical content.</p>
+
+        <p>
+          I have written about SEO, SaaS products, APIs, data workflows, and technical processes for years. Writing about a process from the outside is different from having to work through it yourself.
+        </p>
+
+        <p>
+          A sentence like “connect your custom domain” sounds simple until you are the one checking DNS records and trying to understand why the domain is not pointing where you expect.
+        </p>
+
+        <p>The same applies to GitHub.</p>
+        <p>“Push your changes to GitHub” can look like one small step in a tutorial.</p>
+
+        <p>Once you are working with a project, more questions appear:</p>
+
+        <ul>
+          <li>Which files changed?</li>
+          <li>Did I include something by accident?</li>
+          <li>Is this warning harmless?</li>
+          <li>Did the build succeed?</li>
+          <li>Did the deployed version update correctly?</li>
+        </ul>
+
+        <p>Working through those questions gives me better context for technical writing.</p>
+        <p>It also makes me think more carefully about documentation.</p>
+
+        <p>
+          A useful tutorial should tell someone what to do, but the surrounding details matter too. What should they check first? What should they expect afterward? What should they look at when something does not go as planned?
+        </p>
+
+        <p>This experience is also helping me understand web infrastructure more clearly.</p>
+
+        <p>
+          GitHub, Vercel, domains, browser storage, APIs, and deployment workflows are becoming less abstract because I am using them in a project I care about.
+        </p>
+
+        <p>That matters for SEO and product content too.</p>
+
+        <p>
+          When I write about a technical product, I want to understand where a user may get confused, what information they need before starting, and what they should verify after completing a step.
+        </p>
+
+        <p>I am still approaching all of this as a content writer and SEO professional.</p>
+
+        <p>
+          Building something myself is giving me more context for the products, workflows, and technical systems I write about.
+        </p>
+
+        <h2>What I’m Building Next</h2>
+
+        <p>SEO VA Practice is still early.</p>
+
+        <p>
+          I want to keep improving the Practice Lab, add more assignments, and learn from the current ones before expanding too quickly.
+        </p>
+
+        <p>
+          The first two assignments are already giving me a better idea of what the project needs next.
+        </p>
+
+        <p>
+          I want future assignments to stay focused on realistic SEO support work, with clear briefs, useful practice data, and deliverables that require the learner to review information and make decisions.
+        </p>
+
+        <p>I also want to keep learning more about the technical side of the project.</p>
+
+        <p>
+          That includes how the app is structured, how data should be handled, how progress should be stored, and where APIs or automation may eventually make sense.
+        </p>
+
+        <p>I do not want to add technical features just because I can.</p>
+
+        <p>
+          Each change should either improve the learning experience or help me understand the workflow better.
+        </p>
+
+        <p>This article is the first in a series about the project.</p>
+
+        <p>
+          Future articles will document individual parts of the build, including the Practice Lab, my GitHub workflow, Vercel deployment, domain setup, assignment design, and the problems I run into along the way.
+        </p>
+
+        <p>Some articles will cover things that worked.</p>
+        <p>Others will document things I misunderstood, had to fix, or needed help figuring out.</p>
+        <p>That is the part I want to keep documenting.</p>
+
+        <p>
+          SEO VA Practice started as a way to help people practice SEO VA work before getting a real client.
+        </p>
+
+        <p>
+          It is also giving me a practical way to become more technically capable while staying grounded in the work I already do in SEO, content, and technical writing.
+        </p>
+
+        <h2>Follow the SEO VA Practice Build</h2>
+
+        <p>
+          SEO VA Practice is still an early project. I will continue documenting the assignments, technical decisions, mistakes, and lessons behind the build as it develops.
+        </p>
+
+        <p>
+          You can visit
+          <a href="https://seovapractice.com/" target="_blank" rel="noopener">SEO VA Practice ↗</a>
+          or open the
+          <a href="https://app.seovapractice.com/" target="_blank" rel="noopener">Practice Lab ↗</a>.
+        </p>
+
+        <p>
+          You can also browse more <a href="/writing/">learning notes</a>,
+          see my <a href="/work/">professional work</a>, or visit
+          <a href="/lab/">Ed's Lab</a>.
+        </p>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+  <footer class="footer">
+
+    <div class="container footer-inner">
+
+      <span>
+        © 2026 Ed Umbao
+      </span>
+
+      <span>
+        Writing · SEO · Technical learning · Small projects
+      </span>
+
+    </div>
+
+
+    <div class="container footer-social">
+
+      <span class="footer-social-label">
+        Elsewhere
+      </span>
+
+      <nav
+        class="footer-social-links"
+        aria-label="Elsewhere"
+      >
+
+        <a
+          href="https://www.linkedin.com/in/ed-umbao/"
+          target="_blank"
+          rel="noopener"
+        >
+          LinkedIn ↗
+        </a>
+
+        <a
+          href="https://x.com/edmundumbao"
+          target="_blank"
+          rel="noopener"
+        >
+          X ↗
+        </a>
+
+        <a
+          href="https://github.com/edumbao"
+          target="_blank"
+          rel="noopener"
+        >
+          GitHub ↗
+        </a>
+
+        <a
+          href="https://edumbao.substack.com"
+          target="_blank"
+          rel="noopener"
+        >
+          Substack ↗
+        </a>
+
+        <a
+          href="https://edumbao.medium.com/"
+          target="_blank"
+          rel="noopener"
+        >
+          Medium ↗
+        </a>
+
+      </nav>
+
+    </div>
+
+  </footer>
+
+
+  <script>
+
+    document.addEventListener(
+      'DOMContentLoaded',
+      function () {
+
+        const menuButton =
+          document.querySelector('.menu-toggle');
+
+        const siteMenu =
+          document.querySelector('.site-menu');
+
+        const themeToggle =
+          document.getElementById('theme-toggle');
+
+
+        if (menuButton && siteMenu) {
+
+          menuButton.addEventListener(
+            'click',
+            function () {
+
+              const isOpen =
+                siteMenu.classList.toggle('nav-open');
+
+              menuButton.setAttribute(
+                'aria-expanded',
+                isOpen ? 'true' : 'false'
+              );
+
+            }
+          );
+
+
+          siteMenu
+            .querySelectorAll('a')
+            .forEach(
+              function (link) {
+
+                link.addEventListener(
+                  'click',
+                  function () {
+
+                    siteMenu.classList.remove('nav-open');
+
+                    menuButton.setAttribute(
+                      'aria-expanded',
+                      'false'
+                    );
+
+                  }
+                );
+
+              }
+            );
+
+        }
+
+
+        function currentTheme() {
+          return document.documentElement
+            .getAttribute('data-theme') === 'light'
+              ? 'light'
+              : 'dark';
+        }
+
+
+        function updateThemeLabel() {
+
+          if (!themeToggle) {
+            return;
+          }
+
+          const theme = currentTheme();
+
+          const nextTheme =
+            theme === 'dark'
+              ? 'Light'
+              : 'Dark';
+
+          themeToggle.textContent = nextTheme;
+
+          themeToggle.setAttribute(
+            'aria-label',
+            'Switch to ' +
+            nextTheme.toLowerCase() +
+            ' theme'
+          );
+
+        }
+
+
+        updateThemeLabel();
+
+
+        if (themeToggle) {
+
+          themeToggle.addEventListener(
+            'click',
+            function (event) {
+
+              event.preventDefault();
+
+              const nextTheme =
+                currentTheme() === 'dark'
+                  ? 'light'
+                  : 'dark';
+
+              document.documentElement.setAttribute(
+                'data-theme',
+                nextTheme
+              );
+
+              try {
+
+                localStorage.setItem(
+                  'edumbao-theme',
+                  nextTheme
+                );
+
+              } catch (error) {
+
+                // Theme switching still works
+                // if storage is unavailable.
+
+              }
+
+              updateThemeLabel();
+
+            }
+          );
+
+        }
+
+      }
+    );
+
+  </script>
+
+</body>
+
+</html>
