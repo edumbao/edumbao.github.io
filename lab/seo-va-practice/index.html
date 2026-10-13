@@ -1,0 +1,1212 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LBQL9HBJNL"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-LBQL9HBJNL');
+  </script>
+
+
+  <!-- Basic Metadata -->
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>SEO VA Practice | Ed's Lab</title>
+
+  <meta
+    name="description"
+    content="Build notes from Ed Umbao's SEO VA Practice project: creating free SEO practice assignments while learning GitHub, Next.js, Vercel, analytics, deployment, and technical SEO."
+  >
+
+  <link
+    rel="canonical"
+    href="https://edumbao.com/lab/seo-va-practice/"
+  >
+
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+
+  <meta
+    property="og:title"
+    content="SEO VA Practice | Ed's Lab"
+  >
+
+  <meta
+    property="og:description"
+    content="A free SEO practice project for aspiring virtual assistants and a hands-on experiment in building and maintaining a real website."
+  >
+
+  <meta
+    property="og:url"
+    content="https://edumbao.com/lab/seo-va-practice/"
+  >
+
+  <meta
+    property="og:site_name"
+    content="Ed Umbao"
+  >
+
+  <meta
+  property="og:image"
+  content="https://edumbao.com/images/ed-umbao-social-preview.webp"
+>
+
+<meta
+  property="og:image:alt"
+  content="Ed Umbao - Content, SEO, technical writing, and technical learning"
+>
+
+  <!-- Twitter / X -->
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+  <meta
+  name="twitter:image"
+  content="https://edumbao.com/images/ed-umbao-social-preview.webp"
+>
+
+<meta
+  name="twitter:image:alt"
+  content="Ed Umbao - Content, SEO, technical writing, and technical learning"
+>
+
+  <meta
+    name="twitter:title"
+    content="SEO VA Practice | Ed's Lab"
+  >
+
+  <meta
+    name="twitter:description"
+    content="What I learned while building a free SEO practice project for aspiring virtual assistants."
+  >
+
+
+  <!-- Apply saved/system theme before the page paints -->
+  <script>
+    (function () {
+      let savedTheme = null;
+
+      try {
+        savedTheme = localStorage.getItem('edumbao-theme');
+      } catch (error) {
+        savedTheme = null;
+      }
+
+      const preferredTheme =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: light)').matches
+          ? 'light'
+          : 'dark';
+
+      const theme =
+        savedTheme === 'light' || savedTheme === 'dark'
+          ? savedTheme
+          : preferredTheme;
+
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+
+</head>
+
+
+<body>
+
+<!-- ======================================================
+     Header
+======================================================= -->
+
+<header class="site-header">
+
+  <div class="container site-nav">
+
+    <a
+      href="/"
+      class="site-brand"
+      aria-label="Ed Umbao homepage"
+    >
+
+      <span class="brand-logo-wrap" aria-hidden="true">
+
+        <img
+          src="/images/ed-umbao-logo-on-light-mode.png"
+          alt=""
+          class="brand-logo brand-logo-on-light"
+        >
+
+        <img
+          src="/images/ed-umbao-logo-on-dark-mode.png"
+          alt=""
+          class="brand-logo brand-logo-on-dark"
+        >
+
+      </span>
+
+      <span class="brand-name">
+        Ed Umbao
+      </span>
+
+    </a>
+
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-controls="site-menu"
+      aria-expanded="false"
+    >
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </button>
+
+
+    <nav
+      class="site-menu"
+      id="site-menu"
+      aria-label="Main navigation"
+    >
+
+      <a
+        href="/lab/"
+        class="is-active"
+        aria-current="page"
+      >
+        Lab
+      </a>
+
+      <a href="/work/">
+        Work
+      </a>
+
+      <a href="/writing/">
+        Writing
+      </a>
+
+      <a href="/#about">
+        About
+      </a>
+
+      <a
+        href="https://github.com/edumbao"
+        target="_blank"
+        rel="noopener"
+        class="nav-external"
+      >
+        GitHub
+      </a>
+
+      <a
+        href="#"
+        id="theme-toggle"
+        class="theme-link"
+        aria-label="Switch color theme"
+      >
+        Theme
+      </a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+<main>
+
+<!-- ====================================================
+     Project Hero
+===================================================== -->
+
+<section class="project-page-hero">
+
+  <div class="container">
+
+    <div class="project-breadcrumb">
+
+      <a href="/lab/">
+        Ed's Lab
+      </a>
+
+      <span aria-hidden="true">
+        /
+      </span>
+
+      <span>
+        SEO VA Practice
+      </span>
+
+    </div>
+
+
+    <div class="project-page-hero-grid">
+
+      <div>
+
+        <p class="hero-eyebrow">
+          Working project / October 2026
+        </p>
+
+        <h1>
+          SEO VA
+          <em>
+            Practice
+          </em>
+        </h1>
+
+      </div>
+
+
+      <div class="project-page-summary">
+
+        <p>
+          I wanted to give aspiring SEO virtual assistants a place to practice
+          realistic work before getting their first client.
+        </p>
+
+        <p>
+          Building the project also gave me a practical way to learn more about
+          GitHub, Next.js, Vercel, deployments, analytics, technical SEO, and
+          maintaining a real website as a non-developer.
+        </p>
+
+
+        <div class="actions">
+
+          <a
+            href="https://seovapractice.com/"
+            class="button button-primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View SEO VA Practice →
+          </a>
+
+          <a
+            href="https://app.seovapractice.com/"
+            class="button button-private"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Try a Free Assignment
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ====================================================
+     Project Snapshot
+===================================================== -->
+
+<section class="project-snapshot">
+
+  <div class="container project-snapshot-grid">
+
+    <div>
+
+      <span>
+        Status
+      </span>
+
+      <strong>
+        Active learning project
+      </strong>
+
+      <p>
+        The site is live while I continue adding assignments and improving the workflow.
+      </p>
+
+    </div>
+
+
+    <div>
+
+      <span>
+        Live site
+      </span>
+
+      <strong>
+        SEO VA Practice
+      </strong>
+
+      <p>
+        Free SEO practice assignments with no login or sign-up requirement.
+      </p>
+
+    </div>
+
+
+    <div>
+
+      <span>
+        Main tools
+      </span>
+
+      <strong>
+        Next.js · GitHub · Vercel
+      </strong>
+
+      <p>
+        With VS Code, Vercel Web Analytics, technical SEO, and manual QA.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ====================================================
+     01 What I tried
+===================================================== -->
+
+<section
+  class="section project-story-section"
+  id="what-i-tried"
+>
+
+  <div class="container project-story-grid">
+
+    <aside class="project-story-index">
+
+      <span>
+        01
+      </span>
+
+      <p>
+        What I tried
+      </p>
+
+    </aside>
+
+
+    <div class="project-story-content">
+
+      <h2 class="section-title">
+        Build a place where beginners can practice SEO work, not just read about it.
+      </h2>
+
+      <p>
+        SEO VA Practice is a free learning and practice website for aspiring
+        SEO virtual assistants.
+      </p>
+
+      <p>
+        Instead of focusing only on explanations, I wanted the project to give
+        people something closer to the work they may eventually receive from a
+        client. Each assignment includes instructions, an SEO task, sample data,
+        and an expected output.
+      </p>
+
+      <p>
+        I also decided to keep the practice environment open. There is no account
+        registration or login requirement. Someone can open an assignment and
+        start working immediately.
+      </p>
+
+
+      <div class="project-process">
+
+        <div>
+          <span>
+            01
+          </span>
+
+          <strong>
+            Choose
+          </strong>
+
+          <p>
+            Pick an SEO practice assignment.
+          </p>
+        </div>
+
+        <div>
+          <span>
+            02
+          </span>
+
+          <strong>
+            Read
+          </strong>
+
+          <p>
+            Review the instructions, task, and expected deliverable.
+          </p>
+        </div>
+
+        <div>
+          <span>
+            03
+          </span>
+
+          <strong>
+            Practice
+          </strong>
+
+          <p>
+            Work through the task using the provided sample data.
+          </p>
+        </div>
+
+        <div>
+          <span>
+            04
+          </span>
+
+          <strong>
+            Produce
+          </strong>
+
+          <p>
+            Finish the type of output the assignment asks for.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ====================================================
+     02 Why I tried it
+===================================================== -->
+
+<section
+  class="section project-story-section project-story-alt"
+  id="why-i-tried-it"
+>
+
+  <div class="container project-story-grid">
+
+    <aside class="project-story-index">
+
+      <span>
+        02
+      </span>
+
+      <p>
+        Why I tried it
+      </p>
+
+    </aside>
+
+
+    <div class="project-story-content">
+
+      <h2 class="section-title">
+        Learning SEO is different from doing SEO work.
+      </h2>
+
+      <p>
+        Beginners can spend hours watching tutorials, reading guides, and
+        completing courses but still feel unsure when they are asked to produce
+        an actual SEO deliverable.
+      </p>
+
+      <p>
+        Knowing what keyword research means is different from deciding what to
+        research, reviewing the data, organizing the findings, and handing over
+        something another person can use.
+      </p>
+
+      <p>
+        I wanted to create another path for people who are still looking for work
+        and may not be ready to pay for training immediately. The project is not
+        meant to replace paid courses or trainers. It simply gives beginners a
+        free place to practice first.
+      </p>
+
+      <p>
+        I also had a second reason for building it. I wanted a real project where
+        I could become more comfortable with the technical side of publishing
+        and maintaining a website.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ====================================================
+     03 What worked
+===================================================== -->
+
+<section
+  class="section project-story-section"
+  id="what-worked"
+>
+
+  <div class="container project-story-grid">
+
+    <aside class="project-story-index">
+
+      <span>
+        03
+      </span>
+
+      <p>
+        What worked
+      </p>
+
+    </aside>
+
+
+    <div class="project-story-content">
+
+      <h2 class="section-title">
+        People are reaching the practice environment and opening assignments.
+      </h2>
+
+      <p>
+        The project is still early, so I do not want to turn a small amount of
+        usage into a bigger claim than the data supports.
+      </p>
+
+      <p>
+        What I can see is that visitors are reaching the practice app and opening
+        the assignments. Early traffic has mainly come from Facebook, direct
+        visits from the main SEO VA Practice site, and updates I shared while
+        building the project.
+      </p>
+
+
+      <div class="project-metrics">
+
+        <div>
+          <strong>
+            2
+          </strong>
+
+          <span>
+            practice assignments currently live
+          </span>
+        </div>
+
+        <div>
+          <strong>
+            No login
+          </strong>
+
+          <span>
+            required to start practicing
+          </span>
+        </div>
+
+        <div>
+          <strong>
+            Facebook + direct
+          </strong>
+
+          <span>
+            main early traffic sources
+          </span>
+        </div>
+
+        <div>
+          <strong>
+            Local SEO
+          </strong>
+
+          <span>
+            strongest early assignment
+          </span>
+        </div>
+
+      </div>
+
+
+      <p>
+        Local SEO Competitor Research has shown the strongest early usage so far.
+        I see that as a small signal that the practice format is useful enough
+        for people to try, not as proof that the project has reached major traction.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ====================================================
+     04 What broke or confused me
+===================================================== -->
+
+<section
+  class="section project-story-section project-story-alt"
+  id="what-broke"
+>
+
+  <div class="container project-story-grid">
+
+    <aside class="project-story-index">
+
+      <span>
+        04
+      </span>
+
+      <p>
+        What broke or confused me
+      </p>
+
+    </aside>
+
+
+    <div class="project-story-content">
+
+      <h2 class="section-title">
+        Some of the best lessons came from changes that did not work the first time.
+      </h2>
+
+      <p>
+        Building the site exposed problems that I do not normally deal with when
+        I am working only on content.
+      </p>
+
+      <p>
+        I ran into deployment and text-encoding problems, learned that desktop
+        layouts can look fine while mobile still needs work, and became more
+        careful about checking a Vercel Preview before merging changes into the
+        production branch.
+      </p>
+
+      <p>
+        Analytics created another learning problem. Early visits were visible,
+        but traffic attribution was harder to read when I shared links without
+        consistent UTM parameters.
+      </p>
+
+      <p>
+        None of these problems were dramatic on their own. Together, they helped
+        me see how much work happens between writing a page and keeping a live
+        website working properly.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ====================================================
+     05 What I learned
+===================================================== -->
+
+<section
+  class="section project-story-section"
+  id="what-i-learned"
+>
+
+  <div class="container project-story-grid">
+
+    <aside class="project-story-index">
+
+      <span>
+        05
+      </span>
+
+      <p>
+        What I learned
+      </p>
+
+    </aside>
+
+
+    <div class="project-story-content">
+
+      <h2 class="section-title">
+        Building a live project forced me to work beyond the content layer.
+      </h2>
+
+      <p>
+        GitHub branches and pull requests became more practical once I had a
+        real reason to separate unfinished work from production changes.
+      </p>
+
+      <p>
+        Vercel helped me understand the difference between Preview and Production
+        deployments. Instead of treating deployment as the final step, I started
+        using previews as part of the review process.
+      </p>
+
+      <p>
+        I also added Vercel Web Analytics, checked layouts across desktop and
+        mobile, worked through deployment problems, and applied page structure,
+        metadata, internal linking, and other technical SEO decisions to a
+        project I control.
+      </p>
+
+      <p>
+        I am still learning these tools. The useful part is that the lessons are
+        attached to a live project rather than isolated exercises.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ====================================================
+     06 Connection to my work
+===================================================== -->
+
+<section
+  class="section project-story-section project-story-alt"
+  id="connection"
+>
+
+  <div class="container project-story-grid">
+
+    <aside class="project-story-index">
+
+      <span>
+        06
+      </span>
+
+      <p>
+        Connection to my work
+      </p>
+
+    </aside>
+
+
+    <div class="project-story-content">
+
+      <h2 class="section-title">
+        This sits between SEO education, content work, and technical learning.
+      </h2>
+
+
+      <div class="project-connection-grid">
+
+        <div>
+
+          <h3>
+            SEO
+          </h3>
+
+          <p>
+            I can apply page structure, metadata, internal linking, indexing,
+            and measurement decisions to a website that I can change directly.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h3>
+            Content
+          </h3>
+
+          <p>
+            The assignments force me to turn SEO knowledge into instructions
+            that a beginner can follow without already knowing the answer.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h3>
+            Technical writing
+          </h3>
+
+          <p>
+            Each practice task needs a clear objective, enough context, usable
+            sample data, and a defined deliverable. That is documentation work,
+            not just SEO writing.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h3>
+            Web workflows
+          </h3>
+
+          <p>
+            GitHub, Vercel, analytics, deployment checks, and QA are helping me
+            understand what happens around the content before and after publication.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ====================================================
+     07 What I will try next
+===================================================== -->
+
+<section
+  class="section project-story-section"
+  id="next"
+>
+
+  <div class="container project-story-grid">
+
+    <aside class="project-story-index">
+
+      <span>
+        07
+      </span>
+
+      <p>
+        What I will try next
+      </p>
+
+    </aside>
+
+
+    <div class="project-story-content">
+
+      <h2 class="section-title">
+        Improve the assignments before making the project bigger.
+      </h2>
+
+      <p>
+        I want to keep the project manageable and use actual behavior to decide
+        what deserves more work.
+      </p>
+
+
+      <ol class="project-next-list">
+
+        <li>
+          Add more SEO practice assignments.
+        </li>
+
+        <li>
+          Build additional Local SEO exercises.
+        </li>
+
+        <li>
+          Publish supporting guides for the skills used in each assignment.
+        </li>
+
+        <li>
+          Improve internal linking between guides, SEO VA task pages, and practice assignments.
+        </li>
+
+        <li>
+          Continue checking mobile layouts and usability.
+        </li>
+
+        <li>
+          Use UTM parameters more consistently when sharing the project.
+        </li>
+
+        <li>
+          Review assignment usage before deciding what to build next.
+        </li>
+
+      </ol>
+
+
+      <div class="project-final-note">
+
+        <p>
+          The useful part of this project is not simply that I built a website.
+          It is that I am learning how SEO, content, GitHub, deployment,
+          analytics, documentation, and maintenance fit together on something
+          people can actually use.
+        </p>
+
+      </div>
+
+
+      <div class="actions">
+
+        <a
+          href="https://seovapractice.com/"
+          class="button button-primary"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View SEO VA Practice 
+        </a>
+
+        <a
+          href="https://app.seovapractice.com/"
+          class="button button-private"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Start Practicing
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ====================================================
+     Footer
+===================================================== -->
+
+<footer class="footer">
+
+  <div class="container footer-inner">
+
+    <span>
+      © 2026 Ed Umbao
+    </span>
+
+    <span>
+      Ed's Lab · SEO VA Practice
+    </span>
+
+  </div>
+
+
+  <div class="container footer-social">
+
+    <span class="footer-social-label">
+      Elsewhere
+    </span>
+
+    <nav
+      class="footer-social-links"
+      aria-label="Elsewhere"
+    >
+
+      <a
+        href="https://www.linkedin.com/in/ed-umbao/"
+        target="_blank"
+        rel="noopener"
+      >
+        LinkedIn
+      </a>
+
+      <a
+        href="https://x.com/edmundumbao"
+        target="_blank"
+        rel="noopener"
+      >
+        X
+      </a>
+
+      <a
+        href="https://github.com/edumbao"
+        target="_blank"
+        rel="noopener"
+      >
+        GitHub
+      </a>
+
+      <a
+        href="https://edumbao.substack.com"
+        target="_blank"
+        rel="noopener"
+      >
+        Substack
+      </a>
+
+      <a
+        href="https://edumbao.medium.com/"
+        target="_blank"
+        rel="noopener"
+      >
+        Medium
+      </a>
+
+    </nav>
+
+  </div>
+
+</footer>
+
+</main>
+
+
+<!-- ======================================================
+     Navigation + Theme
+======================================================= -->
+
+<script>
+
+  document.addEventListener(
+    'DOMContentLoaded',
+    function () {
+
+      const menuButton =
+        document.querySelector('.menu-toggle');
+
+      const siteMenu =
+        document.querySelector('.site-menu');
+
+      const themeToggle =
+        document.getElementById('theme-toggle');
+
+
+      if (menuButton && siteMenu) {
+
+        menuButton.addEventListener(
+          'click',
+          function () {
+
+            const isOpen =
+              siteMenu.classList.toggle('nav-open');
+
+            menuButton.setAttribute(
+              'aria-expanded',
+              isOpen ? 'true' : 'false'
+            );
+
+          }
+        );
+
+
+        siteMenu
+          .querySelectorAll('a')
+          .forEach(
+            function (link) {
+
+              link.addEventListener(
+                'click',
+                function () {
+
+                  siteMenu.classList.remove('nav-open');
+
+                  menuButton.setAttribute(
+                    'aria-expanded',
+                    'false'
+                  );
+
+                }
+              );
+
+            }
+          );
+
+      }
+
+
+      function currentTheme() {
+        return document.documentElement.getAttribute('data-theme') === 'light'
+          ? 'light'
+          : 'dark';
+      }
+
+
+      function updateThemeLabel() {
+
+        if (!themeToggle) {
+          return;
+        }
+
+        const theme = currentTheme();
+        const nextTheme = theme === 'dark' ? 'Light' : 'Dark';
+
+        themeToggle.textContent = nextTheme;
+
+        themeToggle.setAttribute(
+          'aria-label',
+          'Switch to ' + nextTheme.toLowerCase() + ' theme'
+        );
+
+      }
+
+
+      updateThemeLabel();
+
+
+      if (themeToggle) {
+
+        themeToggle.addEventListener(
+          'click',
+          function (event) {
+
+            event.preventDefault();
+
+            const nextTheme =
+              currentTheme() === 'dark'
+                ? 'light'
+                : 'dark';
+
+            document.documentElement.setAttribute(
+              'data-theme',
+              nextTheme
+            );
+
+            try {
+              localStorage.setItem(
+                'edumbao-theme',
+                nextTheme
+              );
+            } catch (error) {
+              // Theme still works for the current page
+              // if localStorage is unavailable.
+            }
+
+            updateThemeLabel();
+
+          }
+        );
+
+      }
+
+    }
+  );
+
+</script>
+
+</body>
+
+</html>
