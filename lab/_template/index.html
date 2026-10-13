@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LBQL9HBJNL"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-LBQL9HBJNL');
+  </script>
+
+
+  <!-- Basic Metadata -->
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>{{PROJECT_TITLE}} | Ed's Lab</title>
+
+  <meta
+    name="description"
+    content="{{META_DESCRIPTION}}"
+  >
+
+  <link
+    rel="canonical"
+    href="https://edumbao.com/lab/{{PROJECT_SLUG}}/"
+  >
+
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+
+  <meta
+    property="og:title"
+    content="{{PROJECT_TITLE}} | Ed's Lab"
+  >
+
+  <meta
+    property="og:description"
+    content="{{OG_DESCRIPTION}}"
+  >
+
+  <meta
+    property="og:url"
+    content="https://edumbao.com/lab/{{PROJECT_SLUG}}/"
+  >
+
+  <meta
+    property="og:site_name"
+    content="Ed Umbao"
+  >
+
+  <meta
+  property="og:image"
+  content="https://edumbao.com/images/ed-umbao-social-preview.webp"
+>
+
+<meta
+  property="og:image:alt"
+  content="Ed Umbao - Content, SEO, technical writing, and technical learning"
+>
+
+  <!-- Twitter / X -->
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+  <meta
+  name="twitter:image"
+  content="https://edumbao.com/images/ed-umbao-social-preview.webp"
+>
+
+<meta
+  name="twitter:image:alt"
+  content="Ed Umbao - Content, SEO, technical writing, and technical learning"
+>
+
+  <meta
+    name="twitter:title"
+    content="{{PROJECT_TITLE}} | Ed's Lab"
+  >
+
+  <meta
+    name="twitter:description"
+    content="{{TWITTER_DESCRIPTION}}"
+  >
+
+
+  <!-- Apply saved/system theme before the page paints -->
+  <script>
+    (function () {
+      let savedTheme = null;
+
+      try {
+        savedTheme = localStorage.getItem('edumbao-theme');
+      } catch (error) {
+        savedTheme = null;
+      }
+
+      const preferredTheme =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: light)').matches
+          ? 'light'
+          : 'dark';
+
+      const theme =
+        savedTheme === 'light' || savedTheme === 'dark'
+          ? savedTheme
+          : preferredTheme;
+
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+
+</head>
+
+
+<body>
+
+{{HEADER}}
+
+
+<main>
+
+{{CONTENT}}
+
+
+{{FOOTER}}
+
+</main>
+
+
+<!-- ======================================================
+     Navigation + Theme
+======================================================= -->
+
+<script>
+
+  document.addEventListener(
+    'DOMContentLoaded',
+    function () {
+
+      const menuButton =
+        document.querySelector('.menu-toggle');
+
+      const siteMenu =
+        document.querySelector('.site-menu');
+
+      const themeToggle =
+        document.getElementById('theme-toggle');
+
+
+      if (menuButton && siteMenu) {
+
+        menuButton.addEventListener(
+          'click',
+          function () {
+
+            const isOpen =
+              siteMenu.classList.toggle('nav-open');
+
+            menuButton.setAttribute(
+              'aria-expanded',
+              isOpen ? 'true' : 'false'
+            );
+
+          }
+        );
+
+
+        siteMenu
+          .querySelectorAll('a')
+          .forEach(
+            function (link) {
+
+              link.addEventListener(
+                'click',
+                function () {
+
+                  siteMenu.classList.remove('nav-open');
+
+                  menuButton.setAttribute(
+                    'aria-expanded',
+                    'false'
+                  );
+
+                }
+              );
+
+            }
+          );
+
+      }
+
+
+      function currentTheme() {
+        return document.documentElement.getAttribute('data-theme') === 'light'
+          ? 'light'
+          : 'dark';
+      }
+
+
+      function updateThemeLabel() {
+
+        if (!themeToggle) {
+          return;
+        }
+
+        const theme = currentTheme();
+        const nextTheme = theme === 'dark' ? 'Light' : 'Dark';
+
+        themeToggle.textContent = nextTheme;
+
+        themeToggle.setAttribute(
+          'aria-label',
+          'Switch to ' + nextTheme.toLowerCase() + ' theme'
+        );
+
+      }
+
+
+      updateThemeLabel();
+
+
+      if (themeToggle) {
+
+        themeToggle.addEventListener(
+          'click',
+          function (event) {
+
+            event.preventDefault();
+
+            const nextTheme =
+              currentTheme() === 'dark'
+                ? 'light'
+                : 'dark';
+
+            document.documentElement.setAttribute(
+              'data-theme',
+              nextTheme
+            );
+
+            try {
+              localStorage.setItem(
+                'edumbao-theme',
+                nextTheme
+              );
+            } catch (error) {
+              // Theme still works for the current page
+              // if localStorage is unavailable.
+            }
+
+            updateThemeLabel();
+
+          }
+        );
+
+      }
+
+    }
+  );
+
+</script>
+
+</body>
+
+</html>
