@@ -233,10 +233,10 @@ const DISCOVERY_FORM_ACCESS_KEY = "";
       confirmationBody.textContent =
         "Your answers passed validation, and the form is ready. No delivery endpoint is connected yet, so nothing was sent.";
     } else {
-      confirmationKicker.textContent = "Sent";
-      confirmationTitle.textContent = "Intake received";
+      confirmationKicker.textContent = "Submission successful";
+      confirmationTitle.textContent = "Thank you for your inquiry";
       confirmationBody.textContent =
-        "Thank you. Ed Umbao’s specialist pod has your campaign intake and will use it to prepare a tailored proposal in AUD.";
+        "Your discovery form has been submitted successfully. Our team will review your business details, campaign goals, and requirements before contacting you about the next steps.";
     }
 
     intro.hidden = true;
