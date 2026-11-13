@@ -16,7 +16,7 @@
 // load the script; restrict the key to edumbao.com in the Web3Forms dashboard.
 // While DISCOVERY_FORM_ENDPOINT is empty, Submit still validates and shows
 // an on-page notice that nothing was sent.
-const DISCOVERY_FORM_ENDPOINT = "";
+const DISCOVERY_FORM_ENDPOINT = "https://formspree.io/f/mljbdora";
 
 // Web3Forms access key. Leave empty when using Formspree.
 const DISCOVERY_FORM_ACCESS_KEY = "";
