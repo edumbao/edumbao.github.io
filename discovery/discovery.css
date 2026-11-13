@@ -1,0 +1,494 @@
+/* Page-specific rules for the unlisted intake.
+   Color, type, and radius come from assets/css/site.css tokens. */
+
+body.intake {
+  --intake-danger: #f0b4b4;
+}
+
+html[data-theme="light"] body.intake {
+  --intake-danger: #8f2d2d;
+}
+
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: 0;
+  z-index: 200;
+
+  transform: translateY(-120%);
+
+  padding: 10px 14px;
+
+  border-radius: 8px;
+
+  background: var(--brand-blue);
+  color: var(--brand-blue-contrast);
+
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.skip-link:focus {
+  top: 12px;
+  transform: none;
+}
+
+.intake-nav {
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+
+.intake-badge {
+  display: inline-flex;
+  align-items: center;
+
+  margin: 0;
+
+  min-height: 28px;
+
+  padding: 4px 10px;
+
+  border: 1px solid var(--line);
+  border-radius: 6px;
+
+  background: var(--brand-blue-soft);
+  color: var(--accent-text);
+
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+.intake-hero {
+  padding: 64px 0 12px;
+}
+
+.intake-hero h1 {
+  max-width: 640px;
+
+  margin: 0 0 22px;
+
+  font-family: var(--serif);
+  font-size: clamp(42px, 6vw, 68px);
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+}
+
+.intake-heading {
+  max-width: 18em;
+
+  margin: 0 0 14px;
+
+  font-family: var(--serif);
+  font-size: clamp(32px, 4vw, 46px);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+}
+
+.intake .service-number {
+  margin-bottom: 14px;
+
+  font-size: 14px;
+}
+
+.intake .pod-role {
+  margin: 0 0 10px;
+
+  color: var(--text-soft);
+
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.45;
+}
+
+.intake .pod-detail {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.intake .pod-detail + .pod-detail {
+  margin-top: 8px;
+}
+
+.intake .pod-detail strong {
+  color: var(--text);
+  font-weight: 650;
+}
+
+.intake-form {
+  max-width: 760px;
+  margin-top: 8px;
+}
+
+.intake fieldset {
+  min-inline-size: 0;
+
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+}
+
+.intake-section {
+  margin-top: 36px;
+  padding-top: 28px;
+
+  border-top: 1px solid var(--line);
+}
+
+.intake-section > legend {
+  display: block;
+
+  width: 100%;
+
+  margin: 0 0 4px;
+  padding: 0;
+
+  color: var(--accent-text);
+
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.question {
+  margin-top: 12px;
+  padding-bottom: 8px;
+}
+
+.intake legend {
+  padding: 0;
+}
+
+.question > legend,
+.question-label {
+  display: block;
+
+  width: 100%;
+
+  margin-bottom: 10px;
+
+  color: var(--text);
+
+  font-family: var(--sans);
+  font-size: 16px;
+  font-weight: 650;
+  letter-spacing: -0.011em;
+  line-height: 1.4;
+  text-transform: none;
+}
+
+.field-pair .question-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-soft);
+}
+
+.req {
+  color: var(--accent-text);
+  font-weight: 700;
+}
+
+.opt {
+  color: var(--muted);
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.field-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.question > div + div {
+  margin-top: 16px;
+}
+
+.intake input[type="text"],
+.intake input[type="email"],
+.intake textarea {
+  display: block;
+
+  width: 100%;
+
+  margin: 0;
+  padding: 12px 14px;
+
+  border: 1px solid var(--line);
+  border-radius: 8px;
+
+  background: var(--bg-soft);
+  color: var(--text);
+
+  line-height: 1.5;
+
+  box-shadow: none;
+}
+
+.intake textarea {
+  min-height: 132px;
+  resize: vertical;
+}
+
+.intake input[type="text"]:focus-visible,
+.intake input[type="email"]:focus-visible,
+.intake textarea:focus-visible,
+.choice input:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.intake input[aria-invalid="true"],
+.intake textarea[aria-invalid="true"] {
+  border-color: var(--intake-danger);
+}
+
+.intake input:-webkit-autofill,
+.intake input:-webkit-autofill:hover,
+.intake input:-webkit-autofill:focus,
+.intake textarea:-webkit-autofill {
+  -webkit-text-fill-color: var(--text);
+  caret-color: var(--text);
+  transition: background-color 9999s ease-out;
+}
+
+.helper {
+  margin: 8px 0 16px;
+
+  color: var(--muted);
+
+  font-size: 13px;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.field-error {
+  margin: 8px 0 0;
+
+  color: var(--intake-danger);
+
+  font-size: 13px;
+  font-style: normal;
+  line-height: 1.45;
+}
+
+.field-error:empty {
+  margin: 0;
+}
+
+.choices {
+  display: grid;
+  gap: 8px;
+}
+
+.choice {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  padding: 12px 14px;
+
+  border: 1px solid var(--line);
+  border-radius: 8px;
+
+  background: var(--bg-soft);
+
+  cursor: pointer;
+}
+
+.choice:hover {
+  border-color: var(--accent-text);
+}
+
+.choice:has(input:checked) {
+  border-color: var(--accent-text);
+  background: var(--brand-blue-soft);
+}
+
+.choice-set[aria-invalid="true"] .choice {
+  border-color: var(--intake-danger);
+}
+
+.choice input {
+  width: 18px;
+  height: 18px;
+  margin: 2px 0 0;
+
+  flex: 0 0 auto;
+
+  accent-color: var(--brand-blue);
+}
+
+.choice-title {
+  display: block;
+
+  color: var(--text);
+
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.011em;
+  line-height: 1.4;
+}
+
+.choice-support {
+  display: block;
+
+  margin-top: 2px;
+
+  color: var(--muted);
+
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 18px;
+
+  margin-top: 32px;
+}
+
+.intake button.button {
+  cursor: pointer;
+
+  appearance: none;
+  font-family: inherit;
+}
+
+.intake button.button:disabled {
+  cursor: wait;
+  opacity: 0.72;
+  transform: none;
+}
+
+.intake #submit-intake {
+  min-width: 11rem;
+}
+
+.form-note {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.form-alert {
+  margin: 0 0 22px;
+  padding: 14px 16px;
+
+  border: 1px solid var(--line);
+  border-radius: 8px;
+
+  background: var(--surface);
+  color: var(--text-soft);
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.form-alert p {
+  margin: 0;
+}
+
+.form-alert.is-error {
+  border-color: var(--intake-danger);
+  color: var(--text);
+}
+
+#submit-error {
+  margin-top: 16px;
+
+  scroll-margin-top: 88px;
+}
+
+.form-alert ul {
+  margin: 8px 0 0;
+  padding-left: 18px;
+}
+
+.form-alert a {
+  color: var(--link-blue);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.confirmation {
+  max-width: 680px;
+
+  margin-top: 8px;
+  padding-top: 8px;
+
+  scroll-margin-top: 88px;
+}
+
+.confirmation h2 {
+  scroll-margin-top: 88px;
+
+  margin: 0 0 14px;
+
+  font-family: var(--serif);
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+}
+
+.confirmation h2:focus {
+  outline: none;
+}
+
+.confirmation-body {
+  margin: 0 0 20px;
+
+  color: var(--text-soft);
+
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.form-summary,
+.question input,
+.question textarea,
+.choice input {
+  scroll-margin-top: 96px;
+}
+
+@media (max-width: 700px) {
+  .field-pair {
+    grid-template-columns: 1fr;
+  }
+
+  .intake-badge {
+    white-space: normal;
+  }
+
+  .intake-hero {
+    padding-top: 40px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intake .button {
+    transition: none;
+  }
+}
