@@ -16,6 +16,9 @@
     <loc>https://edumbao.com/lab/targetron-knowledge-catalog/</loc>
   </url>
   <url>
+    <loc>https://edumbao.com/lab/seo-va-practice/</loc>
+  </url>
+  <url>
     <loc>https://edumbao.com/work/</loc>
   </url>
   <url>
@@ -44,5 +47,11 @@
   </url>
   <url>
     <loc>https://edumbao.com/posts/rebuilding-personal-portfolio-github-pages.html</loc>
+  </url>
+  <url>
+    <loc>https://edumbao.com/posts/building-seo-va-practice.html</loc>
+  </url>
+  <url>
+    <loc>https://edumbao.com/posts/grok-build-to-github-vercel.html</loc>
   </url>
 </urlset>
