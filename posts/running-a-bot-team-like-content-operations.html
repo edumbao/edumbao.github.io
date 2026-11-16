@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>I Run a Small AI Bot Team Like a Content Operations System | Ed Umbao</title>
+
+  <meta
+    name="description"
+    content="I run a small Grok Bot team like a content operation: clear roles, written briefs, review-only drafts, and a human yes before anything ships."
+  >
+
+  <link
+    rel="canonical"
+    href="https://edumbao.com/posts/running-a-bot-team-like-content-operations.html"
+  >
+
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+
+  <meta
+    property="og:title"
+    content="I Run a Small AI Bot Team Like a Content Operations System"
+  >
+
+  <meta
+    property="og:description"
+    content="What I learned from running a small AI bot team the way I already run content operations: roles, written briefs, and a human yes before anything ships."
+  >
+
+  <meta
+    property="og:url"
+    content="https://edumbao.com/posts/running-a-bot-team-like-content-operations.html"
+  >
+
+  <meta
+    property="og:image"
+    content="https://edumbao.com/images/running-a-bot-team-like-content-operations.webp"
+  >
+
+  <meta
+    property="og:image:alt"
+    content="Diagram of four roles — chief of staff, developer, content, and SEO — feeding into a human yes gate before anything is published."
+  >
+
+  <meta
+    property="og:site_name"
+    content="Ed Umbao"
+  >
+
+
+  <!-- Twitter / X -->
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <meta
+    name="twitter:title"
+    content="I Run a Small AI Bot Team Like a Content Operations System"
+  >
+
+  <meta
+    name="twitter:description"
+    content="A content writer's notes on running a small Grok Bot team with clear roles, written briefs, review-only drafts, and a human yes before anything ships."
+  >
+
+  <meta
+    name="twitter:image"
+    content="https://edumbao.com/images/running-a-bot-team-like-content-operations.webp"
+  >
+
+
+  <!-- Apply theme before page paint -->
+  <script>
+    (function () {
+      let savedTheme = null;
+
+      try {
+        savedTheme = localStorage.getItem('edumbao-theme');
+      } catch (error) {
+        savedTheme = null;
+      }
+
+      const preferredTheme =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: light)').matches
+          ? 'light'
+          : 'dark';
+
+      const theme =
+        savedTheme === 'light' || savedTheme === 'dark'
+          ? savedTheme
+          : preferredTheme;
+
+      document.documentElement.setAttribute(
+        'data-theme',
+        theme
+      );
+    })();
+  </script>
+
+
+  <link
+    rel="stylesheet"
+    href="/assets/css/site.css"
+  >
+
+</head>
+
+
+<body>
+
+  <header class="site-header">
+
+    <div class="container site-nav">
+
+      <a
+        href="/"
+        class="site-brand"
+        aria-label="Ed Umbao homepage"
+      >
+
+        <span class="brand-logo-wrap" aria-hidden="true">
+
+  <img
+    src="/images/ed-umbao-logo-on-light-mode.png"
+    alt=""
+    class="brand-logo brand-logo-on-light"
+  >
+
+  <img
+    src="/images/ed-umbao-logo-on-dark-mode.png"
+    alt=""
+    class="brand-logo brand-logo-on-dark"
+  >
+
+</span>
+
+        <span class="brand-name">
+          Ed Umbao
+        </span>
+
+      </a>
+
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-controls="site-menu"
+        aria-expanded="false"
+      >
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </button>
+
+
+      <nav
+        class="site-menu"
+        id="site-menu"
+        aria-label="Main navigation"
+      >
+
+        <a href="/lab/">
+          Lab
+        </a>
+
+        <a href="/work/">
+          Work
+        </a>
+
+        <a
+          href="/writing/"
+          class="is-active"
+          aria-current="page"
+        >
+          Writing
+        </a>
+
+        <a href="/#about">
+          About
+        </a>
+
+        <a
+          href="https://github.com/edumbao"
+          target="_blank"
+          rel="noopener"
+          class="nav-external"
+        >
+          GitHub ↗
+        </a>
+
+        <a
+          href="#"
+          id="theme-toggle"
+          class="theme-link"
+          aria-label="Switch color theme"
+        >
+          Theme
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <main class="article-page">
+
+    <div class="container article-shell">
+
+      <article class="article-content">
+
+        <h1 class="article-title">
+          I Run a Small AI Bot Team Like a Content Operations System
+        </h1>
+
+        <p class="article-date">
+          Published on November 16, 2026
+        </p>
+
+        <figure class="article-featured-image">
+
+          <img
+            src="/images/running-a-bot-team-like-content-operations.webp"
+            alt="Diagram of four roles — chief of staff, developer, content, and SEO — feeding into a human yes gate before anything is published."
+            width="2752"
+            height="1536"
+          >
+
+          <figcaption>
+          Running a small Grok Bot team became a hands-on lesson in roles,
+          written briefs, review-only drafts, and putting a human yes in
+          front of anything that gets published, sent, or shipped.
+          </figcaption>
+
+        </figure>
+
+        <p>
+          I did not set out to build an AI department.
+        </p>
+        <p>
+          I started using Grok Bot as a content writer who already thinks in
+          terms of briefs, review, and publishing workflows. I wanted help
+          with research, drafts, technical tasks, and the operational work
+          around them.
+        </p>
+        <p>
+          What I ended up with was smaller and more familiar than that
+          sounds.
+        </p>
+        <p>
+          There is a chief of staff bot, a developer bot, a content bot, and
+          an SEO bot. I write the brief. They do the assigned work. I review
+          the result. Nothing is published, merged, sent, or spent without
+          my yes.
+        </p>
+        <p>
+          I built this system because the alternative was a long chat thread
+          and a lot of trust I had not earned yet.
+        </p>
+
+        <h2>
+          1. What I tried
+        </h2>
+        <p>
+          My original goal was not to assemble a large virtual staff.
+        </p>
+        <p>
+          I wanted to answer a simpler question:
+        </p>
+        <p>
+          Could I run a few AI bots the way a lean content team already
+          works, with clear roles, a written brief, and one approval gate?
+        </p>
+        <p>
+          At first, I asked one bot to cover both operations and technical
+          lead work.
+        </p>
+        <p>
+          That did not stay useful for long.
+        </p>
+        <p>
+          In early November, I split that combined role into two: a chief of
+          staff bot, who is the only bot that brings approvals to me, and a
+          developer bot, who owns technical and repository work. Content and
+          SEO work sit in their own roles.
+        </p>
+        <p>
+          The chain is simple on purpose.
+        </p>
+        <p>
+          The chief of staff bot coordinates. The other bots do one job at a
+          time. I stay the person who says yes or no.
+        </p>
+        <p>
+          I also wrote a short set of team rules.
+        </p>
+        <p>
+          The most useful of those rules, for me, was to start work with a
+          tight done-list brief: the goal, the purpose, the constraints, and
+          three to five pass/fail checks. I asked for one bot per task, one
+          big job at a time, and small changes batched into a single
+          pull-request cycle.
+        </p>
+        <p>
+          Drafts stay drafts.
+        </p>
+        <p>
+          Pull requests stay review-only until I approve them.
+        </p>
+        <p>
+          If I need to think, I pause the team rather than hoping it will
+          stay aligned on its own.
+        </p>
+
+        <h2>
+          2. Why I tried it
+        </h2>
+        <p>
+          The experiment was partly about using a new tool, but the bigger
+          reason was operational.
+        </p>
+        <p>
+          As a content writer, I already work around editorial workflows,
+          internal review, and the gap between a draft and something that is
+          actually ready to go live.
+        </p>
+        <p>
+          I understand those things from the content side.
+        </p>
+        <p>
+          I wanted to see whether the same ideas would hold when some of the
+          drafting and technical work was done by bots.
+        </p>
+        <p>
+          Generating text is becoming easier.
+        </p>
+        <p>
+          Taking responsibility for what was generated is a different
+          problem.
+        </p>
+        <p>
+          That is the same issue I ran into when I took an
+          <a href="/posts/grok-build-to-github-vercel.html">unfinished Grok Build export</a>
+          and had to make it my own. The useful work started after the
+          generation stopped.
+        </p>
+        <p>
+          I also wanted a system simple enough that I could understand it.
+        </p>
+        <p>
+          If I could not explain who writes, who checks, and who ships, I
+          would not be running a team. I would be hoping a chat window would
+          stay organized by itself.
+        </p>
+
+        <h2>
+          3. What worked
+        </h2>
+        <p>
+          The biggest thing that worked was the written brief.
+        </p>
+        <p>
+          A long chat is easy to start and hard to reuse. A done-list brief
+          can be checked.
+        </p>
+        <p>
+          When I state the goal, the purpose, what not to do, and a small
+          set of pass/fail criteria, the output is easier to review. I can
+          see whether the work met the brief or quietly expanded past it.
+        </p>
+        <p>
+          Separating roles also helped.
+        </p>
+        <p>
+          Content work, technical work, and SEO work are not the same job.
+          Neither is the work of bringing a decision to me. Once those were
+          no longer stacked on a single bot, I spent less time untangling
+          who was supposed to do what.
+        </p>
+        <p>
+          The approval gate is the other part that worked.
+        </p>
+        <p>
+          I use one path for approvals. The chief of staff bot can prepare
+          the question. I am the only one who can say yes.
+        </p>
+        <p>
+          That applies to publishing, sending, and spending.
+        </p>
+        <p>
+          It also applies to code.
+        </p>
+        <p>
+          A review-only pull request is useful for the same reason a draft
+          article is useful. I can read it, ask for changes, or leave it
+          unmerged. Nothing goes live because a bot finished a task.
+        </p>
+        <p>
+          Pausing the team also worked, even though it did not feel
+          productive at first.
+        </p>
+        <p>
+          In early November I stopped all bot-team work so I could plan
+          offline in ChatGPT Pro and be more careful with usage. I have done
+          that more than once since then. The team stays idle until I
+          explicitly say to resume.
+        </p>
+        <p>
+          That is an operations decision, not a failure.
+        </p>
+
+        <h2>
+          4. What broke or confused me
+        </h2>
+        <h3>
+          One bot doing two jobs created confusion
+        </h3>
+        <p>
+          The first structure asked one bot to be both the operations lead
+          and the technical lead.
+        </p>
+        <p>
+          That was too much to keep clean.
+        </p>
+        <p>
+          Handoffs got heavier. Priorities were harder to see. I found
+          myself unsure whether I was getting an operations recommendation
+          or a technical one.
+        </p>
+        <p>
+          Splitting the roles made the system easier to run, even though it
+          meant more setup at the beginning.
+        </p>
+        <h3>
+          A chat thread is a weak brief
+        </h3>
+        <p>
+          I can have a long conversation and still not have a clear
+          assignment.
+        </p>
+        <p>
+          The thread contains useful context, but it also contains discarded
+          ideas, side questions, and older instructions. A bot can follow
+          the wrong part of it.
+        </p>
+        <p>
+          Writing the brief separately forced me to decide what the task
+          actually was before anyone started work.
+        </p>
+        <h3>
+          Thin analytics can look more certain than they are
+        </h3>
+        <p>
+          I also used the team, carefully, for read-only analytics work.
+        </p>
+        <p>
+          On one of my own projects, I authorized a bot to review Google
+          Analytics 4 and Google Search Console data, and nothing else,
+          while the rest of the team stayed paused.
+        </p>
+        <p>
+          The temptation, with any early report, is to treat a short window
+          of data as a conclusion.
+        </p>
+        <p>
+          It is not.
+        </p>
+        <p>
+          A few weeks of Search Console data on a small site is a
+          hypothesis. It can tell me what to look at next. It is not proof
+          that a page is working, or that a change is required.
+        </p>
+        <p>
+          I would rather have a cautious read than a confident
+          recommendation built on too little evidence.
+        </p>
+        <h3>
+          Speed makes it easy to ship too soon
+        </h3>
+        <p>
+          Bots can produce drafts and open pull requests quickly.
+        </p>
+        <p>
+          That is useful, and it is also the risk.
+        </p>
+        <p>
+          If the system is optimized only for speed, publishing becomes the
+          default. I had to make the default the opposite: review first, and
+          no live changes unless I ask for them.
+        </p>
+
+        <h2>
+          5. What I learned
+        </h2>
+        <p>
+          The main lesson was that a bot team is only as good as the
+          editorial system around it.
+        </p>
+        <p>
+          Written briefs beat chat.
+        </p>
+        <p>
+          It is better to separate who writes, who checks, and who ships
+          than to ask one assistant to do all three.
+        </p>
+        <p>
+          A human gate still belongs on publishing, sending, and spending.
+        </p>
+        <p>
+          I also learned to pause the team on purpose.
+        </p>
+        <p>
+          If I need to plan, or I do not want work running in the
+          background, stopping everyone is part of the workflow. I can think
+          offline, then resume with a clearer brief.
+        </p>
+        <p>
+          Another rule I now treat as non-negotiable: never let a bot invent
+          numbers.
+        </p>
+        <p>
+          If a figure did not come from a source I can check, it does not
+          belong in a draft, a report, or a page. That is basic editorial
+          QA, and it matters more, not less, when the first draft can be
+          produced quickly.
+        </p>
+        <p>
+          I am still the editor.
+        </p>
+        <p>
+          The bots can help me move work along. They cannot take
+          responsibility for what goes live.
+        </p>
+
+        <h2>
+          6. How this connects to SEO, content, APIs, and documentation
+        </h2>
+        <h3>
+          Content operations is the same shape of problem
+        </h3>
+        <p>
+          In my professional work, a lot of the job sits between search
+          research, drafting, editorial QA, and the systems used to decide
+          what should be published next.
+        </p>
+        <p>
+          This bot team is a smaller version of that.
+        </p>
+        <p>
+          Roles, briefs, review checklists, and a publishing gate are not
+          new ideas. I am just applying them to assistants that can work
+          very quickly if I let them.
+        </p>
+        <h3>
+          Directing bots is teaching me technical work
+        </h3>
+        <p>
+          I am not a senior engineer, and I am not trying to present this as
+          if I were.
+        </p>
+        <p>
+          I am a content writer who is learning the technical side by doing
+          the review work myself.
+        </p>
+        <p>
+          That means reading pull requests instead of only asking whether
+          the work is "done." It means deciding whether something can be
+          merged. It means understanding, at a basic level, what a deploy
+          will change. It means looking at GA4 and Search Console with a
+          skeptical eye, especially when the dataset is still thin.
+        </p>
+        <p>
+          I still need help with the underlying implementation.
+        </p>
+        <p>
+          The difference is that I am no longer only looking at the finished
+          page or the finished paragraph. I am learning to inspect the path
+          that got it there, which is useful for technical writing,
+          documentation, and any content work that depends on what a product
+          actually does.
+        </p>
+        <h3>
+          Documentation should include what did not work
+        </h3>
+        <p>
+          I want to keep using the same structure I use in the Lab: what I
+          tried, what worked, what broke, and what I will try next.
+        </p>
+        <p>
+          A bot team can make the work look smoother than it was.
+        </p>
+        <p>
+          The notes should not.
+        </p>
+
+        <h2>
+          7. What I will try next
+        </h2>
+        <p>
+          I do not want to keep adding bots just because I can.
+        </p>
+        <p>
+          The current system is useful because it is small enough to
+          understand.
+        </p>
+        <p>
+          My next steps are:
+        </p>
+        <ul>
+          <li>Keep writing tighter done-list briefs before work starts.</li>
+          <li>Keep review-only drafts and pull requests as the default.</li>
+          <li>Practice reading pull requests, deploys, and analytics with the same skepticism I already use on drafts.</li>
+          <li>Document more of what the system gets wrong, not only what it produces.</li>
+          <li>Resume the team only when I have a clear brief.</li>
+        </ul>
+        <p>
+          The interesting part of this experiment is no longer that I can
+          assign work to AI bots.
+        </p>
+        <p>
+          It is that I am learning how to run that work like a content
+          operation, with a human yes at the end.
+        </p>
+
+        <h2>
+          Explore the rest of the project
+        </h2>
+
+        <p>
+          I am documenting these projects as I learn more about the
+          technical side of content work.
+        </p>
+
+        <p>
+          You can explore the current experiments in
+          <a href="/lab/">Ed's Lab</a>, browse my
+          <a href="/work/">professional work</a>, or read more of my
+          <a href="/writing/">learning notes</a>.
+        </p>
+      </article>
+
+    </div>
+
+  </main>
+
+
+  <footer class="footer">
+
+    <div class="container footer-inner">
+
+      <span>
+        © 2026 Ed Umbao
+      </span>
+
+      <span>
+        Writing · SEO · Technical learning · Small projects
+      </span>
+
+    </div>
+
+
+    <div class="container footer-social">
+
+      <span class="footer-social-label">
+        Elsewhere
+      </span>
+
+      <nav
+        class="footer-social-links"
+        aria-label="Elsewhere"
+      >
+
+        <a
+          href="https://www.linkedin.com/in/ed-umbao/"
+          target="_blank"
+          rel="noopener"
+        >
+          LinkedIn ↗
+        </a>
+
+        <a
+          href="https://x.com/edmundumbao"
+          target="_blank"
+          rel="noopener"
+        >
+          X ↗
+        </a>
+
+        <a
+          href="https://github.com/edumbao"
+          target="_blank"
+          rel="noopener"
+        >
+          GitHub ↗
+        </a>
+
+        <a
+          href="https://edumbao.substack.com"
+          target="_blank"
+          rel="noopener"
+        >
+          Substack ↗
+        </a>
+
+        <a
+          href="https://edumbao.medium.com/"
+          target="_blank"
+          rel="noopener"
+        >
+          Medium ↗
+        </a>
+
+      </nav>
+
+    </div>
+
+  </footer>
+
+
+  <script>
+
+    document.addEventListener(
+      'DOMContentLoaded',
+      function () {
+
+        const menuButton =
+          document.querySelector('.menu-toggle');
+
+        const siteMenu =
+          document.querySelector('.site-menu');
+
+        const themeToggle =
+          document.getElementById('theme-toggle');
+
+
+        if (menuButton && siteMenu) {
+
+          menuButton.addEventListener(
+            'click',
+            function () {
+
+              const isOpen =
+                siteMenu.classList.toggle('nav-open');
+
+              menuButton.setAttribute(
+                'aria-expanded',
+                isOpen ? 'true' : 'false'
+              );
+
+            }
+          );
+
+
+          siteMenu
+            .querySelectorAll('a')
+            .forEach(
+              function (link) {
+
+                link.addEventListener(
+                  'click',
+                  function () {
+
+                    siteMenu.classList.remove('nav-open');
+
+                    menuButton.setAttribute(
+                      'aria-expanded',
+                      'false'
+                    );
+
+                  }
+                );
+
+              }
+            );
+
+        }
+
+
+        function currentTheme() {
+          return document.documentElement
+            .getAttribute('data-theme') === 'light'
+              ? 'light'
+              : 'dark';
+        }
+
+
+        function updateThemeLabel() {
+
+          if (!themeToggle) {
+            return;
+          }
+
+          const theme = currentTheme();
+
+          const nextTheme =
+            theme === 'dark'
+              ? 'Light'
+              : 'Dark';
+
+          themeToggle.textContent = nextTheme;
+
+          themeToggle.setAttribute(
+            'aria-label',
+            'Switch to ' +
+            nextTheme.toLowerCase() +
+            ' theme'
+          );
+
+        }
+
+
+        updateThemeLabel();
+
+
+        if (themeToggle) {
+
+          themeToggle.addEventListener(
+            'click',
+            function (event) {
+
+              event.preventDefault();
+
+              const nextTheme =
+                currentTheme() === 'dark'
+                  ? 'light'
+                  : 'dark';
+
+              document.documentElement.setAttribute(
+                'data-theme',
+                nextTheme
+              );
+
+              try {
+
+                localStorage.setItem(
+                  'edumbao-theme',
+                  nextTheme
+                );
+
+              } catch (error) {
+
+                // Theme switching still works
+                // if storage is unavailable.
+
+              }
+
+              updateThemeLabel();
+
+            }
+          );
+
+        }
+
+      }
+    );
+
+  </script>
+
+</body>
+
+</html>
