@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LBQL9HBJNL"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-LBQL9HBJNL');
+  </script>
+
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Data-First Programmatic SEO Playbook | Ed Umbao</title>
+
+  <meta
+    name="description"
+    content="Fix Crawled - currently not indexed programmatic pages with unique entity data, the 40% unique benefit rule, and weekly rollouts of 100 to 250 URLs."
+  >
+
+  <link
+    rel="canonical"
+    href="https://edumbao.com/posts/data-first-programmatic-seo-playbook.html"
+  >
+
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+
+  <meta
+    property="og:title"
+    content="Data-First Programmatic SEO: How to Fix &quot;Crawled - Currently Not Indexed&quot; Without Adding Word Count"
+  >
+
+  <meta
+    property="og:description"
+    content="Fix Crawled - currently not indexed programmatic pages with unique entity data, the 40% unique benefit rule, and weekly rollouts of 100 to 250 URLs."
+  >
+
+  <meta
+    property="og:url"
+    content="https://edumbao.com/posts/data-first-programmatic-seo-playbook.html"
+  >
+
+  <meta
+    property="og:image"
+    content="https://edumbao.com/images/data-first-programmatic-seo-page-template-wireframe.png"
+  >
+
+  <meta
+    property="og:image:alt"
+    content="Wireframe of a data-first programmatic SEO landing page showing above-the-fold local data benchmarks, a dynamic H1 structure, ranked listings, and JSON-LD schema placement."
+  >
+
+  <meta
+    property="og:site_name"
+    content="Ed Umbao"
+  >
+
+
+  <!-- Twitter / X -->
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <meta
+    name="twitter:title"
+    content="Data-First Programmatic SEO: How to Fix &quot;Crawled - Currently Not Indexed&quot; Without Adding Word Count"
+  >
+
+  <meta
+    name="twitter:description"
+    content="Fix Crawled - currently not indexed programmatic pages with unique entity data, the 40% unique benefit rule, and weekly rollouts of 100 to 250 URLs."
+  >
+
+  <meta
+    name="twitter:image"
+    content="https://edumbao.com/images/data-first-programmatic-seo-page-template-wireframe.png"
+  >
+
+  <meta
+    name="twitter:image:alt"
+    content="Wireframe of a data-first programmatic SEO landing page showing above-the-fold local data benchmarks, a dynamic H1 structure, ranked listings, and JSON-LD schema placement."
+  >
+
+
+  <!-- Apply theme before page paint -->
+  <script>
+    (function () {
+      let savedTheme = null;
+
+      try {
+        savedTheme = localStorage.getItem('edumbao-theme');
+      } catch (error) {
+        savedTheme = null;
+      }
+
+      const preferredTheme =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: light)').matches
+          ? 'light'
+          : 'dark';
+
+      const theme =
+        savedTheme === 'light' || savedTheme === 'dark'
+          ? savedTheme
+          : preferredTheme;
+
+      document.documentElement.setAttribute(
+        'data-theme',
+        theme
+      );
+    })();
+  </script>
+
+
+  <link
+    rel="stylesheet"
+    href="/assets/css/site.css"
+  >
+
+  <style>
+    .article-offer {
+      margin: 48px 0 8px;
+      padding: 8px 28px 4px;
+      border: 1px solid var(--line-soft);
+      border-radius: 4px;
+      background: var(--bg-soft);
+    }
+
+    .article-offer h2 {
+      margin-top: 28px;
+    }
+  </style>
+
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Data-First Programmatic SEO: How to Fix \"Crawled - Currently Not Indexed\" Without Adding Word Count",
+  "description": "Fix Crawled - currently not indexed programmatic pages with unique entity data, the 40% unique benefit rule, and weekly rollouts of 100 to 250 URLs.",
+  "image": "https://edumbao.com/images/data-first-programmatic-seo-page-template-wireframe.png",
+  "datePublished": "2026-11-17",
+  "author": {
+    "@type": "Person",
+    "name": "Ed Umbao",
+    "jobTitle": "Head of Content and SEO Strategist",
+    "url": "https://edumbao.com/",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Outscraper",
+      "url": "https://outscraper.com/"
+    }
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Ed Umbao",
+    "url": "https://edumbao.com/"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://edumbao.com/posts/data-first-programmatic-seo-playbook.html"
+  },
+  "url": "https://edumbao.com/posts/data-first-programmatic-seo-playbook.html"
+}
+  </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Data-First Programmatic SEO",
+  "description": "A 14-page digital manual with the 10-column Master CSV schema, a 15-line Python Pandas cleaning script, a fact-only AI enrichment prompt, copy-ready JSON-LD schema, and a 20-point pre-launch QA scorecard.",
+  "url": "https://philnews.gumroad.com/l/data-first-programmatic-seo",
+  "brand": {
+    "@type": "Brand",
+    "name": "Ed Umbao"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "19.00",
+    "priceCurrency": "USD",
+    "url": "https://philnews.gumroad.com/l/data-first-programmatic-seo",
+    "availability": "https://schema.org/InStock"
+  }
+}
+  </script>
+
+</head>
+
+
+<body>
+
+  <header class="site-header">
+
+    <div class="container site-nav">
+
+      <a
+        href="/"
+        class="site-brand"
+        aria-label="Ed Umbao homepage"
+      >
+
+        <span class="brand-logo-wrap" aria-hidden="true">
+
+  <img
+    src="/images/ed-umbao-logo-on-light-mode.png"
+    alt=""
+    class="brand-logo brand-logo-on-light"
+  >
+
+  <img
+    src="/images/ed-umbao-logo-on-dark-mode.png"
+    alt=""
+    class="brand-logo brand-logo-on-dark"
+  >
+
+</span>
+
+        <span class="brand-name">
+          Ed Umbao
+        </span>
+
+      </a>
+
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-controls="site-menu"
+        aria-expanded="false"
+      >
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </button>
+
+
+      <nav
+        class="site-menu"
+        id="site-menu"
+        aria-label="Main navigation"
+      >
+
+        <a href="/lab/">
+          Lab
+        </a>
+
+        <a href="/work/">
+          Work
+        </a>
+
+        <a
+          href="/writing/"
+          class="is-active"
+          aria-current="page"
+        >
+          Writing
+        </a>
+
+        <a href="/#about">
+          About
+        </a>
+
+        <a
+          href="https://github.com/edumbao"
+          target="_blank"
+          rel="noopener"
+          class="nav-external"
+        >
+          GitHub ↗
+        </a>
+
+        <a
+          href="#"
+          id="theme-toggle"
+          class="theme-link"
+          aria-label="Switch color theme"
+        >
+          Theme
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <main class="article-page">
+
+    <div class="container article-shell">
+
+      <article class="article-content">
+
+        <h1 class="article-title">
+          Data-First Programmatic SEO: How to Fix "Crawled - Currently Not Indexed" Without Adding Word Count
+        </h1>
+
+        <p class="article-date">
+          Published on November 17, 2026
+        </p>
+
+        <p>
+          I helped scale Outscraper to over 700,000 users in 2 years with a
+          9-person B2B SaaS team and just 3 writers. That constraint left no
+          room to treat programmatic SEO as a writing volume problem.
+        </p>
+
+        <p>
+          We could not put a writer on every city, service, or entity page.
+          If those pages were going to be indexed, the uniqueness had to
+          come from the data under the template, not from more copy.
+        </p>
+
+        <p>
+          I treat programmatic SEO as a data engineering problem for that
+          reason. The page is a layout for facts that already belong to one
+          entity. The writing supports those facts.
+        </p>
+
+        <h2>
+          Why bulk templates fail indexation
+        </h2>
+
+        <p>
+          A frequent build pattern is to generate thousands of URLs from one
+          template and swap a city name, a service name, or a category into
+          otherwise identical paragraphs. The pages look complete in a
+          browser. In Google Search Console, they collect under
+          "Discovered - currently not indexed" or
+          "Crawled - currently not indexed."
+        </p>
+
+        <p>
+          Google can crawl a URL and still decline to index it when the page
+          does not add information beyond pages that already exist. If the
+          only change from one URL to the next is a proper noun inside a
+          repeated paragraph, the crawler has little new to record.
+        </p>
+
+        <p>
+          Word count does not fix that. Extra generic paragraphs about the
+          local market still leave every page saying the same thing. The
+          indexation problem is a uniqueness problem in the underlying data.
+        </p>
+
+        <h2>
+          The 40% Unique Benefit Rule
+        </h2>
+
+        <p>
+          I use a clear threshold before a template is allowed to ship. At
+          least 40% of the visible page content must come from proprietary,
+          calculated, or freshly scraped data that is specific to that exact
+          entity.
+        </p>
+
+        <p>
+          On a local or entity page, that data includes:
+        </p>
+
+        <ul>
+          <li>
+            City median pricing for the service or product
+          </li>
+          <li>
+            Total verified providers in that market
+          </li>
+          <li>
+            Local review rankings
+          </li>
+          <li>
+            Factual review themes pulled from real reviews
+          </li>
+        </ul>
+
+        <p>
+          Those fields have to be visible. A number that only lives in a
+          database does not count toward the 40%. Remove the shared intro
+          and the repeated service copy, and a reader should still see a
+          page that could only belong to that entity.
+        </p>
+
+        <p>
+          The other 60% can be a stable template: the H1 pattern, the
+          section order, the call to action, and short explanatory copy.
+          The entity data is the reason the page exists.
+        </p>
+
+        <h2>
+          The 4-step production pipeline
+        </h2>
+
+        <h3>
+          Step 1: 15-minute SERP footprint validation before touching a CMS
+        </h3>
+
+        <p>
+          Before touching a CMS, I spend 15 minutes on the search results
+          for the target query pattern. I look for data-heavy results:
+          comparison tables, counts, prices, lists of providers, or other
+          entity-specific facts.
+        </p>
+
+        <p>
+          If the first page is filled with unique local inventories, a thin
+          template with a city name swap is unlikely to earn indexation. If
+          the results already show a clear data footprint, I document those
+          fields and decide whether we can supply a cleaner version of the
+          same kind of data.
+        </p>
+
+        <h3>
+          Step 2: Pre-calculating group-level metrics in Python Pandas or Google Sheets QUERY formulas before export
+        </h3>
+
+        <p>
+          Raw rows are not page-ready. I pre-calculate group-level metrics
+          before anything is exported into the template. In Python Pandas or
+          in Google Sheets QUERY formulas, I compute those entity-specific
+          fields at the group the page will represent.
+        </p>
+
+        <p>
+          The page then receives finished fields. It does not average or
+          rank values at render time. You can inspect the export and confirm
+          a city is distinct from its neighbors before a URL goes live.
+        </p>
+
+        <h3>
+          Step 3: Conditional fallback rules so missing cells in raw scraped CSVs never render broken blanks
+        </h3>
+
+        <p>
+          Scraped CSVs have gaps. A missing price, a blank review count, or
+          an empty theme field should never reach the page as an empty box,
+          a "null," or a broken sentence.
+        </p>
+
+        <p>
+          I set conditional fallback rules before render. If a cell is
+          missing, the template hides that block, substitutes a pre-approved
+          factual label that does not invent a number, or drops the URL from
+          the current batch until the data is complete. The rule is written
+          once and applied to every row.
+        </p>
+
+        <h3>
+          Step 4: Controlled weekly drip rollouts (100 to 250 URLs per week) until Search Console indexation passes 80%
+        </h3>
+
+        <p>
+          I do not publish the full set on day one. I roll out 100 to 250
+          URLs per week and watch Google Search Console. The batch stays at
+          that pace until indexation for the launched set passes 80%.
+        </p>
+
+        <p>
+          A drip lets you catch a template defect or a weak data field in
+          that week's batch. If indexation stays below 80%, I stop the next
+          batch and fix the data or the template first. Only after the
+          launched set clears the threshold do I release the next group.
+        </p>
+
+        <figure class="article-featured-image">
+          <img
+            src="/images/data-first-programmatic-seo-page-template-wireframe.png"
+            alt="Wireframe of a data-first programmatic SEO landing page showing above-the-fold local data benchmarks, a dynamic H1 structure, ranked listings, and JSON-LD schema placement."
+          >
+          <figcaption>
+            Page template wireframe showing above-the-fold local data
+            benchmarks, a dynamic H1 structure, ranked listings, and
+            JSON-LD schema placement.
+          </figcaption>
+        </figure>
+
+        <aside class="article-offer">
+          <h2>
+            The Data-First Programmatic SEO manual
+          </h2>
+
+          <p>
+            The same production rules are documented in my 14-page digital
+            manual, "Data-First Programmatic SEO," which is $19.00 on
+            Gumroad. Inside the manual you will find:
+          </p>
+
+          <ul>
+            <li>
+              The 10-column Master CSV schema
+            </li>
+            <li>
+              A 15-line Python Pandas cleaning script
+            </li>
+            <li>
+              A fact-only AI enrichment prompt
+            </li>
+            <li>
+              Copy-ready JSON-LD schema
+            </li>
+            <li>
+              A 20-point pre-launch QA scorecard
+            </li>
+          </ul>
+
+          <p>
+            <a href="https://philnews.gumroad.com/l/data-first-programmatic-seo">
+              Get the Data-First Programmatic SEO manual on Gumroad ($19.00)
+            </a>
+          </p>
+        </aside>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+  <footer class="footer">
+
+    <div class="container footer-inner">
+
+      <span>
+        © 2026 Ed Umbao
+      </span>
+
+      <span>
+        Writing · SEO · Technical learning · Small projects
+      </span>
+
+    </div>
+
+
+    <div class="container footer-social">
+
+      <span class="footer-social-label">
+        Elsewhere
+      </span>
+
+      <nav
+        class="footer-social-links"
+        aria-label="Elsewhere"
+      >
+
+        <a
+          href="https://www.linkedin.com/in/ed-umbao/"
+          target="_blank"
+          rel="noopener"
+        >
+          LinkedIn ↗
+        </a>
+
+        <a
+          href="https://x.com/edmundumbao"
+          target="_blank"
+          rel="noopener"
+        >
+          X ↗
+        </a>
+
+        <a
+          href="https://github.com/edumbao"
+          target="_blank"
+          rel="noopener"
+        >
+          GitHub ↗
+        </a>
+
+        <a
+          href="https://edumbao.substack.com"
+          target="_blank"
+          rel="noopener"
+        >
+          Substack ↗
+        </a>
+
+        <a
+          href="https://edumbao.medium.com/"
+          target="_blank"
+          rel="noopener"
+        >
+          Medium ↗
+        </a>
+
+      </nav>
+
+    </div>
+
+  </footer>
+
+
+  <script>
+
+    document.addEventListener(
+      'DOMContentLoaded',
+      function () {
+
+        const menuButton =
+          document.querySelector('.menu-toggle');
+
+        const siteMenu =
+          document.querySelector('.site-menu');
+
+        const themeToggle =
+          document.getElementById('theme-toggle');
+
+
+        if (menuButton && siteMenu) {
+
+          menuButton.addEventListener(
+            'click',
+            function () {
+
+              const isOpen =
+                siteMenu.classList.toggle('nav-open');
+
+              menuButton.setAttribute(
+                'aria-expanded',
+                isOpen ? 'true' : 'false'
+              );
+
+            }
+          );
+
+
+          siteMenu
+            .querySelectorAll('a')
+            .forEach(
+              function (link) {
+
+                link.addEventListener(
+                  'click',
+                  function () {
+
+                    siteMenu.classList.remove('nav-open');
+
+                    menuButton.setAttribute(
+                      'aria-expanded',
+                      'false'
+                    );
+
+                  }
+                );
+
+              }
+            );
+
+        }
+
+
+        function currentTheme() {
+          return document.documentElement
+            .getAttribute('data-theme') === 'light'
+              ? 'light'
+              : 'dark';
+        }
+
+
+        function updateThemeLabel() {
+
+          if (!themeToggle) {
+            return;
+          }
+
+          const theme = currentTheme();
+
+          const nextTheme =
+            theme === 'dark'
+              ? 'Light'
+              : 'Dark';
+
+          themeToggle.textContent = nextTheme;
+
+          themeToggle.setAttribute(
+            'aria-label',
+            'Switch to ' +
+            nextTheme.toLowerCase() +
+            ' theme'
+          );
+
+        }
+
+
+        updateThemeLabel();
+
+
+        if (themeToggle) {
+
+          themeToggle.addEventListener(
+            'click',
+            function (event) {
+
+              event.preventDefault();
+
+              const nextTheme =
+                currentTheme() === 'dark'
+                  ? 'light'
+                  : 'dark';
+
+              document.documentElement.setAttribute(
+                'data-theme',
+                nextTheme
+              );
+
+              try {
+
+                localStorage.setItem(
+                  'edumbao-theme',
+                  nextTheme
+                );
+
+              } catch (error) {
+
+                // Theme switching still works
+                // if storage is unavailable.
+
+              }
+
+              updateThemeLabel();
+
+            }
+          );
+
+        }
+
+      }
+    );
+
+  </script>
+
+</body>
+
+</html>
