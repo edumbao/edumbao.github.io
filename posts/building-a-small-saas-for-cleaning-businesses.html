@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LBQL9HBJNL"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-LBQL9HBJNL');
+  </script>
+
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>I Am Building a Small Lead-Generation SaaS for Cleaning Businesses | Ed Umbao</title>
+
+  <meta
+    name="description"
+    content="I am building CleanServiceLeads, a small lead-generation SaaS for commercial cleaning owners, and I am learning architecture, debugging, and deployment by shipping it in small, review-only steps."
+  >
+
+  <link
+    rel="canonical"
+    href="https://edumbao.com/posts/building-a-small-saas-for-cleaning-businesses.html"
+  >
+
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+
+  <meta
+    property="og:title"
+    content="I Am Building a Small Lead-Generation SaaS for Cleaning Businesses"
+  >
+
+  <meta
+    property="og:description"
+    content="I am building CleanServiceLeads, a small lead-generation SaaS for commercial cleaning owners, and I am learning architecture, debugging, and deployment by shipping it in small, review-only steps."
+  >
+
+  <meta
+    property="og:url"
+    content="https://edumbao.com/posts/building-a-small-saas-for-cleaning-businesses.html"
+  >
+
+  <meta
+    property="og:image"
+    content="https://edumbao.com/images/building-a-small-saas-for-cleaning-businesses.webp"
+  >
+
+  <meta
+    property="og:image:alt"
+    content="Diagram of a lead-generation workflow for cleaning businesses, showing search, preview, unlock, and a saved pipeline."
+  >
+
+  <meta
+    property="og:site_name"
+    content="Ed Umbao"
+  >
+
+
+  <!-- Twitter / X -->
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <meta
+    name="twitter:title"
+    content="I Am Building a Small Lead-Generation SaaS for Cleaning Businesses"
+  >
+
+  <meta
+    name="twitter:description"
+    content="I am building CleanServiceLeads, a small lead-generation SaaS for commercial cleaning owners, and I am learning architecture, debugging, and deployment by shipping it in small, review-only steps."
+  >
+
+  <meta
+    name="twitter:image"
+    content="https://edumbao.com/images/building-a-small-saas-for-cleaning-businesses.webp"
+  >
+
+  <meta
+    name="twitter:image:alt"
+    content="Diagram of a lead-generation workflow for cleaning businesses, showing search, preview, unlock, and a saved pipeline."
+  >
+
+
+  <!-- Apply theme before page paint -->
+  <script>
+    (function () {
+      let savedTheme = null;
+
+      try {
+        savedTheme = localStorage.getItem('edumbao-theme');
+      } catch (error) {
+        savedTheme = null;
+      }
+
+      const preferredTheme =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: light)').matches
+          ? 'light'
+          : 'dark';
+
+      const theme =
+        savedTheme === 'light' || savedTheme === 'dark'
+          ? savedTheme
+          : preferredTheme;
+
+      document.documentElement.setAttribute(
+        'data-theme',
+        theme
+      );
+    })();
+  </script>
+
+
+  <link
+    rel="stylesheet"
+    href="/assets/css/site.css"
+  >
+
+  <style>
+    .article-offer {
+      margin: 48px 0 8px;
+      padding: 8px 28px 4px;
+      border: 1px solid var(--line-soft);
+      border-radius: 4px;
+      background: var(--bg-soft);
+    }
+
+    .article-offer h2 {
+      margin-top: 28px;
+    }
+  </style>
+
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "I Am Building a Small Lead-Generation SaaS for Cleaning Businesses",
+  "description": "I am building CleanServiceLeads, a small lead-generation SaaS for commercial cleaning owners, and I am learning architecture, debugging, and deployment by shipping it in small, review-only steps.",
+  "image": "https://edumbao.com/images/building-a-small-saas-for-cleaning-businesses.webp",
+  "datePublished": "2026-11-21",
+  "author": {
+    "@type": "Person",
+    "name": "Ed Umbao",
+    "jobTitle": "Head of Content and SEO Strategist",
+    "url": "https://edumbao.com/",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Outscraper",
+      "url": "https://outscraper.com/"
+    }
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Ed Umbao",
+    "url": "https://edumbao.com/"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://edumbao.com/posts/building-a-small-saas-for-cleaning-businesses.html"
+  },
+  "url": "https://edumbao.com/posts/building-a-small-saas-for-cleaning-businesses.html"
+}
+  </script>
+
+</head>
+
+
+<body>
+
+  <header class="site-header">
+
+    <div class="container site-nav">
+
+      <a
+        href="/"
+        class="site-brand"
+        aria-label="Ed Umbao homepage"
+      >
+
+        <span class="brand-logo-wrap" aria-hidden="true">
+
+  <img
+    src="/images/ed-umbao-logo-on-light-mode.png"
+    alt=""
+    class="brand-logo brand-logo-on-light"
+  >
+
+  <img
+    src="/images/ed-umbao-logo-on-dark-mode.png"
+    alt=""
+    class="brand-logo brand-logo-on-dark"
+  >
+
+</span>
+
+        <span class="brand-name">
+          Ed Umbao
+        </span>
+
+      </a>
+
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-controls="site-menu"
+        aria-expanded="false"
+      >
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </button>
+
+
+      <nav
+        class="site-menu"
+        id="site-menu"
+        aria-label="Main navigation"
+      >
+
+        <a href="/lab/">
+          Lab
+        </a>
+
+        <a href="/work/">
+          Work
+        </a>
+
+        <a
+          href="/writing/"
+          class="is-active"
+          aria-current="page"
+        >
+          Writing
+        </a>
+
+        <a href="/#about">
+          About
+        </a>
+
+        <a
+          href="https://github.com/edumbao"
+          target="_blank"
+          rel="noopener"
+          class="nav-external"
+        >
+          GitHub ↗
+        </a>
+
+        <a
+          href="#"
+          id="theme-toggle"
+          class="theme-link"
+          aria-label="Switch color theme"
+        >
+          Theme
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <main class="article-page">
+
+    <div class="container article-shell">
+
+      <article class="article-content">
+
+        <h1 class="article-title">
+          I Am Building a Small Lead-Generation SaaS for Cleaning Businesses
+        </h1>
+
+        <p class="article-date">
+          Published on November 21, 2026
+        </p>
+
+        <figure class="article-featured-image">
+          <img
+            src="/images/building-a-small-saas-for-cleaning-businesses.webp"
+            alt="Diagram of a lead-generation workflow for cleaning businesses, showing search, preview, unlock, and a saved pipeline."
+            width="1920"
+            height="1080"
+          >
+          <figcaption>
+            I am building CleanServiceLeads, a small SaaS for commercial
+            cleaning and janitorial owners, and learning architecture,
+            debugging, and deployment by shipping in small, review-only
+            steps.
+          </figcaption>
+        </figure>
+
+        <p>
+          I am building <a href="https://www.cleanserviceleads.com">CleanServiceLeads</a>, a small SaaS for commercial
+          cleaning and janitorial owners. It helps them find local
+          business prospects, score which ones are worth calling first,
+          and keep follow-up in one place. I am learning the
+          architecture, debugging, and deployment as I go, by shipping
+          the work in small, review-only steps.
+        </p>
+        <h2>
+          The problem
+        </h2>
+        <p>
+          A cleaning business that still does its own prospecting has a
+          slow first step. Someone has to build a call list for a city,
+          copy public contact details, and decide who to dial first.
+          That work takes time, and a long unranked list makes it easy
+          to call weaker prospects before stronger ones.
+        </p>
+        <p>
+          The product is aimed at US commercial cleaning and janitorial
+          owners who look for offices, clinics, gyms, property managers,
+          and similar local businesses in their service area.
+        </p>
+        <h2>
+          What I built
+        </h2>
+        <p>
+          The app has a public marketing site and a signed-in dashboard.
+          You search by city and business type, see how many matches
+          exist, and get a preview list with contact details hidden.
+          Each lead gets a score from 0 to 100 and a Hot, Warm, or Low
+          label.
+        </p>
+        <p>
+          The score adds points for signals already on the public
+          listing, such as a website, phone, email, a person contact,
+          rating, reviews, and address. Hot means the score is 75 or
+          higher. It does not mean the business is hiring a cleaner, and
+          it does not mean an email is on file.
+        </p>
+        <p>
+          When you choose a prospect, you unlock the contact details
+          that are on file and save that lead to a pipeline. The
+          statuses are Saved, Contacted, Follow Up, Ready, and Not a
+          Fit. You can add notes. Paid plans can export the pipeline to
+          CSV. Re-opening a saved lead does not use another unlock.
+          There is a free plan with limited unlocks, and paid plans when
+          a pipeline needs more capacity. Checkout runs through a
+          merchant of record.
+        </p>
+        <p>
+          Around the product I built a public guides library. As of 21
+          November 2026, nine guides are live, grouped into finding
+          leads, deciding who to call first, reaching the decision
+          maker, and comparing tools. I write some myself. The others go
+          out under the product team byline.
+        </p>
+        <p>
+          The stack is Next.js with the App Router, TypeScript, and
+          Tailwind CSS, with Clerk for sign-in, Postgres on Neon through
+          Prisma, and Vercel for hosting. Public listing data is fetched
+          on the server, not in the browser. I started the repository at
+          the end of May 2026 as a local dashboard, then added
+          authentication, a real database for saved leads, plan limits,
+          billing, SEO, and the guides.
+        </p>
+        <h2>
+          How I built it
+        </h2>
+        <p>
+          I am a technical writer who builds software hands-on. I am not
+          a senior engineer. I needed a way to move this product forward
+          without pretending I could hold the whole system in my head at
+          once.
+        </p>
+        <p>
+          I run a small AI agent team the same way I already run content
+          work. There is a chief-of-staff agent, a developer agent, a
+          content agent, and an SEO agent. I write the brief. They do
+          one assigned job. I review the result. Nothing is merged,
+          published, or billed without my yes. Pull requests stay
+          review-only until I approve them. I check the diff, the tests,
+          and the claims in the public copy. When a guide needs a
+          featured image, I make it and upload it myself, then I merge.
+        </p>
+        <p>
+          The office cleaning leads guide is one example. I merged that
+          review-only pull request on 17 November 2026, after I had the
+          featured image in place. The next day I merged a second
+          review-only pull request that tightened SEO across the eight
+          guides then live, and had the production pages checked.
+        </p>
+        <h2>
+          What broke and what I fixed
+        </h2>
+        <p>
+          Public copy can drift away from the code. The score is
+          additive. A complete listing with no email and no person
+          contact scores 70, which is Warm. An email adds 20 points. A
+          person contact adds 10. A lead can reach Hot without an email
+          if a person contact is present on an otherwise full listing.
+          Early marketing pages did not describe that clearly. In one
+          version, the advertised signals added up to 70 while the same
+          page said Hot started at 75, which made "Hot" sound
+          impossible. I left the formula alone and rewrote the homepage,
+          the how it works page, the sample list, and the FAQ so they
+          match the math.
+        </p>
+        <p>
+          A search returned zero results, and it was easy to assume the
+          data API was down. The city name had been typed wrong. The
+          integration was fine. I still treat empty results as a prompt
+          to check the input first, then the wiring.
+        </p>
+        <p>
+          By mid-November, eight guides were live, but the search titles
+          were too long (one ran to 102 characters), some sections
+          overlapped, vendor prices were repeated on more than one page,
+          and a few guides reused the homepage image in their social
+          previews. The SEO pull request rewrote titles and meta
+          descriptions to fit search-snippet limits, moved repeated
+          price lists to the comparison guide, added related-guide
+          blocks and internal links, and gave each guide its own image,
+          byline dates, and structured data. No live guide URL was
+          changed.
+        </p>
+        <p>
+          A later pre-release review led to a hardening pass. I pinned
+          the Next.js version instead of leaving it on a floating tag,
+          added stricter browser security headers, closed a path that
+          could save preview results without an unlock, and stopped
+          sending internal error details to the browser.
+        </p>
+        <h2>
+          What I learned
+        </h2>
+        <p>
+          The useful unit of work, for me, is a small pull request with
+          a written brief and a pass/fail list.
+        </p>
+        <p>
+          A product site and its guides are part of the same system. If
+          the scoring page, the FAQ, and the code disagree, the reader
+          is right to stop trusting the tool. I now treat "does this
+          sentence still match the code?" as part of review, not as
+          later polish. The same rule applies to the guides: one main
+          keyword per article, links instead of copied sections, and no
+          URL changes once a page is live.
+        </p>
+        <p>
+          I am still learning how the pieces fit: auth, a hosted
+          database, webhooks, search metering, and deployments. The
+          agents can draft the change. I still have to understand enough
+          to accept or reject it.
+        </p>
+        <h2>
+          What's next
+        </h2>
+        <p>
+          I am continuing the guides. The latest one, published on 21
+          November 2026, is a practical follow-up plan for a commercial
+          cleaning quote. New guides will keep the same rules: one
+          keyword, related links both ways, and a human yes before
+          anything goes live. I will also keep reviewing the product the
+          way I review a draft, and fix what is off before I add scope.
+        </p>
+
+        <aside class="article-offer">
+          <h2>
+            Try CleanServiceLeads
+          </h2>
+
+          <p>
+            If you run a commercial cleaning business and want a scored
+            list of local prospects, you can try
+            <a href="https://www.cleanserviceleads.com">CleanServiceLeads</a>.
+          </p>
+        </aside>
+
+        <h2>
+          Explore the rest of the project
+        </h2>
+
+        <p>
+          I am documenting these projects as I learn more about the
+          technical side of content work.
+        </p>
+
+        <p>
+          You can explore the current experiments in
+          <a href="/lab/">Ed's Lab</a>, browse my
+          <a href="/work/">professional work</a>, or read more of my
+          <a href="/writing/">learning notes</a>.
+        </p>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+  <footer class="footer">
+
+    <div class="container footer-inner">
+
+      <span>
+        © 2026 Ed Umbao
+      </span>
+
+      <span>
+        Writing · SEO · Technical learning · Small projects
+      </span>
+
+    </div>
+
+
+    <div class="container footer-social">
+
+      <span class="footer-social-label">
+        Elsewhere
+      </span>
+
+      <nav
+        class="footer-social-links"
+        aria-label="Elsewhere"
+      >
+
+        <a
+          href="https://www.linkedin.com/in/ed-umbao/"
+          target="_blank"
+          rel="noopener"
+        >
+          LinkedIn ↗
+        </a>
+
+        <a
+          href="https://x.com/edmundumbao"
+          target="_blank"
+          rel="noopener"
+        >
+          X ↗
+        </a>
+
+        <a
+          href="https://github.com/edumbao"
+          target="_blank"
+          rel="noopener"
+        >
+          GitHub ↗
+        </a>
+
+        <a
+          href="https://edumbao.substack.com"
+          target="_blank"
+          rel="noopener"
+        >
+          Substack ↗
+        </a>
+
+        <a
+          href="https://edumbao.medium.com/"
+          target="_blank"
+          rel="noopener"
+        >
+          Medium ↗
+        </a>
+
+      </nav>
+
+    </div>
+
+  </footer>
+
+
+  <script>
+
+    document.addEventListener(
+      'DOMContentLoaded',
+      function () {
+
+        const menuButton =
+          document.querySelector('.menu-toggle');
+
+        const siteMenu =
+          document.querySelector('.site-menu');
+
+        const themeToggle =
+          document.getElementById('theme-toggle');
+
+
+        if (menuButton && siteMenu) {
+
+          menuButton.addEventListener(
+            'click',
+            function () {
+
+              const isOpen =
+                siteMenu.classList.toggle('nav-open');
+
+              menuButton.setAttribute(
+                'aria-expanded',
+                isOpen ? 'true' : 'false'
+              );
+
+            }
+          );
+
+
+          siteMenu
+            .querySelectorAll('a')
+            .forEach(
+              function (link) {
+
+                link.addEventListener(
+                  'click',
+                  function () {
+
+                    siteMenu.classList.remove('nav-open');
+
+                    menuButton.setAttribute(
+                      'aria-expanded',
+                      'false'
+                    );
+
+                  }
+                );
+
+              }
+            );
+
+        }
+
+
+        function currentTheme() {
+          return document.documentElement
+            .getAttribute('data-theme') === 'light'
+              ? 'light'
+              : 'dark';
+        }
+
+
+        function updateThemeLabel() {
+
+          if (!themeToggle) {
+            return;
+          }
+
+          const theme = currentTheme();
+
+          const nextTheme =
+            theme === 'dark'
+              ? 'Light'
+              : 'Dark';
+
+          themeToggle.textContent = nextTheme;
+
+          themeToggle.setAttribute(
+            'aria-label',
+            'Switch to ' +
+            nextTheme.toLowerCase() +
+            ' theme'
+          );
+
+        }
+
+
+        updateThemeLabel();
+
+
+        if (themeToggle) {
+
+          themeToggle.addEventListener(
+            'click',
+            function (event) {
+
+              event.preventDefault();
+
+              const nextTheme =
+                currentTheme() === 'dark'
+                  ? 'light'
+                  : 'dark';
+
+              document.documentElement.setAttribute(
+                'data-theme',
+                nextTheme
+              );
+
+              try {
+
+                localStorage.setItem(
+                  'edumbao-theme',
+                  nextTheme
+                );
+
+              } catch (error) {
+
+                // Theme switching still works
+                // if storage is unavailable.
+
+              }
+
+              updateThemeLabel();
+
+            }
+          );
+
+        }
+
+      }
+    );
+
+  </script>
+
+</body>
+
+</html>
